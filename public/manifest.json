@@ -1,0 +1,24 @@
+{
+  "name": "pharma Oasis - Germans EG",
+  "short_name": "pharma Oasis",
+  "description": "المنصة الإكلينيكية وواحة الدواء السريرية المعتمدة للأطباء والصيادلة - ملك شركة pharma Oasis Germans EG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1329",
+  "theme_color": "#0b1329",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/pwa-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

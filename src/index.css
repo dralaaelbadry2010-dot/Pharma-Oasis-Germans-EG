@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* 3D Depth & Elevation */
+  .card-3d {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05),
+                0 10px 15px -3px rgba(15, 23, 42, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-3d:hover {
+    transform: translateY(-3px) scale(1.005);
+    box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.1),
+                0 4px 6px -2px rgba(15, 23, 42, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+
+  .card-3d-dark {
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+    border: 1px solid rgba(51, 65, 85, 0.7);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-panel-3d {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .btn-3d-primary {
+    background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 0 #1e40af,
+                0 8px 12px -2px rgba(37, 99, 235, 0.3);
+    transition: all 0.15s ease;
+  }
+
+  .btn-3d-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 0 #1e40af,
+                0 10px 16px -2px rgba(37, 99, 235, 0.4);
+  }
+
+  .btn-3d-primary:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #1e40af,
+                0 3px 6px -1px rgba(37, 99, 235, 0.2);
+  }
+
+  .btn-3d-amber {
+    background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+    box-shadow: 0 4px 0 #b45309,
+                0 8px 12px -2px rgba(245, 158, 11, 0.3);
+    transition: all 0.15s ease;
+  }
+
+  .btn-3d-amber:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 0 #b45309,
+                0 10px 16px -2px rgba(245, 158, 11, 0.4);
+  }
+
+  .btn-3d-amber:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #b45309,
+                0 3px 6px -1px rgba(245, 158, 11, 0.2);
+  }
+
+  /* 3D floating animation */
+  @keyframes float3d {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-6px) rotate(0.5deg);
+    }
+  }
+
+  .animate-float-3d {
+    animation: float3d 5s ease-in-out infinite;
+  }
+
+  /* German Engineering Trim */
+  .german-flag-trim {
+    height: 3px;
+    background: linear-gradient(90deg, #111827 0%, #111827 33.3%, #dc2626 33.3%, #dc2626 66.6%, #f59e0b 66.6%, #f59e0b 100%);
+  }
+}

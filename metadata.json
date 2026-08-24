@@ -1,0 +1,6 @@
+{
+  "name": "PharmaPulse | نبض الدواء الطبي",
+  "description": "منصة وتطبيق سريري يومي للأطباء والصيادلة والتمريض: دواء اليوم، فاحص التفاعلات الدوائية، حاسبة الجرعات، وتنبيهات مخصصة حسب التخصص الطبي مع نشرة بريدية متقدمة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
