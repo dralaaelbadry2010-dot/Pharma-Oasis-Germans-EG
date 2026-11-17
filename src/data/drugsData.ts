@@ -3862,6 +3862,666 @@ export const INITIAL_DRUGS: Drug[] = [
       'يجب إيقاف أي مضاد اكتئاب سيروتونيني قبل البدء به إن أمكن لتجنب متلازمة السيروتونين',
       'تثبيط نخاع العظم عادة قابل للعكس عند إيقاف الدواء، لكنه يتطلب مراقبة دورية بتعداد دم كامل'
     ]
+  },
+  {
+    id: 'epinephrine',
+    genericName: 'Epinephrine (Adrenaline)',
+    genericNameAr: 'إبينفرين (أدرينالين)',
+    brandNames: ['EpiPen', 'Adrenalin', 'إيبي بن'],
+    drugClass: 'Catecholamine (Alpha/Beta Adrenergic Agonist)',
+    drugClassAr: 'كاتيكولامين (ناهض أدريناليني ألفا/بيتا)',
+    category: 'Rx',
+    route: ['IM', 'IV', 'SC', 'Inhalation'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pediatrics', 'nursing', 'pharmacy'],
+    keyHighlights: [
+      'العلاج الأول والأهم في الصدمة التأقية - يُعطى عضلياً في الفخذ الأمامي الوحشي فوراً دون تأخير',
+      'جرعة الإنعاش القلبي الرئوي الوريدية (1 مج كل 3-5 دقائق) مختلفة تماماً عن جرعة التأق العضلية',
+      'لا يوجد مضاد استطباب مطلق في حالة التأق المهدد للحياة'
+    ],
+    indications: [
+      {
+        indication: 'Anaphylaxis / Cardiac arrest (ACLS) / Severe asthma/anaphylactic bronchospasm',
+        indicationAr: 'الصدمة التأقية / السكتة القلبية (بروتوكول الإنعاش المتقدم) / تشنج قصبي شديد تأقي',
+        adultDose: 'Anaphylaxis: 0.3-0.5 mg IM (1:1000) every 5-15 min as needed; Cardiac arrest: 1 mg IV (1:10,000) every 3-5 min',
+        adultDoseAr: 'التأق: 0.3-0.5 مج عضلياً (1:1000) كل 5-15 دقيقة عند الحاجة؛ السكتة القلبية: 1 مج وريدياً (1:10000) كل 3-5 دقائق',
+        pediatricDose: 'Anaphylaxis: 0.01 mg/kg IM (max 0.3 mg) every 5-15 min as needed',
+        pediatricDoseAr: 'التأق: 0.01 مج/كجم عضلياً (حد أقصى 0.3 مج) كل 5-15 دقيقة عند الحاجة',
+        maxDose: '0.5 mg per IM dose for anaphylaxis',
+        route: 'IM/IV/SC'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; titrate to clinical effect',
+      hemodialysis: 'Not dialyzed; titrate to hemodynamic/clinical effect'
+    },
+    hepaticAdjustment: 'No specific adjustment needed',
+    contraindications: [
+      'لا يوجد مضاد استطباب مطلق في التأق المهدد للحياة',
+      'حذر نسبي في أمراض القلب التاجية الشديدة أو اضطراب النظم (لا يمنع الاستخدام في التأق)'
+    ],
+    mechanismOfAction: 'Potent agonist at alpha-1, beta-1, and beta-2 adrenergic receptors, causing vasoconstriction, increased cardiac contractility/rate, and bronchodilation',
+    mechanismOfActionAr: 'ناهض قوي لمستقبلات ألفا-1 وبيتا-1 وبيتا-2 الأدرينالية، يسبب تضيقاً وعائياً وزيادة انقباضية ومعدل القلب وتوسع القصبات',
+    halfLife: '2-3 minutes',
+    monitoringParameters: [
+      'ضغط الدم ومعدل ضربات القلب المستمر',
+      'تخطيط القلب (خطر اضطراب النظم)',
+      'الأعراض التنفسية والجلدية للتأق',
+      'سكر الدم (قد يرتفع)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية؛ يُستخدم في حالات الطوارئ بغض النظر عن توقيت الطعام'
+    ],
+    pearls: [
+      'الحقن العضلي في الفخذ الأمامي الوحشي (ليس الألوية) يحقق أسرع امتصاص في التأق',
+      'قلم الإيبينفرين الذاتي (EpiPen) يجب أن يحمله كل مريض لديه تاريخ تأق معروف',
+      'لا يُؤخر إعطاؤه في التأق المشتبه به انتظاراً لتأكيد التشخيص - التأخير يزيد الوفيات بشكل كبير'
+    ]
+  },
+  {
+    id: 'naloxone',
+    genericName: 'Naloxone',
+    genericNameAr: 'نالوكسون',
+    brandNames: ['Narcan', 'نارکان'],
+    drugClass: 'Opioid Receptor Antagonist',
+    drugClassAr: 'مضاد مستقبلات الأفيون',
+    category: 'Rx',
+    route: ['IV', 'IM', 'SC', 'Intranasal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'nursing', 'pharmacy'],
+    keyHighlights: [
+      'نصف عمره أقصر من معظم الأفيونات - قد يحتاج جرعات متكررة أو تسريباً مستمراً لمنع عودة التثبيط التنفسي',
+      'متاح بدون وصفة طبية في كثير من الدول كبخاخ أنفي (Narcan) للاستخدام من غير المختصين',
+      'يُعطى بجرعات صغيرة ومتدرجة في مدمني الأفيونات المزمنين لتجنب متلازمة انسحاب حادة'
+    ],
+    indications: [
+      {
+        indication: 'Opioid overdose / Reversal of opioid-induced respiratory depression',
+        indicationAr: 'جرعة زائدة من الأفيونات / عكس تثبيط التنفس الناتج عن الأفيونات',
+        adultDose: '0.4-2 mg IV/IM/SC every 2-3 minutes as needed (titrate carefully in opioid-dependent patients, start 0.04-0.1 mg)',
+        adultDoseAr: '0.4-2 مج وريدياً/عضلياً/تحت الجلد كل 2-3 دقائق عند الحاجة (يُعدل بحذر في معتادي الأفيونات، البدء بـ 0.04-0.1 مج)',
+        pediatricDose: '0.01 mg/kg IV/IM/SC, may repeat every 2-3 minutes',
+        pediatricDoseAr: '0.01 مج/كجم وريدياً/عضلياً/تحت الجلد، يمكن تكرارها كل 2-3 دقائق',
+        maxDose: '10 mg cumulative dose (consider alternative diagnosis if no response)',
+        route: 'IV/IM/SC/Intranasal'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment needed',
+    contraindications: [
+      'فرط الحساسية للنالوكسون (نادر جداً)',
+      'لا يوجد مضاد استطباب حقيقي في حالة جرعة الأفيون الزائدة المهددة للحياة'
+    ],
+    mechanismOfAction: 'Competitively antagonizes mu, kappa, and delta opioid receptors, rapidly reversing opioid agonist effects',
+    mechanismOfActionAr: 'يضاد تنافسياً مستقبلات مو وكابا ودلتا الأفيونية، فيعكس بسرعة تأثيرات ناهضات الأفيون',
+    halfLife: '30-100 minutes',
+    monitoringParameters: [
+      'معدل التنفس ومستوى الوعي بعد الإعطاء',
+      'علامات عودة التثبيط التنفسي (خاصة مع الأفيونات طويلة المفعول)',
+      'علامات متلازمة انسحاب الأفيون الحادة (في المعتادين)',
+      'الحاجة لجرعات متكررة أو تسريب مستمر'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية'
+    ],
+    pearls: [
+      'نصف عمره القصير يعني أن الأفيونات طويلة المفعول (مثل الميثادون أو الفنتانيل اللاصق) قد تتطلب مراقبة مطولة أو تسريب نالوكسون مستمر',
+      'في معتادي الأفيونات، الجرعة العالية قد تسبب متلازمة انسحاب حادة ومؤلمة - يُفضل البدء بجرعات صغيرة متدرجة',
+      'عدم الاستجابة للنالوكسون يستدعي البحث عن سبب آخر للتثبيط التنفسي أو تعدد مواد'
+    ]
+  },
+  {
+    id: 'flumazenil',
+    genericName: 'Flumazenil',
+    genericNameAr: 'فلومازينيل',
+    brandNames: ['Romazicon', 'روماذيكون'],
+    drugClass: 'Benzodiazepine Receptor Antagonist',
+    drugClassAr: 'مضاد مستقبلات البنزوديازيبين',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy'],
+    keyHighlights: [
+      'يُستخدم بحذر شديد في المدمنين المزمنين على البنزوديازيبينات - خطر إحداث تشنجات بإزالة التثبيط المفاجئة',
+      'نصف عمره أقصر من معظم البنزوديازيبينات - خطر عودة التخدير يتطلب مراقبة مطولة',
+      'غير فعال ولا يُستخدم لعكس تثبيط الأفيونات (النالوكسون هو المناسب لذلك)'
+    ],
+    indications: [
+      {
+        indication: 'Reversal of benzodiazepine-induced sedation (procedural or overdose)',
+        indicationAr: 'عكس التسكين الناتج عن البنزوديازيبينات (إجرائي أو جرعة زائدة)',
+        adultDose: '0.2 mg IV over 15 seconds, may repeat 0.2 mg every minute up to total 1 mg (3 mg in overdose)',
+        adultDoseAr: '0.2 مج وريدياً خلال 15 ثانية، يمكن تكرار 0.2 مج كل دقيقة حتى إجمالي 1 مج (3 مج في الجرعة الزائدة)',
+        maxDose: '3 mg total in any single episode',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution and lower initial doses in hepatic impairment due to reduced clearance',
+    contraindications: [
+      'المرضى الذين يتناولون البنزوديازيبينات لعلاج حالة تهدد الحياة (مثل التحكم بضغط داخل الجمجمة أو حالة صرعية)',
+      'تاريخ الإدمان المزمن على البنزوديازيبينات (خطر تشنجات شديد)',
+      'علامات التسمم بمضادات الاكتئاب الحلقية الثلاثية المصاحب (خطر تشنج واضطراب نظم)'
+    ],
+    mechanismOfAction: 'Competitively antagonizes the benzodiazepine binding site on the GABA-A receptor complex',
+    mechanismOfActionAr: 'يضاد تنافسياً موقع ارتباط البنزوديازيبين على مركب مستقبل GABA-A',
+    halfLife: '40-80 minutes',
+    monitoringParameters: [
+      'مستوى الوعي ومعدل التنفس لمدة ساعتين على الأقل بعد آخر جرعة (خطر عودة التخدير)',
+      'علامات التشنج خاصة في المدمنين المزمنين',
+      'تخطيط القلب إذا اشتُبه بتسمم مشترك بمضادات الاكتئاب الحلقية'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية'
+    ],
+    pearls: [
+      'يُستخدم بحذر بالغ في حالات الجرعة الزائدة المختلطة لأنه قد يكشف تسمماً مصاحباً بمضادات الاكتئاب الحلقية ويحرض تشنجات',
+      'عودة التخدير شائعة بسبب قصر نصف العمر مقارنة بالبنزوديازيبينات طويلة المفعول - يحتاج مراقبة مطولة',
+      'غير مفيد كعلاج روتيني للجرعة الزائدة من البنزوديازيبين بسبب هامش الأمان الواسع لهذه الأدوية أصلاً في معظم الحالات'
+    ]
+  },
+  {
+    id: 'dopamine',
+    genericName: 'Dopamine',
+    genericNameAr: 'دوبامين',
+    brandNames: ['Intropin', 'إنتروبين'],
+    drugClass: 'Catecholamine Vasopressor/Inotrope',
+    drugClassAr: 'كاتيكولامين رافع للضغط ومقوي للقلب',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'nursing'],
+    keyHighlights: [
+      'تأثيره جرعة-معتمد: منخفضة (دوبامينرجي) متوسطة (بيتا-1) عالية (ألفا-1) لكن هذا التصنيف التقليدي محل نقاش علمي حديث',
+      'يُعطى عبر خط مركزي قدر الإمكان لتقليل خطر النخر الجلدي عند التسرب',
+      'تراجع استخدامه لصالح النورإبينفرين كخط أول في معظم أنواع الصدمة بسبب زيادة خطر اضطراب النظم القلبي'
+    ],
+    indications: [
+      {
+        indication: 'Cardiogenic shock / Symptomatic bradycardia (after atropine failure) / Hypotension',
+        indicationAr: 'الصدمة القلبية / بطء القلب العرضي (بعد فشل الأتروبين) / انخفاض الضغط',
+        adultDose: '2-20 mcg/kg/min IV infusion, titrate to hemodynamic response',
+        adultDoseAr: '2-20 ميكروجرام/كجم/دقيقة تسريب وريدي، يُعدل حسب الاستجابة الدموية',
+        maxDose: 'Up to 50 mcg/kg/min in refractory cases under specialist guidance',
+        route: 'IV continuous infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; titrate to hemodynamic response',
+      hemodialysis: 'Not dialyzed; titrate to hemodynamic effect'
+    },
+    hepaticAdjustment: 'No specific adjustment; titrate to hemodynamic response',
+    contraindications: [
+      'الرجفان البطيني',
+      'ورم القواتم (pheochromocytoma)',
+      'عدم تصحيح نقص حجم الدم قبل البدء',
+      'اضطراب نظم تسرعي بطيني غير مصحح'
+    ],
+    mechanismOfAction: 'Dose-dependent agonism: low doses stimulate dopaminergic receptors (renal/mesenteric vasodilation), moderate doses stimulate beta-1 (increased contractility), high doses stimulate alpha-1 (vasoconstriction)',
+    mechanismOfActionAr: 'تنبيه معتمد على الجرعة: الجرعات المنخفضة تنبه مستقبلات الدوبامين (توسع وعائي كلوي ومساريقي)، المتوسطة تنبه بيتا-1 (زيادة الانقباضية)، العالية تنبه ألفا-1 (تضيق وعائي)',
+    halfLife: '2 minutes',
+    monitoringParameters: [
+      'ضغط الدم ومعدل ضربات القلب المستمر',
+      'تخطيط القلب (خطر اضطراب نظم تسرعي)',
+      'إنتاج البول',
+      'موقع الحقن لعلامات التسرب خارج الوعاء'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية (يُعطى وريدياً فقط في بيئة العناية المركزة)'
+    ],
+    pearls: [
+      'مفهوم "الجرعة الكلوية" المنخفضة الذي كان شائعاً لتحسين تروية الكلى لم يعد مدعوماً بالأدلة الحديثة',
+      'يُفضل عليه النورإبينفرين في الصدمة الإنتانية لانخفاض خطر اضطراب النظم القلبي',
+      'التسرب خارج الوعاء يُعالج بالفينتولامين الموضعي مثل النورإبينفرين'
+    ]
+  },
+  {
+    id: 'dobutamine',
+    genericName: 'Dobutamine',
+    genericNameAr: 'دوبوتامين',
+    brandNames: ['Dobutrex', 'دوبوتريكس'],
+    drugClass: 'Synthetic Catecholamine (Inotrope)',
+    drugClassAr: 'كاتيكولامين اصطناعي (مقوي للقلب)',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'nursing'],
+    keyHighlights: [
+      'يزيد النتاج القلبي دون رفع كبير في المقاومة الوعائية المحيطية - مفيد في فشل القلب الحاد مع ضغط مقبول',
+      'قد يسبب انخفاض ضغط بسبب تأثيره الموسع الوعائي بيتا-2 الخفيف - يختلف عن الدوبامين',
+      'يُستخدم أيضاً كعامل إجهاد دوائي في اختبارات الإجهاد القلبي بالصدى (stress echo)'
+    ],
+    indications: [
+      {
+        indication: 'Acute decompensated heart failure with adequate blood pressure / Cardiogenic shock (with adequate preload) / Dobutamine stress echocardiography',
+        indicationAr: 'فشل القلب الحاد غير المعاوض مع ضغط دم مقبول / الصدمة القلبية (مع حمل أولي كافٍ) / تخطيط صدى القلب بالإجهاد الدوائي',
+        adultDose: '2.5-20 mcg/kg/min IV infusion, titrate to hemodynamic response',
+        adultDoseAr: '2.5-20 ميكروجرام/كجم/دقيقة تسريب وريدي، يُعدل حسب الاستجابة الدموية',
+        maxDose: 'Up to 40 mcg/kg/min in refractory cases under specialist guidance',
+        route: 'IV continuous infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; titrate to hemodynamic response',
+      hemodialysis: 'Not dialyzed; titrate to hemodynamic effect'
+    },
+    hepaticAdjustment: 'No specific adjustment; titrate to hemodynamic response',
+    contraindications: [
+      'تضيق تحت الأبهر الضخامي الانسدادي (HOCM)',
+      'عدم تصحيح نقص حجم الدم قبل البدء',
+      'فرط الحساسية للسلفايت (بعض التركيبات)'
+    ],
+    mechanismOfAction: 'Selective beta-1 adrenergic agonist with mild beta-2 activity, increasing myocardial contractility and cardiac output with minimal chronotropic effect at lower doses',
+    mechanismOfActionAr: 'ناهض انتقائي لبيتا-1 الأدرينالي مع نشاط خفيف لبيتا-2، يزيد انقباضية عضلة القلب والنتاج القلبي مع تأثير ضئيل على معدل القلب بالجرعات المنخفضة',
+    halfLife: '2 minutes',
+    monitoringParameters: [
+      'ضغط الدم ومعدل ضربات القلب المستمر',
+      'تخطيط القلب (خطر اضطراب نظم)',
+      'علامات نقص التروية العضلية القلبية (زيادة استهلاك الأكسجين)',
+      'النتاج القلبي والعلامات السريرية لفشل القلب'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية (يُعطى وريدياً فقط في بيئة العناية المركزة)'
+    ],
+    pearls: [
+      'خلافاً للنورإبينفرين والدوبامين، لا يرفع المقاومة الوعائية المحيطية بشكل كبير مما قد يسبب انخفاض ضغط في بعض المرضى',
+      'يُستخدم غالباً بالاشتراك مع رافع ضغطي آخر (نورإبينفرين) في الصدمة القلبية المصحوبة بانخفاض ضغط',
+      'التحمل (tachyphylaxis) قد يتطور مع التسريب المطول لأكثر من 72 ساعة'
+    ]
+  },
+  {
+    id: 'calcium_gluconate',
+    genericName: 'Calcium Gluconate',
+    genericNameAr: 'غلوكونات الكالسيوم',
+    brandNames: ['Calcium Gluconate Injection', 'غلوكونات الكالسيوم'],
+    drugClass: 'Electrolyte Replacement',
+    drugClassAr: 'معوض كهارل',
+    category: 'Rx',
+    route: ['IV', 'PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'nursing', 'pharmacy'],
+    keyHighlights: [
+      'العلاج الأول لتثبيت غشاء عضلة القلب في فرط بوتاسيوم الدم الخطير - يعمل خلال دقائق لكن لا يخفض البوتاسيوم',
+      'الترياق الأساسي للتسمم بحاصرات قنوات الكالسيوم وفرط مغنيسيوم الدم ولسع الحمض الهيدروفلوريك',
+      'لا يُخلط أبداً مع السيفترياكسون أو محاليل البيكربونات في نفس الخط الوريدي - خطر ترسب'
+    ],
+    indications: [
+      {
+        indication: 'Severe hyperkalemia (cardiac membrane stabilization) / Calcium channel blocker toxicity / Hypocalcemia / Hypermagnesemia',
+        indicationAr: 'فرط بوتاسيوم الدم الشديد (تثبيت غشاء القلب) / تسمم حاصرات قنوات الكالسيوم / نقص كالسيوم الدم / فرط مغنيسيوم الدم',
+        adultDose: 'Hyperkalemia: 1-2 g (10-20 mL of 10% solution) IV over 2-5 minutes, may repeat if ECG changes persist',
+        adultDoseAr: 'فرط البوتاسيوم: 1-2 جرام (10-20 مل من محلول 10%) وريدياً خلال 2-5 دقائق، يمكن تكرارها إذا استمرت تغيرات تخطيط القلب',
+        pediatricDose: '60-100 mg/kg IV (max 2-3 g) for severe hyperkalemia or hypocalcemia',
+        pediatricDoseAr: '60-100 مج/كجم وريدياً (حد أقصى 2-3 جم) لفرط بوتاسيوم الدم الشديد أو نقص الكالسيوم',
+        route: 'IV/PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed; monitor calcium levels',
+      crclBelow10: 'No adjustment needed; monitor calcium levels closely (common in renal failure)',
+      hemodialysis: 'No adjustment needed; often required in dialysis-dependent hypocalcemia'
+    },
+    hepaticAdjustment: 'No specific adjustment needed',
+    contraindications: [
+      'فرط كالسيوم الدم',
+      'الرجفان البطيني (ما عدا في سياق علاج فرط البوتاسيوم القاتل)',
+      'تسمم الديجوكسين النشط (حذر شديد - قد يفاقم السمية)'
+    ],
+    mechanismOfAction: 'Raises extracellular calcium concentration, stabilizing cardiac cell membrane threshold potential and antagonizing calcium channel blocker effects',
+    mechanismOfActionAr: 'يرفع تركيز الكالسيوم خارج الخلية، فيثبت جهد عتبة غشاء الخلية القلبية ويضاد تأثيرات حاصرات قنوات الكالسيوم',
+    halfLife: 'N/A (physiological regulation)',
+    monitoringParameters: [
+      'تخطيط القلب المستمر أثناء الإعطاء الوريدي',
+      'الكالسيوم الدموي (الكلي والمتأين)',
+      'موقع الحقن (خطر نخر الأنسجة عند التسرب)',
+      'مستوى الديجوكسين إذا كان المريض يتناوله'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'الشكل الفموي يتفاعل مع التتراسيكلينات والفلوروكينولونات (يقلل امتصاصها) - يفصل بساعتين'
+    ],
+    pearls: [
+      'يُعطى خلال دقائق لتثبيت القلب في فرط البوتاسيوم الخطير بينما تُستخدم علاجات أخرى (إنسولين/جلوكوز، سالبوتامول) لخفض البوتاسيوم فعلياً',
+      'كلوريد الكالسيوم يحتوي كالسيوم أولي أكثر 3 أضعاف من الغلوكونات لكنه أكثر تآكلاً للأوردة المحيطية - يُفضل عبر خط مركزي',
+      'لا يُخلط مع محاليل تحتوي فوسفات أو بيكربونات أو سيفترياكسون لخطر الترسب'
+    ]
+  },
+  {
+    id: 'magnesium_sulfate',
+    genericName: 'Magnesium Sulfate',
+    genericNameAr: 'كبريتات المغنيسيوم',
+    brandNames: ['Magnesium Sulfate Injection', 'كبريتات المغنيسيوم'],
+    drugClass: 'Electrolyte Replacement/Anticonvulsant',
+    drugClassAr: 'معوض كهارل ومضاد اختلاج',
+    category: 'Rx',
+    route: ['IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'nursing', 'pharmacy'],
+    keyHighlights: [
+      'العلاج الأول لمنع وعلاج تشنجات تسمم الحمل (eclampsia) - ليس مضاد اختلاج تقليدي لكن فعال نوعياً هنا',
+      'الترياق النوعي لفرط مغنيسيوم الدم السام هو غلوكونات الكالسيوم الوريدية',
+      'يُراقب المنعكس الرضفي ومعدل التنفس أثناء التسريب لاكتشاف السمية مبكراً'
+    ],
+    indications: [
+      {
+        indication: 'Eclampsia/preeclampsia seizure prophylaxis / Torsades de pointes / Severe asthma exacerbation / Hypomagnesemia',
+        indicationAr: 'الوقاية من تشنجات تسمم الحمل / تسرع القلب البطيني متعدد الأشكال / تفاقم الربو الشديد / نقص المغنيسيوم',
+        adultDose: 'Eclampsia: 4-6 g IV loading over 15-20 min then 1-2 g/hour infusion; Torsades: 1-2 g IV over 5-60 min',
+        adultDoseAr: 'تسمم الحمل: 4-6 جرام وريدياً تحميل خلال 15-20 دقيقة ثم تسريب 1-2 جم/ساعة؛ تورساد: 1-2 جرام وريدياً خلال 5-60 دقيقة',
+        route: 'IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed; monitor levels',
+      crcl10to50: 'Reduce dose by 25-50%; monitor magnesium levels closely',
+      crclBelow10: 'Reduce dose significantly (25% of standard) or avoid; high risk of toxic accumulation',
+      hemodialysis: 'Dialyzable; dose with extreme caution and monitor levels closely'
+    },
+    hepaticAdjustment: 'No specific adjustment needed; renally eliminated',
+    contraindications: [
+      'القصور الكلوي الشديد (حذر بالغ وليس منعاً مطلقاً حسب الاستطباب)',
+      'الحصار القلبي أو بطء القلب الشديد',
+      'وهن العضلات الوبيل (قد يفاقم الضعف العضلي)',
+      'فرط مغنيسيوم الدم الحالي'
+    ],
+    mechanismOfAction: 'Acts as a physiological calcium antagonist at the neuromuscular junction and vascular smooth muscle, causing vasodilation, CNS depression, and reduced acetylcholine release',
+    mechanismOfActionAr: 'يعمل كمضاد فسيولوجي للكالسيوم عند الوصلة العصبية العضلية والعضلات الملساء الوعائية، مسبباً توسعاً وعائياً وتثبيطاً للجهاز العصبي المركزي وتقليل إفراز الأسيتيل كولين',
+    halfLife: '1 hour (longer with renal impairment)',
+    monitoringParameters: [
+      'المنعكس الرضفي (العلامة الأولى لفرط المغنيسيوم عند غيابه)',
+      'معدل التنفس',
+      'وظائف الكلى وإخراج البول',
+      'مستوى المغنيسيوم الدموي',
+      'تخطيط القلب عند استخدامه لاضطراب النظم'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية (يُعطى حقناً في معظم الاستطبابات الحرجة)'
+    ],
+    pearls: [
+      'غياب المنعكس الرضفي هو أول علامة سريرية لفرط مغنيسيوم الدم السام قبل تثبيط التنفس - يُفحص بانتظام أثناء التسريب',
+      'غلوكونات الكالسيوم (1 جم وريدياً) هي الترياق الفوري عند ظهور علامات السمية (غياب المنعكسات، تثبيط تنفسي)',
+      'فعال بشكل خاص في علاج تورساد دي بوينت حتى مع مستوى مغنيسيوم دموي طبيعي'
+    ]
+  },
+  {
+    id: 'sodium_bicarbonate',
+    genericName: 'Sodium Bicarbonate',
+    genericNameAr: 'بيكربونات الصوديوم',
+    brandNames: ['Sodium Bicarbonate Injection', 'بيكربونات الصوديوم'],
+    drugClass: 'Alkalinizing Agent',
+    drugClassAr: 'عامل مقلون',
+    category: 'Rx',
+    route: ['IV', 'PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'nursing'],
+    keyHighlights: [
+      'علاج فعال لعكس السمية القلبية لمضادات الاكتئاب الحلقية الثلاثية (توسع QRS) عبر آلية حصار الصوديوم',
+      'يُستخدم لقلونة البول في بعض حالات الجرعة الزائدة (الساليسيلات) لتسريع الإخراج الكلوي',
+      'لا يُخلط مع الكالسيوم أو الكاتيكولامينات في نفس المحلول - خطر الترسب أو التعطيل'
+    ],
+    indications: [
+      {
+        indication: 'Severe metabolic acidosis / TCA cardiotoxicity / Salicylate toxicity (urinary alkalinization) / Hyperkalemia (adjunct)',
+        indicationAr: 'الحماض الاستقلابي الشديد / السمية القلبية لمضادات الاكتئاب الحلقية / تسمم الساليسيلات (قلونة البول) / فرط بوتاسيوم الدم (مساعد)',
+        adultDose: 'TCA toxicity: 1-2 mEq/kg IV bolus, repeat to maintain serum pH 7.45-7.55; Severe acidosis: per calculated base deficit',
+        adultDoseAr: 'سمية مضادات الاكتئاب الحلقية: 1-2 ملي مكافئ/كجم جرعة بلعية وريدية، تُكرر للحفاظ على pH الدم 7.45-7.55؛ الحماض الشديد: حسب عجز القاعدة المحسوب',
+        route: 'IV/PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Use with caution; monitor sodium and fluid status',
+      crclBelow10: 'Use with caution; risk of sodium and fluid overload; monitor closely',
+      hemodialysis: 'Dose per acid-base status; sodium bicarbonate may be part of dialysate'
+    },
+    hepaticAdjustment: 'No specific adjustment needed',
+    contraindications: [
+      'القلاء الاستقلابي أو التنفسي',
+      'نقص كالسيوم الدم (قد يفاقم أعراض التكزز)',
+      'فرط صوديوم الدم الشديد',
+      'فشل القلب غير المعاوض (حذر لحمل الصوديوم العالي)'
+    ],
+    mechanismOfAction: 'Dissociates to provide bicarbonate ion, buffering excess hydrogen ions and raising blood pH; sodium load also narrows QRS in sodium channel blocker toxicity',
+    mechanismOfActionAr: 'يتفكك ليوفر أيون البيكربونات الذي يعادل زيادة أيونات الهيدروجين ويرفع pH الدم؛ حمل الصوديوم أيضاً يضيق QRS في تسمم حاصرات قنوات الصوديوم',
+    halfLife: 'N/A (rapidly metabolized/excreted)',
+    monitoringParameters: [
+      'غازات الدم الشريانية وpH',
+      'الصوديوم والبوتاسيوم في الدم',
+      'تخطيط القلب (عرض QRS في سمية TCA)',
+      'حالة السوائل وعلامات الحمل الزائد'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يُقلل امتصاص بعض الأدوية الحمضية عبر رفع pH المعدة عند الاستخدام الفموي'
+    ],
+    pearls: [
+      'في سمية مضادات الاكتئاب الحلقية الثلاثية، الهدف هو تضييق مركب QRS وليس تصحيح الحماض بالضرورة - يُعطى حتى مع pH طبيعي أحياناً',
+      'لا يُستخدم روتينياً في السكتة القلبية العامة إلا في حالات محددة (فرط بوتاسيوم، حماض شديد موثق، تسمم بمضادات الاكتئاب الحلقية)',
+      'الإعطاء السريع أو الزائد قد يسبب قلاءً استقلابياً وانزياحاً يسارياً لمنحنى تفكك الأكسجين'
+    ]
+  },
+  {
+    id: 'gabapentin',
+    genericName: 'Gabapentin',
+    genericNameAr: 'جابابنتين',
+    brandNames: ['Neurontin', 'نيورونتين'],
+    drugClass: 'Gabapentinoid (Anticonvulsant/Neuropathic Pain Agent)',
+    drugClassAr: 'جابابنتينويد (مضاد اختلاج وعلاج الألم العصبي)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'internal_medicine', 'nursing'],
+    keyHighlights: [
+      'يحتاج تعديل جرعة كبير جداً في القصور الكلوي - يُفرز كلياً دون تغيير',
+      'امتصاصه غير خطي (يقل نسبياً مع زيادة الجرعة الواحدة) - يُقسم على جرعات متعددة لتحسين التوافر الحيوي',
+      'خطر تثبيط تنفسي متزايد عند الدمج مع الأفيونات أو في أمراض الرئة الانسدادية'
+    ],
+    indications: [
+      {
+        indication: 'Postherpetic neuralgia / Diabetic peripheral neuropathy / Adjunctive therapy for partial seizures / Restless legs syndrome',
+        indicationAr: 'الألم العصبي التالي للهربس النطاقي / اعتلال الأعصاب السكري المحيطي / علاج مساعد للنوبات الجزئية / متلازمة تململ الساقين',
+        adultDose: 'Start 300 mg PO once daily, titrate to 300-600 mg three times daily (max 3600 mg/day divided)',
+        adultDoseAr: 'البدء بـ 300 مج فموياً مرة يومياً، يُعدل تدريجياً إلى 300-600 مج ثلاث مرات يومياً (حد أقصى 3600 مج/يوم مقسمة)',
+        pediatricDose: '10-15 mg/kg/day divided three times daily for seizures (ages 3+)',
+        pediatricDoseAr: '10-15 مج/كجم/يوم مقسمة ثلاث مرات يومياً للنوبات (من عمر 3 سنوات)',
+        maxDose: '3600 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed (CrCl > 60)',
+      crcl10to50: 'Reduce total daily dose significantly (e.g., 200-700 mg/day divided based on exact CrCl)',
+      crclBelow10: 'Maximum 300 mg/day or every other day dosing',
+      hemodialysis: '125-350 mg after each dialysis session (supplemental dose required)'
+    },
+    hepaticAdjustment: 'No specific adjustment needed; not hepatically metabolized',
+    contraindications: [
+      'فرط الحساسية للجابابنتين'
+    ],
+    mechanismOfAction: 'Binds to the alpha-2-delta subunit of voltage-gated calcium channels, reducing calcium influx and neurotransmitter release',
+    mechanismOfActionAr: 'يرتبط بالوحدة الفرعية ألفا-2-دلتا لقنوات الكالسيوم المعتمدة على الجهد، فيقلل دخول الكالسيوم وإفراز النواقل العصبية',
+    halfLife: '5-7 hours',
+    monitoringParameters: [
+      'مستوى الألم والوظيفة',
+      'الدوخة والنعاس خاصة عند البدء',
+      'وظائف الكلى لتعديل الجرعة',
+      'معدل التنفس عند الدمج مع الأفيونات أو المهدئات'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'مضادات الحموضة المحتوية على الألومنيوم أو المغنيسيوم تقلل الامتصاص - يفصل بساعتين'
+    ],
+    pearls: [
+      'امتصاصه غير الخطي يعني أن تقسيم الجرعة اليومية على 3 مرات أفضل من جرعة واحدة كبيرة لتحقيق توافر حيوي أعلى',
+      'أصبح يُصنف كمادة خاضعة للرقابة في بعض الولايات/الدول بسبب تزايد سوء الاستخدام مع الأفيونات',
+      'الإيقاف المفاجئ بعد استخدام مطول قد يسبب أعراض انسحاب تشمل القلق والأرق والتشنجات النادرة'
+    ]
+  },
+  {
+    id: 'quetiapine',
+    genericName: 'Quetiapine',
+    genericNameAr: 'كويتيابين',
+    brandNames: ['Seroquel', 'سيروكويل'],
+    drugClass: 'Atypical (Second-Generation) Antipsychotic',
+    drugClassAr: 'مضاد ذهان غير تقليدي (الجيل الثاني)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'تحذير صندوق أسود لزيادة الوفيات في المرضى المسنين المصابين بالخرف وزيادة الأفكار الانتحارية في الشباب',
+      'تأثير مهدئ قوي بالجرعات المنخفضة (يُستخدم أحياناً خارج الاستطباب للأرق) وتأثير مضاد ذهان بالجرعات الأعلى',
+      'خطر متلازمة الأيض (زيادة وزن، سكري، شحوم) من أعلى مضادات الذهان غير التقليدية'
+    ],
+    indications: [
+      {
+        indication: 'Schizophrenia / Bipolar disorder (mania and depression) / Major depressive disorder (adjunct)',
+        indicationAr: 'الفصام / الاضطراب ثنائي القطب (الهوس والاكتئاب) / الاكتئاب الجسيم (مساعد)',
+        adultDose: 'Immediate-release: start 25 mg twice daily, titrate to 150-800 mg/day divided; Extended-release: 50-300 mg once daily',
+        adultDoseAr: 'سريع الإطلاق: البدء بـ 25 مج مرتين يومياً، يُعدل إلى 150-800 مج/يوم مقسمة؛ ممتد الإطلاق: 50-300 مج مرة يومياً',
+        maxDose: '800 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No specific adjustment typically needed; use with caution',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Start at 25 mg/day and titrate slowly (by 25-50 mg/day increments) in hepatic impairment',
+    contraindications: [
+      'فرط الحساسية للكويتيابين'
+    ],
+    blackBoxWarning: 'Increased mortality in elderly patients with dementia-related psychosis; increased risk of suicidal thinking and behavior in children, adolescents, and young adults',
+    blackBoxWarningAr: 'زيادة معدل الوفيات في المرضى المسنين المصابين بذهان مرتبط بالخرف؛ زيادة خطر الأفكار والسلوكيات الانتحارية لدى الأطفال والمراهقين والشباب',
+    mechanismOfAction: 'Antagonizes dopamine D2 and serotonin 5-HT2A receptors; also has significant antihistaminic and alpha-1 adrenergic antagonist activity (sedation, hypotension)',
+    mechanismOfActionAr: 'يضاد مستقبلات الدوبامين D2 والسيروتونين 5-HT2A؛ وله نشاط مضاد للهيستامين وألفا-1 الأدريناليني ملحوظ (تسكين وانخفاض ضغط)',
+    halfLife: '6-7 hours',
+    monitoringParameters: [
+      'الوزن ومحيط الخصر دورياً',
+      'سكر الدم والشحوم الصائمة (خط الأساس وكل 3-6 أشهر)',
+      'ضغط الدم (خطر انخفاض ضغط انتصابي خاصة عند البدء)',
+      'علامات الأعراض خارج الهرمية (أقل من مضادات الذهان التقليدية)',
+      'علامات المتلازمة الخبيثة للذهان'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'عصير الجريب فروت قد يرفع مستواه الدموي عبر تثبيط CYP3A4 - يُفضل تجنبه',
+      'يُتجنب الكحول لزيادة التأثير المهدئ'
+    ],
+    pearls: [
+      'يُستخدم على نطاق واسع خارج الاستطباب المعتمد كمساعد منوم بجرعات منخفضة (25-100 مج) رغم عدم الموافقة الرسمية لهذا الغرض',
+      'من أقل مضادات الذهان تسبباً بالأعراض خارج الهرمية لكنه من أكثرها تسبباً بزيادة الوزن والتأثيرات الأيضية',
+      'لا يُوقف فجأة بعد استخدام مطول - خطر أعراض ارتدادية (أرق، غثيان، دوخة)'
+    ]
+  },
+  {
+    id: 'escitalopram',
+    genericName: 'Escitalopram',
+    genericNameAr: 'إسيتالوبرام',
+    brandNames: ['Lexapro', 'ليكسابرو'],
+    drugClass: 'Selective Serotonin Reuptake Inhibitor (SSRI)',
+    drugClassAr: 'مثبط انتقائي لإعادة امتصاص السيروتونين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'تحذير صندوق أسود لزيادة الأفكار والسلوك الانتحاري عند الأطفال والمراهقين والشباب حتى 24 عاماً',
+      'يطيل QT بطريقة جرعة-معتمدة - الجرعة القصوى 20 مج/يوم في المرضى فوق 65 عاماً',
+      'من أكثر SSRIs انتقائية مع تفاعلات دوائية أقل عبر CYP450 مقارنة بالفلوكسيتين أو الباروكسيتين'
+    ],
+    indications: [
+      {
+        indication: 'Major depressive disorder / Generalized anxiety disorder',
+        indicationAr: 'الاكتئاب الجسيم / اضطراب القلق المعمم',
+        adultDose: 'Start 10 mg PO once daily, may increase to 20 mg once daily after at least 1 week',
+        adultDoseAr: 'البدء بـ 10 مج فموياً مرة يومياً، يمكن زيادتها إلى 20 مج مرة يومياً بعد أسبوع على الأقل',
+        pediatricDose: '10 mg PO once daily for ages 12-17 (MDD), may increase to 20 mg after 3 weeks',
+        pediatricDoseAr: '10 مج فموياً مرة يومياً للأعمار 12-17 (الاكتئاب الجسيم)، يمكن زيادتها إلى 20 مج بعد 3 أسابيع',
+        maxDose: '20 mg/day (10 mg/day in patients over 65 or with hepatic impairment)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'Use with caution; limited data in severe renal impairment',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Maximum 10 mg/day in hepatic impairment',
+    contraindications: [
+      'الاستخدام المتزامن أو خلال 14 يوماً من مثبطات MAO',
+      'الاستخدام المتزامن مع بيموزايد',
+      'متلازمة QT الطويل الخلقية (حذر، ليس مانعاً مطلقاً دائماً لكن يُراعى)'
+    ],
+    blackBoxWarning: 'Increased risk of suicidal thinking and behavior in children, adolescents, and young adults up to age 24, particularly during initial treatment and dose changes',
+    blackBoxWarningAr: 'زيادة خطر الأفكار والسلوكيات الانتحارية لدى الأطفال والمراهقين والشباب حتى سن 24، خاصة في بداية العلاج وتغيير الجرعة',
+    mechanismOfAction: 'Selectively and potently inhibits presynaptic serotonin reuptake, increasing serotonergic neurotransmission',
+    mechanismOfActionAr: 'يثبط بشكل انتقائي وقوي إعادة امتصاص السيروتونين قبل المشبكي فيزيد النقل العصبي السيروتونيني',
+    halfLife: '27-32 hours',
+    monitoringParameters: [
+      'المزاج والأفكار الانتحارية (خاصة في أول شهرين)',
+      'تخطيط القلب في المرضى عاليي الخطورة لإطالة QT',
+      'الصوديوم في الدم (خطر نقص صوديوم الدم خاصة في المسنين)',
+      'علامات متلازمة السيروتونين'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُؤخذ مع أو بدون طعام',
+      'يُتجنب الكحول لزيادة التأثير المركزي'
+    ],
+    pearls: [
+      'المستقلب النشط الوحيد (s-enantiomer) من السيتالوبرام - يحقق نفس الفعالية بنصف الجرعة تقريباً مع آثار جانبية أقل',
+      'الجرعة القصوى محدودة بـ 20 مج/يوم في كبار السن بسبب خطر إطالة QT الجرعة-معتمد',
+      'يُعتبر من أفضل SSRIs تحملاً مع أقل تفاعلات دوائية عبر نظام السيتوكروم P450'
+    ]
   }
 ];
 
