@@ -6728,6 +6728,703 @@ export const INITIAL_DRUGS: Drug[] = [
       'إعطاء حمض الفوليك وحده دون تقييم B12 في فقر الدم الضخم الأرومات قد يصحح فقر الدم ظاهرياً بينما يستمر التلف العصبي الناتج عن نقص B12 في التفاقم',
       'جزء أساسي وروتيني من بروتوكول العلاج بالميثوتريكسات لتقليل السمية الهضمية والكبدية دون التأثير على الفعالية المضادة للالتهاب'
     ]
+  },
+  {
+    id: 'trimethoprim_sulfamethoxazole',
+    genericName: 'Trimethoprim-Sulfamethoxazole (TMP-SMX)',
+    genericNameAr: 'تريميثوبريم-سلفاميثوكسازول',
+    brandNames: ['Bactrim', 'Septrin', 'باكتريم'],
+    drugClass: 'Sulfonamide/Folate Antagonist Combination',
+    drugClassAr: 'مركب سلفوناميد ومضاد حمض الفوليك',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'يرفع مستوى الوارفارين والفينيتوين والسلفونيل يوريا بشكل كبير - من أخطر التفاعلات الدوائية الشائعة',
+      'جرعات عالية تُستخدم للوقاية والعلاج من الالتهاب الرئوي بالمتكيسة الرئوية (PJP) في مرضى نقص المناعة',
+      'يُمنع في الثلث الأخير من الحمل وحديثي الولادة - خطر اليرقان النووي (kernicterus)'
+    ],
+    indications: [
+      {
+        indication: 'Urinary tract infection / Pneumocystis jirovecii pneumonia (treatment and prophylaxis) / MRSA skin infections',
+        indicationAr: 'عدوى المسالك البولية / الالتهاب الرئوي بالمتكيسة الرئوية (علاج ووقاية) / عدوى جلدية بالمكورات العنقودية المقاومة',
+        adultDose: 'UTI: 1 DS tablet (160/800 mg) PO twice daily; PJP treatment: 15-20 mg/kg/day (TMP component) IV/PO divided every 6-8 hours',
+        adultDoseAr: 'عدوى المسالك البولية: قرص واحد مضاعف التركيز (160/800 مج) فموياً مرتين يومياً؛ علاج PJP: 15-20 مج/كجم/يوم (مكون التريميثوبريم) وريدياً/فموياً مقسمة كل 6-8 ساعات',
+        pediatricDose: '8-12 mg/kg/day (TMP component) divided every 12 hours (ages 2 months+)',
+        pediatricDoseAr: '8-12 مج/كجم/يوم (مكون التريميثوبريم) مقسمة كل 12 ساعة (من عمر شهرين فأكبر)',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Reduce dose by 50%',
+      crclBelow10: 'Avoid use if possible; if necessary, reduce dose by 50% and use with extreme caution',
+      hemodialysis: 'Dialyzable; administer supplemental dose after dialysis session'
+    },
+    hepaticAdjustment: 'Avoid in severe hepatic impairment or liver damage',
+    contraindications: [
+      'الحمل في الثلث الأخير',
+      'حديثو الولادة دون عمر شهرين',
+      'نقص إنزيم G6PD الشديد (خطر انحلال دم)',
+      'فقر الدم الضخم الأرومات الناتج عن نقص الفولات',
+      'فرط الحساسية للسلفوناميدات',
+      'القصور الكلوي أو الكبدي الشديد'
+    ],
+    blackBoxWarning: 'Sulfonamides have been associated with severe reactions including Stevens-Johnson syndrome, toxic epidermal necrolysis, fulminant hepatic necrosis, and blood dyscrasias',
+    blackBoxWarningAr: 'ارتبطت السلفوناميدات بتفاعلات خطيرة شملت متلازمة ستيفنز جونسون وانحلال البشرة السمي ونخر الكبد الخاطف واضطرابات دموية',
+    mechanismOfAction: 'Sequentially blocks two steps in bacterial folate synthesis: sulfamethoxazole inhibits dihydropteroate synthase, trimethoprim inhibits dihydrofolate reductase',
+    mechanismOfActionAr: 'يحجب بشكل متتالي خطوتين في تخليق الفولات البكتيري: السلفاميثوكسازول يثبط ديهيدروبتيروات سينثيز، والتريميثوبريم يثبط ديهيدروفولات ريدكتيز',
+    halfLife: '8-10 hours (trimethoprim), 10 hours (sulfamethoxazole)',
+    monitoringParameters: [
+      'وظائف الكلى والبوتاسيوم في الدم',
+      'تعداد الدم الكامل عند الاستخدام المطول',
+      'علامات الطفح الجلدي أو فرط الحساسية',
+      'INR في المرضى على الوارفارين',
+      'سكر الدم في مرضى السكري على السلفونيل يوريا'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُنصح بزيادة شرب السوائل لتقليل خطر تبلور السلفوناميد في الكلى',
+      'الكحول قد يزيد الآثار الجانبية الهضمية'
+    ],
+    pearls: [
+      'التفاعل مع الوارفارين من أخطر وأكثر التفاعلات الدوائية شيوعاً في الممارسة السريرية - يتطلب مراقبة INR عن كثب عند الدمج',
+      'من أكثر الأسباب شيوعاً للطفح الجلدي الدوائي والتفاعلات الجلدية الخطيرة بين المضادات الحيوية',
+      'يسبب أحياناً فرط بوتاسيوم الدم خاصة بالجرعات العالية أو في القصور الكلوي - يُراقب البوتاسيوم بانتظام'
+    ]
+  },
+  {
+    id: 'nitrofurantoin',
+    genericName: 'Nitrofurantoin',
+    genericNameAr: 'نيتروفورانتوين',
+    brandNames: ['Macrobid', 'Macrodantin', 'ماكروبيد'],
+    drugClass: 'Nitrofuran Antibiotic',
+    drugClassAr: 'مضاد حيوي من فئة النيتروفوران',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'غير فعال إلا في عدوى المسالك البولية السفلية - يتركز في البول ولا يحقق مستوى علاجي في الدم أو الأنسجة',
+      'يُمنع عند CrCl أقل من 30-60 مل/دقيقة (حسب المرجع) لعدم كفاية تركيزه في البول وزيادة السمية الجهازية',
+      'آمن وفعال في الحمل باستثناء قرب الولادة (38-42 أسبوع) - خطر فقر دم انحلالي عند حديثي الولادة بنقص G6PD'
+    ],
+    indications: [
+      {
+        indication: 'Uncomplicated lower urinary tract infection (cystitis) / UTI prophylaxis',
+        indicationAr: 'عدوى المسالك البولية السفلية غير المعقدة (التهاب المثانة) / الوقاية من عدوى المسالك البولية المتكررة',
+        adultDose: 'Macrobid (SR): 100 mg PO twice daily for 5-7 days; Prophylaxis: 50-100 mg PO once daily at bedtime',
+        adultDoseAr: 'ماكروبيد (ممتد المفعول): 100 مج فموياً مرتين يومياً لمدة 5-7 أيام؛ الوقاية: 50-100 مج فموياً مرة يومياً عند النوم',
+        pediatricDose: '5-7 mg/kg/day divided every 6 hours (ages 1 month+)',
+        pediatricDoseAr: '5-7 مج/كجم/يوم مقسمة كل 6 ساعات (من عمر شهر فأكبر)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Avoid use if CrCl less than 30-60 mL/min (per reference); insufficient urinary concentration and increased systemic toxicity risk',
+      crclBelow10: 'Contraindicated; ineffective and increased toxicity risk',
+      hemodialysis: 'Contraindicated; not effective and accumulates toxic metabolites'
+    },
+    hepaticAdjustment: 'Avoid in significant hepatic impairment; discontinue if signs of hepatotoxicity develop',
+    contraindications: [
+      'القصور الكلوي (CrCl أقل من 30-60 مل/دقيقة حسب المرجع)',
+      'حديثو الولادة دون عمر شهر',
+      'الحمل عند الولادة (38-42 أسبوعاً) بسبب خطر فقر دم انحلالي عند الوليد',
+      'نقص إنزيم G6PD',
+      'انقطاع البول'
+    ],
+    blackBoxWarning: 'Pulmonary reactions (acute, subacute, and chronic), hepatotoxicity, and peripheral neuropathy have occurred with prolonged therapy; use with caution especially in elderly patients',
+    blackBoxWarningAr: 'تفاعلات رئوية (حادة وتحت حادة ومزمنة) وسمية كبدية واعتلال عصبي محيطي حدثت مع العلاج المطول؛ يُستخدم بحذر خاصة في المرضى المسنين',
+    mechanismOfAction: 'Reduced by bacterial flavoproteins to reactive intermediates that damage bacterial DNA, ribosomal proteins, and other macromolecules',
+    mechanismOfActionAr: 'يُختزل بواسطة الفلافوبروتينات البكتيرية إلى وسائط تفاعلية تتلف الحمض النووي البكتيري والبروتينات الريبوسومية وجزيئات كبيرة أخرى',
+    halfLife: '20-60 minutes',
+    monitoringParameters: [
+      'وظائف الكلى قبل البدء وأثناء العلاج المطول',
+      'وظائف الرئة والأعراض التنفسية خاصة مع الاستخدام الوقائي المزمن',
+      'وظائف الكبد عند الاستخدام المطول',
+      'علامات الاعتلال العصبي المحيطي'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُفضل تناوله مع الطعام لتحسين الامتصاص وتقليل الاضطراب الهضمي',
+      'يلون البول بلون بني داكن (طبيعي وغير ضار)'
+    ],
+    pearls: [
+      'الاستخدام الوقائي المزمن (لأشهر أو سنوات) يحمل خطراً تراكمياً للتليف الرئوي والاعتلال العصبي المحيطي - يحتاج إعادة تقييم دورية',
+      'لا يُستخدم أبداً لعلاج التهاب الحويضة والكلية أو أي عدوى مسالك بولية علوية لعدم وصوله لمستوى علاجي في أنسجة الكلى',
+      'خيار ممتاز وآمن نسبياً لعلاج التهاب المثانة البسيط أثناء الحمل باستثناء الفترة القريبة من الولادة'
+    ]
+  },
+  {
+    id: 'ketamine',
+    genericName: 'Ketamine',
+    genericNameAr: 'كيتامين',
+    brandNames: ['Ketalar', 'كيتالار'],
+    drugClass: 'Dissociative Anesthetic/NMDA Receptor Antagonist',
+    drugClassAr: 'مخدر تفارقي / مضاد مستقبلات NMDA',
+    category: 'Controlled',
+    route: ['IV', 'IM', 'Intranasal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'من المخدرات القليلة التي تحافظ على استقرار التنفس والدورة الدموية - مفيد جداً في المرضى غير المستقرين ديموغرافياً',
+      'يُستخدم بجرعات تحت التخديرية كمسكن قوي بديل للأفيونات ولعلاج الاكتئاب المقاوم (إسكيتامين)',
+      'تفاعلات الاستيقاظ (هلوسات، كوابيس) شائعة - البنزوديازيبينات المرافقة تقللها'
+    ],
+    indications: [
+      {
+        indication: 'Procedural sedation / Induction of anesthesia / Analgesia (sub-dissociative dose) / Status epilepticus (refractory, adjunct)',
+        indicationAr: 'التخدير الإجرائي / بدء التخدير العام / التسكين (جرعة تحت التفارقية) / الحالة الصرعية المقاومة (مساعد)',
+        adultDose: 'Procedural sedation: 1-2 mg/kg IV or 4-5 mg/kg IM; Analgesia: 0.1-0.3 mg/kg IV',
+        adultDoseAr: 'التخدير الإجرائي: 1-2 مج/كجم وريدياً أو 4-5 مج/كجم عضلياً؛ التسكين: 0.1-0.3 مج/كجم وريدياً',
+        pediatricDose: '1-2 mg/kg IV or 4-5 mg/kg IM for procedural sedation',
+        pediatricDoseAr: '1-2 مج/كجم وريدياً أو 4-5 مج/كجم عضلياً للتخدير الإجرائي',
+        route: 'IV/IM/Intranasal'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; titrate to effect',
+      hemodialysis: 'Not significantly dialyzed; titrate to clinical effect'
+    },
+    hepaticAdjustment: 'Use with caution; reduce dose in significant hepatic impairment',
+    contraindications: [
+      'ارتفاع ضغط الدم الشديد غير المتحكم به',
+      'تمدد الأوعية الدموية أو تاريخ سكتة دماغية حديثة (حذر نسبي)',
+      'الذهان النشط غير المستقر (حذر)',
+      'زيادة الضغط داخل الجمجمة الشديدة (حذر، أقل إطلاقاً مما كان يُعتقد سابقاً)'
+    ],
+    mechanismOfAction: 'Non-competitively antagonizes NMDA glutamate receptors, producing dissociative anesthesia, analgesia, and amnesia while preserving airway reflexes and hemodynamic stability',
+    mechanismOfActionAr: 'يضاد بشكل غير تنافسي مستقبلات NMDA للجلوتامات، منتجاً تخديراً تفارقياً وتسكيناً وفقدان ذاكرة مع الحفاظ على منعكسات مجرى الهواء واستقرار الدورة الدموية',
+    halfLife: '2.5-3 hours',
+    monitoringParameters: [
+      'ضغط الدم ومعدل ضربات القلب (قد يزيدان)',
+      'معدل التنفس وتشبع الأكسجين',
+      'علامات الهلوسة أو تفاعلات الاستيقاظ غير السارة',
+      'إفراز اللعاب الزائد (قد يحتاج مضاد كولين مساعد)'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية (يُعطى حقناً في بيئة طبية مراقبة)'
+    ],
+    pearls: [
+      'أصبح خياراً مفضلاً متزايداً في طوارئ الصدمة وإصابات متعددة بسبب الحفاظ على استقرار الدورة الدموية خلافاً لمعظم المخدرات الأخرى',
+      'الجرعات المنخفضة جداً تحت التفارقية أصبحت أداة قيمة لتسكين الألم الحاد وتقليل استخدام الأفيونات',
+      'إسكيتامين (الشكل النقي أحادي الإينانتيومر) معتمد الآن لعلاج الاكتئاب المقاوم للعلاج تحت إشراف طبي صارم'
+    ]
+  },
+  {
+    id: 'n_acetylcysteine',
+    genericName: 'N-Acetylcysteine (NAC)',
+    genericNameAr: 'ن-أسيتيل سيستئين',
+    brandNames: ['Acetadote', 'Mucomyst', 'أسيتادوت'],
+    drugClass: 'Antidote (Glutathione Precursor) / Mucolytic',
+    drugClassAr: 'ترياق (سلائف الجلوتاثيون) / مذيب للبلغم',
+    category: 'Rx',
+    route: ['PO', 'IV', 'Inhalation'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'الترياق النوعي الوحيد الفعال للتسمم بالأسيتامينوفين - فعاليته القصوى عند الإعطاء خلال 8-10 ساعات من التناول',
+      'مخطط Rumack-Matthew يحدد الحاجة للعلاج بناءً على مستوى الأسيتامينوفين الدموي والوقت منذ التناول',
+      'التسريب الوريدي السريع للجرعة الأولى قد يسبب تفاعلاً تأقياني كاذب (احمرار، طفح، تشنج قصبي) - يتطلب تسريباً أبطأ عند حدوثه'
+    ],
+    indications: [
+      {
+        indication: 'Acetaminophen (paracetamol) overdose / Prevention of contrast-induced nephropathy (controversial) / Mucolytic (inhaled)',
+        indicationAr: 'جرعة زائدة من الأسيتامينوفين (باراسيتامول) / الوقاية من اعتلال الكلى الناتج عن الصبغة (مثير للجدل) / مذيب للبلغم (استنشاق)',
+        adultDose: 'IV protocol: 150 mg/kg over 1 hour, then 50 mg/kg over 4 hours, then 100 mg/kg over 16 hours; Oral: 140 mg/kg loading then 70 mg/kg every 4 hours x17 doses',
+        adultDoseAr: 'بروتوكول وريدي: 150 مج/كجم خلال ساعة، ثم 50 مج/كجم خلال 4 ساعات، ثم 100 مج/كجم خلال 16 ساعة؛ فموي: 140 مج/كجم جرعة تحميل ثم 70 مج/كجم كل 4 ساعات لـ17 جرعة',
+        pediatricDose: 'Same weight-based protocol as adults, adjusted for pediatric weight',
+        pediatricDoseAr: 'نفس البروتوكول حسب الوزن كالبالغين، معدل حسب وزن الطفل',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly affected; continue standard protocol'
+    },
+    hepaticAdjustment: 'No adjustment needed; used specifically to treat hepatotoxicity',
+    contraindications: [
+      'لا يوجد مضاد استطباب حقيقي في علاج التسمم المهدد للحياة بالأسيتامينوفين',
+      'حذر نسبي في تاريخ الربو الشديد (الشكل الاستنشاقي قد يسبب تشنجاً قصبياً)'
+    ],
+    mechanismOfAction: 'Replenishes hepatic glutathione stores, which conjugate and neutralize the toxic acetaminophen metabolite NAPQI, preventing hepatocellular damage',
+    mechanismOfActionAr: 'يجدد مخزون الجلوتاثيون الكبدي الذي يقترن بالمستقلب السام NAPQI الناتج عن الأسيتامينوفين ويحيّده، فيمنع تلف الخلايا الكبدية',
+    halfLife: '5.6 hours',
+    monitoringParameters: [
+      'مستوى الأسيتامينوفين الدموي (على مخطط Rumack-Matthew)',
+      'وظائف الكبد (AST, ALT, INR) كل 12-24 ساعة',
+      'علامات التفاعل التأقياني الكاذب أثناء التسريب الوريدي',
+      'وظائف الكلى'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'الشكل الفموي له رائحة وطعم كبريتي كريه قوي - يُفضل تخفيفه بمشروب غازي أو عصير بارد لتحسين القبول'
+    ],
+    pearls: [
+      'الفعالية الوقائية للكبد شبه كاملة عند البدء خلال 8 ساعات من التناول، وتتناقص بشكل كبير بعد ذلك لكن يبقى العلاج مفيداً حتى بعد 24 ساعة',
+      'التفاعل التأقياني الكاذب أثناء جرعة التحميل الوريدية السريعة شائع نسبياً ويُدار بإبطاء معدل التسريب وليس بالضرورة إيقاف العلاج',
+      'يُبدأ العلاج فوراً في حالات الاشتباه القوي بجرعة زائدة خطيرة دون انتظار نتيجة المستوى الدموي إذا كان التأخير سيتجاوز 8 ساعات من التناول'
+    ]
+  },
+  {
+    id: 'activated_charcoal',
+    genericName: 'Activated Charcoal',
+    genericNameAr: 'الفحم المنشط',
+    brandNames: ['Actidose', 'أكتيدوز'],
+    drugClass: 'Adsorbent (Gastrointestinal Decontamination)',
+    drugClassAr: 'ماص (إزالة تلوث الجهاز الهضمي)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'الفعالية القصوى عند الإعطاء خلال ساعة واحدة من تناول السم - الفائدة تتناقص بشكل كبير بعد ذلك',
+      'غير فعال ضد المعادن الثقيلة والكحوليات والحديد والليثيوم والأحماض/القلويات القوية',
+      'يُمنع في حالة تدني مستوى الوعي دون حماية مجرى الهواء - خطر الاستنشاق الرئوي القاتل'
+    ],
+    indications: [
+      {
+        indication: 'Acute oral poisoning/overdose (gastrointestinal decontamination within 1 hour)',
+        indicationAr: 'التسمم الفموي الحاد/الجرعة الزائدة (إزالة تلوث الجهاز الهضمي خلال ساعة)',
+        adultDose: '25-100 g PO/NG single dose (1 g/kg); multi-dose protocol (25-50 g every 2-4 hours) for specific toxins',
+        adultDoseAr: '25-100 جرام فموياً/أنبوب أنفي معدي جرعة واحدة (1 جم/كجم)؛ بروتوكول متعدد الجرعات (25-50 جم كل 2-4 ساعات) لسموم محددة',
+        pediatricDose: '1 g/kg PO/NG (max 50 g) single dose',
+        pediatricDoseAr: '1 جم/كجم فموياً/أنبوب أنفي معدي (حد أقصى 50 جم) جرعة واحدة',
+        route: 'PO/NG'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not applicable; not systemically absorbed'
+    },
+    hepaticAdjustment: 'No adjustment needed; not systemically absorbed',
+    contraindications: [
+      'انخفاض مستوى الوعي دون حماية مجرى الهواء (خطر استنشاق)',
+      'انسداد معوي أو ثقب الجهاز الهضمي',
+      'ابتلاع مواد أكالة (أحماض/قلويات قوية)',
+      'ابتلاع هيدروكربونات مع خطر استنشاق عالٍ',
+      'نزيف هضمي نشط أو جراحة هضمية حديثة'
+    ],
+    mechanismOfAction: 'Adsorbs toxins and drugs onto its large surface area within the gastrointestinal tract, preventing systemic absorption',
+    mechanismOfActionAr: 'يمتص السموم والأدوية على سطحه الكبير المساحة داخل الجهاز الهضمي، فيمنع الامتصاص الجهازي',
+    halfLife: 'N/A (not systemically absorbed)',
+    monitoringParameters: [
+      'مستوى الوعي ومجرى الهواء قبل وأثناء الإعطاء',
+      'أصوات الأمعاء وحركتها (خطر الانسداد مع الجرعات المتكررة)',
+      'علامات الاستنشاق الرئوي',
+      'الاستجابة السريرية للتسمم'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يمتص أيضاً العديد من الأدوية الفموية الأخرى المعطاة بالتزامن - يفصل بساعتين عن أي دواء فموي ضروري آخر'
+    ],
+    pearls: [
+      'حماية مجرى الهواء (أحياناً عبر التنبيب) ضرورية قبل الإعطاء في أي مريض ذي وعي متدنٍ أو غير قادر على حماية مجراه الهوائي',
+      'غير فعال إطلاقاً ضد الكحولات (الإيثانول، الميثانول، الإيثيلين جليكول) والمعادن الثقيلة والحديد والليثيوم - "لا PHAILS" اختصار شائع للسموم غير المستجيبة',
+      'الجرعات المتعددة (multi-dose activated charcoal) تُستخدم لزيادة إخراج بعض السموم ذات الدورة المعوية الكبدية مثل الكاربامازيبين والفينوباربيتال'
+    ]
+  },
+  {
+    id: 'naproxen',
+    genericName: 'Naproxen',
+    genericNameAr: 'نابروكسين',
+    brandNames: ['Aleve', 'Naprosyn', 'نابروسين'],
+    drugClass: 'Nonsteroidal Anti-Inflammatory Drug (NSAID)',
+    drugClassAr: 'مضاد التهاب غير ستيرويدي',
+    category: 'OTC',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'internal_medicine', 'cardiology'],
+    keyHighlights: [
+      'نصف عمر طويل نسبياً (12-17 ساعة) يسمح بجرعتين يومياً فقط خلافاً لمعظم NSAIDs الأخرى',
+      'قد يكون أقل خطورة قلبية وعائية من بعض NSAIDs الانتقائية لـ COX-2 حسب بعض الدراسات، لكن الخطر يبقى موجوداً',
+      'تحذير صندوق أسود مشترك لجميع NSAIDs لخطر القلب والأوعية والنزيف الهضمي'
+    ],
+    indications: [
+      {
+        indication: 'Osteoarthritis / Rheumatoid arthritis / Acute pain / Dysmenorrhea / Fever',
+        indicationAr: 'الفصال العظمي / التهاب المفاصل الروماتويدي / الألم الحاد / عسر الطمث / الحمى',
+        adultDose: '250-500 mg PO twice daily (OTC: 220 mg every 8-12 hours, max 660 mg/day)',
+        adultDoseAr: '250-500 مج فموياً مرتين يومياً (بدون وصفة: 220 مج كل 8-12 ساعة، حد أقصى 660 مج/يوم)',
+        pediatricDose: '5-7 mg/kg PO twice daily (ages 2+) for juvenile idiopathic arthritis',
+        pediatricDoseAr: '5-7 مج/كجم فموياً مرتين يومياً (من عمر سنتين) لالتهاب المفاصل الروماتويدي اليفعي',
+        maxDose: '1500 mg/day (prescription)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Use with caution; avoid if possible',
+      crclBelow10: 'Avoid use; significant risk of worsening renal function',
+      hemodialysis: 'Avoid use; not recommended in dialysis-dependent patients'
+    },
+    hepaticAdjustment: 'Use with caution; avoid in severe hepatic impairment',
+    contraindications: [
+      'تاريخ النزيف الهضمي أو القرحة النشطة المرتبطة بـ NSAIDs',
+      'جراحة مجازة الشريان التاجي (فترة حول الجراحة)',
+      'القصور الكلوي المتقدم',
+      'فشل القلب الشديد',
+      'الثلث الثالث من الحمل',
+      'الربو المحرض بالأسبرين أو NSAIDs'
+    ],
+    blackBoxWarning: 'Increased risk of serious cardiovascular thrombotic events, myocardial infarction, and stroke; increased risk of serious gastrointestinal bleeding, ulceration, and perforation',
+    blackBoxWarningAr: 'زيادة خطر الأحداث الخثارية القلبية الوعائية الخطيرة واحتشاء عضلة القلب والسكتة الدماغية؛ زيادة خطر النزيف الهضمي والتقرح والانثقاب الخطير',
+    mechanismOfAction: 'Non-selectively inhibits cyclooxygenase (COX-1 and COX-2), reducing prostaglandin synthesis and inflammation',
+    mechanismOfActionAr: 'يثبط بشكل غير انتقائي إنزيم الأكسدة الحلقية (COX-1 وCOX-2) فيقلل تخليق البروستاجلاندين والالتهاب',
+    halfLife: '12-17 hours',
+    monitoringParameters: [
+      'وظائف الكلى',
+      'علامات النزيف الهضمي',
+      'ضغط الدم',
+      'علامات احتباس السوائل أو تفاقم فشل القلب'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُفضل تناوله مع الطعام أو الحليب لتقليل تهيج المعدة',
+      'الكحول يزيد خطر النزيف الهضمي'
+    ],
+    pearls: [
+      'الجرعتان اليوميتان فقط (بدلاً من 3-4 مرات مع معظم NSAIDs الأخرى) تجعله خياراً مريحاً للالتزام في الحالات المزمنة',
+      'يُمنع بعد الأسبوع 30 من الحمل بسبب خطر الإغلاق المبكر للقناة الشريانية الجنينية',
+      'يُستخدم بحذر بالجرعات الدنيا الفعالة ولأقصر مدة ممكنة بسبب المخاطر القلبية والهضمية المشتركة لجميع NSAIDs'
+    ]
+  },
+  {
+    id: 'celecoxib',
+    genericName: 'Celecoxib',
+    genericNameAr: 'سيليكوكسيب',
+    brandNames: ['Celebrex', 'سيليبريكس'],
+    drugClass: 'Selective COX-2 Inhibitor (NSAID)',
+    drugClassAr: 'مثبط انتقائي لـ COX-2 (مضاد التهاب غير ستيرويدي)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'internal_medicine', 'cardiology'],
+    keyHighlights: [
+      'خطر نزيف هضمي أقل من NSAIDs التقليدية بفضل الانتقائية لـ COX-2 لكن الخطر القلبي الوعائي موجود وربما أعلى',
+      'يحتوي على مجموعة سلفوناميد - يُمنع في فرط الحساسية للسلفا',
+      'بديل مفيد للمرضى ذوي الخطورة العالية للنزيف الهضمي لكن يحتاجون مسكناً مضاداً للالتهاب'
+    ],
+    indications: [
+      {
+        indication: 'Osteoarthritis / Rheumatoid arthritis / Acute pain / Ankylosing spondylitis',
+        indicationAr: 'الفصال العظمي / التهاب المفاصل الروماتويدي / الألم الحاد / التهاب الفقار اللاصق',
+        adultDose: '100-200 mg PO once or twice daily',
+        adultDoseAr: '100-200 مج فموياً مرة أو مرتين يومياً',
+        pediatricDose: '50-100 mg PO twice daily based on weight (ages 2+) for juvenile idiopathic arthritis',
+        pediatricDoseAr: '50-100 مج فموياً مرتين يومياً حسب الوزن (من عمر سنتين) لالتهاب المفاصل الروماتويدي اليفعي',
+        maxDose: '400 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Use with caution; avoid if possible',
+      crclBelow10: 'Avoid use; significant risk of worsening renal function',
+      hemodialysis: 'Avoid use; not recommended'
+    },
+    hepaticAdjustment: 'Reduce dose by 50% in moderate hepatic impairment; avoid in severe impairment',
+    contraindications: [
+      'فرط الحساسية للسلفوناميدات',
+      'تاريخ تفاعل حساسية مفرطة تجاه الأسبرين أو NSAIDs أخرى (ربو، شرى، تفاعل تأقي)',
+      'جراحة مجازة الشريان التاجي (فترة حول الجراحة)',
+      'فشل القلب الشديد',
+      'الثلث الثالث من الحمل'
+    ],
+    blackBoxWarning: 'Increased risk of serious cardiovascular thrombotic events, myocardial infarction, and stroke; increased risk of serious gastrointestinal bleeding, ulceration, and perforation',
+    blackBoxWarningAr: 'زيادة خطر الأحداث الخثارية القلبية الوعائية الخطيرة واحتشاء عضلة القلب والسكتة الدماغية؛ زيادة خطر النزيف الهضمي والتقرح والانثقاب الخطير',
+    mechanismOfAction: 'Selectively inhibits cyclooxygenase-2 (COX-2), reducing inflammatory prostaglandin synthesis while sparing COX-1-mediated gastric protection',
+    mechanismOfActionAr: 'يثبط انتقائياً إنزيم الأكسدة الحلقية-2 (COX-2) فيقلل تخليق البروستاجلاندين الالتهابي مع الحفاظ النسبي على الحماية المعدية الوسيطة بـ COX-1',
+    halfLife: '11 hours',
+    monitoringParameters: [
+      'وظائف الكلى',
+      'ضغط الدم',
+      'علامات الأحداث القلبية الوعائية',
+      'علامات النزيف الهضمي (أقل شيوعاً لكن ممكنة)',
+      'وظائف الكبد'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يمكن تناوله مع أو بدون طعام',
+      'الكحول يزيد خطر النزيف الهضمي والسمية الكبدية'
+    ],
+    pearls: [
+      'الخيار المفضل بين NSAIDs للمرضى ذوي الخطورة العالية للنزيف الهضمي الذين يحتاجون مسكناً مضاداً للالتهاب',
+      'لا يؤثر على وظيفة الصفائح (خلافاً لـ NSAIDs غير الانتقائية) لذا لا يحتاج إيقافاً قبل الجراحة لهذا السبب تحديداً',
+      'يجب تجنبه تماماً في المرضى ذوي الحساسية المعروفة للسلفا بسبب احتوائه على مجموعة سلفوناميد كيميائية'
+    ]
+  },
+  {
+    id: 'amoxicillin',
+    genericName: 'Amoxicillin',
+    genericNameAr: 'أموكسيسيلين',
+    brandNames: ['Amoxil', 'أموكسيل'],
+    drugClass: 'Aminopenicillin',
+    drugClassAr: 'أمينوبنسلين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pediatrics', 'infectious_diseases', 'pharmacy'],
+    keyHighlights: [
+      'من أكثر المضادات الحيوية وصفاً عند الأطفال بسبب الطعم المقبول والأمان العالي والفعالية ضد العقديات الشائعة',
+      'طفح جلدي غير تحسسي شائع جداً عند الإصابة بعدوى فيروس إبشتاين بار (عدد وحيدات النوى) - يجب تمييزه عن حساسية حقيقية للبنسلين',
+      'لا يغطي البكتيريا المنتجة للبيتالاكتاماز - يُستبدل بالأوجمنتين (مع كلافولانيك أسيد) عند الاشتباه بمقاومة'
+    ],
+    indications: [
+      {
+        indication: 'Acute otitis media / Streptococcal pharyngitis / Community-acquired pneumonia (non-severe) / Sinusitis',
+        indicationAr: 'التهاب الأذن الوسطى الحاد / التهاب البلعوم العقدي / الالتهاب الرئوي المكتسب من المجتمع (غير شديد) / التهاب الجيوب الأنفية',
+        adultDose: '500-875 mg PO every 8-12 hours',
+        adultDoseAr: '500-875 مج فموياً كل 8-12 ساعة',
+        pediatricDose: '80-90 mg/kg/day divided every 12 hours (high-dose for otitis media)',
+        pediatricDoseAr: '80-90 مج/كجم/يوم مقسمة كل 12 ساعة (جرعة عالية لالتهاب الأذن الوسطى)',
+        maxDose: '4000 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed (CrCl 10-30: extend interval to every 12 hours)',
+      crclBelow10: 'Reduce dose and extend interval to every 24 hours',
+      hemodialysis: 'Dialyzable; administer supplemental dose after dialysis session'
+    },
+    hepaticAdjustment: 'No specific adjustment needed',
+    contraindications: [
+      'فرط الحساسية للبنسلينات',
+      'تاريخ تفاعل حساسية شديد تجاه أي بيتالاكتام'
+    ],
+    mechanismOfAction: 'Inhibits bacterial cell wall synthesis by binding to penicillin-binding proteins, causing cell lysis',
+    mechanismOfActionAr: 'يثبط تخليق جدار الخلية البكتيرية عن طريق الارتباط ببروتينات ربط البنسلين مسبباً تحلل الخلية',
+    halfLife: '1-1.5 hours',
+    monitoringParameters: [
+      'علامات الحساسية المفرطة',
+      'الاستجابة السريرية للعدوى',
+      'الطفح الجلدي (تمييز الحساسية الحقيقية عن الطفح المرتبط بعدوى EBV)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يمكن تناوله مع أو بدون طعام'
+    ],
+    pearls: [
+      'الطفح الجلدي الذي يظهر عند إعطائه لمريض مصاب بعدوى وحيدات النوى العدوائية (EBV) شائع جداً (تصل نسبته لأكثر من 90%) وليس بالضرورة حساسية حقيقية للبنسلين',
+      'الجرعة العالية (80-90 مج/كجم/يوم) أصبحت المعيار لعلاج التهاب الأذن الوسطى لتغطية المكورات الرئوية ذات الحساسية المتوسطة للبنسلين',
+      'من أكثر المضادات الحيوية أماناً خلال الحمل ولجميع الأعمار شاملة حديثي الولادة'
+    ]
+  },
+  {
+    id: 'bisoprolol',
+    genericName: 'Bisoprolol',
+    genericNameAr: 'بيسوبرولول',
+    brandNames: ['Zebeta', 'Concor', 'كونكور'],
+    drugClass: 'Beta-1 Selective Blocker',
+    drugClassAr: 'حاصر بيتا-1 انتقائي',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'من حاصرات بيتا الثلاثة الموثقة بتحسين البقيا في فشل القلب مع انخفاض الكسر القذفي (مع ميتوبرولول سكسينات وكارفيديلول)',
+      'انتقائية عالية جداً لبيتا-1 عند الجرعات المنخفضة إلى المتوسطة - أقل تأثيراً على القصبات الهوائية',
+      'نصف عمر طويل (10-12 ساعة) يسمح بجرعة واحدة يومية ثابتة'
+    ],
+    indications: [
+      {
+        indication: 'Heart failure with reduced ejection fraction / Hypertension / Chronic stable angina',
+        indicationAr: 'فشل القلب مع انخفاض الكسر القذفي / ارتفاع ضغط الدم / الذبحة الصدرية المزمنة المستقرة',
+        adultDose: 'Heart failure: start 1.25 mg PO once daily, titrate slowly to target 10 mg once daily; Hypertension: 2.5-10 mg once daily',
+        adultDoseAr: 'فشل القلب: البدء بـ 1.25 مج فموياً مرة يومياً، يُعدل تدريجياً ببطء للوصول لهدف 10 مج مرة يومياً؛ ارتفاع ضغط الدم: 2.5-10 مج مرة يومياً',
+        maxDose: '20 mg/day (hypertension); 10 mg/day (heart failure)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed; start with lower dose',
+      crclBelow10: 'Maximum 10 mg/day; start with lower dose and titrate slowly',
+      hemodialysis: 'Not significantly dialyzed; dose per clinical response'
+    },
+    hepaticAdjustment: 'Maximum 10 mg/day in significant hepatic impairment',
+    contraindications: [
+      'بطء القلب الجيبي الشديد',
+      'الحصار الأذيني البطيني من الدرجة الثانية أو الثالثة',
+      'الصدمة القلبية',
+      'فشل القلب الحاد غير المعاوض',
+      'الربو الشديد غير المستقر (حذر نسبي)'
+    ],
+    mechanismOfAction: 'Selectively blocks beta-1 adrenergic receptors, reducing heart rate, myocardial contractility, and renin release',
+    mechanismOfActionAr: 'يحجب انتقائياً مستقبلات بيتا-1 الأدرينالية فيقلل معدل ضربات القلب وانقباضية عضلة القلب وإفراز الرينين',
+    halfLife: '10-12 hours',
+    monitoringParameters: [
+      'معدل ضربات القلب وضغط الدم',
+      'علامات تفاقم فشل القلب عند بدء العلاج أو زيادة الجرعة',
+      'سكر الدم في مرضى السكري (قد يخفي أعراض نقص السكر)',
+      'وظائف الكلى والكبد لتعديل الجرعة'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يمكن تناوله مع أو بدون طعام',
+      'يُتجنب الكحول لزيادة خطر انخفاض الضغط'
+    ],
+    pearls: [
+      'في فشل القلب، يُبدأ بجرعات منخفضة جداً (1.25 مج) ويُعدل تدريجياً على مدى أسابيع لتجنب تفاقم الأعراض الحاد',
+      'التدريج البطيء والإيقاف التدريجي (وليس المفاجئ) ضروريان في كل من البدء والإيقاف لتجنب الارتداد أو تفاقم فشل القلب',
+      'الانتقائية العالية لبيتا-1 تجعله خياراً أفضل نسبياً من حاصرات بيتا غير الانتقائية في مرضى الانسداد الرئوي المزمن الخفيف إلى المتوسط'
+    ]
+  },
+  {
+    id: 'fluoxetine',
+    genericName: 'Fluoxetine',
+    genericNameAr: 'فلوكستين',
+    brandNames: ['Prozac', 'بروزاك'],
+    drugClass: 'Selective Serotonin Reuptake Inhibitor (SSRI)',
+    drugClassAr: 'مثبط انتقائي لإعادة امتصاص السيروتونين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'نصف عمر طويل جداً (4-6 أيام، مستقلب نشط حتى 16 يوماً) - أقل أعراض انسحاب عند نسيان جرعة أو الإيقاف',
+      'مثبط قوي لـ CYP2D6 وCYP3A4 - تفاعلات دوائية كثيرة تستمر لأسابيع حتى بعد الإيقاف بسبب نصف العمر الطويل',
+      'الخيار الوحيد المعتمد لعلاج الاكتئاب عند الأطفال (من عمر 8 سنوات)'
+    ],
+    indications: [
+      {
+        indication: 'Major depressive disorder / OCD / Bulimia nervosa / Panic disorder',
+        indicationAr: 'الاكتئاب الجسيم / الوسواس القهري / الشره العصبي / اضطراب الهلع',
+        adultDose: 'Start 20 mg PO once daily (morning), titrate to 20-80 mg/day',
+        adultDoseAr: 'البدء بـ 20 مج فموياً مرة يومياً (صباحاً)، يُعدل إلى 20-80 مج/يوم',
+        pediatricDose: '10-20 mg PO once daily for ages 8-17 (depression); may titrate based on response',
+        pediatricDoseAr: '10-20 مج فموياً مرة يومياً للأعمار 8-17 (الاكتئاب)؛ يمكن التعديل حسب الاستجابة',
+        maxDose: '80 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'Use with caution; consider lower dose or less frequent dosing',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose or use lower frequency (e.g., every other day) in hepatic impairment due to prolonged half-life',
+    contraindications: [
+      'الاستخدام المتزامن أو خلال 14 يوماً من مثبطات MAO (يجب الانتظار 5 أسابيع بعد إيقاف الفلوكستين قبل بدء MAOI بسبب نصف العمر الطويل)',
+      'الاستخدام المتزامن مع بيموزايد أو ثيوريدازين',
+      'فرط الحساسية للفلوكستين'
+    ],
+    blackBoxWarning: 'Increased risk of suicidal thinking and behavior in children, adolescents, and young adults up to age 24, particularly during initial treatment and dose changes',
+    blackBoxWarningAr: 'زيادة خطر الأفكار والسلوكيات الانتحارية لدى الأطفال والمراهقين والشباب حتى سن 24، خاصة في بداية العلاج وتغيير الجرعة',
+    mechanismOfAction: 'Selectively inhibits presynaptic serotonin reuptake, increasing serotonergic neurotransmission',
+    mechanismOfActionAr: 'يثبط انتقائياً إعادة امتصاص السيروتونين قبل المشبكي فيزيد النقل العصبي السيروتونيني',
+    halfLife: '4-6 days (norfluoxetine active metabolite: 4-16 days)',
+    monitoringParameters: [
+      'المزاج والأفكار الانتحارية (خاصة في أول شهرين)',
+      'علامات متلازمة السيروتونين',
+      'الوزن (قد يسبب فقدان وزن خفيف خلافاً لبعض SSRIs الأخرى)',
+      'التفاعلات الدوائية نظراً لتثبيطه القوي لإنزيمات الكبد'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يمكن تناوله مع أو بدون طعام',
+      'يُتجنب الكحول لزيادة التأثير المركزي'
+    ],
+    pearls: [
+      'نصف العمر الطويل جداً يجعله الخيار المفضل للمرضى ذوي الالتزام الضعيف بالجرعات المنتظمة، لكنه يعني أيضاً استمرار التفاعلات الدوائية لأسابيع بعد الإيقاف',
+      'يجب الانتظار 5 أسابيع على الأقل بعد إيقاف الفلوكستين قبل بدء أي مثبط MAO بسبب طول نصف عمره ومستقلبه النشط',
+      'الخيار الأول المعتمد للاكتئاب عند الأطفال والمراهقين بفضل أكبر قاعدة بيانات أمان وفعالية في هذه الفئة العمرية'
+    ]
+  },
+  {
+    id: 'promethazine',
+    genericName: 'Promethazine',
+    genericNameAr: 'بروميثازين',
+    brandNames: ['Phenergan', 'فينيرجان'],
+    drugClass: 'Phenothiazine Antihistamine/Antiemetic',
+    drugClassAr: 'مضاد هيستامين ومضاد قيء من فئة الفينوثيازين',
+    category: 'Rx',
+    route: ['PO', 'IV', 'IM', 'PR'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'تحذير صندوق أسود للنخر النسيجي الشديد عند التسرب خارج الوعاء أو الحقن داخل الشريان عن طريق الخطأ - يُفضل الحقن العضلي العميق',
+      'يُمنع تماماً في الأطفال دون عمر سنتين - خطر تثبيط تنفسي قاتل',
+      'تأثير مهدئ قوي ومضاد كوليني - حذر في المسنين (قائمة Beers)'
+    ],
+    indications: [
+      {
+        indication: 'Nausea and vomiting / Motion sickness / Allergic reactions / Preoperative sedation',
+        indicationAr: 'الغثيان والتقيؤ / دوار الحركة / التفاعلات التحسسية / التسكين قبل الجراحة',
+        adultDose: '12.5-25 mg PO/IV/IM/PR every 4-6 hours as needed',
+        adultDoseAr: '12.5-25 مج فموياً/وريدياً/عضلياً/شرجياً كل 4-6 ساعات عند الحاجة',
+        pediatricDose: '0.25-0.5 mg/kg PO/PR every 4-6 hours (ages 2+ only)',
+        pediatricDoseAr: '0.25-0.5 مج/كجم فموياً/شرجياً كل 4-6 ساعات (من عمر سنتين فأكبر فقط)',
+        maxDose: '25 mg per IV dose (diluted and given slowly into a running IV line)',
+        route: 'PO/IV/IM/PR'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed; use with caution',
+      crclBelow10: 'Use with caution; consider dose reduction',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution; avoid or reduce dose in significant hepatic impairment',
+    contraindications: [
+      'الأطفال دون عمر سنتين',
+      'الغيبوبة أو تثبيط الجهاز العصبي المركزي الشديد',
+      'فرط الحساسية للفينوثيازينات',
+      'الحقن داخل الشريان أو تحت الجلد (يُمنع تماماً)'
+    ],
+    blackBoxWarning: 'Severe tissue injury including gangrene can result from inadvertent intra-arterial injection or extravasation; contraindicated in children under 2 years due to risk of fatal respiratory depression',
+    blackBoxWarningAr: 'إصابة نسيجية شديدة شملت الغرغرينا قد تنتج عن الحقن داخل الشريان عن طريق الخطأ أو التسرب خارج الوعاء؛ ممنوع في الأطفال دون عمر سنتين لخطر التثبيط التنفسي القاتل',
+    mechanismOfAction: 'Antagonizes histamine H1 receptors and dopamine D2 receptors in the chemoreceptor trigger zone; also has significant anticholinergic and alpha-adrenergic blocking effects',
+    mechanismOfActionAr: 'يضاد مستقبلات الهيستامين H1 ومستقبلات الدوبامين D2 في منطقة المستقبلات الكيميائية المحفزة؛ كما له تأثيرات مضادة للكولين وحاصرة لألفا الأدرينالي ملحوظة',
+    halfLife: '9-16 hours',
+    monitoringParameters: [
+      'مستوى الوعي ومعدل التنفس',
+      'موقع الحقن الوريدي (علامات تسرب أو حقن داخل شرياني)',
+      'علامات الأعراض خارج الهرمية',
+      'ضغط الدم (خطر انخفاض ضغط انتصابي)'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُمنع الكحول لزيادة التأثير المهدئ بشكل خطير'
+    ],
+    pearls: [
+      'يُفضل الحقن العضلي العميق على الوريدي قدر الإمكان لتقليل خطر النخر النسيجي الشديد المرتبط بهذا الدواء تحديداً',
+      'عند الإعطاء الوريدي الضروري، يجب التخفيف الجيد والحقن ببطء شديد في خط وريدي يعمل بتدفق جيد مع مراقبة علامات الألم أو الحرقان فوراً',
+      'يُستخدم أحياناً كمساعد مع الأفيونات في تسكين الألم رغم عدم وجود دليل قوي على تحسين التسكين وزيادة خطر التثبيط التنفسي المضاعف'
+    ]
   }
 ];
 
