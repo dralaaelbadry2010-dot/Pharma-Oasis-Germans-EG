@@ -924,6 +924,351 @@ export const INITIAL_DRUGS: Drug[] = [
       'متلازمة الرجل الأحمر (Red Man Syndrome / RMS): ليست حساسية حقيقية بل تحرر هيستامين ناتج عن سرعة التسريب؛ علاجها بإبطاء معدل التسريب الوريدي (1 جرام على مدار 60-120 دقيقة) وإعطاء مضاد هيستامين.',
       'الفانكومايسين الوريدي لا يعالج التهاب القولون بـ C. diff لأنه لا يفرز في تجويف الأمعاء إطلاقاً، ويجب استخدام الكبسولات الفموية.'
     ]
+  },
+  {
+    id: 'insulin_glargine',
+    genericName: 'Insulin Glargine',
+    genericNameAr: 'إنسولين جلارجين',
+    brandNames: ['Lantus', 'Toujeo', 'Basaglar', 'Semglee', 'لانتوس', 'توجيو'],
+    drugClass: 'Long-Acting Basal Insulin Analog',
+    drugClassAr: 'إنسولين قاعدي طويل المفعول (نظير الإنسولين)',
+    category: 'Rx',
+    route: ['Subcutaneous (مرة يومياً)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-10',
+    targetSpecialties: ['internal_medicine', 'icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'إنسولين قاعدي بدون قمة تأثير واضحة (Peakless) يغطي 24 ساعة تقريباً',
+      'لا يُمزج أبداً في نفس المحقنة مع أنواع إنسولين أخرى',
+      'تبديل نوع أو ماركة الإنسولين يتطلب مراقبة دقيقة للسكر لتفادي نقص أو ارتفاع السكر'
+    ],
+    indications: [
+      {
+        indication: 'Type 1 Diabetes Mellitus',
+        indicationAr: 'السكري من النوع الأول',
+        adultDose: 'Initiate 0.2-0.4 units/kg/day SC once daily as part of basal-bolus regimen; titrate per glucose readings.',
+        adultDoseAr: 'البدء بـ 0.2-0.4 وحدة/كجم/يوم تحت الجلد مرة يومياً كجزء من نظام القاعدي-الوجبات، مع تعديل الجرعة حسب قراءات السكر.',
+        route: 'Subcutaneous'
+      },
+      {
+        indication: 'Type 2 Diabetes Mellitus (insulin-requiring)',
+        indicationAr: 'السكري من النوع الثاني (المحتاج للإنسولين)',
+        adultDose: 'Start 10 units or 0.1-0.2 units/kg SC once daily; titrate by 2-4 units every 3-4 days to reach fasting glucose goal.',
+        adultDoseAr: 'البدء بـ 10 وحدات أو 0.1-0.2 وحدة/كجم تحت الجلد مرة يومياً، مع رفع الجرعة 2-4 وحدات كل 3-4 أيام للوصول لهدف سكر الصيام.',
+        route: 'Subcutaneous'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل جرعة مبدئي، لكن يتابع السكر بحذر.',
+      crcl10to50: 'قد يتراكم الإنسولين ويقل الاحتياج؛ يخفض الجرعة تدريجياً مع مراقبة لصيقة لنقص السكر.',
+      crclBelow10: 'يقل إطراح الإنسولين الكلوي بشدة؛ يخفض الجرعة بنسبة قد تصل 25-50% مع مراقبة متكررة.',
+      hemodialysis: 'تعديل فردي حسب نمط السكر حول جلسات الغسيل؛ خطر نقص السكر مرتفع خلال وبعد الجلسة.'
+    },
+    hepaticAdjustment: 'قد يقل تكسير الإنسولين في القصور الكبدي الشديد مما يزيد خطر نقص السكر؛ يبدأ بجرعة حذرة مع مراقبة لصيقة.',
+    contraindications: [
+      'نقص سكر الدم الحالي أو المتكرر غير المُسيطر عليه',
+      'فرط الحساسية المعروف للإنسولين جلارجين أو أحد مكوناته'
+    ],
+    mechanismOfAction: 'Binds to insulin receptors, promoting peripheral glucose uptake and suppressing hepatic glucose production; forms microprecipitates at the injection site for a slow, prolonged, relatively flat absorption profile.',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الإنسولين فيعزز امتصاص الجلوكوز المحيطي ويثبط إنتاج الجلوكوز الكبدي؛ يترسب جزئياً تحت الجلد مما يعطي امتصاصاً بطيئاً وممتداً وثابتاً نسبياً طوال 24 ساعة.',
+    halfLife: '~ 12 to 19 hours (duration of action up to 24 hours)',
+    monitoringParameters: [
+      'سكر الدم الصيامي والعشوائي (Self-Monitoring of Blood Glucose)',
+      'مستوى السكر التراكمي HbA1c كل 3 أشهر',
+      'أعراض نقص السكر (تعرق، رعشة، تسرع قلب، تشوش)',
+      'موضع الحقن دورياً لتفادي الحثل الشحمي (Lipodystrophy)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا يرتبط بوجبة محددة لأنه إنسولين قاعدي، لكن يجب ثبات مواعيد ومحتوى الوجبات لتفادي تقلبات السكر.',
+      'الكحول يزيد خطر نقص السكر المتأخر؛ يُنصح بالحذر الشديد.'
+    ],
+    pearls: [
+      'لا يُخفف ولا يُمزج أبداً مع إنسولينات أخرى في نفس المحقنة أو المحلول الوريدي.',
+      'القلم يُستخدم لمريض واحد فقط حتى مع تغيير الإبرة لتفادي انتقال العدوى.',
+      'عند التبديل من NPH إلى جلارجين تقل الجرعة الكلية عادة بنسبة 20% لتفادي نقص السكر الليلي.'
+    ]
+  },
+  {
+    id: 'enoxaparin',
+    genericName: 'Enoxaparin',
+    genericNameAr: 'إينوكسابارين',
+    brandNames: ['Clexane', 'Lovenox', 'كليكسان'],
+    drugClass: 'Low Molecular Weight Heparin (LMWH)',
+    drugClassAr: 'هيبارين منخفض الوزن الجزيئي',
+    category: 'Rx',
+    route: ['Subcutaneous', 'Intravenous (حالات محددة)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-09',
+    targetSpecialties: ['internal_medicine', 'cardiology', 'icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'لا يحتاج مراقبة روتينية بـ aPTT بعكس الهيبارين غير المجزأ',
+      'تعديل الجرعة إلزامي في القصور الكلوي الشديد (CrCl < 30)',
+      'يُحقن تحت الجلد في الأنسجة الدهنية بالبطن مع عدم فرك الموضع بعد الحقن لتقليل الكدمات'
+    ],
+    indications: [
+      {
+        indication: 'VTE Prophylaxis (Medical/Surgical patients)',
+        indicationAr: 'الوقاية من الجلطات الوريدية',
+        adultDose: '40 mg SC once daily.',
+        adultDoseAr: '40 مجم تحت الجلد مرة يومياً.',
+        route: 'Subcutaneous'
+      },
+      {
+        indication: 'Treatment of DVT/PE',
+        indicationAr: 'علاج الجلطات الوريدية العميقة والانصمام الرئوي',
+        adultDose: '1 mg/kg SC every 12 hours, or 1.5 mg/kg SC once daily.',
+        adultDoseAr: '1 مجم/كجم تحت الجلد كل 12 ساعة، أو 1.5 مجم/كجم تحت الجلد مرة يومياً.',
+        route: 'Subcutaneous'
+      },
+      {
+        indication: 'ACS (STEMI/NSTEMI)',
+        indicationAr: 'المتلازمة التاجية الحادة',
+        adultDose: '1 mg/kg SC every 12 hours (with aspirin); first dose may be preceded by a 30 mg IV bolus in STEMI.',
+        adultDoseAr: '1 مجم/كجم تحت الجلد كل 12 ساعة (مع الأسبرين)؛ قد تُسبق الجرعة الأولى بجرعة وريدية 30 مجم في حالات STEMI.',
+        route: 'Subcutaneous/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة.',
+      crcl10to50: 'يستخدم بحذر مع مراقبة سريرية لعلامات النزيف؛ لا تعديل رسمي حتى CrCl 30.',
+      crclBelow10: 'إذا CrCl < 30: تخفض جرعة العلاج إلى 1 مجم/كجم مرة يومياً (بدلاً من مرتين)، وجرعة الوقاية إلى 30 مجم مرة يومياً.',
+      hemodialysis: 'يُفضل الهيبارين غير المجزأ لقصر مدة تأثيره القابلة للعكس؛ إن استُخدم الإينوكسابارين يُخفض الجرعة بشدة مع مراقبة لصيقة.'
+    },
+    hepaticAdjustment: 'لا توجد توصية رسمية لتعديل الجرعة، لكن يستخدم بحذر في تليف الكبد المتقدم مع خطر النزيف المرتفع أصلاً.',
+    contraindications: [
+      'نزيف نشط حاد أو خطر نزيف مرتفع غير مُسيطر عليه',
+      'قلة الصفائح المحرّضة بالهيبارين (HIT) الحالية أو بالتاريخ المرضي',
+      'حساسية مفرطة للهيبارين أو منتجات الخنازير'
+    ],
+    blackBoxWarning: 'Spinal/Epidural Hematoma risk with neuraxial anesthesia or spinal puncture in patients receiving LMWH, potentially causing long-term or permanent paralysis.',
+    blackBoxWarningAr: 'تحذير الصندوق الأسود: خطر تكوّن ورم دموي فوق أو تحت الجافية عند إجراء تخدير نصفي أو بزل شوكي لمريض يتلقى هيبارين منخفض الوزن الجزيئي، وقد يؤدي لشلل طويل أو دائم.',
+    mechanismOfAction: 'Potentiates antithrombin III, predominantly inhibiting Factor Xa (with lesser effect on thrombin/Factor IIa), interrupting the coagulation cascade.',
+    mechanismOfActionAr: 'يُعزز نشاط الأنتيثرومبين III فيثبط بشكل أساسي عامل التخثر Xa (مع تأثير أقل على الثرومبين)، مما يقطع سلسلة التخثر.',
+    halfLife: '~ 4.5 to 7 hours (SC)',
+    monitoringParameters: [
+      'علامات النزيف الظاهر والخفي (البراز، البول، موضع الحقن)',
+      'تعداد الصفائح الدموية (خاصة بين اليوم 4-14 لاستبعاد HIT)',
+      'وظائف الكلى (Creatinine Clearance) قبل البدء وعند أي تغير سريري',
+      'مستوى Anti-Xa في حالات خاصة (سمنة شديدة، حمل، قصور كلوي)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية مباشرة مهمة.',
+      'تجنب مكملات الأعشاب ذات التأثير المضاد للتخثر (الجنكة، الثوم المركّز) لتقليل خطر النزيف التراكمي.'
+    ],
+    pearls: [
+      'لا يُعطى بالحقن العضلي أبداً بسبب خطر الورم الدموي العضلي.',
+      'فقاعة الهواء الموجودة مسبقاً في المحقنة المعبأة جزء من آلية التجهيز ولا تُطرد قبل الحقن في حالة جرعة كاملة المحقنة.',
+      'يُفضل التوقف 12 ساعة قبل التخدير النصفي للجرعة الوقائية، و24 ساعة للجرعة العلاجية.'
+    ]
+  },
+  {
+    id: 'levothyroxine',
+    genericName: 'Levothyroxine',
+    genericNameAr: 'ليفوثيروكسين',
+    brandNames: ['Synthroid', 'Eltroxin', 'Euthyrox', 'يوثيروكس', 'إلتروكسين'],
+    drugClass: 'Thyroid Hormone Replacement (T4)',
+    drugClassAr: 'هرمون الغدة الدرقية البديل (T4)',
+    category: 'Rx',
+    route: ['Oral', 'Intravenous (حالات الغيبوبة المخاطية)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-08',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'يُؤخذ صباحاً على معدة فارغة قبل الطعام بـ 30-60 دقيقة لضمان امتصاص ثابت',
+      'له نافذة علاجية ضيقة؛ التبديل بين الماركات التجارية قد يغير الفعالية السريرية',
+      'التعديل في الجرعة يحتاج 6-8 أسابيع لتقييم مستوى TSH قبل أي تغيير جديد'
+    ],
+    indications: [
+      {
+        indication: 'Primary Hypothyroidism',
+        indicationAr: 'قصور الغدة الدرقية الأولي',
+        adultDose: '1.6 mcg/kg/day PO once daily; start lower (25-50 mcg) in elderly or cardiac patients.',
+        adultDoseAr: '1.6 ميكروجرام/كجم/يوم فموياً مرة يومياً؛ يبدأ بجرعة أقل (25-50 ميكروجرام) لكبار السن أو مرضى القلب.',
+        route: 'Oral'
+      },
+      {
+        indication: 'Myxedema Coma',
+        indicationAr: 'الغيبوبة المخاطية (نادرة وطارئة)',
+        adultDose: '200-400 mcg IV loading dose, then 50-100 mcg IV once daily.',
+        adultDoseAr: 'جرعة تحميل وريدية 200-400 ميكروجرام، ثم 50-100 ميكروجرام وريدياً مرة يومياً.',
+        route: 'Intravenous'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة.',
+      crcl10to50: 'لا يتطلب تعديل روتيني؛ يتابع TSH حسب الاستجابة السريرية.',
+      crclBelow10: 'لا يتطلب تعديل جرعة مرتبط بالكلى مباشرة؛ الفشل الكلوي المزمن قد يصاحبه قصور غدة درقية يحتاج جرعة معدلة سريرياً لا كلوياً.',
+      hemodialysis: 'لا يُزال بالغسيل الكلوي بشكل مؤثر؛ لا حاجة لجرعة إضافية بعد الجلسة.'
+    },
+    hepaticAdjustment: 'يستخدم بحذر في القصور الكبدي الشديد لأن استقلاب الهرمون قد يتأثر؛ يُتابع سريرياً بدون تعديل جرعة ثابت.',
+    contraindications: [
+      'قصور كظري غير معالج (يجب تعويض الكورتيزون أولاً لتفادي أزمة كظرية)',
+      'نوبة قلبية حادة غير مُستقرة',
+      'فرط نشاط الغدة الدرقية غير المُعالج'
+    ],
+    mechanismOfAction: 'Synthetic T4 that is peripherally converted to active T3, binding nuclear thyroid hormone receptors to regulate metabolic rate, growth, and development.',
+    mechanismOfActionAr: 'هرمون T4 مُصنّع يتحول محيطياً إلى الشكل الفعال T3، ويرتبط بمستقبلات الهرمون النووية لتنظيم معدل التمثيل الغذائي والنمو.',
+    halfLife: '~ 6 to 7 days',
+    monitoringParameters: [
+      'مستوى TSH بعد 6-8 أسابيع من بدء أو تعديل الجرعة',
+      'أعراض فرط النشاط الدرقي عند الجرعة الزائدة (خفقان، أرق، فقدان وزن)',
+      'تخطيط القلب الكهربائي في مرضى القلب عند بدء العلاج'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يتفاعل بشدة مع الكالسيوم والحديد ومضادات الحموضة المحتوية على ألمنيوم/مغنيسيوم؛ يُفصل بينهما 4 ساعات على الأقل.',
+      'القهوة ومنتجات الصويا قد تقلل الامتصاص إذا تم تناولها بالقرب من موعد الجرعة.',
+      'يجب تناوله بثبات بالنسبة للوجبات؛ تغيير التوقيت يغير مستوى الامتصاص.'
+    ],
+    pearls: [
+      'التبديل بين ماركة وأخرى (حتى لو نفس الجرعة الرقمية) قد يستدعي إعادة فحص TSH بعد 6 أسابيع.',
+      'في كبار السن ومرضى القلب التاجي: البدء بجرعة منخفضة جداً (12.5-25 ميكروجرام) والتصعيد التدريجي لتفادي نوبة قلبية أو عدم انتظام ضربات.',
+      'الحمل بوزن الجسم المثالي (لا الفعلي) هو الأساس لحساب الجرعة في السمنة لتفادي جرعة زائدة.'
+    ]
+  },
+  {
+    id: 'omeprazole',
+    genericName: 'Omeprazole',
+    genericNameAr: 'أوميبرازول',
+    brandNames: ['Losec', 'Gasec', 'Omez', 'لوسيك', 'جاسيك'],
+    drugClass: 'Proton Pump Inhibitor (PPI)',
+    drugClassAr: 'مثبط مضخة البروتون',
+    category: 'Rx',
+    route: ['Oral', 'Intravenous'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-07',
+    targetSpecialties: ['internal_medicine', 'cardiology', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'يُثبط بشدة إنزيم CYP2C19 الكبدي مما يقلل تفعيل الكلوبيدوجريل (تفاعل دوائي خطير)',
+      'الاستخدام طويل المدى (> سنة) مرتبط بنقص فيتامين B12 والمغنيسيوم وزيادة خطر كسور العظام',
+      'يُؤخذ قبل الطعام بـ 30-60 دقيقة لتحقيق أقصى تثبيط لإفراز الحمض'
+    ],
+    indications: [
+      {
+        indication: 'GERD / Peptic Ulcer Disease',
+        indicationAr: 'الارتجاع المريئي والقرحة الهضمية',
+        adultDose: '20-40 mg PO once daily for 4-8 weeks.',
+        adultDoseAr: '20-40 مجم فموياً مرة يومياً لمدة 4-8 أسابيع.',
+        route: 'Oral'
+      },
+      {
+        indication: 'H. pylori Eradication (Triple Therapy)',
+        indicationAr: 'علاج جرثومة المعدة (العلاج الثلاثي)',
+        adultDose: '20 mg PO twice daily with Amoxicillin and Clarithromycin for 10-14 days.',
+        adultDoseAr: '20 مجم فموياً مرتين يومياً مع أموكسيسيلين وكلاريثروميسين لمدة 10-14 يوم.',
+        route: 'Oral'
+      },
+      {
+        indication: 'Stress Ulcer Prophylaxis (ICU)',
+        indicationAr: 'الوقاية من قرحة الإجهاد في العناية المركزة',
+        adultDose: '40 mg IV once daily.',
+        adultDoseAr: '40 مجم وريدياً مرة يومياً.',
+        route: 'Intravenous'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة.',
+      crcl10to50: 'لا يتطلب تعديل الجرعة.',
+      crclBelow10: 'لا يتطلب تعديل الجرعة (استقلاب كبدي بالأساس).',
+      hemodialysis: 'لا يُزال بالغسيل الكلوي؛ لا حاجة لجرعة إضافية.'
+    },
+    hepaticAdjustment: 'في القصور الكبدي الشديد: لا تتجاوز الجرعة 20 مجم يومياً مع مراقبة سريرية.',
+    contraindications: [
+      'فرط الحساسية المعروف للأوميبرازول أو مثبطات مضخة البروتون الأخرى',
+      'الاستخدام المتزامن مع ريلبيفيرين (Rilpivirine) بسبب نقص الامتصاص الحرج'
+    ],
+    mechanismOfAction: 'Irreversibly inhibits the H+/K+ ATPase pump on gastric parietal cells, blocking the final step of gastric acid secretion.',
+    mechanismOfActionAr: 'يُثبط بشكل لا رجعي مضخة H+/K+ ATPase في خلايا جدار المعدة، فيوقف الخطوة الأخيرة لإفراز حمض المعدة.',
+    halfLife: '~ 0.5 to 1 hour (duration of acid suppression up to 24-72 hours)',
+    monitoringParameters: [
+      'الأعراض الهضمية والاستجابة العلاجية',
+      'مستوى المغنيسيوم وفيتامين B12 في الاستخدام طويل المدى',
+      'مراجعة الكلوبيدوجريل أو أي أدوية تعتمد على CYP2C19 عند بدء العلاج'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'يُنصح بتناوله قبل أول وجبة في اليوم بـ 30-60 دقيقة لأقصى فعالية.',
+      'لا توجد تفاعلات غذائية خطيرة مباشرة، لكن الاستخدام المزمن قد يقلل امتصاص الحديد وB12 من الطعام.'
+    ],
+    pearls: [
+      'عند مرضى الدعامات القلبية الذين يحتاجون PPI: يُفضل Pantoprazole بدلاً من Omeprazole لتقليل التعارض مع الكلوبيدوجريل.',
+      'التوقف المفاجئ بعد استخدام طويل قد يسبب فرط إفراز حمض ارتدادي (Rebound Acid Hypersecretion).'
+    ]
+  },
+  {
+    id: 'amiodarone',
+    genericName: 'Amiodarone',
+    genericNameAr: 'أميودارون',
+    brandNames: ['Cordarone', 'Pacerone', 'كوردارون'],
+    drugClass: 'Class III Antiarrhythmic',
+    drugClassAr: 'مضاد لاضطراب نظم القلب - الفئة الثالثة',
+    category: 'Rx',
+    route: ['Oral', 'Intravenous'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-06',
+    targetSpecialties: ['cardiology', 'icu_emergency', 'internal_medicine', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'نصف عمر طويل جداً (أسابيع) يستمر تأثيره وتفاعلاته لفترة طويلة بعد التوقف',
+      'يحتاج جرعة تحميل عالية ثم جرعة صيانة منخفضة بسبب تراكمه الواسع في الأنسجة الدهنية',
+      'متابعة وظائف الغدة الدرقية والكبد والرئة دورية إلزامية طوال فترة العلاج'
+    ],
+    indications: [
+      {
+        indication: 'Ventricular Fibrillation / Pulseless VT (ACLS)',
+        indicationAr: 'الرجفان البطيني أو تسرع البطين بدون نبض (الإنعاش القلبي)',
+        adultDose: '300 mg IV push, then 150 mg IV push if needed.',
+        adultDoseAr: '300 مجم حقن وريدي سريع، ثم 150 مجم إضافية عند الحاجة.',
+        route: 'Intravenous'
+      },
+      {
+        indication: 'Atrial Fibrillation (Rhythm Control)',
+        indicationAr: 'الرجفان الأذيني (ضبط النظم)',
+        adultDose: 'Loading: 400 mg PO 2-3 times daily for 1-4 weeks, then taper to 200 mg once daily maintenance; or IV load 150 mg over 10 min then infusion.',
+        adultDoseAr: 'جرعة تحميل: 400 مجم فموياً 2-3 مرات يومياً لمدة 1-4 أسابيع، ثم تخفف إلى 200 مجم يومياً للمداومة؛ أو تحميل وريدي 150 مجم خلال 10 دقائق ثم تسريب مستمر.',
+        route: 'Oral/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة (استقلاب كبدي بالكامل تقريباً).',
+      crcl10to50: 'لا يتطلب تعديل الجرعة.',
+      crclBelow10: 'لا يتطلب تعديل الجرعة؛ يُتابع سريرياً.',
+      hemodialysis: 'لا يُزال بالغسيل الكلوي؛ لا حاجة لجرعة إضافية.'
+    },
+    hepaticAdjustment: 'يستخدم بحذر شديد في أمراض الكبد؛ يُراقب إنزيمات الكبد قبل البدء وكل 6 أشهر لخطر التليف الكبدي الدوائي.',
+    contraindications: [
+      'بطء القلب الشديد أو إحصار القلب من الدرجة الثانية/الثالثة بدون جهاز تنظيم ضربات',
+      'صدمة قلبية (Cardiogenic Shock)',
+      'فرط حساسية معروف لليود (قد يسبب تفاعل تحسسي لاحتوائه على اليود)'
+    ],
+    blackBoxWarning: 'Pulmonary toxicity (interstitial pneumonitis/fibrosis), hepatotoxicity, and proarrhythmic effects including worsening of existing arrhythmias, particularly with IV use.',
+    blackBoxWarningAr: 'تحذير الصندوق الأسود: سمية رئوية (التهاب أو تليف رئوي خلالي)، سمية كبدية، وتأثير مُحفّز لاضطراب النظم قد يُفاقم عدم انتظام ضربات القلب الموجود أصلاً، خصوصاً مع الاستخدام الوريدي.',
+    mechanismOfAction: 'Blocks potassium channels (prolonging repolarization/QT), with additional sodium channel, beta-adrenergic, and calcium channel blocking properties (multi-channel antiarrhythmic).',
+    mechanismOfActionAr: 'يُثبط قنوات البوتاسيوم (يُطيل إعادة الاستقطاب وفترة QT)، مع تأثيرات إضافية على قنوات الصوديوم ومستقبلات بيتا وقنوات الكالسيوم (مضاد نظم متعدد القنوات).',
+    halfLife: '~ 20 to 100 days (extensive tissue accumulation)',
+    monitoringParameters: [
+      'تخطيط القلب الكهربائي (فترة QT) بشكل دوري',
+      'وظائف الغدة الدرقية (TSH, Free T4) كل 6 أشهر',
+      'وظائف الكبد (ALT/AST) كل 6 أشهر',
+      'أشعة صدر سنوية ووظائف الرئة عند ظهور أي أعراض تنفسية',
+      'فحص العين (ترسبات قرنية) عند الاستخدام طويل المدى'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'يتفاعل بشدة مع عصير الجريب فروت (Grapefruit) الذي يزيد تركيزه بالدم عبر تثبيط CYP3A4.',
+      'يزيد تركيز الوارفارين والديجوكسين بشكل ملحوظ ويحتاج تقليل جرعتهما عند البدء المتزامن.'
+    ],
+    pearls: [
+      'عند إضافته لمريض على وارفارين: تُخفض جرعة الوارفارين تلقائياً 30-50% عند البدء مع مراقبة لصيقة لـ INR.',
+      'يحتوي على مكون اليود؛ قد يُسبب قصور أو فرط نشاط درقي حتى بعد التوقف عن الدواء بفترة طويلة.',
+      'التسريب الوريدي السريع قد يسبب هبوط ضغط حاد؛ يُعطى ببطء عبر مضخة تسريب مع مراقبة الضغط المستمرة.'
+    ]
   }
 ];
 
