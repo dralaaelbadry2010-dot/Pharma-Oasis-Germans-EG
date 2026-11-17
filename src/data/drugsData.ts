@@ -9471,6 +9471,1032 @@ export const INITIAL_DRUGS: Drug[] = [
       'Addition of epinephrine prolongs duration and reduces systemic absorption/peak levels by causing local vasoconstriction — but should be avoided in digits, nose, ears, penis (end-arterial areas)',
       'As a Class IB antiarrhythmic, now a second-line option after amiodarone for shock-refractory VF/pulseless VT in ACLS'
     ]
+  },
+  {
+    id: 'hydrocortisone',
+    genericName: 'Hydrocortisone',
+    genericNameAr: 'هيدروكورتيزون',
+    brandNames: ['Solu-Cortef', 'Cortef', 'سولوكورتيف'],
+    drugClass: 'Short-Acting Corticosteroid (Glucocorticoid with Mineralocorticoid Activity)',
+    drugClassAr: 'كورتيكوستيرويد قصير المفعول (له نشاط مشابه للألدوستيرون)',
+    category: 'Rx',
+    route: ['IV', 'IM', 'PO', 'topical'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['icu_emergency', 'internal_medicine'],
+    keyHighlights: [
+      'First-line for adrenal insufficiency (Addisonian crisis) and physiologic replacement — closest glucocorticoid to endogenous cortisol',
+      'Retains significant mineralocorticoid activity unlike dexamethasone/methylprednisolone, making it preferred for adrenal crisis',
+      'Stress-dose hydrocortisone is standard in septic shock refractory to fluids/vasopressors'
+    ],
+    indications: [
+      {
+        indication: 'Acute adrenal insufficiency (Addisonian crisis)',
+        indicationAr: 'قصور الغدة الكظرية الحاد (نوبة أديسون)',
+        adultDose: '100 mg IV bolus, then 50 mg IV every 6 hours (or 200 mg/24hr continuous infusion)',
+        adultDoseAr: '100 ملجم دفعة وريدية، ثم 50 ملجم وريدي كل 6 ساعات (أو 200 ملجم/24 ساعة تسريب مستمر)',
+        pediatricDose: '1–2 mg/kg IV bolus, then 25–150 mg/day divided per age/weight',
+        pediatricDoseAr: '1-2 ملجم/كجم دفعة وريدية، ثم 25-150 ملجم/يوم مقسمة حسب العمر/الوزن',
+        maxDose: '200 mg/day typically in crisis, tapered rapidly',
+        duration: '24–72 hours then transition to maintenance oral replacement',
+        route: 'IV'
+      },
+      {
+        indication: 'Chronic adrenal insufficiency (maintenance replacement)',
+        indicationAr: 'قصور الغدة الكظرية المزمن (العلاج التعويضي)',
+        adultDose: '15–25 mg/day PO divided (e.g., 10–15 mg AM, 5–10 mg afternoon)',
+        adultDoseAr: '15-25 ملجم/يوم فموي مقسمة (مثل 10-15 ملجم صباحًا، 5-10 ملجم بعد الظهر)',
+        pediatricDose: '6–10 mg/m²/day PO divided, specialist-guided',
+        pediatricDoseAr: '6-10 ملجم/م²/يوم فموي مقسمة، بإشراف متخصص',
+        maxDose: 'Individualized; increase 2–3x during physiologic stress (illness, surgery)',
+        duration: 'Lifelong',
+        route: 'PO'
+      },
+      {
+        indication: 'Septic shock, refractory to fluids/vasopressors (stress-dose steroids)',
+        indicationAr: 'الصدمة الإنتانية المعندة على السوائل والرافعات الوعائية',
+        adultDose: '50 mg IV every 6 hours or 200 mg/day continuous infusion',
+        adultDoseAr: '50 ملجم وريدي كل 6 ساعات أو 200 ملجم/يوم تسريب مستمر',
+        pediatricDose: 'Specialist ICU-guided weight-based dosing',
+        pediatricDoseAr: 'جرعة حسب الوزن بإشراف العناية المركزة',
+        maxDose: '200–300 mg/day',
+        duration: 'Until vasopressor independence, then taper',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; monitor fluid/electrolyte status',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment typically required; monitor closely in severe hepatic impairment',
+    contraindications: [
+      'Systemic fungal infections (unless life-threatening and specifically indicated)',
+      'Known hypersensitivity to hydrocortisone',
+      'Live vaccine administration during high-dose therapy (relative)'
+    ],
+    mechanismOfAction: 'Binds intracellular glucocorticoid receptors, modulating gene transcription to suppress inflammatory mediators; also binds mineralocorticoid receptors in the renal tubule promoting sodium retention and potassium excretion',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الجلوكوكورتيكويد داخل الخلايا، معدّلًا نسخ الجينات لتثبيط الوسائط الالتهابية؛ كما يرتبط بمستقبلات الألدوستيرون في الكلى محفزًا احتباس الصوديوم وطرح البوتاسيوم',
+    halfLife: '1.5–2 hours (biologic effect lasts 8–12 hours)',
+    monitoringParameters: [
+      'Blood pressure and volume status',
+      'Serum electrolytes (sodium, potassium)',
+      'Blood glucose',
+      'Signs of infection (can be masked by steroid use)',
+      'Signs of adrenal crisis resolution (hemodynamic stability)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Take oral doses with food to reduce GI upset'
+    ],
+    pearls: [
+      'Unlike dexamethasone, hydrocortisone has substantial mineralocorticoid activity — it is the preferred agent for adrenal crisis since it addresses both glucocorticoid and mineralocorticoid deficiency simultaneously',
+      'Patients on chronic replacement must be educated on "sick day rules" — double or triple their dose during illness, fever, or before surgery to mimic physiologic stress response',
+      'Never abruptly stop chronic corticosteroid therapy — risk of precipitating adrenal crisis; taper gradually',
+      'If adrenal crisis is suspected but diagnosis unconfirmed, treat empirically with hydrocortisone immediately rather than delaying for cosyntropin stimulation test results'
+    ]
+  },
+  {
+    id: 'desmopressin',
+    genericName: 'Desmopressin (DDAVP)',
+    genericNameAr: 'ديسموبريسين',
+    brandNames: ['DDAVP', 'Stimate', 'ديدافب'],
+    drugClass: 'Synthetic Vasopressin Analog (V2-Selective)',
+    drugClassAr: 'نظير تخليقي للفازوبريسين (انتقائي لمستقبلات V2)',
+    category: 'Rx',
+    route: ['IV', 'intranasal', 'PO', 'SC'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine', 'pediatrics'],
+    keyHighlights: [
+      'Treatment of choice for central diabetes insipidus — V2-selective so lacks the vasoconstrictive (V1) effects of vasopressin',
+      'Also used in mild hemophilia A and von Willebrand disease to release stored factor VIII/vWF from endothelium',
+      'Severe hyponatremia risk with excessive free water intake — fluid restriction counseling is essential'
+    ],
+    indications: [
+      {
+        indication: 'Central diabetes insipidus',
+        indicationAr: 'البوال التفهي المركزي',
+        adultDose: '0.1–0.4 mg PO 2–3 times daily, or 10–40 mcg intranasal divided 1–2 times daily',
+        adultDoseAr: '0.1-0.4 ملجم فموي 2-3 مرات يوميًا، أو 10-40 ميكروجرام أنفي مقسمة 1-2 مرة يوميًا',
+        pediatricDose: '0.05 mg PO twice daily initially, titrate; intranasal weight-based per specialist',
+        pediatricDoseAr: '0.05 ملجم فموي مرتين يوميًا مبدئيًا، تُعدّل؛ الأنفي حسب الوزن بإشراف متخصص',
+        maxDose: '1.2 mg/day PO (highly individualized)',
+        duration: 'Chronic, lifelong',
+        route: 'PO/intranasal'
+      },
+      {
+        indication: 'Mild hemophilia A / von Willebrand disease (bleeding prophylaxis/treatment)',
+        indicationAr: 'الهيموفيليا الخفيفة A / داء فون ويلبراند (الوقاية/علاج النزيف)',
+        adultDose: '0.3 mcg/kg IV infusion over 15–30 min, or 150–300 mcg intranasal single dose before procedure',
+        adultDoseAr: '0.3 ميكروجرام/كجم تسريب وريدي خلال 15-30 دقيقة، أو 150-300 ميكروجرام أنفي جرعة واحدة قبل الإجراء',
+        pediatricDose: '0.3 mcg/kg IV, weight-based (same as adult per kg)',
+        pediatricDoseAr: '0.3 ميكروجرام/كجم وريدي، حسب الوزن (نفس جرعة البالغين بالكجم)',
+        maxDose: 'Single dose typically, may repeat once after 6–24 hours (tachyphylaxis with repeated use)',
+        duration: 'Single dose pre-procedure or as needed for minor bleeding',
+        route: 'IV/intranasal'
+      },
+      {
+        indication: 'Primary nocturnal enuresis',
+        indicationAr: 'التبول اللا إرادي الليلي الأساسي',
+        adultDose: 'Not typically applicable (pediatric indication)',
+        adultDoseAr: 'غير مطبق عادة (دواعي استخدام عند الأطفال)',
+        pediatricDose: '0.2 mg PO at bedtime, titrate up to 0.6 mg if needed (age ≥6 years)',
+        pediatricDoseAr: '0.2 ملجم فموي عند النوم، تُزاد حتى 0.6 ملجم حسب الحاجة (عمر 6 سنوات فأكبر)',
+        maxDose: '0.6 mg PO at bedtime',
+        duration: 'Chronic with periodic reassessment; fluid restriction after evening dose essential',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Use with caution; increased risk of hyponatremia/fluid retention',
+      crclBelow10: 'Avoid if possible; significantly increased hyponatremia risk',
+      hemodialysis: 'Not dialyzed; use with extreme caution given fluid balance concerns'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Moderate to severe renal impairment (relative — increased hyponatremia risk)',
+      'Hyponatremia or history of hyponatremia',
+      'Syndrome of inappropriate antidiuretic hormone secretion (SIADH)',
+      'Habitual or psychogenic polydipsia',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Hyponatremia and seizures have occurred, particularly in children and elderly, due to excessive fluid retention — fluid restriction is essential, especially for the nocturnal enuresis indication',
+    blackBoxWarningAr: 'حدث نقص صوديوم الدم ونوبات تشنجية، خاصة عند الأطفال والمسنين، بسبب احتباس السوائل المفرط - تقييد السوائل ضروري خاصة لدواعي التبول الليلي',
+    mechanismOfAction: 'Selectively activates V2 receptors in renal collecting ducts, increasing water reabsorption via aquaporin channels; also releases von Willebrand factor and factor VIII from vascular endothelial storage sites with minimal V1 (vasopressor) activity',
+    mechanismOfActionAr: 'ينشط انتقائيًا مستقبلات V2 في القنوات الكلوية الجامعة، مما يزيد إعادة امتصاص الماء؛ كما يُحرر عامل فون ويلبراند والعامل الثامن من الخلايا البطانية مع نشاط ضئيل على مستقبلات V1',
+    halfLife: '2–4 hours (IV); longer with intranasal/oral',
+    monitoringParameters: [
+      'Serum sodium (baseline and periodically, especially early in therapy)',
+      'Urine output and osmolality in diabetes insipidus',
+      'Fluid intake — counsel on restriction, especially evening doses',
+      'Signs of hyponatremia (headache, confusion, seizures)',
+      'Factor VIII/vWF levels when used for bleeding disorders'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Fluid intake should be limited to only what is needed to satisfy thirst while on desmopressin — excess free water intake combined with the drug\'s antidiuretic effect is the main cause of dangerous hyponatremia',
+      'Tachyphylaxis (reduced response) occurs with repeated dosing for bleeding indications within 24–48 hours, limiting its use to occasional bleeding episodes or pre-procedure prophylaxis rather than chronic hemostasis',
+      'Preferred over vasopressin for diabetes insipidus because its V2 selectivity avoids the vasoconstrictive/coronary ischemia risk of V1 activation',
+      'Intranasal spray and oral tablet are NOT interchangeable on a 1:1 mcg/mg basis — dosing must be specifically converted'
+    ]
+  },
+  {
+    id: 'oxytocin',
+    genericName: 'Oxytocin',
+    genericNameAr: 'أوكسيتوسين',
+    brandNames: ['Pitocin', 'Syntocinon', 'بيتوسين'],
+    drugClass: 'Uterotonic Hormone (Posterior Pituitary Hormone)',
+    drugClassAr: 'هرمون منشط لتقلص الرحم',
+    category: 'Rx',
+    route: ['IV infusion', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['icu_emergency', 'nursing'],
+    keyHighlights: [
+      'First-line uterotonic for labor induction/augmentation and postpartum hemorrhage prevention/treatment',
+      'High-alert medication — overdose can cause uterine hyperstimulation, fetal distress, and uterine rupture',
+      'Rapid IV push of undiluted oxytocin can cause severe hypotension and reflex tachycardia — always given as a controlled infusion'
+    ],
+    indications: [
+      {
+        indication: 'Labor induction/augmentation',
+        indicationAr: 'تحريض/تعزيز المخاض',
+        adultDose: 'Initial 0.5–2 milliunits/min IV infusion, titrate every 15–60 min by 1–2 milliunits/min per protocol',
+        adultDoseAr: 'بداية 0.5-2 ملي وحدة/دقيقة تسريب وريدي، تُعدّل كل 15-60 دقيقة بزيادة 1-2 ملي وحدة/دقيقة حسب البروتوكول',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: 'Typically capped at 20–40 milliunits/min per institutional protocol',
+        duration: 'Continuous infusion throughout labor, titrated to contraction pattern',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Postpartum hemorrhage prevention (active management of third stage)',
+        indicationAr: 'الوقاية من نزيف ما بعد الولادة (الإدارة الفعالة للمرحلة الثالثة)',
+        adultDose: '10 units IM, or 10–40 units in 500–1000 mL IV fluid infused after delivery',
+        adultDoseAr: '10 وحدة عضلي، أو 10-40 وحدة في 500-1000 مل سوائل وريدية بعد الولادة',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '40 units/1000 mL infusion typical maximum concentration',
+        duration: 'Single dose/short infusion immediately after delivery',
+        route: 'IM/IV infusion'
+      },
+      {
+        indication: 'Postpartum hemorrhage treatment (active bleeding)',
+        indicationAr: 'علاج نزيف ما بعد الولادة (نزيف نشط)',
+        adultDose: '10–40 units in 500–1000 mL IV fluid, infused rapidly, plus uterine massage',
+        adultDoseAr: '10-40 وحدة في 500-1000 مل سوائل وريدية، تُسرّب بسرعة، مع تدليك الرحم',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: 'Per institutional PPH protocol; add second-line agents (methylergonovine, misoprostol, tranexamic acid) if unresponsive',
+        duration: 'Until bleeding controlled',
+        route: 'IV infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; monitor fluid balance',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Significant cephalopelvic disproportion or fetal malposition preventing vaginal delivery',
+      'Fetal distress where delivery is not imminent',
+      'Unfavorable fetal positions (e.g., transverse lie) undeliverable without conversion',
+      'Hypertonic or hyperactive uterus',
+      'Prior classical cesarean section or significant uterine surgery (relative — rupture risk)'
+    ],
+    blackBoxWarning: 'Should not be used for elective labor induction without medical indication; inappropriate use can cause uterine hyperstimulation, fetal distress, uterine rupture, and water intoxication with high-dose prolonged infusion',
+    blackBoxWarningAr: 'يجب عدم استخدامه لتحريض الولادة الاختياري بدون مؤشر طبي؛ الاستخدام غير الملائم قد يسبب فرط تحفيز الرحم وضيق الجنين وتمزق الرحم وتسمم مائي مع التسريب المطول بجرعات عالية',
+    mechanismOfAction: 'Binds oxytocin receptors on uterine myometrium, increasing intracellular calcium and triggering rhythmic smooth muscle contractions; also causes milk ejection via receptors in mammary myoepithelial cells',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الأوكسيتوسين في عضلة الرحم، مما يزيد الكالسيوم داخل الخلايا ويُحدث تقلصات عضلية منتظمة؛ كما يسبب إفراز الحليب عبر مستقبلات في الخلايا العضلية الطلائية للثدي',
+    halfLife: '1–6 minutes',
+    monitoringParameters: [
+      'Uterine contraction frequency, duration, and intensity (tocodynamometry)',
+      'Fetal heart rate (continuous monitoring during induction/augmentation)',
+      'Blood pressure (hypotension with rapid undiluted IV push)',
+      'Signs of uterine hyperstimulation/tetany',
+      'Fluid balance/serum sodium with prolonged high-dose use (water intoxication risk)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Always administer via controlled infusion pump, never as a rapid IV push of concentrated solution — this has caused severe maternal hypotension and cardiovascular collapse',
+      'Continuous electronic fetal monitoring is mandatory during administration due to the hyperstimulation/fetal distress risk',
+      'Has a very short half-life (minutes), so uterine tone normalizes quickly after stopping the infusion if hyperstimulation occurs',
+      'Prolonged infusion of large volumes of hypotonic IV fluid carrying oxytocin can rarely cause water intoxication/hyponatremia due to oxytocin\'s structural similarity to vasopressin (weak ADH-like effect)'
+    ]
+  },
+  {
+    id: 'misoprostol',
+    genericName: 'Misoprostol',
+    genericNameAr: 'ميزوبروستول',
+    brandNames: ['Cytotec', 'سايتوتك'],
+    drugClass: 'Synthetic Prostaglandin E1 Analog',
+    drugClassAr: 'نظير تخليقي للبروستاغلاندين E1',
+    category: 'Rx',
+    route: ['PO', 'sublingual', 'rectal', 'vaginal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['icu_emergency', 'internal_medicine'],
+    keyHighlights: [
+      'Dual clinical role: NSAID-induced gastric ulcer prevention AND obstetric uterotonic (second-line PPH treatment, cervical ripening, medical abortion)',
+      'Absolute contraindication in pregnancy for the GI indication — potent abortifacient/uterotonic effect',
+      'Inexpensive, heat-stable, and does not require refrigeration — valuable for postpartum hemorrhage treatment in resource-limited settings'
+    ],
+    indications: [
+      {
+        indication: 'NSAID-induced gastric ulcer prevention',
+        indicationAr: 'الوقاية من قرحة المعدة الناتجة عن مضادات الالتهاب غير الستيرويدية',
+        adultDose: '200 mcg PO 4 times daily with food, for the duration of NSAID therapy',
+        adultDoseAr: '200 ميكروجرام فموي 4 مرات يوميًا مع الطعام، طوال مدة علاج مضادات الالتهاب',
+        pediatricDose: 'Not established for this indication',
+        pediatricDoseAr: 'غير مستقر لهذا الاستخدام',
+        maxDose: '800 mcg/day',
+        duration: 'Duration of concurrent NSAID therapy',
+        route: 'PO'
+      },
+      {
+        indication: 'Postpartum hemorrhage (second-line, when oxytocin unavailable or ineffective)',
+        indicationAr: 'نزيف ما بعد الولادة (خط ثاني، عندما يكون الأوكسيتوسين غير متوفر أو غير فعال)',
+        adultDose: '800–1000 mcg rectal or sublingual single dose',
+        adultDoseAr: '800-1000 ميكروجرام شرجي أو تحت اللسان جرعة واحدة',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '1000 mcg single dose',
+        duration: 'Single dose',
+        route: 'Rectal/sublingual'
+      },
+      {
+        indication: 'Cervical ripening / labor induction',
+        indicationAr: 'تنضيج عنق الرحم / تحريض المخاض',
+        adultDose: '25 mcg vaginal every 3–6 hours, or 25–50 mcg oral every 4 hours',
+        adultDoseAr: '25 ميكروجرام مهبلي كل 3-6 ساعات، أو 25-50 ميكروجرام فموي كل 4 ساعات',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: 'Per institutional labor induction protocol',
+        duration: 'Repeated dosing until adequate cervical ripening/labor established',
+        route: 'Vaginal/PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Pregnancy, when used for the gastric ulcer prevention indication',
+      'Prior cesarean section or major uterine surgery, when used for labor induction (rupture risk)',
+      'Known hypersensitivity to prostaglandins',
+      'Known allergy to misoprostol'
+    ],
+    blackBoxWarning: 'Can cause abortion, birth defects, or uterine rupture when used for labor induction/cervical ripening in women with a prior cesarean delivery or major uterine surgery; must not be used for GI ulcer prevention during pregnancy',
+    blackBoxWarningAr: 'قد يسبب إجهاضًا أو تشوهات خلقية أو تمزق الرحم عند استخدامه لتحريض المخاض عند النساء اللاتي سبق لهن ولادة قيصرية أو جراحة رحمية كبرى؛ يجب عدم استخدامه للوقاية من قرحة المعدة أثناء الحمل',
+    mechanismOfAction: 'Synthetic PGE1 analog that increases gastric mucus and bicarbonate secretion while inhibiting gastric acid secretion (cytoprotection); also stimulates uterine smooth muscle contraction and cervical ripening via prostaglandin EP receptors',
+    mechanismOfActionAr: 'نظير تخليقي للبروستاغلاندين E1 يزيد إفراز المخاط والبيكربونات المعدي ويثبط إفراز الحمض؛ كما يحفز تقلص عضلة الرحم وتنضيج عنق الرحم',
+    halfLife: '20–40 minutes',
+    monitoringParameters: [
+      'GI symptoms (diarrhea, cramping — common with GI indication)',
+      'Uterine activity and fetal heart rate when used obstetrically',
+      'Signs of uterine hyperstimulation or rupture',
+      'Pregnancy status before initiating for GI indication'
+    ],
+    pregnancyCategory: 'X',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Take with food when used for GI ulcer prevention to reduce diarrhea'
+    ],
+    pearls: [
+      'Pregnancy category X specifically for the gastric ulcer prevention indication — women of childbearing potential must have a negative pregnancy test and use effective contraception before starting for this use',
+      'Heat-stable and inexpensive, making it a critical tool for postpartum hemorrhage management in settings without reliable cold-chain storage for oxytocin',
+      'Diarrhea and abdominal cramping are very common with oral dosing — often dose-limiting for the GI indication',
+      'Also used (often in combination with mifepristone) for medical termination of pregnancy and management of early pregnancy loss under appropriate protocols'
+    ]
+  },
+  {
+    id: 'etomidate',
+    genericName: 'Etomidate',
+    genericNameAr: 'إيتوميديت',
+    brandNames: ['Amidate', 'أميديت'],
+    drugClass: 'Imidazole-Derivative IV Anesthetic Induction Agent',
+    drugClassAr: 'عامل تخدير وريدي حثي من مشتقات الإيميدازول',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['icu_emergency'],
+    keyHighlights: [
+      'Preferred induction agent for rapid sequence intubation in hemodynamically unstable patients due to minimal cardiovascular depression',
+      'Transiently suppresses adrenal cortisol synthesis (11-beta-hydroxylase inhibition) — a single dose\'s clinical significance remains debated but is a known consideration in septic shock',
+      'No analgesic properties — must be paired with an analgesic/opioid for painful procedures'
+    ],
+    indications: [
+      {
+        indication: 'Rapid sequence intubation induction',
+        indicationAr: 'حث التنبيب السريع المتسلسل',
+        adultDose: '0.2–0.3 mg/kg IV push',
+        adultDoseAr: '0.2-0.3 ملجم/كجم دفعة وريدية',
+        pediatricDose: '0.2–0.3 mg/kg IV (safety/efficacy in children <10 years less established, used with caution)',
+        pediatricDoseAr: '0.2-0.3 ملجم/كجم وريدي (الأمان والفعالية أقل ثباتًا تحت عمر 10 سنوات، يُستخدم بحذر)',
+        maxDose: 'Weight-based; typically 20–40 mg in an average adult',
+        duration: 'Onset 15–45 sec, duration 3–12 min',
+        route: 'IV'
+      },
+      {
+        indication: 'Procedural sedation (brief painful procedures, with analgesia)',
+        indicationAr: 'التسكين للإجراءات (إجراءات مؤلمة قصيرة، مع مسكن)',
+        adultDose: '0.1–0.15 mg/kg IV, may repeat smaller doses as needed',
+        adultDoseAr: '0.1-0.15 ملجم/كجم وريدي، يمكن تكرار جرعات أصغر حسب الحاجة',
+        pediatricDose: '0.2–0.3 mg/kg IV, specialist-guided for procedural sedation',
+        pediatricDoseAr: '0.2-0.3 ملجم/كجم وريدي، بإشراف متخصص للتسكين الإجرائي',
+        maxDose: 'Titrate to effect; cumulative dosing limited by myoclonus/adrenal suppression concerns',
+        duration: 'Single or repeated small boluses for brief procedures',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No formal dose adjustment required; use with caution in severe hepatic impairment',
+    contraindications: [
+      'Known hypersensitivity to etomidate',
+      'Relative caution in septic shock given adrenal suppression concerns (clinical significance debated, often still used as single induction dose)'
+    ],
+    mechanismOfAction: 'Potentiates GABA-A receptor-mediated chloride currents in the CNS, producing rapid hypnosis with relative hemodynamic stability compared to other induction agents',
+    mechanismOfActionAr: 'يعزز تيارات الكلوريد المعتمدة على مستقبلات GABA-A في الجهاز العصبي المركزي، منتجًا تنويمًا سريعًا مع استقرار نسبي في الدورة الدموية مقارنة بعوامل الحث الأخرى',
+    halfLife: '2.6–5 hours (clinical effect much shorter due to redistribution)',
+    monitoringParameters: [
+      'Blood pressure and heart rate (generally stable, still monitor)',
+      'Myoclonic movements during induction (common, usually benign)',
+      'Adequacy of sedation/need for additional analgesia',
+      'Signs of adrenal insufficiency with repeated dosing or in critically ill patients'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Minimal effect on blood pressure and cardiac output makes it the induction agent of choice in hypotensive, hypovolemic, or cardiac-compromised patients undergoing RSI',
+      'Myoclonic movements during induction are common and can be mistaken for seizure activity — generally benign and self-limited',
+      'Does not provide any analgesia — always co-administer an opioid or other analgesic for painful stimuli',
+      'A single induction dose causes transient adrenal suppression lasting several hours; while associated with some mortality signal in sepsis literature, it remains widely used as a one-time RSI induction agent given its hemodynamic advantages'
+    ]
+  },
+  {
+    id: 'dexamethasone',
+    genericName: 'Dexamethasone',
+    genericNameAr: 'ديكساميثازون',
+    brandNames: ['Decadron', 'ديكادرون'],
+    drugClass: 'Long-Acting Corticosteroid (Glucocorticoid, Minimal Mineralocorticoid Activity)',
+    drugClassAr: 'كورتيكوستيرويد طويل المفعول (نشاط جلوكوكورتيكويد قوي، نشاط ألدوستيروني ضئيل)',
+    category: 'Rx',
+    route: ['PO', 'IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['icu_emergency', 'oncology', 'internal_medicine'],
+    keyHighlights: [
+      'Reduced mortality in COVID-19 patients requiring supplemental oxygen or mechanical ventilation (RECOVERY trial)',
+      'Preferred steroid for cerebral edema (vasogenic, from tumors) due to good CNS penetration and minimal mineralocorticoid-related fluid retention',
+      'Standard component of antiemetic prophylaxis for highly emetogenic chemotherapy regimens'
+    ],
+    indications: [
+      {
+        indication: 'COVID-19 (hypoxemic, requiring supplemental oxygen)',
+        indicationAr: 'كوفيد-19 (نقص الأكسجين، يتطلب أكسجين تكميلي)',
+        adultDose: '6 mg PO/IV once daily for up to 10 days',
+        adultDoseAr: '6 ملجم فموي/وريدي مرة يوميًا لمدة تصل إلى 10 أيام',
+        pediatricDose: '0.15 mg/kg/day (max 6 mg) once daily, specialist-guided',
+        pediatricDoseAr: '0.15 ملجم/كجم/يوم (بحد أقصى 6 ملجم) مرة يوميًا، بإشراف متخصص',
+        maxDose: '6 mg/day',
+        duration: 'Up to 10 days or until discharge',
+        route: 'PO/IV'
+      },
+      {
+        indication: 'Cerebral edema (tumor-associated, vasogenic)',
+        indicationAr: 'وذمة المخ (المرتبطة بالورم)',
+        adultDose: '10 mg IV loading, then 4–6 mg IV/PO every 6 hours, taper once stable',
+        adultDoseAr: '10 ملجم وريدي جرعة تحميل، ثم 4-6 ملجم وريدي/فموي كل 6 ساعات، تُدرّج عند الاستقرار',
+        pediatricDose: '1–2 mg/kg loading (max 16 mg), then 1–1.5 mg/kg/day divided every 4–6 hours',
+        pediatricDoseAr: '1-2 ملجم/كجم جرعة تحميل (بحد أقصى 16 ملجم)، ثم 1-1.5 ملجم/كجم/يوم مقسمة كل 4-6 ساعات',
+        maxDose: '16 mg/day (varies by severity)',
+        duration: 'Days to weeks, taper based on response and imaging',
+        route: 'IV/PO'
+      },
+      {
+        indication: 'Chemotherapy-induced nausea/vomiting prophylaxis',
+        indicationAr: 'الوقاية من الغثيان والقيء الناتج عن العلاج الكيميائي',
+        adultDose: '12–20 mg IV/PO before chemotherapy, then 8 mg daily for 2–4 days post-chemo',
+        adultDoseAr: '12-20 ملجم وريدي/فموي قبل العلاج الكيميائي، ثم 8 ملجم يوميًا لـ 2-4 أيام بعد العلاج',
+        pediatricDose: '10 mg/m² (max 20 mg) IV before chemotherapy, specialist-guided',
+        pediatricDoseAr: '10 ملجم/م² (بحد أقصى 20 ملجم) وريدي قبل العلاج الكيميائي، بإشراف متخصص',
+        maxDose: '20 mg per dose',
+        duration: 'Pre-chemo plus 2–4 days post as combination antiemetic regimen',
+        route: 'IV/PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment typically required; monitor closely in severe hepatic impairment',
+    contraindications: [
+      'Systemic fungal infections',
+      'Known hypersensitivity to dexamethasone or sulfite components',
+      'Live vaccine administration during high-dose therapy (relative)',
+      'Epidural administration (not approved)'
+    ],
+    blackBoxWarning: 'Epidural administration not approved and associated with serious neurologic events including spinal cord infarction, paraplegia, and death',
+    blackBoxWarningAr: 'الإعطاء فوق الجافية غير معتمد ويرتبط بأحداث عصبية خطيرة تشمل احتشاء النخاع الشوكي والشلل النصفي والوفاة',
+    mechanismOfAction: 'Potent, highly selective glucocorticoid receptor agonist with minimal mineralocorticoid activity; suppresses multiple inflammatory pathways including cytokine production, leukocyte migration, and vascular permeability',
+    mechanismOfActionAr: 'منشط قوي وانتقائي لمستقبلات الجلوكوكورتيكويد مع نشاط ألدوستيروني ضئيل؛ يثبط مسارات التهابية متعددة تشمل إفراز السيتوكينات وهجرة الخلايا البيضاء ونفاذية الأوعية',
+    halfLife: '36–54 hours (biologic)',
+    monitoringParameters: [
+      'Blood glucose (hyperglycemia common)',
+      'Signs of infection (can be masked)',
+      'Mental status changes (steroid-induced psychosis/mood changes)',
+      'GI symptoms (consider PPI/H2 blocker prophylaxis with prolonged use)',
+      'Bone density with prolonged chronic use'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Take with food to reduce GI upset'
+    ],
+    pearls: [
+      'Minimal mineralocorticoid activity compared to hydrocortisone makes it preferable when fluid retention/hypokalemia must be avoided, but unsuitable as sole therapy for adrenal crisis (lacks adequate mineralocorticoid replacement)',
+      'Long biologic half-life allows once-daily dosing, improving adherence compared to shorter-acting steroids requiring multiple daily doses',
+      'High potency relative to other corticosteroids (dexamethasone 0.75 mg ≈ hydrocortisone 20 mg) — always double-check equivalency when switching steroids',
+      'Can falsely suppress cosyntropin (ACTH) stimulation test results and interferes with dexamethasone suppression testing for Cushing syndrome if timing is not carefully controlled'
+    ]
+  },
+  {
+    id: 'alprazolam',
+    genericName: 'Alprazolam',
+    genericNameAr: 'ألبرازولام',
+    brandNames: ['Xanax', 'زاناكس'],
+    drugClass: 'Benzodiazepine (Short-Acting)',
+    drugClassAr: 'بنزوديازيبين قصير المفعول',
+    category: 'Controlled',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'High potency and short half-life give rapid symptom relief but also the highest dependence/withdrawal risk among commonly used benzodiazepines',
+      'First-line acute treatment for panic disorder, though SSRIs/SNRIs are preferred for long-term management',
+      'Interdose withdrawal/rebound anxiety is common due to short half-life, often driving dose escalation'
+    ],
+    indications: [
+      {
+        indication: 'Panic disorder',
+        indicationAr: 'اضطراب الهلع',
+        adultDose: '0.5 mg PO three times daily initially, titrate every 3–4 days, usual range 1–4 mg/day divided',
+        adultDoseAr: '0.5 ملجم فموي 3 مرات يوميًا مبدئيًا، تُزاد كل 3-4 أيام، المعدل المعتاد 1-4 ملجم/يوم مقسمة',
+        pediatricDose: 'Not established in children',
+        pediatricDoseAr: 'غير مستقر عند الأطفال',
+        maxDose: '10 mg/day in severe cases (rarely needed)',
+        duration: 'Short-term preferred; reassess chronic use regularly',
+        route: 'PO'
+      },
+      {
+        indication: 'Generalized anxiety disorder (short-term)',
+        indicationAr: 'اضطراب القلق المعمم (قصير المدى)',
+        adultDose: '0.25–0.5 mg PO three times daily, titrate as needed',
+        adultDoseAr: '0.25-0.5 ملجم فموي 3 مرات يوميًا، تُزاد حسب الحاجة',
+        pediatricDose: 'Not established in children',
+        pediatricDoseAr: 'غير مستقر عند الأطفال',
+        maxDose: '4 mg/day',
+        duration: 'Short-term (days to weeks), avoid prolonged continuous use',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'Use with caution; start at lower dose',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose and/or extend dosing interval in hepatic impairment — elimination half-life significantly prolonged',
+    contraindications: [
+      'Narrow-angle glaucoma',
+      'Concurrent use with ketoconazole or itraconazole (strong CYP3A4 inhibitors)',
+      'Severe respiratory insufficiency',
+      'Known hypersensitivity to benzodiazepines'
+    ],
+    blackBoxWarning: 'Concomitant use with opioids may result in profound sedation, respiratory depression, coma, and death; risk of abuse, misuse, and addiction; physical dependence and withdrawal (including seizures) with abrupt discontinuation',
+    blackBoxWarningAr: 'الاستخدام المصاحب مع الأفيونيات قد يؤدي إلى تخدير شديد وتثبيط تنفسي وغيبوبة ووفاة؛ خطر التعاطي وسوء الاستخدام والإدمان؛ الاعتماد الجسدي والانسحاب (يشمل النوبات) مع التوقف المفاجئ',
+    mechanismOfAction: 'Enhances GABA-A receptor-mediated chloride influx by binding the benzodiazepine binding site, increasing the frequency of channel opening and producing anxiolytic, sedative, and anticonvulsant effects',
+    mechanismOfActionAr: 'يعزز تدفق الكلوريد عبر مستقبلات GABA-A بالارتباط بموقع البنزوديازيبين، منتجًا تأثيرات مزيلة للقلق ومهدئة ومضادة للتشنج',
+    halfLife: '11–16 hours',
+    monitoringParameters: [
+      'Level of sedation/cognitive impairment',
+      'Signs of dependence, tolerance, or misuse',
+      'Interdose withdrawal symptoms (rebound anxiety between doses)',
+      'Respiratory status, especially with concurrent opioids/CNS depressants',
+      'Fall risk in elderly patients'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'Avoid alcohol (additive CNS/respiratory depression)',
+      'Avoid grapefruit juice (increases alprazolam levels via CYP3A4 inhibition)'
+    ],
+    pearls: [
+      'Short half-life causes interdose rebound anxiety more than longer-acting benzodiazepines (e.g., clonazepam), which can drive dose escalation and makes it a higher-risk agent for dependence',
+      'Never abruptly discontinue after regular use — taper gradually to avoid withdrawal seizures, which can be life-threatening',
+      'SSRIs/SNRIs remain first-line for long-term panic disorder management; benzodiazepines are best reserved for acute/bridge therapy',
+      'Significant abuse potential and street value — prescribe the smallest effective quantity and monitor closely, especially with concurrent opioid use given fatal respiratory depression risk'
+    ]
+  },
+  {
+    id: 'venlafaxine',
+    genericName: 'Venlafaxine',
+    genericNameAr: 'فينلافاكسين',
+    brandNames: ['Effexor', 'إيفكسور'],
+    drugClass: 'Serotonin-Norepinephrine Reuptake Inhibitor (SNRI)',
+    drugClassAr: 'مثبط إعادة امتصاص السيروتونين والنورإبينفرين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Dose-dependent pharmacology: primarily serotonergic at low doses, with increasing noradrenergic effect at higher doses (>150 mg/day)',
+      'One of the most notorious antidepressants for severe discontinuation syndrome — must be tapered very slowly',
+      'Dose-related increase in blood pressure, particularly at higher doses — monitor BP'
+    ],
+    indications: [
+      {
+        indication: 'Major depressive disorder',
+        indicationAr: 'اضطراب الاكتئاب الشديد',
+        adultDose: 'IR: 75 mg/day divided 2–3 times, titrate; XR: 75 mg once daily, titrate to 150–225 mg/day',
+        adultDoseAr: 'سريع المفعول: 75 ملجم/يوم مقسمة 2-3 مرات، تُزاد؛ طويل المفعول: 75 ملجم مرة يوميًا، تُزاد إلى 150-225 ملجم/يوم',
+        pediatricDose: 'Not established for depression in children',
+        pediatricDoseAr: 'غير مستقر للاكتئاب عند الأطفال',
+        maxDose: '375 mg/day (IR); 225 mg/day (XR) typical ceiling',
+        duration: 'Chronic, reassess at 4–6 weeks',
+        route: 'PO'
+      },
+      {
+        indication: 'Generalized anxiety disorder / social anxiety disorder / panic disorder',
+        indicationAr: 'اضطراب القلق المعمم / اضطراب القلق الاجتماعي / اضطراب الهلع',
+        adultDose: 'XR 37.5–75 mg once daily, titrate up to 225 mg/day',
+        adultDoseAr: 'طويل المفعول 37.5-75 ملجم مرة يوميًا، تُزاد حتى 225 ملجم/يوم',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '225 mg/day',
+        duration: 'Chronic, reassess periodically',
+        route: 'PO'
+      },
+      {
+        indication: 'Vasomotor symptoms (hot flashes) — off-label',
+        indicationAr: 'الأعراض الوعائية الحركية (الهبات الساخنة) - استخدام خارج النشرة',
+        adultDose: '37.5–75 mg XR once daily',
+        adultDoseAr: '37.5-75 ملجم طويل المفعول مرة يوميًا',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '75 mg/day typically sufficient for this indication',
+        duration: 'As needed for symptom control',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Reduce total daily dose by 25%',
+      crclBelow10: 'Reduce total daily dose by 50%',
+      hemodialysis: 'Reduce dose by 50%; administer after dialysis session; significantly dialyzed'
+    },
+    hepaticAdjustment: 'Reduce total daily dose by 50% in moderate hepatic impairment; use with caution and consider further reduction in severe impairment',
+    contraindications: [
+      'Use of MAO inhibitors within 14 days (or 7 days after stopping venlafaxine before starting an MAOI)',
+      'Uncontrolled narrow-angle glaucoma',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Increased risk of suicidal thinking and behavior in children, adolescents, and young adults; monitor closely for clinical worsening, especially early in treatment or with dose changes',
+    blackBoxWarningAr: 'خطر متزايد للتفكير والسلوك الانتحاري عند الأطفال والمراهقين والشباب؛ يجب المراقبة الدقيقة لأي تدهور سريري خاصة في بداية العلاج أو عند تغيير الجرعة',
+    mechanismOfAction: 'Inhibits reuptake of serotonin and norepinephrine (and weakly dopamine at high doses); noradrenergic contribution increases with dose, giving dose-dependent pharmacologic effects',
+    mechanismOfActionAr: 'يثبط إعادة امتصاص السيروتونين والنورإبينفرين (وبشكل ضعيف الدوبامين بالجرعات العالية)؛ المساهمة النورأدرينالية تزيد مع الجرعة',
+    halfLife: '5 hours (parent); active metabolite O-desmethylvenlafaxine ~11 hours',
+    monitoringParameters: [
+      'Blood pressure (dose-dependent increase, especially above 150 mg/day)',
+      'Mood and suicidality, especially early in treatment',
+      'Signs of serotonin syndrome if combined with other serotonergic agents',
+      'Sodium levels (SIADH/hyponatremia risk, especially elderly)',
+      'Discontinuation symptoms if stopping or missing doses'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Avoid alcohol',
+      'Take with food to reduce nausea'
+    ],
+    pearls: [
+      'Has one of the most severe discontinuation syndromes among antidepressants (dizziness, "brain zaps," irritability, nausea) due to its relatively short half-life — must be tapered very gradually, especially after prolonged use',
+      'Blood pressure should be checked at baseline and periodically during treatment, particularly as doses increase above 150 mg/day, where noradrenergic effects become more prominent',
+      'Extended-release formulation improves GI tolerability and allows once-daily dosing compared to immediate-release',
+      'Often used when SSRIs provide inadequate response, given its dual serotonin-norepinephrine mechanism, particularly for depression with comorbid pain or anxiety'
+    ]
+  },
+  {
+    id: 'olanzapine',
+    genericName: 'Olanzapine',
+    genericNameAr: 'أولانزابين',
+    brandNames: ['Zyprexa', 'زيبريكسا'],
+    drugClass: 'Atypical (Second-Generation) Antipsychotic',
+    drugClassAr: 'مضاد ذهان غير نمطي (من الجيل الثاني)',
+    category: 'Rx',
+    route: ['PO', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Among the highest metabolic risk (weight gain, dyslipidemia, new-onset diabetes) of all atypical antipsychotics — requires baseline and ongoing metabolic monitoring',
+      'IM formulation used for acute agitation; a rare post-injection delirium/sedation syndrome requires 3-hour monitoring after each IM dose',
+      'Also effective as an adjunct antiemetic for highly emetogenic chemotherapy and refractory nausea'
+    ],
+    indications: [
+      {
+        indication: 'Schizophrenia',
+        indicationAr: 'الفصام',
+        adultDose: '5–10 mg PO once daily initially, titrate to 10–20 mg/day',
+        adultDoseAr: '5-10 ملجم فموي مرة يوميًا مبدئيًا، تُزاد إلى 10-20 ملجم/يوم',
+        pediatricDose: '2.5–5 mg PO once daily (age 13+), titrate to 10 mg/day max',
+        pediatricDoseAr: '2.5-5 ملجم فموي مرة يوميًا (عمر 13+)، تُزاد بحد أقصى 10 ملجم/يوم',
+        maxDose: '20 mg/day',
+        duration: 'Chronic, lifelong maintenance typical',
+        route: 'PO'
+      },
+      {
+        indication: 'Bipolar I disorder (acute mania, maintenance)',
+        indicationAr: 'اضطراب ثنائي القطب من النوع الأول (نوبة الهوس الحادة، الصيانة)',
+        adultDose: '10–15 mg PO once daily, titrate to 5–20 mg/day',
+        adultDoseAr: '10-15 ملجم فموي مرة يوميًا، تُزاد إلى 5-20 ملجم/يوم',
+        pediatricDose: '2.5–5 mg PO once daily (age 13+), titrate to 10 mg/day max',
+        pediatricDoseAr: '2.5-5 ملجم فموي مرة يوميًا (عمر 13+)، تُزاد بحد أقصى 10 ملجم/يوم',
+        maxDose: '20 mg/day',
+        duration: 'Acute episode then maintenance per response',
+        route: 'PO'
+      },
+      {
+        indication: 'Acute agitation (psychiatric emergency)',
+        indicationAr: 'التهيج الحاد (حالة طوارئ نفسية)',
+        adultDose: '5–10 mg IM, may repeat after 2 hours (max 3 doses/day)',
+        adultDoseAr: '5-10 ملجم عضلي، يمكن تكرارها بعد ساعتين (بحد أقصى 3 جرعات/يوم)',
+        pediatricDose: 'Not established for IM use in children',
+        pediatricDoseAr: 'غير مستقر للاستخدام العضلي عند الأطفال',
+        maxDose: '30 mg/day IM',
+        duration: 'Single or repeated IM doses as needed, monitor 3 hours post-injection',
+        route: 'IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; limited data, use with caution',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Consider lower starting dose (5 mg) in hepatic impairment; titrate cautiously',
+    contraindications: [
+      'Known hypersensitivity to olanzapine',
+      'Not for use in elderly patients with dementia-related psychosis (increased mortality)'
+    ],
+    blackBoxWarning: 'Increased risk of death in elderly patients with dementia-related psychosis; not approved for this use. IM formulation: risk of post-injection delirium/sedation syndrome requiring observation for at least 3 hours after each injection',
+    blackBoxWarningAr: 'خطر متزايد للوفاة عند المسنين المصابين بذهان مرتبط بالخرف؛ غير معتمد لهذا الاستخدام. الشكل العضلي: خطر متلازمة الهذيان/التخدير بعد الحقن يتطلب مراقبة لمدة 3 ساعات على الأقل بعد كل حقنة',
+    mechanismOfAction: 'Antagonizes dopamine D2 and serotonin 5-HT2A receptors, along with histamine H1 and muscarinic receptors, reducing positive psychotic symptoms while contributing to sedation and metabolic effects',
+    mechanismOfActionAr: 'يحجب مستقبلات الدوبامين D2 والسيروتونين 5-HT2A، بالإضافة لمستقبلات الهيستامين H1 والمسكارينية، مما يقلل الأعراض الذهانية الإيجابية مع المساهمة في التخدير والتأثيرات الاستقلابية',
+    halfLife: '21–54 hours',
+    monitoringParameters: [
+      'Weight, BMI, waist circumference (baseline and periodically)',
+      'Fasting glucose/HbA1c and lipid panel (baseline and every 3–12 months)',
+      'Blood pressure',
+      'Signs of extrapyramidal symptoms/tardive dyskinesia (lower risk than first-generation but still possible)',
+      'Sedation level, especially with IM dosing (monitor 3 hours post-injection)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Avoid alcohol (additive CNS depression)',
+      'Smoking (via CYP1A2 induction) can reduce olanzapine levels — dose adjustment may be needed if smoking status changes'
+    ],
+    pearls: [
+      'Carries among the highest risk of clinically significant weight gain, dyslipidemia, and new-onset type 2 diabetes among atypical antipsychotics — baseline and regular metabolic monitoring (ADA/APA protocol) is essential',
+      'IM injection has a unique risk of post-injection delirium/sedation syndrome (accidental intravascular injection), requiring in-facility observation for at least 3 hours after each dose',
+      'Smoking induces CYP1A2 and can significantly lower olanzapine levels — dose may need adjustment if a patient starts or stops smoking during treatment',
+      'Low-dose olanzapine (2.5–5 mg) is increasingly used off-label as an effective adjunct antiemetic for refractory chemotherapy-induced or palliative care nausea'
+    ]
+  },
+  {
+    id: 'sucralfate',
+    genericName: 'Sucralfate',
+    genericNameAr: 'سوكرالفات',
+    brandNames: ['Carafate', 'كارافيت'],
+    drugClass: 'Mucosal Protectant (Aluminum Sucrose Sulfate Complex)',
+    drugClassAr: 'عامل حماية للغشاء المخاطي (مركب كبريتات السكروز والألمنيوم)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Forms a physical protective barrier over ulcerated mucosa rather than reducing acid secretion — a fundamentally different mechanism from PPIs/H2 blockers',
+      'Requires an acidic environment to activate and must be taken on an empty stomach, strictly separated from other medications',
+      'Significantly binds and reduces absorption of many co-administered oral drugs — timing separation of at least 2 hours is essential'
+    ],
+    indications: [
+      {
+        indication: 'Duodenal ulcer (treatment and maintenance)',
+        indicationAr: 'قرحة الاثني عشر (العلاج والصيانة)',
+        adultDose: '1 g PO four times daily on an empty stomach (1 hour before meals and at bedtime)',
+        adultDoseAr: '1 جرام فموي 4 مرات يوميًا على معدة فارغة (قبل الوجبات بساعة وعند النوم)',
+        pediatricDose: '40–80 mg/kg/day divided every 6 hours (limited pediatric data)',
+        pediatricDoseAr: '40-80 ملجم/كجم/يوم مقسمة كل 6 ساعات (بيانات محدودة عند الأطفال)',
+        maxDose: '8 g/day (treatment); 4 g/day (maintenance, typically 1 g twice daily)',
+        duration: '4–8 weeks treatment course',
+        route: 'PO'
+      },
+      {
+        indication: 'Stress ulcer prophylaxis (ICU, mechanically ventilated patients)',
+        indicationAr: 'الوقاية من قرحة التوتر (العناية المركزة، المرضى على التنفس الصناعي)',
+        adultDose: '1 g PO/via feeding tube every 6 hours',
+        adultDoseAr: '1 جرام فموي/عبر أنبوب التغذية كل 6 ساعات',
+        pediatricDose: 'Not routinely established; specialist-guided if used',
+        pediatricDoseAr: 'غير مستقرة بشكل روتيني؛ بإشراف متخصص إذا استُخدم',
+        maxDose: '4 g/day for prophylaxis',
+        duration: 'Duration of ICU stay/mechanical ventilation risk period',
+        route: 'PO/enteral'
+      },
+      {
+        indication: 'Radiation-induced or chemotherapy-induced mucositis (oral suspension, topical use)',
+        indicationAr: 'التهاب الغشاء المخاطي الناتج عن العلاج الإشعاعي أو الكيميائي (معلق فموي، استخدام موضعي)',
+        adultDose: '1 g (10 mL suspension) swish and swallow/spit 4 times daily',
+        adultDoseAr: '1 جرام (10 مل معلق) يُغرغر ويُبلع/يُبصق 4 مرات يوميًا',
+        pediatricDose: 'Specialist-guided for oncology supportive care',
+        pediatricDoseAr: 'بإشراف متخصص للرعاية الداعمة في الأورام',
+        maxDose: '4 g/day',
+        duration: 'Duration of mucositis symptoms',
+        route: 'PO (topical/swish)'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Use with caution; aluminum accumulation risk with prolonged use',
+      crclBelow10: 'Avoid prolonged use if possible; significant aluminum accumulation risk',
+      hemodialysis: 'Avoid prolonged use; aluminum toxicity risk in dialysis patients'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to sucralfate',
+      'Severe renal impairment with prolonged use (aluminum toxicity risk)'
+    ],
+    mechanismOfAction: 'In an acidic environment, polymerizes and binds to proteins at the ulcer base, forming a protective physical barrier that shields the mucosa from acid, pepsin, and bile while also stimulating local prostaglandin and mucus production',
+    mechanismOfActionAr: 'في بيئة حمضية، يتبلمر ويرتبط بالبروتينات في قاعدة القرحة، مكونًا حاجزًا ماديًا حاميًا يحمي الغشاء المخاطي من الحمض والببسين والصفراء، ويحفز إنتاج البروستاغلاندين والمخاط موضعيًا',
+    halfLife: 'Minimal systemic absorption (acts locally)',
+    monitoringParameters: [
+      'Ulcer healing symptoms/endoscopic follow-up if indicated',
+      'Constipation (common side effect)',
+      'Aluminum levels with prolonged use in renal impairment',
+      'Drug interaction review — timing with other oral medications'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'Must be taken on an EMPTY stomach, at least 1 hour before meals — food/antacids reduce activation and efficacy',
+      'Separate administration from other oral drugs by at least 2 hours (binds and reduces absorption of many medications including fluoroquinolones, tetracyclines, levothyroxine, phenytoin, digoxin)'
+    ],
+    pearls: [
+      'Must be taken on an empty stomach — co-administration with food, antacids, or H2 blockers/PPIs (which raise gastric pH) can reduce its activation and efficacy since it requires an acidic environment to polymerize',
+      'Binds many commonly co-administered drugs (fluoroquinolones, tetracyclines, levothyroxine, digoxin, phenytoin), reducing their absorption — always separate dosing by at least 2 hours',
+      'Constipation is the most common side effect due to its aluminum content',
+      'A reasonable alternative to acid-suppressive stress ulcer prophylaxis in ICU patients when avoiding gastric pH elevation is desired (e.g., concern for ventilator-associated pneumonia), though PPIs/H2 blockers are more commonly used'
+    ]
+  },
+  {
+    id: 'lactulose',
+    genericName: 'Lactulose',
+    genericNameAr: 'لاكتولوز',
+    brandNames: ['Kristalose', 'Enulose', 'كريستالوز'],
+    drugClass: 'Osmotic Laxative (Synthetic Disaccharide)',
+    drugClassAr: 'ملين حلولي (ثنائي سكاريد تخليقي)',
+    category: 'Rx',
+    route: ['PO', 'rectal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Dual indication: standard osmotic laxative for constipation AND first-line treatment for hepatic encephalopathy',
+      'In hepatic encephalopathy, dosed to produce 2–3 soft stools/day, not titrated for maximal laxative effect',
+      'Metabolized by colonic bacteria to organic acids, trapping ammonia (NH3→NH4+) in the gut lumen for excretion — the key mechanism in hepatic encephalopathy'
+    ],
+    indications: [
+      {
+        indication: 'Hepatic encephalopathy (treatment and prevention of recurrence)',
+        indicationAr: 'اعتلال الدماغ الكبدي (العلاج والوقاية من التكرار)',
+        adultDose: '20–30 g (30–45 mL) PO 2–4 times daily, titrate to 2–3 soft stools/day',
+        adultDoseAr: '20-30 جرام (30-45 مل) فموي 2-4 مرات يوميًا، تُعدّل لتحقيق 2-3 حركات أمعاء لينة يوميًا',
+        pediatricDose: 'Infants: 2.5–10 mL/day divided; children: 40–90 mL/day divided, titrate to effect',
+        pediatricDoseAr: 'الرضع: 2.5-10 مل/يوم مقسمة؛ الأطفال: 40-90 مل/يوم مقسمة، تُعدّل حسب التأثير',
+        maxDose: 'Titrate to 2–3 soft stools/day; no fixed ceiling',
+        duration: 'Chronic, ongoing in cirrhosis with prior hepatic encephalopathy episodes',
+        route: 'PO'
+      },
+      {
+        indication: 'Severe hepatic encephalopathy (unable to take oral)',
+        indicationAr: 'اعتلال الدماغ الكبدي الشديد (غير قادر على الفموي)',
+        adultDose: '300 mL lactulose in 700 mL water as retention enema, every 4–6 hours',
+        adultDoseAr: '300 مل لاكتولوز في 700 مل ماء كحقنة شرجية احتباسية، كل 4-6 ساعات',
+        pediatricDose: 'Specialist-guided, weight-adjusted enema dosing',
+        pediatricDoseAr: 'بإشراف متخصص، جرعة الحقنة حسب الوزن',
+        maxDose: 'Per clinical response and mental status improvement',
+        duration: 'Until oral route can be resumed',
+        route: 'Rectal'
+      },
+      {
+        indication: 'Chronic constipation',
+        indicationAr: 'الإمساك المزمن',
+        adultDose: '15–30 mL PO once or twice daily, titrate to effect',
+        adultDoseAr: '15-30 مل فموي مرة أو مرتين يوميًا، تُعدّل حسب التأثير',
+        pediatricDose: '1 mL/kg/day divided twice daily',
+        pediatricDoseAr: '1 مل/كجم/يوم مقسمة مرتين يوميًا',
+        maxDose: '60 mL/day',
+        duration: 'As needed, can be used chronically',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; monitor electrolytes with excessive use',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No dose reduction required — in fact a mainstay treatment specifically for hepatic complications; dose titrated to clinical effect regardless of degree of hepatic impairment',
+    contraindications: [
+      'Galactosemia (contains galactose)',
+      'Known hypersensitivity to lactulose',
+      'Suspected bowel obstruction'
+    ],
+    mechanismOfAction: 'Non-absorbable synthetic disaccharide that reaches the colon unchanged, where bacterial fermentation produces organic acids that acidify the colonic lumen, converting absorbable ammonia (NH3) to non-absorbable ammonium (NH4+) for fecal excretion, while also exerting an osmotic laxative effect that speeds transit',
+    mechanismOfActionAr: 'ثنائي سكاريد تخليقي غير قابل للامتصاص يصل إلى القولون دون تغيير، حيث يُخمّر بكتيريًا لإنتاج أحماض عضوية تُحمّض تجويف القولون، محولة الأمونيا القابلة للامتصاص إلى أمونيوم غير قابل للامتصاص يُطرح في البراز، مع تأثير ملين حلولي يُسرّع العبور',
+    halfLife: 'Minimal systemic absorption (acts locally in the colon)',
+    monitoringParameters: [
+      'Stool frequency/consistency (target 2–3 soft stools/day in hepatic encephalopathy)',
+      'Mental status/encephalopathy grade (West Haven criteria)',
+      'Serum electrolytes with prolonged or high-dose use (risk of hypernatremia/dehydration from excessive diarrhea)',
+      'Signs of over-treatment (excessive diarrhea, dehydration, worsening confusion from volume depletion)'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'In hepatic encephalopathy, the dose is titrated to achieve 2–3 soft (not watery) stools per day — both under-dosing (inadequate ammonia clearance) and over-dosing (dehydration worsening encephalopathy) impair outcomes',
+      'Flatulence, bloating, and abdominal cramping from colonic fermentation are very common early side effects that often improve with continued use',
+      'Rifaximin is frequently added for recurrent hepatic encephalopathy despite adequate lactulose therapy, acting synergistically by reducing ammonia-producing gut flora',
+      'Takes 24–48 hours to see onset of laxative effect — not useful for acute/rapid bowel evacuation needs'
+    ]
+  },
+  {
+    id: 'cefazolin',
+    genericName: 'Cefazolin',
+    genericNameAr: 'سيفازولين',
+    brandNames: ['Ancef', 'Kefzol', 'أنسيف'],
+    drugClass: 'First-Generation Cephalosporin Antibiotic',
+    drugClassAr: 'مضاد حيوي من السيفالوسبورينات الجيل الأول',
+    category: 'Rx',
+    route: ['IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['infectious_diseases', 'internal_medicine'],
+    keyHighlights: [
+      'Gold-standard surgical prophylaxis antibiotic — excellent activity against skin flora (MSSA, streptococci) that cause most surgical site infections',
+      'Narrower, more predictable spectrum than broader cephalosporins — preferred when susceptibility is confirmed to reduce resistance pressure',
+      'Low cross-reactivity risk with penicillin allergy, making it often usable even in patients with non-severe penicillin allergies'
+    ],
+    indications: [
+      {
+        indication: 'Surgical prophylaxis',
+        indicationAr: 'الوقاية الجراحية',
+        adultDose: '2 g IV within 60 min before incision (3 g if ≥120 kg); redose if surgery >4 hours or significant blood loss',
+        adultDoseAr: '2 جرام وريدي خلال 60 دقيقة قبل الشق (3 جرام إذا كان الوزن 120 كجم فأكثر)؛ تُكرر الجرعة إذا تجاوزت الجراحة 4 ساعات',
+        pediatricDose: '30 mg/kg IV within 60 min before incision',
+        pediatricDoseAr: '30 ملجم/كجم وريدي خلال 60 دقيقة قبل الشق',
+        maxDose: '3 g per dose',
+        duration: 'Single preoperative dose, redosed intraoperatively if prolonged',
+        route: 'IV'
+      },
+      {
+        indication: 'Skin and soft tissue infections (MSSA, streptococcal)',
+        indicationAr: 'عدوى الجلد والنسيج الرخو (المكورات العنقودية الحساسة للميثيسيلين، العقديات)',
+        adultDose: '1–2 g IV every 8 hours',
+        adultDoseAr: '1-2 جرام وريدي كل 8 ساعات',
+        pediatricDose: '25–50 mg/kg/day divided every 8 hours',
+        pediatricDoseAr: '25-50 ملجم/كجم/يوم مقسمة كل 8 ساعات',
+        maxDose: '6 g/day',
+        duration: '7–14 days depending on severity',
+        route: 'IV'
+      },
+      {
+        indication: 'MSSA bacteremia / endocarditis',
+        indicationAr: 'تجرثم الدم بالمكورات العنقودية الحساسة للميثيسيلين / التهاب الشغاف',
+        adultDose: '2 g IV every 8 hours (higher-dose regimens for endocarditis per cardiology/ID input)',
+        adultDoseAr: '2 جرام وريدي كل 8 ساعات (أنظمة بجرعات أعلى لالتهاب الشغاف بإشراف أمراض القلب والعدوى)',
+        pediatricDose: 'Specialist-guided weight-based dosing',
+        pediatricDoseAr: 'جرعة حسب الوزن بإشراف متخصص',
+        maxDose: '6 g/day for severe infections',
+        duration: '4–6 weeks for endocarditis; 2 weeks minimum for uncomplicated bacteremia',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: '1–2 g loading, then 50% of normal dose at normal interval',
+      crclBelow10: '1–2 g loading, then 50% of normal dose every 18–24 hours',
+      hemodialysis: '0.5–1 g after each dialysis session'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to cefazolin or other cephalosporins',
+      'History of severe immediate hypersensitivity (anaphylaxis) to penicillins (relative — low but present cross-reactivity risk)'
+    ],
+    mechanismOfAction: 'Inhibits bacterial cell wall synthesis by binding penicillin-binding proteins, preventing peptidoglycan cross-linking, leading to cell lysis in susceptible organisms',
+    mechanismOfActionAr: 'يثبط تخليق جدار الخلية البكتيري بالارتباط ببروتينات ربط البنسلين، مما يمنع الترابط المتصالب للببتيدوغليكان ويؤدي لتحلل الخلية',
+    halfLife: '1.8–2 hours (normal renal function)',
+    monitoringParameters: [
+      'Renal function (dose adjustment)',
+      'Signs of allergic/hypersensitivity reaction',
+      'Clinical response (resolution of infection signs)',
+      'Signs of C. difficile-associated diarrhea with prolonged use'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Timing of surgical prophylaxis is critical — must be infused and completed within 60 minutes before incision to ensure adequate tissue concentration at the time of the first cut',
+      'Excellent choice for confirmed MSSA infections — narrower spectrum than vancomycin with better bactericidal activity against susceptible staphylococci ("cefazolin is better than vancomycin for MSSA")',
+      'Low cross-reactivity with penicillins (often cited around 1–2%) means it can frequently be used even in patients reporting penicillin allergy, except with a clear history of severe/anaphylactic reaction',
+      'Redosing intraoperatively is needed if surgery exceeds roughly two half-lives (~4 hours) or with major blood loss, to maintain adequate prophylactic tissue levels'
+    ]
   }
 ];
 
