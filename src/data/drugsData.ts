@@ -1269,6 +1269,417 @@ export const INITIAL_DRUGS: Drug[] = [
       'يحتوي على مكون اليود؛ قد يُسبب قصور أو فرط نشاط درقي حتى بعد التوقف عن الدواء بفترة طويلة.',
       'التسريب الوريدي السريع قد يسبب هبوط ضغط حاد؛ يُعطى ببطء عبر مضخة تسريب مع مراقبة الضغط المستمرة.'
     ]
+  },
+  {
+    id: 'furosemide',
+    genericName: 'Furosemide',
+    genericNameAr: 'فوروسيميد',
+    brandNames: ['Lasix', 'لازكس'],
+    drugClass: 'Loop Diuretic',
+    drugClassAr: 'مدر بول من فئة العروة',
+    category: 'Rx',
+    route: ['Oral', 'Intravenous'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-05',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'icu_emergency', 'nursing'],
+    keyHighlights: [
+      'الخط الأول لعلاج الاحتقان الحاد في قصور القلب والوذمة الرئوية',
+      'الجرعة الوريدية تعادل تقريباً ضعف الفاعلية مقارنة بنفس الجرعة الفموية',
+      'يسبب فقدان البوتاسيوم والمغنيسيوم، يحتاج تعويض دوري ومراقبة الشوارد'
+    ],
+    indications: [
+      {
+        indication: 'Edema (Heart Failure, Hepatic, Renal)',
+        indicationAr: 'الوذمة الناتجة عن قصور القلب أو الكبد أو الكلى',
+        adultDose: '20-80 mg PO/IV once or twice daily; titrate based on response.',
+        adultDoseAr: '20-80 مجم فموياً أو وريدياً مرة أو مرتين يومياً، مع تعديل الجرعة حسب الاستجابة.',
+        route: 'Oral/IV'
+      },
+      {
+        indication: 'Acute Pulmonary Edema',
+        indicationAr: 'الوذمة الرئوية الحادة',
+        adultDose: '40-80 mg IV push, may repeat or double dose if inadequate response within 1-2 hours.',
+        adultDoseAr: '40-80 مجم حقن وريدي سريع، ويمكن تكرار أو مضاعفة الجرعة إذا كانت الاستجابة غير كافية خلال 1-2 ساعة.',
+        route: 'Intravenous'
+      },
+      {
+        indication: 'Hypertension (adjunct)',
+        indicationAr: 'ارتفاع ضغط الدم (كعلاج مساعد)',
+        adultDose: '20-40 mg PO twice daily.',
+        adultDoseAr: '20-40 مجم فموياً مرتين يومياً.',
+        route: 'Oral'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة.',
+      crcl10to50: 'قد يحتاج جرعات أعلى للوصول لنفس الفاعلية الإدرارية؛ يُعدّل حسب الاستجابة السريرية.',
+      crclBelow10: 'يحتاج جرعات أعلى بكثير (قد تصل 160-200 مجم) مع مراقبة لصيقة للسوائل والشوارد.',
+      hemodialysis: 'محدود الفائدة في المرضى عديمي البول (Anuric)؛ يُستخدم أحياناً للمساعدة في إزالة السوائل الزائدة بين الجلسات.'
+    },
+    hepaticAdjustment: 'يستخدم بحذر في تليف الكبد مع الاستسقاء؛ البدء بجرعة منخفضة لتفادي اعتلال الدماغ الكبدي الناتج عن اضطراب الشوارد.',
+    contraindications: [
+      'انقطاع البول التام (Anuria) غير المستجيب للعلاج',
+      'فرط الحساسية المعروف للفوروسيميد أو السلفوناميدات (حساسية متصالبة نادرة)',
+      'الجفاف الشديد أو نقص حجم الدم غير المصحح'
+    ],
+    mechanismOfAction: 'Inhibits the Na-K-2Cl cotransporter in the thick ascending loop of Henle, causing profound natriuresis and diuresis.',
+    mechanismOfActionAr: 'يثبط ناقل الصوديوم-بوتاسيوم-كلوريد المشترك في الفرع الصاعد السميك من عروة هينلي، مسبباً إدراراً قوياً للصوديوم والماء.',
+    halfLife: '~ 2 hours (prolonged in renal impairment)',
+    monitoringParameters: [
+      'الشوارد (البوتاسيوم، الصوديوم، المغنيسيوم) بشكل دوري',
+      'وظائف الكلى (Creatinine, BUN)',
+      'الوزن اليومي وعلامات الجفاف أو الاحتقان',
+      'ضغط الدم عند الوقوف (Orthostatic hypotension)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُفضل تناوله صباحاً لتفادي كثرة التبول ليلاً.',
+      'يُنصح بزيادة تناول الأطعمة الغنية بالبوتاسيوم (الموز) لتعويض الفقد ما لم يُمنع طبياً.'
+    ],
+    pearls: [
+      'عند الإعطاء الوريدي السريع (خاصة بجرعات عالية) قد يسبب سمية أذنية عابرة (Ototoxicity)؛ يُعطى ببطء لا يتجاوز 4 مجم/دقيقة.',
+      'مقاومة الفوروسيميد (Diuretic Resistance) تُعالج بإضافة مدر ثيازيدي (مثل ميتولازون) للحصول على حصار متسلسل للنيفرون (Sequential Nephron Blockade).',
+      'مع مثبطات SGLT2 (إمباجليفلوزين): تأثير إدراري تراكمي يزيد خطر الجفاف وانخفاض الضغط الانتصابي لدى كبار السن.'
+    ]
+  },
+  {
+    id: 'ramipril_enalapril',
+    genericName: 'Ramipril / Enalapril (ACE Inhibitors)',
+    genericNameAr: 'راميبريل / إينالابريل (مثبطات الإنزيم المحول للأنجيوتنسين)',
+    brandNames: ['Tritace', 'Renitec', 'Amprace', 'تريتاس', 'رينيتك'],
+    drugClass: 'ACE Inhibitor',
+    drugClassAr: 'مثبط الإنزيم المحول للأنجيوتنسين (ACEi)',
+    category: 'Rx',
+    route: ['Oral'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-04',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'nursing'],
+    keyHighlights: [
+      'حجر أساس في علاج ارتفاع ضغط الدم وقصور القلب وحماية الكلى لدى مرضى السكري',
+      'يسبب سعالاً جافاً مزعجاً لدى 10-20% من المرضى بسبب تراكم البراديكينين',
+      'يتطلب غسيل 36 ساعة قبل البدء بإنترستو (Sacubitril/Valsartan) لتفادي الوذمة الوعائية'
+    ],
+    indications: [
+      {
+        indication: 'Hypertension',
+        indicationAr: 'ارتفاع ضغط الدم',
+        adultDose: 'Ramipril: Start 2.5 mg PO once daily, titrate to 10 mg daily. Enalapril: Start 5 mg PO once/twice daily, titrate to 40 mg daily.',
+        adultDoseAr: 'راميبريل: البدء بـ 2.5 مجم فموياً مرة يومياً، والتصعيد حتى 10 مجم يومياً. إينالابريل: البدء بـ 5 مجم مرة أو مرتين يومياً حتى 40 مجم يومياً.',
+        route: 'Oral'
+      },
+      {
+        indication: 'Heart Failure with Reduced Ejection Fraction',
+        indicationAr: 'قصور القلب مع انخفاض الكسر القذفي',
+        adultDose: 'Ramipril: Start 1.25-2.5 mg PO daily, target 5 mg BID or 10 mg daily.',
+        adultDoseAr: 'راميبريل: البدء بـ 1.25-2.5 مجم يومياً، والوصول لجرعة مستهدفة 5 مجم مرتين يومياً أو 10 مجم يومياً.',
+        route: 'Oral'
+      },
+      {
+        indication: 'Diabetic Nephropathy / Renal Protection',
+        indicationAr: 'الحماية الكلوية لدى مرضى السكري',
+        adultDose: 'Ramipril 5-10 mg PO once daily.',
+        adultDoseAr: 'راميبريل 5-10 مجم فموياً مرة يومياً.',
+        route: 'Oral'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة الابتدائية.',
+      crcl10to50: 'يبدأ بنصف الجرعة الاعتيادية مع مراقبة لصيقة للبوتاسيوم ووظائف الكلى.',
+      crclBelow10: 'يُستخدم بحذر شديد بجرعات منخفضة جداً؛ قد يُفضل تجنبه في الفشل الكلوي المتقدم غير المغسول.',
+      hemodialysis: 'يُعطى بعد جلسة الغسيل (قابل للإزالة جزئياً بالغسيل)؛ جرعة مخفضة مع مراقبة الضغط.'
+    },
+    hepaticAdjustment: 'لا يتطلب تعديل جرعة روتيني، لكن يُراقب سريرياً في القصور الكبدي الشديد.',
+    contraindications: [
+      'تاريخ سابق للوذمة الوعائية المرتبطة بمثبطات ACE',
+      'الحمل (مُشوّه للجنين في الثلثين الثاني والثالث)',
+      'تضيق الشريان الكلوي الثنائي الشديد',
+      'الاستخدام المتزامن مع Sacubitril/Valsartan أو خلال أقل من 36 ساعة من التحول بينهما'
+    ],
+    blackBoxWarning: 'Fetal toxicity: can cause injury and death to the developing fetus when used during pregnancy.',
+    blackBoxWarningAr: 'تحذير الصندوق الأسود: سمية جنينية خطيرة قد تؤدي لإصابة الجنين أو وفاته عند الاستخدام أثناء الحمل.',
+    mechanismOfAction: 'Inhibits angiotensin-converting enzyme, reducing angiotensin II formation and aldosterone secretion, while increasing bradykinin levels.',
+    mechanismOfActionAr: 'يثبط إنزيم تحويل الأنجيوتنسين فيقلل تكوّن الأنجيوتنسين II وإفراز الألدوستيرون، مع ارتفاع مستوى البراديكينين المسبب للسعال والوذمة الوعائية.',
+    halfLife: 'Ramipril (active metabolite ramiprilat): ~ 13-17 hours; Enalapril (active metabolite enalaprilat): ~ 11 hours',
+    monitoringParameters: [
+      'وظائف الكلى والبوتاسيوم خلال أسبوع إلى أسبوعين من البدء أو تعديل الجرعة',
+      'ضغط الدم بشكل دوري',
+      'ظهور السعال الجاف أو علامات الوذمة الوعائية (تورم الوجه/الشفاه/الحنجرة)'
+    ],
+    pregnancyCategory: 'X',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'تجنب بدائل الملح الغنية بالبوتاسيوم ومكملات البوتاسيوم لتفادي فرط بوتاسيوم الدم.',
+      'لا يتأثر الامتصاص بشكل كبير بالطعام، يمكن تناوله مع أو بدون طعام.'
+    ],
+    pearls: [
+      'السعال الجاف المرتبط بـ ACEi لا يستجيب لتغيير الجرعة؛ الحل الوحيد هو التحويل لحاصرات مستقبلات الأنجيوتنسين (ARBs).',
+      'يجب فترة غسيل 36 ساعة كاملة عند التحويل من أو إلى إنترستو (Sacubitril/Valsartan) لتفادي الوذمة الوعائية القاتلة.',
+      'الجمع مع مدرات بوتاسيوم أو مثبطات الألدوستيرون (سبيرونولاكتون) يحتاج مراقبة لصيقة لفرط بوتاسيوم الدم.'
+    ]
+  },
+  {
+    id: 'simvastatin_atorvastatin',
+    genericName: 'Simvastatin / Atorvastatin (Statins)',
+    genericNameAr: 'سيمفاستاتين / أتورفاستاتين (الستاتينات)',
+    brandNames: ['Zocor', 'Lipitor', 'زوكور', 'ليبيتور'],
+    drugClass: 'HMG-CoA Reductase Inhibitor',
+    drugClassAr: 'مثبط إنزيم HMG-CoA Reductase',
+    category: 'Rx',
+    route: ['Oral (مساءً يُفضل للسيمفاستاتين)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-03',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'يُستقلب معظمها (خاصة سيمفاستاتين) عبر CYP3A4 مما يجعلها عرضة لتفاعلات خطيرة مع مثبطات هذا الإنزيم',
+      'خطر الاعتلال العضلي وانحلال العضلات يزيد بشكل كبير مع الجرعات العالية أو التفاعلات الدوائية',
+      'سيمفاستاتين يُفضل إعطاؤه مساءً لتزامنه مع ذروة تصنيع الكوليسترول الكبدي ليلاً'
+    ],
+    indications: [
+      {
+        indication: 'Primary Prevention of Cardiovascular Disease (Hyperlipidemia)',
+        indicationAr: 'الوقاية الأولية من أمراض القلب (ارتفاع الدهون)',
+        adultDose: 'Atorvastatin: 10-20 mg PO once daily. Simvastatin: 10-20 mg PO once daily (evening).',
+        adultDoseAr: 'أتورفاستاتين: 10-20 مجم فموياً مرة يومياً. سيمفاستاتين: 10-20 مجم مرة يومياً مساءً.',
+        route: 'Oral'
+      },
+      {
+        indication: 'High-Intensity Statin Therapy (Post-ACS, High ASCVD Risk)',
+        indicationAr: 'علاج ستاتيني عالي الكثافة (بعد متلازمة تاجية حادة)',
+        adultDose: 'Atorvastatin 40-80 mg PO once daily.',
+        adultDoseAr: 'أتورفاستاتين 40-80 مجم فموياً مرة يومياً.',
+        route: 'Oral'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة.',
+      crcl10to50: 'لا يتطلب تعديل جرعة روتيني لأتورفاستاتين؛ يُحذر من جرعات سيمفاستاتين العالية.',
+      crclBelow10: 'يُبدأ بجرعة منخفضة مع مراقبة لصيقة للأعراض العضلية.',
+      hemodialysis: 'لا يُزال بالغسيل الكلوي؛ لا حاجة لجرعة إضافية.'
+    },
+    hepaticAdjustment: 'مضاد استطباب في أمراض الكبد النشطة أو الارتفاع غير المبرر لإنزيمات الكبد (> 3 أضعاف الحد الطبيعي).',
+    contraindications: [
+      'أمراض الكبد النشطة أو الحاد',
+      'الحمل والرضاعة',
+      'الاستخدام المتزامن مع مثبطات CYP3A4 القوية (مثل باكسلوفيد) خاصة مع سيمفاستاتين'
+    ],
+    mechanismOfAction: 'Competitively inhibits HMG-CoA reductase, the rate-limiting enzyme in hepatic cholesterol synthesis, upregulating LDL receptors.',
+    mechanismOfActionAr: 'يثبط تنافسياً إنزيم HMG-CoA reductase المحدد لسرعة تصنيع الكوليسترول الكبدي، مما يزيد التعبير عن مستقبلات LDL ويخفض مستواه بالدم.',
+    halfLife: 'Atorvastatin: ~ 14 hours (active metabolites up to 20-30 hours); Simvastatin: ~ 2-3 hours',
+    monitoringParameters: [
+      'صورة الدهون (LDL, HDL, Triglycerides) بعد 4-12 أسبوع من بدء العلاج',
+      'إنزيمات الكبد (ALT) عند وجود أعراض أو عوامل خطورة',
+      'أعراض الاعتلال العضلي (ألم أو ضعف عضلي غير مبرر) وفحص CK عند الاشتباه'
+    ],
+    pregnancyCategory: 'X',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'عصير الجريب فروت (خاصة مع سيمفاستاتين) يثبط CYP3A4 المعوي ويرفع التركيز الدموي بشكل خطير؛ يُمنع تماماً.',
+      'لا يتأثر الأتورفاستاتين بعصير الجريب فروت بنفس درجة السيمفاستاتين لكن يُنصح بالحذر.'
+    ],
+    pearls: [
+      'مع باكسلوفيد (مضاد كورونا): يجب إيقاف سيمفاستاتين/لوفاستاتين تماماً، وإيقاف أتورفاستاتين مؤقتاً خلال وبعد العلاج بـ3-5 أيام.',
+      'الاعتلال العضلي البسيط (ألم بدون ارتفاع CK كبير) لا يستدعي دائماً وقف الدواء؛ يمكن تجربة ستاتين آخر أو تقليل الجرعة.',
+      'روزوفاستاتين وبرافاستاتين أقل اعتماداً على CYP3A4 ويُعتبران بديلاً أكثر أماناً عند وجود تفاعلات دوائية محتملة.'
+    ]
+  },
+  {
+    id: 'valproic_acid',
+    genericName: 'Valproic Acid / Sodium Valproate',
+    genericNameAr: 'حمض الفالبرويك / فالبروات الصوديوم',
+    brandNames: ['Depakine', 'Depakote', 'ديباكين'],
+    drugClass: 'Anticonvulsant / Mood Stabilizer',
+    drugClassAr: 'مضاد صرع ومثبت مزاج',
+    category: 'Rx',
+    route: ['Oral', 'Intravenous'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-02',
+    targetSpecialties: ['internal_medicine', 'icu_emergency', 'pharmacy', 'pediatrics'],
+    keyHighlights: [
+      'خطر كارثي من انخفاض مستواه الدموي بنسبة تصل 80-90% خلال 24 ساعة عند الجمع مع الكاربابينيمات',
+      'مُشوّه للجنين بدرجة عالية (عيوب الأنبوب العصبي)؛ مضاد استطباب في الحمل لعلاج الصداع النصفي',
+      'يحتاج مراقبة وظائف الكبد والصفائح الدموية دورياً خاصة في بداية العلاج'
+    ],
+    indications: [
+      {
+        indication: 'Epilepsy (Generalized & Focal Seizures)',
+        indicationAr: 'الصرع (النوبات المعممة والبؤرية)',
+        adultDose: '10-15 mg/kg/day PO in divided doses, titrate weekly to 1000-2000 mg/day (target level 50-100 mcg/mL).',
+        adultDoseAr: '10-15 مجم/كجم/يوم فموياً مقسمة على جرعات، مع رفع الجرعة أسبوعياً حتى 1000-2000 مجم/يوم (المستوى المستهدف 50-100 ميكروجرام/مل).',
+        route: 'Oral'
+      },
+      {
+        indication: 'Bipolar Disorder (Acute Mania)',
+        indicationAr: 'اضطراب ثنائي القطب (نوبة الهوس الحادة)',
+        adultDose: '750 mg/day PO in divided doses, titrate to max 60 mg/kg/day.',
+        adultDoseAr: '750 مجم/يوم فموياً مقسمة على جرعات، مع رفع الجرعة حتى الحد الأقصى 60 مجم/كجم/يوم.',
+        route: 'Oral'
+      },
+      {
+        indication: 'Status Epilepticus (IV)',
+        indicationAr: 'الحالة الصرعية المستمرة (وريدياً)',
+        adultDose: '20-40 mg/kg IV loading dose over 10 minutes, then maintenance infusion.',
+        adultDoseAr: 'جرعة تحميل وريدية 20-40 مجم/كجم خلال 10 دقائق، ثم تسريب مستمر للمداومة.',
+        route: 'Intravenous'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة.',
+      crcl10to50: 'لا يتطلب تعديل جرعة روتيني؛ مراقبة المستوى الحر (Free level) إذا كان نقص الألبومين موجوداً.',
+      crclBelow10: 'قد يحتاج تخفيض الجرعة مع مراقبة المستوى الحر للدواء وليس الكلي فقط.',
+      hemodialysis: 'يُزال جزئياً بالغسيل الكلوي؛ قد يحتاج جرعة إضافية بعد الجلسة.'
+    },
+    hepaticAdjustment: 'مضاد استطباب في أمراض الكبد الحادة أو الشديدة؛ يُراقب ALT/AST قبل البدء وبشكل دوري خاصة في أول 6 أشهر.',
+    contraindications: [
+      'أمراض الكبد النشطة أو تاريخ سابق للسمية الكبدية مع فالبروات',
+      'اضطرابات دورة اليوريا (Urea Cycle Disorders)',
+      'الحمل لعلاج الصداع النصفي (مضاد استطباب قطعي)',
+      'الاستخدام المتزامن مع الكاربابينيمات (ميروبينيم، إيميبينيم)'
+    ],
+    blackBoxWarning: 'Hepatotoxicity (fatal in rare cases), teratogenicity (neural tube defects), and pancreatitis.',
+    blackBoxWarningAr: 'تحذير الصندوق الأسود: سمية كبدية (قد تكون قاتلة في حالات نادرة)، تشوهات جنينية (عيوب الأنبوب العصبي)، والتهاب البنكرياس الحاد.',
+    mechanismOfAction: 'Increases GABAergic transmission and blocks voltage-gated sodium channels, stabilizing neuronal membranes and reducing seizure activity.',
+    mechanismOfActionAr: 'يزيد النقل العصبي عبر GABA ويثبط قنوات الصوديوم المعتمدة على الفولتية، مما يثبط الغشاء العصبي ويقلل النشاط التشنجي.',
+    halfLife: '~ 9 to 16 hours',
+    monitoringParameters: [
+      'المستوى الدموي العلاجي (50-100 mcg/mL) خاصة عند تغيير الجرعة أو إضافة أدوية متفاعلة',
+      'وظائف الكبد (ALT, AST, Ammonia) خاصة في الأشهر الستة الأولى',
+      'تعداد الصفائح الدموية (قد يسبب قلة الصفائح)',
+      'علامات التهاب البنكرياس (ألم بطني حاد)'
+    ],
+    pregnancyCategory: 'X',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية كبرى؛ يُفضل تناوله مع الطعام لتقليل اضطرابات المعدة.'
+    ],
+    pearls: [
+      'تفاعل الكاربابينيمات (ميروبينيم) مع الفالبروات خطير جداً ولا يُعالج برفع الجرعة؛ يجب تبديل المضاد الحيوي أو مضاد الصرع.',
+      'ارتفاع الأمونيا مع أعراض تخليط ذهني (حتى مع وظائف كبد طبيعية) قد يشير لاعتلال دماغي ناتج عن فرط الأمونيا ويستدعي التقييم الفوري.',
+      'يُستخدم بحذر شديد في الأطفال أقل من سنتين لارتفاع خطر السمية الكبدية القاتلة.'
+    ]
+  },
+  {
+    id: 'ibuprofen_ketorolac',
+    genericName: 'Ibuprofen / Ketorolac (NSAIDs)',
+    genericNameAr: 'إيبوبروفين / كيتورولاك (مضادات الالتهاب غير الستيرويدية)',
+    brandNames: ['Brufen', 'Toradol', 'بروفين', 'تورادول'],
+    drugClass: 'Nonsteroidal Anti-Inflammatory Drug (NSAID)',
+    drugClassAr: 'مضاد التهاب غير ستيرويدي',
+    category: 'Rx',
+    route: ['Oral', 'Intravenous/Intramuscular (كيتورولاك)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-08-01',
+    targetSpecialties: ['internal_medicine', 'icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'كيتورولاك له حد أقصى صارم لمدة الاستخدام (5 أيام إجمالاً) لخطورة النزيف الهضمي والكلوي',
+      'يرفع خطر النزيف بشدة عند الجمع مع مضادات التخثر (وارفارين، أبيكسابان)',
+      'يُجنّب قدر الإمكان في المرضى كبار السن أو ذوي القصور الكلوي'
+    ],
+    indications: [
+      {
+        indication: 'Mild to Moderate Pain & Inflammation',
+        indicationAr: 'الألم والالتهاب الخفيف إلى المتوسط',
+        adultDose: 'Ibuprofen 400-800 mg PO every 6-8 hours (max 3200 mg/day).',
+        adultDoseAr: 'إيبوبروفين 400-800 مجم فموياً كل 6-8 ساعات (الحد الأقصى 3200 مجم/يوم).',
+        route: 'Oral'
+      },
+      {
+        indication: 'Acute Moderate-Severe Pain (Postoperative)',
+        indicationAr: 'الألم الحاد المتوسط إلى الشديد (بعد العمليات)',
+        adultDose: 'Ketorolac 30 mg IV/IM every 6 hours (max 120 mg/day); max duration 5 days total.',
+        adultDoseAr: 'كيتورولاك 30 مجم وريدياً أو عضلياً كل 6 ساعات (الحد الأقصى 120 مجم/يوم)؛ الحد الأقصى للاستخدام 5 أيام إجمالاً.',
+        route: 'IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'لا يتطلب تعديل الجرعة، لكن يُستخدم بأقل جرعة فعالة ولأقصر مدة.',
+      crcl10to50: 'يُجنّب قدر الإمكان؛ إن لزم الاستخدام، جرعات منخفضة مع مراقبة لصيقة لوظائف الكلى.',
+      crclBelow10: 'مضاد استطباب نسبي؛ خطر مرتفع لتدهور وظائف الكلى الحاد.',
+      hemodialysis: 'يُجنّب الاستخدام؛ خطر مرتفع للنزيف ولا يُزال بفعالية بالغسيل.'
+    },
+    hepaticAdjustment: 'يستخدم بحذر في القصور الكبدي؛ يُجنّب في أمراض الكبد المتقدمة لخطر النزيف واحتباس السوائل.',
+    contraindications: [
+      'قرحة هضمية نشطة أو نزيف هضمي حديث',
+      'القصور الكلوي المتقدم أو الجفاف الشديد',
+      'الاستخدام حول عملية جراحة المجازة التاجية (CABG)',
+      'الثلث الثالث من الحمل (إغلاق مبكر للقناة الشريانية الجنينية)'
+    ],
+    mechanismOfAction: 'Nonselectively inhibits cyclooxygenase enzymes (COX-1 and COX-2), reducing prostaglandin synthesis responsible for pain, inflammation, and fever.',
+    mechanismOfActionAr: 'يثبط إنزيمي الأكسدة الحلقية COX-1 وCOX-2 بشكل غير انتقائي، مما يقلل تصنيع البروستاجلاندين المسؤول عن الألم والالتهاب والحمى.',
+    halfLife: 'Ibuprofen: ~ 2 hours; Ketorolac: ~ 5 hours',
+    monitoringParameters: [
+      'وظائف الكلى (Creatinine) خاصة قبل البدء وفي الاستخدام المطول',
+      'علامات النزيف الهضمي (البراز الأسود، فقر الدم)',
+      'ضغط الدم (قد يسبب احتباس سوائل وارتفاع ضغط)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُفضل تناوله مع الطعام لتقليل تهيج المعدة.',
+      'تجنب الكحول لتقليل خطر النزيف الهضمي.'
+    ],
+    pearls: [
+      'كيتورولاك ممنوع استخدامه لأكثر من 5 أيام إجمالاً (وريدي + فموي مجتمعين) بسبب التراكم السام.',
+      'مع مضادات التخثر (أبيكسابان، وارفارين): خطر نزيف مضاعف؛ يُفضل الباراسيتامول كبديل آمن للألم.',
+      'يُعتبر كيتورولاك مسكناً قوياً يعادل فاعلية بعض الأفيونيات دون آثارها الإدمانية، لكن مخاطره الهضمية والكلوية أعلى بكثير من NSAIDs الفموية الاعتيادية.'
+    ]
+  },
+  {
+    id: 'contrast_media',
+    genericName: 'Iodinated Radiocontrast Media',
+    genericNameAr: 'الصبغة الإشعاعية اليودية (صبغة الأشعة المقطعية)',
+    brandNames: ['Omnipaque', 'Visipaque', 'أومنيباك', 'فيزيباك'],
+    drugClass: 'Radiographic Contrast Agent',
+    drugClassAr: 'عامل تباين إشعاعي',
+    category: 'Rx',
+    route: ['Intravenous'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-07-31',
+    targetSpecialties: ['internal_medicine', 'icu_emergency', 'cardiology', 'pharmacy'],
+    keyHighlights: [
+      'السبب الرئيسي الثالث للفشل الكلوي الحاد المكتسب داخل المستشفى',
+      'يجب إيقاف الميتفورمين قبل أو عند إعطاء الصبغة في مرضى القصور الكلوي المتوسط',
+      'الترطيب الوريدي قبل وبعد الإجراء هو أهم إجراء وقائي مثبت لتقليل الاعتلال الكلوي بالصبغة'
+    ],
+    indications: [
+      {
+        indication: 'Contrast-Enhanced CT / Angiography',
+        indicationAr: 'التصوير المقطعي أو تصوير الأوعية بالصبغة',
+        adultDose: 'Dose varies by study and body weight, typically 50-150 mL IV per procedure (per radiology protocol).',
+        adultDoseAr: 'الجرعة تختلف حسب نوع الفحص ووزن الجسم، عادة 50-150 مل وريدياً حسب بروتوكول الأشعة.',
+        route: 'Intravenous'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'خطر منخفض نسبياً؛ يُنصح بالترطيب الوقائي في المرضى ذوي عوامل الخطورة الإضافية.',
+      crcl10to50: 'خطر مرتفع للاعتلال الكلوي بالصبغة؛ يتطلب ترطيب وريدي وقائي وإيقاف الميتفورمين والأدوية السامة كلوياً.',
+      crclBelow10: 'يُجنّب إن أمكن أو يُستبدل بتصوير بديل لا يعتمد على اليود (مثل الرنين المغناطيسي)؛ إن لزم الأمر يُستخدم بأقل حجم ممكن.',
+      hemodialysis: 'يمكن إزالته بالغسيل الكلوي إذا لزم بعد الإجراء مباشرة في حالات نادرة شديدة الخطورة.'
+    },
+    hepaticAdjustment: 'لا يتطلب تعديل جرعة كبدي؛ الإطراح كلوي بشكل أساسي.',
+    contraindications: [
+      'تاريخ سابق لتفاعل تحسسي شديد تجاه صبغة اليود',
+      'فرط نشاط الغدة الدرقية غير المُعالج (خطر أزمة درقية)',
+      'الفشل الكلوي الحاد غير المُقيّم'
+    ],
+    mechanismOfAction: 'Iodine-based molecules absorb X-rays, providing radiographic opacity to enhance visualization of blood vessels and organs; can cause direct renal tubular toxicity and medullary hypoxia.',
+    mechanismOfActionAr: 'جزيئات تحتوي على اليود تمتص الأشعة السينية فتعطي تبايناً إشعاعياً يُحسّن رؤية الأوعية الدموية والأعضاء؛ وقد تسبب سمية مباشرة للنبيبات الكلوية ونقص أكسجين في لب الكلية.',
+    halfLife: '~ 2 hours (renal elimination, prolonged in renal impairment)',
+    monitoringParameters: [
+      'وظائف الكلى (Creatinine, eGFR) قبل الإجراء وبعده بـ 48-72 ساعة في المرضى عاليي الخطورة',
+      'حالة الترطيب قبل وبعد الإجراء',
+      'أعراض التحسس الفوري (طفح، ضيق تنفس، هبوط ضغط) أثناء وبعد الحقن مباشرة'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية مباشرة؛ يُنصح بالصيام القصير قبل بعض الإجراءات حسب بروتوكول القسم.'
+    ],
+    pearls: [
+      'إيقاف الميتفورمين وقت إعطاء الصبغة في مرضى eGFR بين 30-60، وعدم استئنافه إلا بعد تأكيد سلامة وظائف الكلى بعد 48 ساعة.',
+      'الترطيب بمحلول ملحي طبيعي (0.9% NaCl) قبل وبعد الإجراء هو التدخل الوقائي الوحيد المثبت علمياً بشكل قوي ضد الاعتلال الكلوي بالصبغة.',
+      'يُفرّق بين الحساسية الحقيقية لليود وبين كون المريض "حساساً من المأكولات البحرية" الذي لا يُعد مؤشراً موثوقاً لرد فعل تجاه الصبغة.'
+    ]
   }
 ];
 
