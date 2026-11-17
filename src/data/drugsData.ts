@@ -10497,6 +10497,1006 @@ export const INITIAL_DRUGS: Drug[] = [
       'Low cross-reactivity with penicillins (often cited around 1–2%) means it can frequently be used even in patients reporting penicillin allergy, except with a clear history of severe/anaphylactic reaction',
       'Redosing intraoperatively is needed if surgery exceeds roughly two half-lives (~4 hours) or with major blood loss, to maintain adequate prophylactic tissue levels'
     ]
+  },
+  {
+    id: 'tiotropium',
+    genericName: 'Tiotropium',
+    genericNameAr: 'تيوتروبيوم',
+    brandNames: ['Spiriva', 'سبيريفا'],
+    drugClass: 'Long-Acting Muscarinic Antagonist (LAMA)',
+    drugClassAr: 'مضاد مسكاريني طويل المفعول',
+    category: 'Rx',
+    route: ['inhalation'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Maintenance bronchodilator of choice for COPD — once-daily dosing improves adherence vs. short-acting anticholinergics',
+      'Also approved as add-on therapy for severe asthma uncontrolled on ICS-LABA',
+      'Not for acute bronchospasm relief — onset is too slow; short-acting bronchodilators remain the rescue agent'
+    ],
+    indications: [
+      {
+        indication: 'COPD maintenance therapy',
+        indicationAr: 'العلاج الصيانة لمرض الانسداد الرئوي المزمن',
+        adultDose: '18 mcg once daily via HandiHaler, or 2.5 mcg (2 puffs) once daily via Respimat',
+        adultDoseAr: '18 ميكروجرام مرة يوميًا عبر هاندي هيلر، أو 2.5 ميكروجرام (نفختان) مرة يوميًا عبر ريسبيمات',
+        pediatricDose: 'Not established for COPD in children',
+        pediatricDoseAr: 'غير مستقر لمرض الانسداد الرئوي عند الأطفال',
+        maxDose: '18 mcg/day (HandiHaler) or 5 mcg/day (Respimat)',
+        duration: 'Chronic, lifelong maintenance',
+        route: 'Inhalation'
+      },
+      {
+        indication: 'Severe asthma (add-on maintenance therapy)',
+        indicationAr: 'الربو الشديد (علاج إضافي للصيانة)',
+        adultDose: '2.5 mcg (2 puffs) once daily via Respimat, added to ICS-LABA',
+        adultDoseAr: '2.5 ميكروجرام (نفختان) مرة يوميًا عبر ريسبيمات، تُضاف لعلاج الستيرويد الاستنشاقي وموسع الشعب طويل المفعول',
+        pediatricDose: '2.5 mcg (2 puffs) once daily (age 6+ years)',
+        pediatricDoseAr: '2.5 ميكروجرام (نفختان) مرة يوميًا (عمر 6 سنوات فأكبر)',
+        maxDose: '5 mcg/day (Respimat)',
+        duration: 'Chronic, add-on maintenance',
+        route: 'Inhalation'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Use with caution; monitor for anticholinergic side effects',
+      crclBelow10: 'Use with caution; increased systemic exposure possible',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to tiotropium, ipratropium, or atropine derivatives',
+      'Acute bronchospasm (not indicated for rescue therapy)'
+    ],
+    mechanismOfAction: 'Long-acting competitive antagonist at muscarinic M1/M3 receptors in airway smooth muscle, blocking acetylcholine-mediated bronchoconstriction with slow dissociation providing a 24-hour duration of action',
+    mechanismOfActionAr: 'مضاد تنافسي طويل المفعول لمستقبلات M1/M3 المسكارينية في العضلات الملساء للشعب الهوائية، يحجب تضيق الشعب المتوسط بالأسيتيل كولين مع تأثير يدوم 24 ساعة',
+    halfLife: '5–6 days (terminal, inhaled route)',
+    monitoringParameters: [
+      'Pulmonary function (FEV1, symptom control)',
+      'Signs of anticholinergic side effects (dry mouth, urinary retention, blurred vision)',
+      'Intraocular pressure in patients with narrow-angle glaucoma',
+      'Cardiovascular status (rare arrhythmia signal in some studies)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Strictly a maintenance medication — has no role in acute exacerbation rescue therapy due to slow onset; short-acting beta-agonists remain first-line for acute symptom relief',
+      'Capsules for the HandiHaler device are for inhalation only and must never be swallowed',
+      'Caution advised in men with bladder outlet obstruction/BPH or narrow-angle glaucoma given anticholinergic effects',
+      'The UPLIFT and TIOSPIR trials established long-term safety and efficacy, with the Respimat (soft mist inhaler) formulation shown non-inferior in cardiovascular safety to the HandiHaler after initial signal concerns were resolved'
+    ]
+  },
+  {
+    id: 'fluticasone',
+    genericName: 'Fluticasone Propionate',
+    genericNameAr: 'فلوتيكازون بروبيونات',
+    brandNames: ['Flovent', 'Flonase', 'فلوفنت'],
+    drugClass: 'Inhaled Corticosteroid (ICS)',
+    drugClassAr: 'كورتيكوستيرويد استنشاقي',
+    category: 'Rx',
+    route: ['inhalation', 'intranasal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine', 'pediatrics'],
+    keyHighlights: [
+      'Controller (maintenance) therapy backbone for persistent asthma — reduces airway inflammation, exacerbation frequency, and need for rescue inhaler use',
+      'Rinse mouth after each inhaled dose to prevent oropharyngeal candidiasis and dysphonia',
+      'Not a rescue inhaler — has no role in acute bronchospasm relief'
+    ],
+    indications: [
+      {
+        indication: 'Persistent asthma (maintenance/controller therapy)',
+        indicationAr: 'الربو المستمر (علاج الصيانة/التحكم)',
+        adultDose: '88–440 mcg twice daily via MDI, dose depends on severity (low/medium/high dose ICS)',
+        adultDoseAr: '88-440 ميكروجرام مرتين يوميًا عبر بخاخ، الجرعة حسب الشدة',
+        pediatricDose: '50–100 mcg twice daily (age 4+), titrate per severity and age',
+        pediatricDoseAr: '50-100 ميكروجرام مرتين يوميًا (عمر 4 سنوات فأكبر)، تُعدّل حسب الشدة والعمر',
+        maxDose: '880 mcg twice daily (high-dose, adult)',
+        duration: 'Chronic, ongoing with step-down trials once controlled',
+        route: 'Inhalation'
+      },
+      {
+        indication: 'Allergic rhinitis',
+        indicationAr: 'التهاب الأنف التحسسي',
+        adultDose: '1–2 sprays per nostril once daily (intranasal)',
+        adultDoseAr: '1-2 بخات في كل فتحة أنف مرة يوميًا (أنفي)',
+        pediatricDose: '1 spray per nostril once daily (age 4+)',
+        pediatricDoseAr: 'بخة واحدة في كل فتحة أنف مرة يوميًا (عمر 4 سنوات فأكبر)',
+        maxDose: '2 sprays per nostril once daily',
+        duration: 'Seasonal or chronic per symptom pattern',
+        route: 'Intranasal'
+      },
+      {
+        indication: 'COPD (combined with LABA, in select patients with frequent exacerbations)',
+        indicationAr: 'مرض الانسداد الرئوي المزمن (مع موسع الشعب طويل المفعول، في مرضى مختارين بنوبات متكررة)',
+        adultDose: '250–500 mcg twice daily as part of combination inhaler',
+        adultDoseAr: '250-500 ميكروجرام مرتين يوميًا كجزء من بخاخ مركب',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '500 mcg twice daily',
+        duration: 'Chronic maintenance',
+        route: 'Inhalation'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution in severe hepatic impairment due to reduced clearance and increased systemic exposure',
+    contraindications: [
+      'Primary treatment of acute bronchospasm or status asthmaticus',
+      'Known hypersensitivity to fluticasone or inhaler components',
+      'Untreated systemic fungal, bacterial, viral, or parasitic infections (relative — localized immunosuppressive effect)'
+    ],
+    mechanismOfAction: 'Binds glucocorticoid receptors in airway epithelium, suppressing multiple inflammatory cell types and mediators (eosinophils, mast cells, cytokines), reducing airway hyperresponsiveness and inflammation',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الجلوكوكورتيكويد في ظهارة الشعب الهوائية، مثبطًا أنواعًا متعددة من الخلايا والوسائط الالتهابية، مما يقلل فرط استجابة الشعب والالتهاب',
+    halfLife: '7.8 hours (inhaled)',
+    monitoringParameters: [
+      'Asthma/COPD control (symptom frequency, rescue inhaler use, exacerbations)',
+      'Oral cavity for candidiasis (thrush)',
+      'Growth velocity in children with long-term use',
+      'Bone density with high-dose, long-term use',
+      'Adrenal function with very high doses or in combination with other corticosteroids'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Patients must rinse mouth and spit after each inhaled dose to prevent oral candidiasis (thrush) and hoarseness — a simple step often overlooked that significantly reduces local side effects',
+      'Use with a spacer device when using an MDI to improve lung deposition and reduce oropharyngeal deposition',
+      'Not a substitute for a rescue inhaler — patients must understand the distinction between daily controller therapy and as-needed rescue bronchodilators',
+      'Growth velocity should be monitored periodically in children on chronic ICS therapy, though the effect is generally small and outweighed by benefits of asthma control'
+    ]
+  },
+  {
+    id: 'formoterol',
+    genericName: 'Formoterol',
+    genericNameAr: 'فورموتيرول',
+    brandNames: ['Foradil', 'Perforomist', 'فوراديل'],
+    drugClass: 'Long-Acting Beta-2 Agonist (LABA)',
+    drugClassAr: 'منشط بيتا-2 طويل المفعول',
+    category: 'Rx',
+    route: ['inhalation'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Unique among LABAs for its rapid onset (within minutes) combined with long duration (12 hours), allowing use in combination ICS-formoterol as both maintenance AND reliever (SMART/MART therapy)',
+      'Must NEVER be used as monotherapy in asthma — always combined with an inhaled corticosteroid (black box warning for asthma-related death with LABA monotherapy)',
+      'Core component of budesonide-formoterol combination inhalers used in modern asthma step-therapy'
+    ],
+    indications: [
+      {
+        indication: 'Asthma maintenance and reliever therapy (combined with ICS, e.g., budesonide-formoterol)',
+        indicationAr: 'علاج الصيانة والتخفيف للربو (مع ستيرويد استنشاقي، مثل بوديسونيد-فورموتيرول)',
+        adultDose: 'Per combination product labeling; typically 1–2 inhalations twice daily plus as-needed for symptoms (SMART regimen)',
+        adultDoseAr: 'حسب نشرة المنتج المركب؛ عادة 1-2 استنشاق مرتين يوميًا بالإضافة لاستخدام حسب الحاجة للأعراض',
+        pediatricDose: 'Per combination product labeling (age-specific, typically 4+ years)',
+        pediatricDoseAr: 'حسب نشرة المنتج المركب (حسب العمر، عادة 4 سنوات فأكبر)',
+        maxDose: 'Per combination product maximum daily inhalations',
+        duration: 'Chronic maintenance with as-needed use per SMART protocol',
+        route: 'Inhalation'
+      },
+      {
+        indication: 'COPD maintenance (combined with ICS or LAMA)',
+        indicationAr: 'علاج صيانة مرض الانسداد الرئوي المزمن (مع ستيرويد استنشاقي أو مضاد مسكاريني)',
+        adultDose: '12 mcg (1 capsule via Aerolizer) or 20 mcg nebulized (Perforomist) twice daily',
+        adultDoseAr: '12 ميكروجرام (كبسولة واحدة عبر إيروليزر) أو 20 ميكروجرام بالرذاذ مرتين يوميًا',
+        pediatricDose: 'Not established for COPD in children',
+        pediatricDoseAr: 'غير مستقر لمرض الانسداد الرئوي عند الأطفال',
+        maxDose: '24 mcg/day (Aerolizer); 40 mcg/day (nebulized)',
+        duration: 'Chronic maintenance',
+        route: 'Inhalation'
+      },
+      {
+        indication: 'Exercise-induced bronchospasm prevention',
+        indicationAr: 'الوقاية من تشنج القصبات الناتج عن الرياضة',
+        adultDose: '12 mcg (1 capsule) at least 15 minutes before exercise',
+        adultDoseAr: '12 ميكروجرام (كبسولة واحدة) قبل التمرين بـ 15 دقيقة على الأقل',
+        pediatricDose: '12 mcg (age 5+ years), same timing',
+        pediatricDoseAr: '12 ميكروجرام (عمر 5 سنوات فأكبر)، نفس التوقيت',
+        maxDose: 'Not more frequently than every 12 hours',
+        duration: 'Single dose before exercise, not more than once every 12 hours',
+        route: 'Inhalation'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Monotherapy in asthma without concomitant inhaled corticosteroid',
+      'Primary treatment of acute bronchospasm or status asthmaticus (not a rescue agent on its own)',
+      'Known hypersensitivity to formoterol'
+    ],
+    blackBoxWarning: 'Long-acting beta-agonists increase the risk of asthma-related death; formoterol should only be used in asthma as adjunct therapy with an inhaled corticosteroid, never as monotherapy',
+    blackBoxWarningAr: 'منشطات بيتا طويلة المفعول تزيد خطر الوفاة المرتبطة بالربو؛ يجب استخدام فورموتيرول في الربو فقط كعلاج إضافي مع ستيرويد استنشاقي، وليس كعلاج منفرد',
+    mechanismOfAction: 'Selectively stimulates beta-2 adrenergic receptors in bronchial smooth muscle, activating adenylate cyclase to increase cAMP, causing bronchial smooth muscle relaxation with both rapid onset and prolonged duration',
+    mechanismOfActionAr: 'ينشط انتقائيًا مستقبلات بيتا-2 الأدرينالية في عضلات الشعب الهوائية، منشطًا إنزيم أدينيلات السيكلاز لزيادة cAMP، مسببًا ارتخاء العضلات الملساء ببداية سريعة ومدة طويلة',
+    halfLife: '10 hours',
+    monitoringParameters: [
+      'Pulmonary function and symptom control',
+      'Heart rate and rhythm (tachycardia, palpitations)',
+      'Serum potassium (hypokalemia risk, especially with higher doses)',
+      'Tremor (common, dose-related side effect)',
+      'Frequency of as-needed use (increasing use signals worsening control)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'The rapid onset (within 1–3 minutes) distinguishes formoterol from other LABAs (e.g., salmeterol, which has delayed onset) — this unique property enables its use as both a scheduled maintenance dose AND an as-needed reliever within the same ICS-formoterol inhaler (SMART/MART strategy), now preferred in many international asthma guidelines over separate rescue SABA inhalers',
+      'Must always be paired with an inhaled corticosteroid in asthma — LABA monotherapy carries a black box warning for increased asthma-related mortality',
+      'Monitor for tremor, tachycardia, and hypokalemia, particularly with higher doses or in patients on concurrent diuretics or theophylline',
+      'In COPD, unlike asthma, LABA monotherapy (without ICS) is an accepted and common treatment approach'
+    ]
+  },
+  {
+    id: 'theophylline',
+    genericName: 'Theophylline',
+    genericNameAr: 'ثيوفيلين',
+    brandNames: ['Theo-24', 'Uniphyl', 'ثيو-24'],
+    drugClass: 'Methylxanthine Bronchodilator',
+    drugClassAr: 'موسع للشعب الهوائية من مجموعة الميثيل زانتين',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Narrow therapeutic index (10–20 mcg/mL historically, now often targeted lower at 5–15 mcg/mL) requiring regular serum level monitoring',
+      'Largely replaced by inhaled bronchodilators and ICS as third/fourth-line add-on therapy due to toxicity risk and extensive drug interactions',
+      'Numerous CYP1A2/CYP3A4-mediated interactions — smoking induces metabolism (lower levels), while many antibiotics (ciprofloxacin, erythromycin) and cimetidine inhibit it (higher levels/toxicity)'
+    ],
+    indications: [
+      {
+        indication: 'Asthma/COPD (add-on maintenance therapy, refractory cases)',
+        indicationAr: 'الربو/مرض الانسداد الرئوي المزمن (علاج إضافي للصيانة، الحالات المعندة)',
+        adultDose: '300–600 mg/day PO extended-release divided once or twice daily, titrate based on levels',
+        adultDoseAr: '300-600 ملجم/يوم فموي طويل المفعول مقسمة مرة أو مرتين يوميًا، تُعدّل حسب المستويات',
+        pediatricDose: '12–20 mg/kg/day divided, age-adjusted and titrated to levels (specialist-guided)',
+        pediatricDoseAr: '12-20 ملجم/كجم/يوم مقسمة، معدّلة حسب العمر وتُعدّل حسب المستويات (بإشراف متخصص)',
+        maxDose: 'Titrate to serum level 5–15 mcg/mL; individualized maximum',
+        duration: 'Chronic maintenance with periodic level monitoring',
+        route: 'PO'
+      },
+      {
+        indication: 'Acute severe asthma/COPD exacerbation (IV aminophylline, rarely used now)',
+        indicationAr: 'نوبة ربو/انسداد رئوي مزمن حادة شديدة (أمينوفيلين وريدي، نادر الاستخدام الآن)',
+        adultDose: 'Loading 5–6 mg/kg IV over 20–30 min (if not on theophylline), then maintenance infusion 0.4–0.6 mg/kg/hr',
+        adultDoseAr: 'جرعة تحميل 5-6 ملجم/كجم وريدي خلال 20-30 دقيقة، ثم تسريب صيانة 0.4-0.6 ملجم/كجم/ساعة',
+        pediatricDose: 'Specialist ICU-guided weight-based loading and maintenance dosing',
+        pediatricDoseAr: 'جرعة تحميل وصيانة حسب الوزن بإشراف العناية المركزة',
+        maxDose: 'Titrate to serum level and clinical response; narrow margin to toxicity',
+        duration: 'Short-term during acute exacerbation, with close level monitoring',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required; primarily hepatic metabolism',
+      crclBelow10: 'No adjustment required for theophylline itself, but monitor closely',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose significantly in hepatic impairment, cirrhosis, or conditions reducing hepatic blood flow (heart failure) — clearance markedly reduced, high toxicity risk without adjustment',
+    contraindications: [
+      'Uncontrolled seizure disorder (relative — lowers seizure threshold)',
+      'Uncontrolled cardiac arrhythmias (relative)',
+      'Active peptic ulcer disease (relative — can worsen GI symptoms)',
+      'Known hypersensitivity to theophylline or other xanthines'
+    ],
+    blackBoxWarning: 'Narrow therapeutic index — toxicity (seizures, arrhythmias) can occur even within or slightly above the therapeutic range; serum concentration monitoring is essential',
+    blackBoxWarningAr: 'نافذة علاجية ضيقة - قد تحدث السمية (نوبات تشنجية، اضطراب نظم القلب) حتى داخل أو قريبًا من المعدل العلاجي؛ مراقبة مستوى الدم ضرورية',
+    mechanismOfAction: 'Non-selectively inhibits phosphodiesterase enzymes (increasing cAMP/cGMP) and antagonizes adenosine receptors, producing bronchodilation, mild anti-inflammatory effects, and increased diaphragmatic contractility',
+    mechanismOfActionAr: 'يثبط إنزيمات الفوسفوديستراز بشكل غير انتقائي ويضاد مستقبلات الأدينوزين، منتجًا توسعًا للشعب وتأثيرًا خفيفًا مضادًا للالتهاب وزيادة تقلص الحجاب الحاجز',
+    halfLife: '3–9 hours (highly variable; shorter in smokers, longer in hepatic impairment/heart failure/elderly)',
+    monitoringParameters: [
+      'Serum theophylline level (target typically 5–15 mcg/mL; check 1–2 weeks after starting/dose change)',
+      'Signs of toxicity (nausea, vomiting, tremor, tachycardia, seizures at high levels)',
+      'Heart rhythm (arrhythmia risk)',
+      'Concurrent medication review for CYP1A2/3A4 interactions',
+      'Smoking status changes (significantly alters clearance)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Avoid excessive caffeine intake (additive stimulant effects)',
+      'High-fat meals can affect absorption of some extended-release formulations — take consistently with regard to meals'
+    ],
+    pearls: [
+      'Largely relegated to third/fourth-line add-on therapy in modern COPD/asthma management given its narrow therapeutic index and extensive interaction profile, now that inhaled therapies and biologics offer better safety margins',
+      'Smoking induces CYP1A2 and significantly increases theophylline clearance — smoking cessation during therapy can precipitate toxicity if the dose is not reduced',
+      'Many common antibiotics (ciprofloxacin, erythromycin, clarithromycin) and cimetidine inhibit theophylline metabolism, risking toxicity — always check for interactions before co-prescribing',
+      'Toxicity can manifest as seizures or life-threatening arrhythmias even without preceding GI warning symptoms (nausea/vomiting) in some patients — serum level monitoring cannot be skipped based on symptom absence alone'
+    ]
+  },
+  {
+    id: 'insulin_aspart',
+    genericName: 'Insulin Aspart',
+    genericNameAr: 'أنسولين أسبارت',
+    brandNames: ['NovoLog', 'Fiasp', 'نوفولوج'],
+    drugClass: 'Rapid-Acting Insulin Analog',
+    drugClassAr: 'نظير أنسولين سريع المفعول',
+    category: 'Rx',
+    route: ['SC', 'IV (regular formulation only in specific settings)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine', 'pediatrics'],
+    keyHighlights: [
+      'Faster onset (10–20 min) and shorter duration (3–5 hours) than regular human insulin — allows dosing immediately before or even after meals',
+      'Mainstay of prandial (mealtime) insulin coverage in both insulin pump (CSII) and multiple daily injection basal-bolus regimens',
+      'Hypoglycemia is the most common and clinically significant adverse effect — patient education on recognition and treatment is essential'
+    ],
+    indications: [
+      {
+        indication: 'Type 1 diabetes mellitus (prandial/mealtime coverage)',
+        indicationAr: 'السكري من النوع الأول (تغطية الوجبات)',
+        adultDose: 'Individualized; typically 0.5–1 unit per 10–15 g carbohydrate, plus correction factor, given immediately before meals',
+        adultDoseAr: 'فردية؛ عادة 0.5-1 وحدة لكل 10-15 جرام كربوهيدرات، بالإضافة لعامل التصحيح، تُعطى قبل الوجبات مباشرة',
+        pediatricDose: 'Individualized weight-based carbohydrate-ratio dosing per endocrinology protocol',
+        pediatricDoseAr: 'جرعة فردية حسب الوزن ونسبة الكربوهيدرات وفق بروتوكول الغدد الصماء',
+        maxDose: 'No fixed ceiling; individualized to glycemic targets',
+        duration: 'Lifelong, with mealtime dosing',
+        route: 'SC'
+      },
+      {
+        indication: 'Type 2 diabetes mellitus (prandial coverage, insulin pump therapy)',
+        indicationAr: 'السكري من النوع الثاني (تغطية الوجبات، علاج مضخة الأنسولين)',
+        adultDose: 'Individualized based on carbohydrate intake and current glucose, typically started at 4–10 units per meal',
+        adultDoseAr: 'جرعة فردية حسب الكربوهيدرات والجلوكوز الحالي، عادة تبدأ بـ 4-10 وحدات لكل وجبة',
+        pediatricDose: 'Individualized, specialist-guided',
+        pediatricDoseAr: 'جرعة فردية بإشراف متخصص',
+        maxDose: 'No fixed ceiling; individualized',
+        duration: 'Ongoing as part of basal-bolus or pump regimen',
+        route: 'SC'
+      },
+      {
+        indication: 'Diabetic ketoacidosis / hyperglycemic crisis (IV regular insulin preferred; rapid-acting analogs used in specific protocols)',
+        indicationAr: 'الحماض الكيتوني السكري / أزمة ارتفاع السكر (الأنسولين العادي الوريدي مفضل؛ النظائر سريعة المفعول في بروتوكولات محددة)',
+        adultDose: 'Per institutional DKA protocol — typically regular insulin IV infusion preferred over SC rapid-acting analogs',
+        adultDoseAr: 'حسب بروتوكول المستشفى للحماض الكيتوني - الأنسولين العادي الوريدي مفضل عادة',
+        pediatricDose: 'Per pediatric DKA protocol, specialist ICU-guided',
+        pediatricDoseAr: 'حسب بروتوكول الحماض الكيتوني عند الأطفال، بإشراف العناية المركزة',
+        maxDose: 'Per institutional protocol',
+        duration: 'Until resolution of ketoacidosis per protocol',
+        route: 'IV (regular insulin preferred)'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Reduce dose; insulin requirements typically decrease as renal clearance of insulin falls',
+      crclBelow10: 'Reduce dose significantly; monitor closely for hypoglycemia',
+      hemodialysis: 'Not significantly dialyzed; dose based on glucose monitoring, often reduced requirements'
+    },
+    hepaticAdjustment: 'Reduce dose in significant hepatic impairment; monitor closely as hepatic gluconeogenesis impairment increases hypoglycemia risk',
+    contraindications: [
+      'Hypoglycemia (active, untreated)',
+      'Known hypersensitivity to insulin aspart or its excipients'
+    ],
+    mechanismOfAction: 'Binds insulin receptors, promoting cellular glucose uptake (primarily in muscle and adipose tissue) and inhibiting hepatic glucose production; the amino acid substitution (proline to aspartic acid at B28) reduces self-association, allowing faster absorption than regular human insulin',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الأنسولين، محفزًا امتصاص الجلوكوز الخلوي ومثبطًا إنتاج الجلوكوز الكبدي؛ الاستبدال الحمضي الأميني يقلل التجمع الذاتي، مما يسمح بامتصاص أسرع من الأنسولين البشري العادي',
+    halfLife: '~81 minutes (though clinical duration of action is 3–5 hours)',
+    monitoringParameters: [
+      'Blood glucose (self-monitoring or continuous glucose monitoring)',
+      'HbA1c (every 3 months)',
+      'Signs/symptoms of hypoglycemia',
+      'Injection site rotation (lipohypertrophy prevention)',
+      'Renal and hepatic function (affects insulin clearance/requirements)'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'Must be dosed in coordination with carbohydrate intake — timing relative to meals is central to proper use',
+      'Avoid alcohol in excess (can cause delayed hypoglycemia)'
+    ],
+    pearls: [
+      'Unlike regular human insulin (which must be given 30 minutes before meals), rapid-acting analogs like aspart can be dosed immediately before, during, or even shortly after eating — particularly useful in patients with unpredictable food intake (young children, elderly)',
+      'Insulin pumps (CSII) exclusively use rapid-acting analogs for both basal and bolus delivery, taking advantage of the fast onset/offset profile',
+      'Always double-check insulin vial/pen labeling before administration — confusing rapid-acting with long-acting insulin is a well-documented, serious medication error',
+      'Carbohydrate counting and correction factor calculations should be individualized and reassessed periodically as insulin sensitivity changes'
+    ]
+  },
+  {
+    id: 'pioglitazone',
+    genericName: 'Pioglitazone',
+    genericNameAr: 'بيوجليتازون',
+    brandNames: ['Actos', 'أكتوس'],
+    drugClass: 'Thiazolidinedione (Insulin Sensitizer)',
+    drugClassAr: 'ثيازوليدين دايون (محسّن لحساسية الأنسولين)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Improves insulin sensitivity in peripheral tissue without directly stimulating insulin secretion — low intrinsic hypoglycemia risk as monotherapy',
+      'Causes fluid retention that can precipitate or worsen heart failure — contraindicated in NYHA Class III/IV heart failure',
+      'Associated with increased risk of bone fractures (especially in women) and a possible small increased risk of bladder cancer with long-term use'
+    ],
+    indications: [
+      {
+        indication: 'Type 2 diabetes mellitus (monotherapy or combination)',
+        indicationAr: 'السكري من النوع الثاني (علاج منفرد أو مركب)',
+        adultDose: '15–30 mg PO once daily, titrate up to 45 mg once daily based on response',
+        adultDoseAr: '15-30 ملجم فموي مرة يوميًا، تُزاد حتى 45 ملجم مرة يوميًا حسب الاستجابة',
+        pediatricDose: 'Not established in children',
+        pediatricDoseAr: 'غير مستقر عند الأطفال',
+        maxDose: '45 mg/day',
+        duration: 'Chronic, with periodic reassessment of benefit/risk (fracture, bladder cancer, fluid retention)',
+        route: 'PO'
+      },
+      {
+        indication: 'Non-alcoholic steatohepatitis (NASH) — off-label',
+        indicationAr: 'التهاب الكبد الدهني غير الكحولي - استخدام خارج النشرة',
+        adultDose: '30–45 mg PO once daily',
+        adultDoseAr: '30-45 ملجم فموي مرة يوميًا',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '45 mg/day',
+        duration: 'Long-term per hepatology guidance, with regular monitoring',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; however, caution with fluid retention in advanced CKD',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed, use with caution given fluid status'
+    },
+    hepaticAdjustment: 'Avoid use with active liver disease or ALT >2.5x upper limit of normal; monitor liver function periodically',
+    contraindications: [
+      'NYHA Class III or IV heart failure',
+      'Active bladder cancer or history of bladder cancer (relative, per some guidelines)',
+      'Active liver disease',
+      'Known hypersensitivity to pioglitazone'
+    ],
+    blackBoxWarning: 'May cause or exacerbate congestive heart failure in some patients; contraindicated in NYHA Class III or IV heart failure; monitor for signs/symptoms of heart failure after initiation or dose increase',
+    blackBoxWarningAr: 'قد يسبب أو يفاقم قصور القلب الاحتقاني عند بعض المرضى؛ ممنوع في قصور القلب من الدرجة الثالثة أو الرابعة؛ يجب مراقبة علامات قصور القلب بعد البدء أو زيادة الجرعة',
+    mechanismOfAction: 'Activates peroxisome proliferator-activated receptor gamma (PPAR-gamma) in adipose, muscle, and liver tissue, improving insulin sensitivity and reducing hepatic glucose output, without directly stimulating insulin secretion',
+    mechanismOfActionAr: 'ينشط مستقبل PPAR-gamma في النسيج الدهني والعضلي والكبد، محسّنًا حساسية الأنسولين ومقللًا إنتاج الجلوكوز الكبدي، دون تحفيز إفراز الأنسولين مباشرة',
+    halfLife: '3–7 hours (parent); active metabolites up to 24 hours',
+    monitoringParameters: [
+      'Signs/symptoms of heart failure (edema, dyspnea, weight gain) — especially after initiation or dose increase',
+      'Liver function tests (baseline and periodically)',
+      'HbA1c (every 3 months)',
+      'Bone density/fracture risk, particularly in postmenopausal women',
+      'Signs of bladder cancer (hematuria) with long-term use'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'May be taken with or without food'
+    ],
+    pearls: [
+      'Fluid retention is dose-dependent and can manifest as peripheral edema or precipitate heart failure — counsel patients to report rapid weight gain or swelling, and avoid use in patients with significant pre-existing heart failure',
+      'Unlike sulfonylureas or insulin, pioglitazone has low intrinsic hypoglycemia risk when used as monotherapy since it works by improving insulin sensitivity rather than increasing insulin levels',
+      'Takes several weeks to reach full glycemic effect — not useful for rapid glucose control',
+      'Increased fracture risk, particularly distal upper and lower limb fractures in women, should be factored into the risk-benefit discussion, especially in postmenopausal patients with osteoporosis risk'
+    ]
+  },
+  {
+    id: 'sulfasalazine',
+    genericName: 'Sulfasalazine',
+    genericNameAr: 'سلفاسالازين',
+    brandNames: ['Azulfidine', 'أزولفيدين'],
+    drugClass: 'Disease-Modifying Antirheumatic Drug (DMARD) / Aminosalicylate',
+    drugClassAr: 'عقار مُعدِّل لمسار المرض الروماتويدي / أمينوساليسيلات',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Dual clinical role: conventional synthetic DMARD for rheumatoid/psoriatic arthritis AND first-line maintenance therapy for mild-moderate ulcerative colitis',
+      'Metabolized by gut bacteria into sulfapyridine (systemic, responsible for most adverse effects) and 5-aminosalicylic acid (local gut anti-inflammatory effect)',
+      'Reversible oligospermia in men — counsel patients concerned about fertility; folic acid supplementation recommended'
+    ],
+    indications: [
+      {
+        indication: 'Rheumatoid arthritis',
+        indicationAr: 'التهاب المفاصل الروماتويدي',
+        adultDose: '500 mg PO twice daily, titrate up to 1000 mg twice daily over several weeks',
+        adultDoseAr: '500 ملجم فموي مرتين يوميًا، تُزاد حتى 1000 ملجم مرتين يوميًا على عدة أسابيع',
+        pediatricDose: 'Not typically first-line in juvenile idiopathic arthritis; specialist-guided if used',
+        pediatricDoseAr: 'ليس خطًا أولًا عادة في التهاب المفاصل اليفعي؛ بإشراف متخصص إذا استُخدم',
+        maxDose: '3000 mg/day (rarely needed)',
+        duration: 'Chronic, response assessed over 1–3 months',
+        route: 'PO'
+      },
+      {
+        indication: 'Ulcerative colitis (mild-moderate, induction and maintenance)',
+        indicationAr: 'التهاب القولون التقرحي (خفيف-متوسط، الحث والصيانة)',
+        adultDose: '3–4 g/day PO divided doses for active disease; 2 g/day divided for maintenance',
+        adultDoseAr: '3-4 جرام/يوم فموي جرعات مقسمة للمرض النشط؛ 2 جرام/يوم مقسمة للصيانة',
+        pediatricDose: '40–60 mg/kg/day divided, specialist gastroenterology-guided',
+        pediatricDoseAr: '40-60 ملجم/كجم/يوم مقسمة، بإشراف أخصائي الجهاز الهضمي',
+        maxDose: '4 g/day (active disease)',
+        duration: 'Induction then long-term maintenance',
+        route: 'PO'
+      },
+      {
+        indication: 'Psoriatic arthritis / ankylosing spondylitis (peripheral joint involvement)',
+        indicationAr: 'التهاب المفاصل الصدفي / التهاب الفقار اللاصق (إصابة المفاصل المحيطية)',
+        adultDose: '2–3 g/day PO divided doses',
+        adultDoseAr: '2-3 جرام/يوم فموي جرعات مقسمة',
+        pediatricDose: 'Not routinely established',
+        pediatricDoseAr: 'غير مستقرة بشكل روتيني',
+        maxDose: '3 g/day',
+        duration: 'Chronic with periodic response assessment',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Use with caution; consider dose reduction',
+      crclBelow10: 'Avoid if possible; sulfapyridine metabolite accumulates significantly',
+      hemodialysis: 'Dose after dialysis; limited data, use with caution'
+    },
+    hepaticAdjustment: 'Use with caution in hepatic impairment; monitor liver function closely, consider dose reduction',
+    contraindications: [
+      'Known hypersensitivity to sulfasalazine, sulfonamides, or salicylates',
+      'Intestinal or urinary obstruction',
+      'Porphyria',
+      'Infants under 2 years of age (risk of kernicterus)',
+      'G6PD deficiency (relative — hemolysis risk)'
+    ],
+    mechanismOfAction: 'Cleaved by colonic bacteria into sulfapyridine and 5-aminosalicylic acid (5-ASA); 5-ASA exerts local anti-inflammatory effects in the colonic mucosa by inhibiting prostaglandin and leukotriene synthesis, while the immunomodulatory mechanism in rheumatoid arthritis is less well defined',
+    mechanismOfActionAr: 'يُشطر بواسطة بكتيريا القولون إلى سلفابيريدين وحمض 5-أمينوساليسيليك؛ يُمارس هذا الأخير تأثيرًا موضعيًا مضادًا للالتهاب في الغشاء المخاطي للقولون بتثبيط تخليق البروستاغلاندين والليكوترين',
+    halfLife: '5–10 hours (parent); sulfapyridine metabolite half-life variable by acetylator status',
+    monitoringParameters: [
+      'CBC with differential (baseline, then every 2–4 weeks initially, then periodically — agranulocytosis risk)',
+      'Liver function tests periodically',
+      'Renal function periodically',
+      'Signs of hypersensitivity reaction (rash, fever — can be severe, Stevens-Johnson syndrome reported)',
+      'Sperm count/fertility counseling in men (reversible oligospermia)'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Take with food to reduce GI upset',
+      'Maintain adequate fluid intake to reduce crystalluria risk'
+    ],
+    pearls: [
+      'Folic acid supplementation is routinely recommended since sulfasalazine inhibits intestinal folate absorption',
+      'Causes reversible oligospermia (reduced sperm count/motility) in a significant proportion of men — reversible within approximately 2–3 months of discontinuation, important counseling point for men trying to conceive',
+      'Orange-yellow discoloration of urine, skin, and contact lenses is a benign, expected finding — counsel patients in advance to avoid unnecessary concern',
+      'Regular CBC monitoring is essential given risk of agranulocytosis/bone marrow suppression, particularly in the first several months of therapy'
+    ]
+  },
+  {
+    id: 'calcitriol',
+    genericName: 'Calcitriol (Active Vitamin D)',
+    genericNameAr: 'كالسيتريول (فيتامين د النشط)',
+    brandNames: ['Rocaltrol', 'Calcijex', 'روكالترول'],
+    drugClass: 'Active Vitamin D Analog (1,25-Dihydroxyvitamin D3)',
+    drugClassAr: 'نظير فيتامين د النشط',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'The biologically active form of vitamin D — bypasses the renal 1-alpha-hydroxylation step that is impaired in chronic kidney disease',
+      'Essential for managing secondary hyperparathyroidism and renal osteodystrophy in dialysis patients, unlike inactive vitamin D (cholecalciferol/ergocalciferol) which requires renal activation',
+      'Narrow therapeutic window — hypercalcemia is the dose-limiting toxicity, requiring regular calcium/phosphate monitoring'
+    ],
+    indications: [
+      {
+        indication: 'Secondary hyperparathyroidism in chronic kidney disease (dialysis-dependent)',
+        indicationAr: 'فرط نشاط الغدة جار الدرقية الثانوي في مرض الكلى المزمن (المعتمد على الديال)',
+        adultDose: '0.25–0.5 mcg PO/IV 3 times weekly (with dialysis), titrate based on PTH/calcium',
+        adultDoseAr: '0.25-0.5 ميكروجرام فموي/وريدي 3 مرات أسبوعيًا (مع الديال)، تُعدّل حسب الهرمون الجار درقي والكالسيوم',
+        pediatricDose: 'Weight-based dosing per nephrology protocol',
+        pediatricDoseAr: 'جرعة حسب الوزن وفق بروتوكول أمراض الكلى',
+        maxDose: 'Titrate to PTH goal; individualized, avoid hypercalcemia',
+        duration: 'Chronic, ongoing with dialysis',
+        route: 'PO/IV'
+      },
+      {
+        indication: 'Hypoparathyroidism',
+        indicationAr: 'قصور الغدة جار الدرقية',
+        adultDose: '0.5–2 mcg PO once daily, titrate based on serum calcium',
+        adultDoseAr: '0.5-2 ميكروجرام فموي مرة يوميًا، تُعدّل حسب الكالسيوم',
+        pediatricDose: '0.25–0.75 mcg/day, weight/age-adjusted',
+        pediatricDoseAr: '0.25-0.75 ميكروجرام/يوم، معدّلة حسب الوزن/العمر',
+        maxDose: 'Individualized; avoid hypercalcemia',
+        duration: 'Chronic, lifelong',
+        route: 'PO'
+      },
+      {
+        indication: 'Renal osteodystrophy / CKD stage 3-5 not yet on dialysis',
+        indicationAr: 'الحثل العظمي الكلوي / مرض الكلى المزمن المرحلة 3-5 قبل الديال',
+        adultDose: '0.25 mcg PO once daily or every other day, titrate carefully',
+        adultDoseAr: '0.25 ميكروجرام فموي مرة يوميًا أو كل يومين، تُعدّل بعناية',
+        pediatricDose: 'Weight-based per nephrology protocol',
+        pediatricDoseAr: 'حسب الوزن وفق بروتوكول أمراض الكلى',
+        maxDose: 'Individualized; avoid hypercalcemia',
+        duration: 'Chronic',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'Standard dosing; typically used for non-renal indications at this level',
+      crcl10to50: 'No specific adjustment beyond titration to PTH/calcium goals',
+      crclBelow10: 'Primary indication — dosed and titrated specifically for this population',
+      hemodialysis: 'Dosed around dialysis schedule (e.g., 3 times weekly with dialysis sessions)'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Hypercalcemia',
+      'Vitamin D toxicity',
+      'Known hypersensitivity to calcitriol'
+    ],
+    mechanismOfAction: 'The active hormonal form of vitamin D that binds the vitamin D receptor, increasing intestinal calcium and phosphate absorption, promoting bone mineralization, and suppressing parathyroid hormone secretion — bypasses the need for renal 1-alpha-hydroxylation required to activate other vitamin D forms',
+    mechanismOfActionAr: 'الشكل الهرموني النشط لفيتامين د يرتبط بمستقبل فيتامين د، يزيد امتصاص الكالسيوم والفوسفات المعوي، يعزز تمعدن العظام، ويثبط إفراز الهرمون الجار درقي - يتجاوز الحاجة لتنشيط كلوي',
+    halfLife: '5–8 hours',
+    monitoringParameters: [
+      'Serum calcium and phosphate (frequently, especially during titration)',
+      'Parathyroid hormone (PTH) levels',
+      'Signs of hypercalcemia (nausea, constipation, confusion, polyuria)',
+      '24-hour urinary calcium periodically'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Avoid excessive calcium-containing antacids/supplements concurrently (additive hypercalcemia risk)',
+      'Avoid magnesium-containing antacids in dialysis patients (hypermagnesemia risk)'
+    ],
+    pearls: [
+      'Unlike cholecalciferol (vitamin D3) or ergocalciferol (vitamin D2), calcitriol does not require renal activation — making it essential in advanced CKD/dialysis where the kidney cannot perform this conversion',
+      'Hypercalcemia is the primary dose-limiting toxicity — frequent calcium monitoring is mandatory, especially during dose titration',
+      'Often used alongside phosphate binders (e.g., sevelamer) in CKD-mineral bone disease management, since calcitriol increases phosphate absorption which must be counterbalanced',
+      'Vitamin D analogs with less hypercalcemic effect (e.g., paricalcitol, doxercalciferol) are increasingly preferred over calcitriol in dialysis patients to reduce hypercalcemia/vascular calcification risk'
+    ]
+  },
+  {
+    id: 'sodium_polystyrene_sulfonate',
+    genericName: 'Sodium Polystyrene Sulfonate',
+    genericNameAr: 'بوليسترين سلفونات الصوديوم',
+    brandNames: ['Kayexalate', 'كاياكسالات'],
+    drugClass: 'Cation-Exchange Resin (Potassium Binder)',
+    drugClassAr: 'راتنج تبادل أيوني (رابط للبوتاسيوم)',
+    category: 'Rx',
+    route: ['PO', 'rectal (enema)'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['icu_emergency', 'internal_medicine'],
+    keyHighlights: [
+      'Treats hyperkalemia by binding potassium in the GI tract for fecal excretion — a slow-onset therapy (hours), NOT for acute life-threatening hyperkalemia with ECG changes',
+      'Must never be confused with calcium gluconate/insulin-glucose/albuterol, which provide IMMEDIATE cardioprotection and intracellular potassium shift in true emergencies',
+      'Rare but serious risk of intestinal necrosis, especially when combined with sorbitol or given to patients with reduced gut motility/postoperative states'
+    ],
+    indications: [
+      {
+        indication: 'Hyperkalemia (non-emergent, mild-moderate)',
+        indicationAr: 'فرط بوتاسيوم الدم (غير طارئ، خفيف-متوسط)',
+        adultDose: '15–30 g PO 1–4 times daily (or as needed), mixed in water/sorbitol-free vehicle',
+        adultDoseAr: '15-30 جرام فموي 1-4 مرات يوميًا (أو حسب الحاجة)، يُمزج في ماء أو مذيب بدون سوربيتول',
+        pediatricDose: '1 g/kg/dose PO or rectal every 6 hours, specialist-guided',
+        pediatricDoseAr: '1 جرام/كجم/جرعة فموي أو شرجي كل 6 ساعات، بإشراف متخصص',
+        maxDose: '15 g up to 4 times daily (60 g/day typical maximum)',
+        duration: 'Until potassium normalized, then discontinue',
+        route: 'PO'
+      },
+      {
+        indication: 'Hyperkalemia (when oral route not feasible)',
+        indicationAr: 'فرط بوتاسيوم الدم (عندما يتعذر الطريق الفموي)',
+        adultDose: '30–50 g as a retention enema every 6 hours',
+        adultDoseAr: '30-50 جرام كحقنة شرجية احتباسية كل 6 ساعات',
+        pediatricDose: '1 g/kg rectal, specialist-guided',
+        pediatricDoseAr: '1 جرام/كجم شرجي، بإشراف متخصص',
+        maxDose: '50 g per dose',
+        duration: 'Until potassium normalized or oral route resumed',
+        route: 'Rectal'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'Not typically indicated — used specifically in renal impairment/dialysis populations',
+      crcl10to50: 'No adjustment required; dosed per serum potassium',
+      crclBelow10: 'No adjustment required; dosed per serum potassium (common indication population)',
+      hemodialysis: 'Not dialyzed; dosed per serum potassium, consider timing with dialysis sessions'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Bowel obstruction or postoperative ileus',
+      'Severely reduced bowel motility',
+      'Neonates (due to risk of bowel perforation)',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Intestinal necrosis (sometimes fatal) has been reported, particularly when combined with sorbitol or in patients with reduced bowel motility (postoperative, opioid use) or bowel obstruction; avoid concurrent sorbitol-containing formulations',
+    blackBoxWarningAr: 'تم الإبلاغ عن نخر الأمعاء (قد يكون قاتلًا)، خاصة عند دمجه مع السوربيتول أو عند المرضى ذوي الحركة المعوية المنخفضة؛ يُتجنب الدمج مع تركيبات تحتوي على السوربيتول',
+    mechanismOfAction: 'Cation-exchange resin that releases sodium and binds potassium ions in the GI tract (predominantly colon), facilitating fecal potassium excretion rather than renal or cellular mechanisms',
+    mechanismOfActionAr: 'راتنج تبادل أيوني يُحرر الصوديوم ويرتبط بأيونات البوتاسيوم في الجهاز الهضمي، مُسهّلًا طرح البوتاسيوم في البراز',
+    halfLife: 'Not systemically absorbed (acts locally in GI tract)',
+    monitoringParameters: [
+      'Serum potassium (serially, response is slow — hours, not minutes)',
+      'Bowel sounds/motility, signs of ileus or obstruction',
+      'Signs of intestinal necrosis (severe abdominal pain, distension, GI bleeding)',
+      'Serum sodium (sodium load from the resin can worsen fluid overload)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'Avoid sorbitol-containing vehicles due to intestinal necrosis risk',
+      'No significant food interactions otherwise'
+    ],
+    pearls: [
+      'Onset of action is slow (hours) — this is NOT appropriate as sole therapy for severe/emergent hyperkalemia with ECG changes, where calcium gluconate (membrane stabilization), insulin-glucose and albuterol (intracellular shift), and consideration of dialysis take priority for immediate effect',
+      'Newer potassium binders (patiromer, sodium zirconium cyclosilicate) have largely replaced sodium polystyrene sulfonate in many settings due to better tolerability and a more favorable safety profile regarding intestinal injury',
+      'Never combine with sorbitol — this combination has been specifically linked to fatal intestinal necrosis',
+      'Primarily useful for chronic/subacute potassium management rather than acute crisis stabilization'
+    ]
+  },
+  {
+    id: 'cyanocobalamin',
+    genericName: 'Cyanocobalamin (Vitamin B12)',
+    genericNameAr: 'سيانوكوبالامين (فيتامين ب12)',
+    brandNames: ['Nascobal', 'B12', 'ناسكوبال'],
+    drugClass: 'Water-Soluble Vitamin (Cobalamin)',
+    drugClassAr: 'فيتامين قابل للذوبان في الماء (كوبالامين)',
+    category: 'OTC',
+    route: ['PO', 'IM', 'SC', 'intranasal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Essential for DNA synthesis and myelin maintenance — deficiency causes megaloblastic anemia and potentially irreversible neurological damage if untreated',
+      'Pernicious anemia (intrinsic factor deficiency) requires parenteral (IM/SC) or high-dose oral replacement since intestinal absorption is impaired',
+      'Metformin, long-term PPI use, and bariatric surgery are common causes of acquired deficiency worth screening for'
+    ],
+    indications: [
+      {
+        indication: 'Vitamin B12 deficiency (pernicious anemia, malabsorption)',
+        indicationAr: 'نقص فيتامين ب12 (فقر الدم الخبيث، سوء الامتصاص)',
+        adultDose: '1000 mcg IM once daily for 1 week, then weekly for 4 weeks, then monthly maintenance; or 1000–2000 mcg PO daily if oral route adequate',
+        adultDoseAr: '1000 ميكروجرام عضلي مرة يوميًا لأسبوع، ثم أسبوعيًا لـ4 أسابيع، ثم شهريًا للصيانة؛ أو 1000-2000 ميكروجرام فموي يوميًا إذا كان الطريق الفموي كافيًا',
+        pediatricDose: '30–100 mcg IM daily for 2 weeks, then every 1–3 months maintenance, specialist-guided',
+        pediatricDoseAr: '30-100 ميكروجرام عضلي يوميًا لأسبوعين، ثم كل 1-3 أشهر للصيانة، بإشراف متخصص',
+        maxDose: 'No fixed ceiling; dosed to correct deficiency and maintain levels',
+        duration: 'Lifelong in pernicious anemia/irreversible malabsorption',
+        route: 'IM'
+      },
+      {
+        indication: 'Nutritional B12 deficiency (dietary, mild cases)',
+        indicationAr: 'نقص فيتامين ب12 الغذائي (حالات خفيفة)',
+        adultDose: '1000–2000 mcg PO once daily',
+        adultDoseAr: '1000-2000 ميكروجرام فموي مرة يوميًا',
+        pediatricDose: 'Weight/age-adjusted per deficiency severity',
+        pediatricDoseAr: 'معدّلة حسب الوزن/العمر وشدة النقص',
+        maxDose: 'No fixed ceiling; water-soluble vitamin with wide safety margin',
+        duration: 'Until levels normalize, then reassess need for ongoing supplementation',
+        route: 'PO'
+      },
+      {
+        indication: 'Nitrous oxide-induced or drug-induced B12 depletion (metformin, PPI long-term use)',
+        indicationAr: 'نقص فيتامين ب12 الناتج عن أكسيد النيتروز أو الأدوية (ميتفورمين، مثبطات مضخة البروتون طويلة المدى)',
+        adultDose: '1000 mcg IM or 1000–2000 mcg PO daily, per severity',
+        adultDoseAr: '1000 ميكروجرام عضلي أو 1000-2000 ميكروجرام فموي يوميًا، حسب الشدة',
+        pediatricDose: 'Not typically applicable for these specific causes',
+        pediatricDoseAr: 'غير قابل للتطبيق عادة لهذه الأسباب المحددة',
+        maxDose: 'No fixed ceiling',
+        duration: 'Until resolved; consider periodic screening if the causative drug is continued long-term',
+        route: 'PO/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to cobalamin or cobalt',
+      'Leber\'s hereditary optic neuropathy (relative — case reports of worsened vision with cyanocobalamin specifically; hydroxocobalamin preferred if this condition is present)'
+    ],
+    mechanismOfAction: 'Essential cofactor for methionine synthase and methylmalonyl-CoA mutase enzymes, required for DNA synthesis, red blood cell maturation, and maintenance of myelin sheath integrity in the nervous system',
+    mechanismOfActionAr: 'عامل مساعد أساسي لإنزيمي ميثيونين سينثاز وميثيل مالونيل-CoA موتاز، ضروري لتخليق الحمض النووي ونضج خلايا الدم الحمراء وصيانة غلاف المايلين العصبي',
+    halfLife: '6 days (storage in liver can extend functional duration for months)',
+    monitoringParameters: [
+      'Serum B12 level and complete blood count (macrocytic anemia resolution)',
+      'Methylmalonic acid/homocysteine levels (more sensitive markers in some cases)',
+      'Neurological symptoms (paresthesias, gait disturbance, cognitive changes)',
+      'Reticulocyte count (response indicator, typically rises within a week of adequate replacement)',
+      'Potassium (can transiently drop with brisk hematologic response to replacement in severe deficiency)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'No significant food interactions; absorption of dietary B12 requires intrinsic factor, which supplementation with large oral doses can partially bypass via passive absorption'
+    ],
+    pearls: [
+      'In pernicious anemia and other causes of impaired intestinal absorption, high-dose oral B12 (1000–2000 mcg/day) can still be effective due to a small amount of passive, intrinsic-factor-independent absorption (~1%), though parenteral therapy remains standard, especially with neurological involvement',
+      'Correct B12 deficiency before or alongside folate deficiency when both coexist — treating folate deficiency alone in the presence of unrecognized B12 deficiency can mask the anemia while allowing neurological damage to progress',
+      'Metformin use is a common, often overlooked cause of B12 deficiency with long-term use — periodic screening is reasonable in patients on metformin for several years',
+      'Potassium levels should be monitored during the first 1–2 weeks of treating severe B12 deficiency, as the brisk erythropoietic response can precipitate hypokalemia'
+    ]
+  },
+  {
+    id: 'tenofovir_emtricitabine',
+    genericName: 'Tenofovir Disoproxil Fumarate / Emtricitabine',
+    genericNameAr: 'تينوفوفير ديسوبروكسيل فومارات / إمتريسيتابين',
+    brandNames: ['Truvada', 'تروفادا'],
+    drugClass: 'Nucleoside/Nucleotide Reverse Transcriptase Inhibitor (NRTI) Combination',
+    drugClassAr: 'مركب مثبطات النيوكليوزيد/النيوكليوتيد العكسية',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['infectious_diseases'],
+    keyHighlights: [
+      'Backbone of most HIV antiretroviral combination regimens, and the first FDA-approved oral regimen for HIV pre-exposure prophylaxis (PrEP)',
+      'Must confirm HIV-negative status before initiating/continuing PrEP — using it in undiagnosed HIV infection risks resistance development',
+      'Tenofovir disoproxil fumarate carries renal and bone density risks requiring baseline and periodic monitoring; tenofovir alafenamide (newer prodrug) has a more favorable renal/bone safety profile'
+    ],
+    indications: [
+      {
+        indication: 'HIV-1 infection (combination antiretroviral therapy backbone)',
+        indicationAr: 'عدوى فيروس نقص المناعة المكتسب (أساس العلاج المضاد للفيروسات المركب)',
+        adultDose: '1 tablet (300 mg/200 mg) PO once daily, combined with a third active agent per regimen',
+        adultDoseAr: 'قرص واحد (300/200 ملجم) فموي مرة يوميًا، مع عامل ثالث فعال حسب النظام',
+        pediatricDose: 'Weight-based dosing per pediatric HIV specialist protocol (age/weight ≥17 kg typically required)',
+        pediatricDoseAr: 'جرعة حسب الوزن وفق بروتوكول أخصائي فيروس نقص المناعة عند الأطفال',
+        maxDose: '1 tablet/day (fixed-dose combination)',
+        duration: 'Lifelong as part of combination ART',
+        route: 'PO'
+      },
+      {
+        indication: 'HIV pre-exposure prophylaxis (PrEP)',
+        indicationAr: 'الوقاية السابقة للتعرض من فيروس نقص المناعة',
+        adultDose: '1 tablet (300 mg/200 mg) PO once daily, continuous dosing',
+        adultDoseAr: 'قرص واحد فموي مرة يوميًا، جرعة مستمرة',
+        pediatricDose: 'Adolescents weighing ≥35 kg at risk, same adult dosing per specialist guidance',
+        pediatricDoseAr: 'المراهقون بوزن 35 كجم فأكثر المعرضون للخطر، نفس جرعة البالغين بإشراف متخصص',
+        maxDose: '1 tablet/day',
+        duration: 'Ongoing during periods of HIV exposure risk, with quarterly HIV testing',
+        route: 'PO'
+      },
+      {
+        indication: 'HIV post-exposure prophylaxis (PEP, combined with a third agent)',
+        indicationAr: 'الوقاية بعد التعرض من فيروس نقص المناعة (مع عامل ثالث)',
+        adultDose: '1 tablet (300 mg/200 mg) PO once daily for 28 days, started within 72 hours of exposure',
+        adultDoseAr: 'قرص واحد فموي مرة يوميًا لمدة 28 يومًا، يُبدأ خلال 72 ساعة من التعرض',
+        pediatricDose: 'Weight-based, specialist-guided',
+        pediatricDoseAr: 'حسب الوزن، بإشراف متخصص',
+        maxDose: '1 tablet/day',
+        duration: '28-day course',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Extend dosing interval (e.g., every 48 hours at CrCl 30–49); avoid for PrEP indication if CrCl <60',
+      crclBelow10: 'Avoid use; not recommended',
+      hemodialysis: 'Avoid use; not recommended without specialist guidance'
+    },
+    hepaticAdjustment: 'No specific adjustment required; monitor for hepatic flare if used in patients with concurrent hepatitis B who discontinue therapy',
+    contraindications: [
+      'CrCl <30 mL/min for most indications/combination products',
+      'Unknown or positive HIV status when initiating for PrEP without appropriate confirmatory testing protocol',
+      'Known hypersensitivity to tenofovir or emtricitabine'
+    ],
+    blackBoxWarning: 'Severe acute exacerbations of hepatitis B have occurred in patients co-infected with HIV and hepatitis B virus who discontinue this medication; lactic acidosis and severe hepatomegaly with steatosis have been reported with nucleoside analog use',
+    blackBoxWarningAr: 'حدثت نوبات حادة شديدة من التهاب الكبد B عند المرضى المصابين بعدوى مشتركة مع فيروس نقص المناعة والتهاب الكبد B الذين أوقفوا هذا الدواء؛ تم الإبلاغ عن حماض لبني وتضخم كبدي شديد مع تشحم',
+    mechanismOfAction: 'Both components are nucleos(t)ide analogs that are phosphorylated intracellularly to their active forms, which competitively inhibit HIV reverse transcriptase and cause chain termination during viral DNA synthesis',
+    mechanismOfActionAr: 'كل المكونين نظائر نيوكليوزيد/نيوكليوتيد تُفسفر داخل الخلايا إلى أشكالها النشطة، التي تثبط تنافسيًا إنزيم الترانسكريبتاز العكسي وتسبب إنهاء السلسلة أثناء تخليق الحمض النووي الفيروسي',
+    halfLife: 'Tenofovir: 17 hours; Emtricitabine: 10 hours',
+    monitoringParameters: [
+      'HIV status confirmation before and periodically during PrEP use (every 3 months)',
+      'Renal function (creatinine, estimated GFR, urine protein) at baseline and periodically',
+      'Bone mineral density in patients at risk for osteoporosis with long-term use',
+      'Hepatitis B status (screen before initiating; monitor for flare if discontinued in co-infected patients)',
+      'Signs of lactic acidosis (rare but serious)'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'May be taken with or without food'
+    ],
+    pearls: [
+      'Before starting or continuing PrEP, HIV status MUST be confirmed negative — undiagnosed acute HIV infection treated with only two active drugs risks developing drug resistance',
+      'Screen for and address hepatitis B status before initiating, since discontinuing therapy in a patient with undiagnosed chronic hepatitis B co-infection can precipitate a severe hepatic flare',
+      'Renal function should be checked before starting and periodically during use, particularly with tenofovir disoproxil fumarate; the newer tenofovir alafenamide-based combination (Descovy) has less renal/bone toxicity though is not approved for receptive vaginal sex PrEP',
+      'Adherence counseling is central to both treatment and PrEP efficacy — missed doses significantly reduce protective efficacy for PrEP and risk resistance in treatment'
+    ]
+  },
+  {
+    id: 'cefuroxime',
+    genericName: 'Cefuroxime',
+    genericNameAr: 'سيفوروكسيم',
+    brandNames: ['Zinacef', 'Ceftin', 'زيناسيف'],
+    drugClass: 'Second-Generation Cephalosporin Antibiotic',
+    drugClassAr: 'مضاد حيوي من السيفالوسبورينات الجيل الثاني',
+    category: 'Rx',
+    route: ['PO', 'IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-18',
+    targetSpecialties: ['infectious_diseases', 'pediatrics'],
+    keyHighlights: [
+      'Broader gram-negative coverage than first-generation cephalosporins while retaining good gram-positive activity — useful "step-up" option for respiratory and skin infections',
+      'Available in both IV and oral formulations, facilitating IV-to-oral step-down therapy',
+      'Oral tablet absorption is significantly enhanced by food — must be taken with meals, unlike many other antibiotics'
+    ],
+    indications: [
+      {
+        indication: 'Community-acquired pneumonia / acute bacterial sinusitis / otitis media',
+        indicationAr: 'ذات الرئة المكتسبة من المجتمع / التهاب الجيوب الحاد / التهاب الأذن الوسطى',
+        adultDose: '250–500 mg PO twice daily, or 750 mg–1.5 g IV every 8 hours for severe infection',
+        adultDoseAr: '250-500 ملجم فموي مرتين يوميًا، أو 750 ملجم-1.5 جرام وريدي كل 8 ساعات للعدوى الشديدة',
+        pediatricDose: '20–30 mg/kg/day PO divided twice daily (max 1 g/day); 50–100 mg/kg/day IV divided every 8 hours for severe infection',
+        pediatricDoseAr: '20-30 ملجم/كجم/يوم فموي مقسمة مرتين يوميًا (بحد أقصى 1 جرام/يوم)؛ 50-100 ملجم/كجم/يوم وريدي مقسمة كل 8 ساعات للعدوى الشديدة',
+        maxDose: '1.5 g IV every 8 hours (adult severe infection); 1 g/day PO',
+        duration: '7–14 days depending on indication and severity',
+        route: 'PO/IV'
+      },
+      {
+        indication: 'Early Lyme disease (alternative to doxycycline)',
+        indicationAr: 'داء لايم المبكر (بديل للدوكسيسيكلين)',
+        adultDose: '500 mg PO twice daily for 14–21 days',
+        adultDoseAr: '500 ملجم فموي مرتين يوميًا لمدة 14-21 يومًا',
+        pediatricDose: '30 mg/kg/day divided twice daily (max 500 mg/dose) for 14–21 days',
+        pediatricDoseAr: '30 ملجم/كجم/يوم مقسمة مرتين يوميًا (بحد أقصى 500 ملجم/جرعة) لمدة 14-21 يومًا',
+        maxDose: '1 g/day',
+        duration: '14–21 days',
+        route: 'PO'
+      },
+      {
+        indication: 'Surgical prophylaxis (gastrointestinal, orthopedic procedures)',
+        indicationAr: 'الوقاية الجراحية (إجراءات الجهاز الهضمي والعظام)',
+        adultDose: '1.5 g IV single dose within 60 minutes before incision',
+        adultDoseAr: '1.5 جرام وريدي جرعة واحدة خلال 60 دقيقة قبل الشق',
+        pediatricDose: '50 mg/kg IV single dose before incision',
+        pediatricDoseAr: '50 ملجم/كجم وريدي جرعة واحدة قبل الشق',
+        maxDose: '1.5 g per dose',
+        duration: 'Single preoperative dose, redose if prolonged surgery',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Administer usual dose every 12 hours',
+      crclBelow10: 'Administer usual dose every 24 hours',
+      hemodialysis: 'Dose after dialysis session'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to cefuroxime or other cephalosporins',
+      'History of severe immediate hypersensitivity (anaphylaxis) to penicillins (relative — low but present cross-reactivity risk)'
+    ],
+    mechanismOfAction: 'Inhibits bacterial cell wall synthesis by binding penicillin-binding proteins, preventing peptidoglycan cross-linking and leading to bacterial cell lysis; more resistant to many beta-lactamases than first-generation cephalosporins, broadening gram-negative coverage',
+    mechanismOfActionAr: 'يثبط تخليق جدار الخلية البكتيري بالارتباط ببروتينات ربط البنسلين؛ أكثر مقاومة لكثير من إنزيمات بيتا لاكتاماز من الجيل الأول، مما يوسع التغطية ضد سالبة الغرام',
+    halfLife: '1–2 hours (normal renal function)',
+    monitoringParameters: [
+      'Renal function (dose adjustment)',
+      'Signs of allergic/hypersensitivity reaction',
+      'Clinical response (resolution of infection signs)',
+      'Signs of C. difficile-associated diarrhea with prolonged use'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'Oral tablets should be taken WITH food — significantly improves absorption and bioavailability compared to fasting state'
+    ],
+    pearls: [
+      'Unlike many antibiotics where food delays or reduces absorption, cefuroxime axetil (oral) absorption is enhanced by food — always counsel patients to take oral tablets with meals',
+      'Useful IV-to-oral step-down option given availability in both formulations with reasonably comparable spectrum, facilitating early hospital discharge',
+      'Broader gram-negative coverage than first-generation cephalosporins (cefazolin) due to increased beta-lactamase stability, but still lacks coverage for Pseudomonas, enterococci, or MRSA',
+      'A reasonable alternative to doxycycline for early Lyme disease, particularly in young children or pregnant patients where tetracyclines are contraindicated'
+    ]
   }
 ];
 
