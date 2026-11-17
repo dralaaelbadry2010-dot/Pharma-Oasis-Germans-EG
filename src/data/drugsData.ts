@@ -8441,6 +8441,1036 @@ export const INITIAL_DRUGS: Drug[] = [
       'Timing with meals is essential for efficacy — counsel patients explicitly, as nonadherence to meal-timing is a common cause of "treatment failure"',
       'Large pill burden (multiple large tablets per meal) is a major adherence challenge — powder formulation available as an alternative'
     ]
+  },
+  {
+    id: 'vincristine',
+    genericName: 'Vincristine',
+    genericNameAr: 'فينكريستين',
+    brandNames: ['Oncovin', 'Vincasar', 'أونكوفين'],
+    drugClass: 'Vinca Alkaloid Chemotherapy Agent',
+    drugClassAr: 'عامل علاج كيميائي من قلويدات الفينكا',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology'],
+    keyHighlights: [
+      'FATAL if given intrathecally — must be clearly labeled "FOR IV USE ONLY, FATAL IF GIVEN INTRATHECALLY"',
+      'Dose-limiting toxicity is peripheral neuropathy, not myelosuppression (minimal bone marrow suppression)',
+      'Core component of CHOP/R-CHOP (lymphoma), ABVD-adjacent regimens, and pediatric ALL protocols'
+    ],
+    indications: [
+      {
+        indication: 'Non-Hodgkin lymphoma (CHOP/R-CHOP regimen)',
+        indicationAr: 'ليمفوما غير هودجكين (نظام CHOP/R-CHOP)',
+        adultDose: '1.4 mg/m² IV (capped at 2 mg absolute) on day 1 of each 21-day cycle',
+        adultDoseAr: '1.4 ملجم/م² وريدي (بحد أقصى 2 ملجم مطلق) في اليوم 1 من كل دورة 21 يومًا',
+        pediatricDose: 'Protocol-specific, specialist pediatric oncology dosing only',
+        pediatricDoseAr: 'حسب البروتوكول، بإشراف أخصائي أورام أطفال فقط',
+        maxDose: '2 mg absolute per dose (capped regardless of BSA in adults)',
+        duration: 'Multiple cycles per protocol',
+        route: 'IV'
+      },
+      {
+        indication: 'Acute lymphoblastic leukemia (induction/maintenance)',
+        indicationAr: 'سرطان الدم الليمفاوي الحاد (الحث/الصيانة)',
+        adultDose: '1.4–2 mg/m² IV weekly per protocol',
+        adultDoseAr: '1.4-2 ملجم/م² وريدي أسبوعيًا حسب البروتوكول',
+        pediatricDose: '1.5 mg/m² IV weekly (max 2 mg) per protocol',
+        pediatricDoseAr: '1.5 ملجم/م² وريدي أسبوعيًا (بحد أقصى 2 ملجم) حسب البروتوكول',
+        maxDose: '2 mg per dose',
+        duration: 'Per induction/maintenance protocol, months to years',
+        route: 'IV'
+      },
+      {
+        indication: 'Wilms tumor / rhabdomyosarcoma (pediatric solid tumors)',
+        indicationAr: 'ورم ويلمز / الساركوما العضلية المخططة (أورام الأطفال الصلبة)',
+        adultDose: 'Not typically applicable',
+        adultDoseAr: 'غير مطبق عادة',
+        pediatricDose: '1.5 mg/m² IV weekly (max 2 mg), per sarcoma/Wilms protocol',
+        pediatricDoseAr: '1.5 ملجم/م² وريدي أسبوعيًا (بحد أقصى 2 ملجم) حسب بروتوكول الساركوما/ويلمز',
+        maxDose: '2 mg per dose',
+        duration: 'Per protocol',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; minimal renal excretion',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose by 50% if bilirubin 1.5–3 mg/dL; reduce by 75% or omit if bilirubin >3 mg/dL — primarily hepatobiliary elimination',
+    contraindications: [
+      'Demyelinating form of Charcot-Marie-Tooth syndrome',
+      'Intrathecal administration (absolute — fatal)',
+      'Significant pre-existing peripheral neuropathy (relative)',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'For intravenous use only — fatal if administered intrathecally. Must be prepared and dispensed in a manner that minimizes risk of inadvertent intrathecal administration (e.g., dispensed in a minibag, never a syringe that could be mistaken for intrathecal chemotherapy)',
+    blackBoxWarningAr: 'للاستخدام الوريدي فقط - قاتل إذا أُعطي داخل القناة الشوكية. يجب تحضيره وتوزيعه بطريقة تقلل خطر الإعطاء الشوكي العرضي',
+    mechanismOfAction: 'Binds tubulin and inhibits microtubule assembly, arresting cell division in metaphase; also disrupts axonal microtubule transport contributing to neurotoxicity',
+    mechanismOfActionAr: 'يرتبط بالتوبيولين ويثبط تجميع الأنيبيبات الدقيقة، موقفًا انقسام الخلايا في الطور الاستوائي؛ كما يعطل النقل المحوري مسببًا السمية العصبية',
+    halfLife: '85 hours (terminal)',
+    monitoringParameters: [
+      'Peripheral neuropathy (sensory loss, foot drop, paresthesias) — dose-limiting',
+      'Bowel function (autonomic neuropathy causing constipation/ileus)',
+      'Liver function tests',
+      'CBC (less myelosuppressive than other agents but still monitored)',
+      'Jaw pain (acute, self-limited)'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'ALWAYS verify route before administration — intrathecal vincristine is uniformly fatal and remains a documented, preventable medical error',
+      'Prophylactic bowel regimen (stool softener/laxative) is routinely co-prescribed due to high incidence of constipation from autonomic neuropathy',
+      'Unlike most chemotherapy, causes minimal myelosuppression — neurotoxicity, not blood counts, is the dose-limiting factor',
+      'Dose is capped at 2 mg absolute in adults regardless of body surface area, unlike most chemotherapy dosed purely by BSA'
+    ]
+  },
+  {
+    id: 'doxorubicin',
+    genericName: 'Doxorubicin',
+    genericNameAr: 'دوكسوروبيسين',
+    brandNames: ['Adriamycin', 'Doxil (liposomal)', 'أدريامايسين'],
+    drugClass: 'Anthracycline Chemotherapy Agent',
+    drugClassAr: 'عامل علاج كيميائي من الأنثراسيكلين',
+    category: 'Rx',
+    route: ['IV infusion'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology'],
+    keyHighlights: [
+      'Cumulative, irreversible dose-dependent cardiotoxicity (dilated cardiomyopathy) — lifetime cumulative dose must be tracked',
+      'Potent vesicant — extravasation causes severe tissue necrosis; dexrazoxane is the specific extravasation antidote',
+      'Liposomal formulation (Doxil) reduces cardiotoxicity but causes hand-foot syndrome and mucositis'
+    ],
+    indications: [
+      {
+        indication: 'Non-Hodgkin lymphoma / Hodgkin lymphoma (CHOP/ABVD)',
+        indicationAr: 'ليمفوما غير هودجكين / ليمفوما هودجكين (CHOP/ABVD)',
+        adultDose: '50–60 mg/m² IV every 21 days, or per specific regimen',
+        adultDoseAr: '50-60 ملجم/م² وريدي كل 21 يومًا، أو حسب البرنامج المحدد',
+        pediatricDose: 'Protocol-specific, specialist pediatric oncology dosing only',
+        pediatricDoseAr: 'حسب البروتوكول، بإشراف أخصائي أورام أطفال فقط',
+        maxDose: 'Cumulative lifetime dose generally capped at 450–550 mg/m²',
+        duration: 'Multiple cycles per protocol',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Breast cancer (adjuvant, e.g., AC regimen)',
+        indicationAr: 'سرطان الثدي (علاج مساعد، نظام AC)',
+        adultDose: '60 mg/m² IV every 2–3 weeks combined with cyclophosphamide',
+        adultDoseAr: '60 ملجم/م² وريدي كل 2-3 أسابيع مع سيكلوفوسفاميد',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: 'Cumulative lifetime dose capped at 450–550 mg/m²',
+        duration: '4 cycles typical',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Sarcoma (osteosarcoma, soft tissue sarcoma)',
+        indicationAr: 'الساركوما (ساركوما العظام، ساركوما النسيج الرخو)',
+        adultDose: '60–75 mg/m² IV every 21 days, per protocol',
+        adultDoseAr: '60-75 ملجم/م² وريدي كل 21 يومًا، حسب البروتوكول',
+        pediatricDose: 'Protocol-specific',
+        pediatricDoseAr: 'حسب البروتوكول',
+        maxDose: 'Cumulative lifetime dose capped at 450–550 mg/m²',
+        duration: 'Multiple cycles per protocol',
+        route: 'IV infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required; primarily hepatic elimination',
+      crclBelow10: 'No adjustment required; use with caution',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose by 50% if bilirubin 1.2–3 mg/dL; reduce by 75% if bilirubin >3 mg/dL',
+    contraindications: [
+      'Severe pre-existing cardiac impairment or recent myocardial infarction',
+      'Severe persistent myelosuppression',
+      'Prior cumulative anthracycline dose near lifetime maximum',
+      'Severe hepatic impairment (relative)',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Causes cumulative, dose-related, potentially fatal cardiomyopathy; severe myelosuppression; must not be given by intramuscular or subcutaneous route; is a potent vesicant causing tissue necrosis with extravasation; secondary leukemia risk',
+    blackBoxWarningAr: 'يسبب اعتلالًا تراكميًا مرتبطًا بالجرعة في عضلة القلب قد يكون قاتلًا؛ تثبيط شديد لنقي العظام؛ يجب عدم إعطائه عضليًا أو تحت الجلد؛ مادة مهيجة قوية تسبب نخر النسيج عند التسرب؛ خطر سرطان الدم الثانوي',
+    mechanismOfAction: 'Intercalates into DNA, inhibits topoisomerase II, and generates free radicals, causing DNA strand breaks and apoptosis; free radical generation in cardiac myocytes underlies the cardiotoxicity',
+    mechanismOfActionAr: 'يتداخل مع الحمض النووي، يثبط التوبويزوميراز II، ويولد شوارد حرة تسبب كسور في خيوط الحمض النووي وموت الخلايا؛ توليد الشوارد الحرة في خلايا القلب يسبب السمية القلبية',
+    halfLife: '20–48 hours (terminal)',
+    monitoringParameters: [
+      'Left ventricular ejection fraction (echocardiogram) at baseline and periodically — cumulative dose tracking',
+      'CBC with differential (nadir 10–14 days)',
+      'Liver function tests',
+      'Signs of extravasation at infusion site',
+      'Signs of heart failure (dyspnea, edema, fatigue)'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Cardiotoxicity risk rises sharply above a cumulative lifetime dose of ~450–550 mg/m² — lifetime dose must be tracked across all treatment courses, even years apart',
+      'Causes reddish discoloration of urine for 1–2 days after administration — a benign, expected finding to counsel patients about in advance',
+      'Dexrazoxane can be used both as a cardioprotectant (at high cumulative doses) and as a specific antidote for extravasation injury',
+      'Liposomal doxorubicin (Doxil) has substantially reduced cardiotoxicity but introduces distinct toxicities (hand-foot syndrome, mucositis, infusion reactions)'
+    ]
+  },
+  {
+    id: 'filgrastim',
+    genericName: 'Filgrastim',
+    genericNameAr: 'فيلجراستيم',
+    brandNames: ['Neupogen', 'Zarxio', 'نيوبوجين'],
+    drugClass: 'Granulocyte Colony-Stimulating Factor (G-CSF)',
+    drugClassAr: 'عامل منشط لمستعمرات الخلايا المحببة',
+    category: 'Rx',
+    route: ['SC', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology'],
+    keyHighlights: [
+      'Reduces duration and severity of chemotherapy-induced neutropenia, lowering febrile neutropenia risk',
+      'Must not be given 24 hours before through 24 hours after cytotoxic chemotherapy — can worsen myelosuppression if mistimed',
+      'Also used to mobilize peripheral blood stem cells before autologous/allogeneic transplant'
+    ],
+    indications: [
+      {
+        indication: 'Chemotherapy-induced febrile neutropenia prevention',
+        indicationAr: 'الوقاية من قلة العدلات الحموية الناتجة عن العلاج الكيميائي',
+        adultDose: '5 mcg/kg SC once daily, starting 24 hours after chemotherapy, until neutrophil recovery',
+        adultDoseAr: '5 ميكروجرام/كجم تحت الجلد مرة يوميًا، تبدأ بعد 24 ساعة من العلاج الكيميائي، حتى استعادة العدلات',
+        pediatricDose: '5 mcg/kg SC once daily, same timing principles',
+        pediatricDoseAr: '5 ميكروجرام/كجم تحت الجلد مرة يوميًا، بنفس مبادئ التوقيت',
+        maxDose: 'Weight-based; continue until ANC recovery (typically >10,000/mm³ after nadir)',
+        duration: 'Until neutrophil recovery, typically up to 14 days',
+        route: 'SC'
+      },
+      {
+        indication: 'Severe chronic neutropenia',
+        indicationAr: 'قلة العدلات المزمنة الشديدة',
+        adultDose: '5–6 mcg/kg/day SC, titrate to maintain ANC >1000–1500/mm³',
+        adultDoseAr: '5-6 ميكروجرام/كجم/يوم تحت الجلد، تُعدّل للحفاظ على عدد مطلق للعدلات أكبر من 1000-1500',
+        pediatricDose: 'Same weight-based dosing, specialist-guided',
+        pediatricDoseAr: 'نفس الجرعة حسب الوزن، بإشراف متخصص',
+        maxDose: 'Individualized to maintain target ANC',
+        duration: 'Chronic, ongoing',
+        route: 'SC'
+      },
+      {
+        indication: 'Peripheral blood stem cell mobilization (pre-transplant)',
+        indicationAr: 'تحشيد الخلايا الجذعية من الدم المحيطي (قبل الزرع)',
+        adultDose: '10 mcg/kg/day SC for 4–7 days before apheresis',
+        adultDoseAr: '10 ميكروجرام/كجم/يوم تحت الجلد لـ 4-7 أيام قبل الفصادة',
+        pediatricDose: 'Transplant-protocol specific',
+        pediatricDoseAr: 'حسب بروتوكول الزرع',
+        maxDose: 'Per transplant center protocol',
+        duration: '4–7 days pre-apheresis, may continue through collection',
+        route: 'SC'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; limited data',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to filgrastim or E. coli-derived proteins',
+      'Concurrent use with chemotherapy or radiation (within 24 hours before/after) due to risk of increased sensitivity of rapidly dividing myeloid cells',
+      'Sickle cell disease (caution — risk of sickle cell crisis)'
+    ],
+    mechanismOfAction: 'Recombinant human G-CSF that stimulates proliferation, differentiation, and functional activation of neutrophil precursors and mature neutrophils in the bone marrow',
+    mechanismOfActionAr: 'عامل منشط لمستعمرات الخلايا المحببة مُعاد التركيب يحفز تكاثر وتمايز وتنشيط سلائف وخلايا العدلات الناضجة في نقي العظام',
+    halfLife: '3.5 hours',
+    monitoringParameters: [
+      'CBC with differential (ANC trending)',
+      'Bone pain (common, manageable with analgesics)',
+      'Spleen size/left upper quadrant pain (rare splenic rupture risk)',
+      'Signs of acute respiratory distress syndrome (rare)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Bone pain is the most common side effect — typically managed with non-opioid analgesics and resolves after discontinuation',
+      'Timing is critical: starting too early (within 24 hours of chemo) can increase toxicity to the dividing progenitor cells chemotherapy is meant to kill',
+      'Pegfilgrastim (long-acting) requires only a single dose per chemotherapy cycle instead of daily injections, improving convenience',
+      'Not indicated for the neutropenia of acute myeloid leukemia during induction chemotherapy without careful oncology input, given theoretical concern for stimulating leukemic blasts'
+    ]
+  },
+  {
+    id: 'amphotericin_b',
+    genericName: 'Amphotericin B (Liposomal)',
+    genericNameAr: 'أمفوتيريسين ب (الشكل الشحمي)',
+    brandNames: ['AmBisome', 'أمبيسوم'],
+    drugClass: 'Polyene Antifungal',
+    drugClassAr: 'مضاد فطري من مجموعة البوليين',
+    category: 'Rx',
+    route: ['IV infusion'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'icu_emergency'],
+    keyHighlights: [
+      '"Ampho-terrible" reputation from nephrotoxicity and infusion reactions — liposomal formulation substantially reduces both vs. conventional deoxycholate form',
+      'Broad-spectrum fungicidal activity — gold standard for invasive aspergillosis, mucormycosis, and severe disseminated fungal infections',
+      'Premedication (antipyretics, antihistamines, sometimes hydrocortisone) reduces infusion-related reactions'
+    ],
+    indications: [
+      {
+        indication: 'Invasive aspergillosis / mucormycosis',
+        indicationAr: 'داء الرشاشيات الغازي / داء الفطار الغشائي',
+        adultDose: '3–5 mg/kg IV once daily (liposomal); up to 10 mg/kg/day for mucormycosis',
+        adultDoseAr: '3-5 ملجم/كجم وريدي مرة يوميًا (شحمي)؛ حتى 10 ملجم/كجم/يوم لداء الفطار الغشائي',
+        pediatricDose: '3–5 mg/kg IV once daily, same weight-based principle',
+        pediatricDoseAr: '3-5 ملجم/كجم وريدي مرة يوميًا، نفس المبدأ حسب الوزن',
+        maxDose: 'Up to 10 mg/kg/day in severe mucormycosis per specialist guidance',
+        duration: 'Weeks to months depending on response and immune status',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Cryptococcal meningitis (induction therapy)',
+        indicationAr: 'التهاب السحايا الكريبتوكوكي (علاج الحث)',
+        adultDose: '3–4 mg/kg IV once daily, combined with flucytosine, for 2 weeks induction',
+        adultDoseAr: '3-4 ملجم/كجم وريدي مرة يوميًا، مع فلوسيتوزين، لمدة 2 أسبوع كعلاج حث',
+        pediatricDose: 'Same weight-based dosing, specialist-guided',
+        pediatricDoseAr: 'نفس الجرعة حسب الوزن، بإشراف متخصص',
+        maxDose: '4–6 mg/kg/day depending on protocol',
+        duration: '2 weeks induction, then fluconazole consolidation/maintenance',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Empiric therapy, febrile neutropenia with suspected invasive fungal infection',
+        indicationAr: 'علاج تجريبي، قلة العدلات الحموية مع اشتباه عدوى فطرية غازية',
+        adultDose: '3 mg/kg IV once daily',
+        adultDoseAr: '3 ملجم/كجم وريدي مرة يوميًا',
+        pediatricDose: '3 mg/kg IV once daily',
+        pediatricDoseAr: '3 ملجم/كجم وريدي مرة يوميًا',
+        maxDose: '5 mg/kg/day',
+        duration: 'Until defervescence/culture results guide definitive therapy',
+        route: 'IV infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required; monitor renal function closely',
+      crcl10to50: 'No formal dose adjustment but monitor closely; consider dose reduction if significant nephrotoxicity develops',
+      crclBelow10: 'Use liposomal form preferentially (less nephrotoxic); monitor very closely, consider alternative antifungal if feasible',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed, dose timing independent of dialysis'
+    },
+    hepaticAdjustment: 'No formal dose adjustment established; use with caution in severe hepatic impairment',
+    contraindications: [
+      'Known hypersensitivity to amphotericin B or liposomal components (unless no alternative exists for life-threatening infection)'
+    ],
+    blackBoxWarning: 'Conventional (non-liposomal) amphotericin B deoxycholate carries significant risk of nephrotoxicity and severe infusion reactions; different lipid formulations are NOT interchangeable — dosing errors from formulation confusion have caused fatalities',
+    blackBoxWarningAr: 'الشكل التقليدي من الأمفوتيريسين ب يحمل خطرًا كبيرًا للسمية الكلوية وتفاعلات التسريب الشديدة؛ الأشكال الشحمية المختلفة غير قابلة للتبديل - أخطاء الجرعات بسبب الخلط بين الأشكال تسببت في وفيات',
+    mechanismOfAction: 'Binds ergosterol in the fungal cell membrane, forming pores that increase membrane permeability, causing leakage of intracellular contents and fungal cell death',
+    mechanismOfActionAr: 'يرتبط بالإرغوستيرول في الغشاء الخلوي الفطري، مكونًا ثقوبًا تزيد نفاذية الغشاء، مما يسبب تسرب المحتويات الخلوية وموت الخلية الفطرية',
+    halfLife: '~100–150 hours (liposomal, terminal)',
+    monitoringParameters: [
+      'Renal function (BUN/creatinine) frequently, especially early in therapy',
+      'Serum electrolytes (potassium, magnesium — renal wasting common)',
+      'Infusion-related reactions (fever, chills, rigors) during/after infusion',
+      'CBC (anemia can occur with prolonged use)',
+      'Liver function tests'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Liposomal (AmBisome) and lipid-complex formulations are dramatically less nephrotoxic than conventional deoxycholate amphotericin B — but are NOT dosed the same, and switching formulations without recalculating dose is a known source of serious medication errors',
+      'Premedicate with acetaminophen/diphenhydramine (± hydrocortisone) before early infusions to reduce rigors and fever ("shake and bake" reaction)',
+      'Aggressive IV saline loading before each dose can reduce nephrotoxicity',
+      'Remains first-line for mucormycosis and many invasive molds where azole resistance or spectrum gaps exist'
+    ]
+  },
+  {
+    id: 'voriconazole',
+    genericName: 'Voriconazole',
+    genericNameAr: 'فوريكونازول',
+    brandNames: ['Vfend', 'فيفند'],
+    drugClass: 'Triazole Antifungal',
+    drugClassAr: 'مضاد فطري من مجموعة التريازول',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases'],
+    keyHighlights: [
+      'First-line therapy for invasive aspergillosis, with superior outcomes vs. amphotericin B in landmark trials',
+      'Causes dose-dependent, reversible visual disturbances (photopsia) in a majority of patients — a near-pathognomonic early side effect',
+      'Extensive CYP2C19/CYP3A4-mediated drug interactions; nonlinear pharmacokinetics with major genetic (CYP2C19 polymorphism) variability'
+    ],
+    indications: [
+      {
+        indication: 'Invasive aspergillosis',
+        indicationAr: 'داء الرشاشيات الغازي',
+        adultDose: 'Loading: 6 mg/kg IV every 12 hours x 2 doses; maintenance: 4 mg/kg IV every 12 hours, or 200 mg PO every 12 hours',
+        adultDoseAr: 'جرعة تحميل: 6 ملجم/كجم وريدي كل 12 ساعة لجرعتين؛ جرعة صيانة: 4 ملجم/كجم وريدي كل 12 ساعة، أو 200 ملجم فموي كل 12 ساعة',
+        pediatricDose: '9 mg/kg IV every 12 hours (loading day 1), then 8 mg/kg every 12 hours; weight-based per specialist protocol',
+        pediatricDoseAr: '9 ملجم/كجم وريدي كل 12 ساعة (يوم التحميل)، ثم 8 ملجم/كجم كل 12 ساعة حسب البروتوكول',
+        maxDose: 'Individualized with therapeutic drug monitoring; trough target 1–5.5 mcg/mL',
+        duration: 'Minimum 6–12 weeks, often longer depending on immune status and response',
+        route: 'IV/PO'
+      },
+      {
+        indication: 'Candidemia / invasive candidiasis (fluconazole-resistant or step-down)',
+        indicationAr: 'داء المبيضات في الدم / داء المبيضات الغازي (مقاوم للفلوكونازول)',
+        adultDose: 'Loading: 6 mg/kg IV every 12 hours x 2 doses; maintenance: 3–4 mg/kg IV every 12 hours or 200 mg PO every 12 hours',
+        adultDoseAr: 'جرعة تحميل: 6 ملجم/كجم وريدي كل 12 ساعة لجرعتين؛ صيانة: 3-4 ملجم/كجم وريدي كل 12 ساعة',
+        pediatricDose: 'Weight-based per specialist protocol',
+        pediatricDoseAr: 'حسب الوزن وبإشراف متخصص',
+        maxDose: 'Per therapeutic drug monitoring',
+        duration: '2 weeks after first negative blood culture (typical for candidemia)',
+        route: 'IV/PO'
+      },
+      {
+        indication: 'Esophageal candidiasis (fluconazole-refractory)',
+        indicationAr: 'داء المبيضات المريئي (المقاوم للفلوكونازول)',
+        adultDose: '200 mg PO every 12 hours',
+        adultDoseAr: '200 ملجم فموي كل 12 ساعة',
+        pediatricDose: 'Weight-based per specialist protocol',
+        pediatricDoseAr: 'حسب الوزن وبإشراف متخصص',
+        maxDose: '200 mg every 12 hours',
+        duration: '14–21 days typically',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required for oral dosing',
+      crcl10to50: 'Oral: no adjustment. IV: avoid if CrCl <50 mL/min due to accumulation of the IV vehicle (cyclodextrin) — use oral route instead',
+      crclBelow10: 'Avoid IV formulation (cyclodextrin accumulation); oral dosing does not require adjustment',
+      hemodialysis: 'Not significantly dialyzed; oral dosing preferred, dose timing independent of dialysis'
+    },
+    hepaticAdjustment: 'Mild-moderate impairment (Child-Pugh A/B): use standard loading dose, halve maintenance dose. Severe impairment: use only if benefit outweighs risk, with close monitoring',
+    contraindications: [
+      'Concurrent use with CYP3A4 substrates with narrow therapeutic index (e.g., sirolimus, certain ergot alkaloids, quinidine)',
+      'Concurrent rifampin, rifabutin, carbamazepine, long-acting barbiturates, ritonavir (high dose), St. John\'s Wort',
+      'Known hypersensitivity to voriconazole or other azoles (cross-reactivity possible)',
+      'QT prolongation with other QT-prolonging drugs (relative)'
+    ],
+    blackBoxWarning: 'Can cause QT prolongation and torsades de pointes; hepatotoxicity including hepatic failure has been reported; visual disturbances are common',
+    blackBoxWarningAr: 'قد يسبب تطاول فترة QT وعدم انتظام ضربات القلب الخطير (torsades de pointes)؛ تم الإبلاغ عن سمية كبدية تشمل فشل الكبد؛ اضطرابات بصرية شائعة',
+    mechanismOfAction: 'Inhibits fungal cytochrome P450-dependent 14-alpha-demethylase, blocking conversion of lanosterol to ergosterol, disrupting fungal cell membrane synthesis and integrity',
+    mechanismOfActionAr: 'يثبط إنزيم 14-ألفا-ديميثيليز الفطري المعتمد على السيتوكروم P450، مما يمنع تحويل اللانوستيرول إلى إرغوستيرول ويعطل تكوين الغشاء الخلوي الفطري',
+    halfLife: 'Nonlinear/dose-dependent (variable due to CYP2C19 polymorphism)',
+    monitoringParameters: [
+      'Liver function tests (baseline and periodically)',
+      'Therapeutic drug monitoring (trough levels) — critical due to nonlinear kinetics and high interpatient variability',
+      'ECG/QTc interval',
+      'Visual symptoms (photopsia, blurred vision)',
+      'Renal function (if IV formulation used)'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'Take oral tablets 1 hour before or after meals (high-fat meals reduce absorption)',
+      'Avoid alcohol'
+    ],
+    pearls: [
+      'Visual disturbances (photopsia — flashing lights, blurred vision, color changes) occur in up to 30% of patients, usually within 30 minutes of a dose, are dose-related, and resolve with continued use or discontinuation',
+      'Therapeutic drug monitoring is essential — nonlinear pharmacokinetics and wide interpatient variability (partly from CYP2C19 polymorphisms) mean fixed dosing can produce subtherapeutic or toxic levels',
+      'Extensive drug interaction potential via CYP3A4/CYP2C19 — always review the full medication list before initiating',
+      'Switch IV to oral once clinically stable since oral bioavailability is excellent (~96%) and avoids cyclodextrin vehicle accumulation in renal impairment'
+    ]
+  },
+  {
+    id: 'clarithromycin',
+    genericName: 'Clarithromycin',
+    genericNameAr: 'كلاريثروميسين',
+    brandNames: ['Biaxin', 'بياكسين'],
+    drugClass: 'Macrolide Antibiotic',
+    drugClassAr: 'مضاد حيوي من المجموعة الماكروليدية',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'internal_medicine'],
+    keyHighlights: [
+      'Key component of H. pylori eradication triple/quadruple therapy',
+      'Significant CYP3A4 inhibitor — extensive drug interaction potential (statins, warfarin, colchicine)',
+      'Associated with increased long-term cardiovascular mortality in some studies — use shortest effective course'
+    ],
+    indications: [
+      {
+        indication: 'H. pylori eradication (triple therapy)',
+        indicationAr: 'استئصال جرثومة المعدة (العلاج الثلاثي)',
+        adultDose: '500 mg PO twice daily with amoxicillin and a PPI for 10–14 days',
+        adultDoseAr: '500 ملجم فموي مرتين يوميًا مع أموكسيسيلين ومثبط مضخة البروتون لمدة 10-14 يومًا',
+        pediatricDose: '15 mg/kg/day divided twice daily (specialist-guided)',
+        pediatricDoseAr: '15 ملجم/كجم/يوم مقسمة مرتين يوميًا (بإشراف متخصص)',
+        maxDose: '1000 mg/day',
+        duration: '10–14 days',
+        route: 'PO'
+      },
+      {
+        indication: 'Community-acquired pneumonia / acute bacterial sinusitis / pharyngitis',
+        indicationAr: 'ذات الرئة المكتسبة من المجتمع / التهاب الجيوب الحاد / التهاب البلعوم',
+        adultDose: '250–500 mg PO twice daily, or 1000 mg extended-release once daily',
+        adultDoseAr: '250-500 ملجم فموي مرتين يوميًا، أو 1000 ملجم طويل المفعول مرة يوميًا',
+        pediatricDose: '15 mg/kg/day PO divided every 12 hours',
+        pediatricDoseAr: '15 ملجم/كجم/يوم فموي مقسمة كل 12 ساعة',
+        maxDose: '1000 mg/day',
+        duration: '7–14 days depending on indication',
+        route: 'PO'
+      },
+      {
+        indication: 'Mycobacterium avium complex (MAC) prophylaxis/treatment',
+        indicationAr: 'الوقاية/علاج عدوى المتفطرة الطيرية المعقدة',
+        adultDose: '500 mg PO twice daily, combined with ethambutol ± rifabutin',
+        adultDoseAr: '500 ملجم فموي مرتين يوميًا، مع إيثامبوتول مع أو بدون ريفابوتين',
+        pediatricDose: '7.5 mg/kg PO twice daily (max 500 mg/dose)',
+        pediatricDoseAr: '7.5 ملجم/كجم فموي مرتين يوميًا (بحد أقصى 500 ملجم/جرعة)',
+        maxDose: '1000 mg/day',
+        duration: 'Prolonged (months), per HIV/immunosuppression protocol',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Reduce dose by 50% or extend interval',
+      crclBelow10: 'Reduce dose by 50% and extend interval; avoid extended-release formulation',
+      hemodialysis: 'Dose after dialysis session'
+    },
+    hepaticAdjustment: 'Use with caution in severe hepatic impairment with concomitant renal impairment; otherwise no specific adjustment needed with normal renal function',
+    contraindications: [
+      'Concurrent use with colchicine in patients with renal/hepatic impairment (risk of fatal colchicine toxicity)',
+      'Concurrent use with certain statins (simvastatin, lovastatin — rhabdomyolysis risk)',
+      'History of QT prolongation or cholestatic jaundice/hepatic dysfunction with prior clarithromycin use',
+      'Concurrent ergotamine/dihydroergotamine, pimozide, or other CYP3A4 substrates with narrow therapeutic index',
+      'Known hypersensitivity to macrolides'
+    ],
+    mechanismOfAction: 'Binds the 50S ribosomal subunit, inhibiting bacterial protein synthesis (bacteriostatic, bactericidal at high concentrations against some organisms)',
+    mechanismOfActionAr: 'يرتبط بالوحدة الريبوسومية 50S، مثبطًا تخليق البروتين البكتيري',
+    halfLife: '3–7 hours (dose-dependent)',
+    monitoringParameters: [
+      'ECG/QTc in high-risk patients',
+      'Liver function tests with prolonged use',
+      'Renal function (dose adjustment)',
+      'Signs of C. difficile-associated diarrhea',
+      'Concurrent statin/colchicine interaction review'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'May be taken with or without food (extended-release should be taken with food)'
+    ],
+    pearls: [
+      'Strong CYP3A4 inhibitor — always cross-check for interacting statins (switch to pravastatin/rosuvastatin), colchicine dose reduction, or warfarin INR monitoring before prescribing',
+      'A 2012 cohort study (and subsequent data) raised concern for increased cardiovascular mortality with clarithromycin, particularly in patients with coronary artery disease — many clinicians now favor amoxicillin or azithromycin when either is suitable',
+      'Azithromycin has largely replaced clarithromycin for many respiratory indications due to simpler dosing and fewer interactions, but clarithromycin remains preferred in H. pylori regimens',
+      'Metallic/bitter taste disturbance is a common, distinctive side effect'
+    ]
+  },
+  {
+    id: 'vancomycin_oral',
+    genericName: 'Vancomycin (Oral)',
+    genericNameAr: 'فانكومايسين (فموي)',
+    brandNames: ['Vancocin', 'فانكوسين'],
+    drugClass: 'Glycopeptide Antibiotic (Oral, Non-Absorbed)',
+    drugClassAr: 'مضاد حيوي من مجموعة الجليكوببتيد (فموي، غير ممتص)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'internal_medicine'],
+    keyHighlights: [
+      'First-line therapy for Clostridioides difficile infection — oral vancomycin stays in the gut lumen with minimal systemic absorption',
+      'IV vancomycin is INEFFECTIVE for C. difficile colitis since it does not reach the gut lumen in adequate concentration',
+      'Not useful for any systemic/bloodstream infection when given orally due to negligible absorption'
+    ],
+    indications: [
+      {
+        indication: 'Clostridioides difficile infection, initial episode (non-severe or severe)',
+        indicationAr: 'عدوى المطثية العسيرة، النوبة الأولى (غير شديدة أو شديدة)',
+        adultDose: '125 mg PO four times daily for 10 days',
+        adultDoseAr: '125 ملجم فموي 4 مرات يوميًا لمدة 10 أيام',
+        pediatricDose: '10 mg/kg/dose (max 125 mg/dose) PO four times daily for 10 days',
+        pediatricDoseAr: '10 ملجم/كجم/جرعة (بحد أقصى 125 ملجم/جرعة) فموي 4 مرات يوميًا لمدة 10 أيام',
+        maxDose: '500 mg/day (125 mg x 4) for standard dosing',
+        duration: '10 days standard course',
+        route: 'PO'
+      },
+      {
+        indication: 'Fulminant C. difficile colitis (with ileus or toxic megacolon)',
+        indicationAr: 'التهاب القولون الخاطف بالمطثية العسيرة (مع انسداد أو تضخم القولون السمي)',
+        adultDose: '500 mg PO/NG four times daily, PLUS IV metronidazole; consider rectal instillation if ileus present',
+        adultDoseAr: '500 ملجم فموي/أنبوب أنف معدي 4 مرات يوميًا، مع ميترونيدازول وريدي؛ يُنظر في التنقيط الشرجي إذا وُجد انسداد',
+        pediatricDose: 'Specialist-guided, weight-based',
+        pediatricDoseAr: 'بإشراف متخصص حسب الوزن',
+        maxDose: '2000 mg/day (500 mg x 4)',
+        duration: 'Until clinical improvement, then taper per specialist guidance',
+        route: 'PO/NG'
+      },
+      {
+        indication: 'Recurrent C. difficile infection (tapered/pulsed regimen)',
+        indicationAr: 'عدوى المطثية العسيرة المتكررة (نظام متدرج/نابض)',
+        adultDose: 'Tapered and pulsed regimen per IDSA guidelines (e.g., 125 mg QID, then taper over weeks)',
+        adultDoseAr: 'نظام متدرج ونابض وفق إرشادات جمعية الأمراض المعدية (مثل 125 ملجم 4 مرات يوميًا ثم تدريج على أسابيع)',
+        pediatricDose: 'Specialist-guided per recurrence pattern',
+        pediatricDoseAr: 'بإشراف متخصص حسب نمط التكرار',
+        maxDose: 'Per tapering protocol',
+        duration: 'Several weeks (tapering protocol)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required (minimal systemic absorption)',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; however, systemic accumulation theoretically possible with prolonged use and impaired gut barrier — monitor in high-risk patients',
+      hemodialysis: 'Not applicable; minimal systemic absorption regardless of dialysis status'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to vancomycin'
+    ],
+    mechanismOfAction: 'Inhibits bacterial cell wall synthesis by binding to the D-Ala-D-Ala terminus of peptidoglycan precursors, preventing cross-linking; given orally it acts locally within the gut lumen with negligible systemic absorption',
+    mechanismOfActionAr: 'يثبط تخليق جدار الخلية البكتيري بالارتباط بنهاية الببتيدوغليكان، ويعمل محليًا داخل تجويف الأمعاء مع امتصاص جهازي ضئيل عند إعطائه فمويًا',
+    halfLife: 'Not systemically absorbed — not clinically relevant orally',
+    monitoringParameters: [
+      'Clinical response (stool frequency/consistency, abdominal pain, fever)',
+      'Signs of recurrence after completion of therapy',
+      'Renal function if colitis is severe with impaired gut barrier (theoretical systemic absorption risk)',
+      'Signs of ileus/toxic megacolon in severe disease'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'A critical distinction: oral vancomycin treats C. difficile colitis; IV vancomycin does NOT (it does not reach adequate gut lumen concentrations) — never substitute one route for the other',
+      'Oral vancomycin is essentially non-absorbed in a healthy gut, so there is no need for serum level monitoring unlike IV vancomycin',
+      'Fidaxomicin is an alternative first-line agent with a narrower spectrum (less disruption of normal flora) and lower recurrence rates, though at higher cost',
+      'Fecal microbiota transplantation is considered for multiply recurrent C. difficile infection after failure of appropriate antibiotic courses'
+    ]
+  },
+  {
+    id: 'adenosine',
+    genericName: 'Adenosine',
+    genericNameAr: 'أدينوزين',
+    brandNames: ['Adenocard', 'أدينوكارد'],
+    drugClass: 'Endogenous Nucleoside / Antiarrhythmic',
+    drugClassAr: 'نيوكليوسيد داخلي / مضاد لاضطراب نظم القلب',
+    category: 'Rx',
+    route: ['IV rapid push'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology'],
+    keyHighlights: [
+      'First-line agent for terminating stable SVT (AVNRT/AVRT) — both diagnostic and therapeutic',
+      'Ultra-short half-life (<10 seconds) requires rapid IV push followed immediately by saline flush via the most proximal, largest IV line possible',
+      'Causes a brief but often alarming sensation of impending doom, chest pressure, and flushing that resolves within seconds'
+    ],
+    indications: [
+      {
+        indication: 'Paroxysmal supraventricular tachycardia (SVT)',
+        indicationAr: 'تسرع القلب فوق البطيني الانتيابي',
+        adultDose: '6 mg rapid IV push, followed by 12 mg if no response after 1–2 min, may repeat 12 mg once more',
+        adultDoseAr: '6 ملجم دفعة وريدية سريعة، تليها 12 ملجم إذا لم تكن هناك استجابة بعد 1-2 دقيقة، يمكن تكرار 12 ملجم مرة أخرى',
+        pediatricDose: '0.1 mg/kg IV rapid push (max 6 mg first dose), then 0.2 mg/kg (max 12 mg) if needed',
+        pediatricDoseAr: '0.1 ملجم/كجم دفعة وريدية سريعة (بحد أقصى 6 ملجم أول جرعة)، ثم 0.2 ملجم/كجم (بحد أقصى 12 ملجم) إذا لزم',
+        maxDose: '12 mg per single dose; total of 30 mg per episode typically',
+        duration: 'Single rapid pushes, repeated as needed per protocol',
+        route: 'IV rapid push'
+      },
+      {
+        indication: 'Diagnostic aid — differentiating wide-complex or unclear SVT rhythms',
+        indicationAr: 'مساعد تشخيصي - تمييز أنماط تسرع القلب غير الواضحة أو المعقدة العريضة',
+        adultDose: '6 mg rapid IV push with continuous ECG recording',
+        adultDoseAr: '6 ملجم دفعة وريدية سريعة مع تسجيل مستمر لتخطيط القلب',
+        pediatricDose: '0.1 mg/kg IV rapid push, weight-based',
+        pediatricDoseAr: '0.1 ملجم/كجم دفعة وريدية سريعة حسب الوزن',
+        maxDose: '6 mg initial diagnostic dose',
+        duration: 'Single dose for diagnostic purposes',
+        route: 'IV rapid push'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; metabolized by cellular uptake and deamination, not renally cleared',
+      hemodialysis: 'Not dialyzed (ultra-short half-life); no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No adjustment required',
+    contraindications: [
+      'Second- or third-degree AV block or sick sinus syndrome without a functioning pacemaker',
+      'Known hypersensitivity to adenosine',
+      'Decompensated asthma/severe bronchospastic lung disease (relative — risk of bronchospasm)',
+      'Use extreme caution with pre-excited atrial fibrillation (e.g., WPW with AF) — can precipitate ventricular fibrillation'
+    ],
+    mechanismOfAction: 'Activates A1 adenosine receptors in the AV node, transiently slowing AV nodal conduction and interrupting reentrant circuits dependent on the AV node',
+    mechanismOfActionAr: 'ينشط مستقبلات الأدينوزين A1 في العقدة الأذينية البطينية، مسببًا تباطؤًا مؤقتًا في التوصيل عبر العقدة ويقطع الدوائر الانتكاسية المعتمدة عليها',
+    halfLife: '<10 seconds',
+    monitoringParameters: [
+      'Continuous ECG monitoring during and after administration',
+      'Blood pressure',
+      'Respiratory status (bronchospasm risk)',
+      'Resuscitation equipment/defibrillator immediately available'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'Caffeine and theophylline (adenosine receptor antagonists) reduce efficacy — higher doses may be needed',
+      'Dipyridamole potentiates effect — reduce adenosine dose if co-administered'
+    ],
+    pearls: [
+      'Must be given as a RAPID IV push (over 1–2 seconds) immediately followed by a rapid saline flush, ideally via the most proximal large-bore IV (e.g., antecubital) — a slow push will be metabolized before reaching the heart and will not work',
+      'Warn the patient beforehand about the transient but intense "flushing, chest pressure, sense of impending doom" sensation that resolves within seconds — this is expected and self-limited',
+      'Will NOT terminate atrial fibrillation/flutter or ventricular tachycardia (the arrhythmia does not depend on the AV node) — only transiently slows the ventricular rate, which can actually help with diagnosis',
+      'Caffeine/theophylline antagonize its effect (may need higher doses); dipyridamole potentiates it (may need lower doses)'
+    ]
+  },
+  {
+    id: 'isosorbide_dinitrate',
+    genericName: 'Isosorbide Dinitrate',
+    genericNameAr: 'ثنائي نترات الأيزوسوربيد',
+    brandNames: ['Isordil', 'BiDil (with hydralazine)', 'إيزورديل'],
+    drugClass: 'Organic Nitrate / Vasodilator',
+    drugClassAr: 'نيترات عضوية / موسع للأوعية',
+    category: 'Rx',
+    route: ['PO', 'sublingual'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology'],
+    keyHighlights: [
+      'Combined with hydralazine (BiDil) shows mortality benefit specifically in self-identified Black patients with heart failure with reduced ejection fraction',
+      'Requires a nitrate-free interval each day to prevent tolerance (tachyphylaxis)',
+      'Absolute contraindication with PDE5 inhibitors (sildenafil, tadalafil) — risk of profound, life-threatening hypotension'
+    ],
+    indications: [
+      {
+        indication: 'Angina pectoris (prevention)',
+        indicationAr: 'الذبحة الصدرية (الوقاية)',
+        adultDose: '5–40 mg PO 2–3 times daily (asymmetric schedule, e.g., 8am/1pm/6pm to allow nitrate-free interval)',
+        adultDoseAr: '5-40 ملجم فموي 2-3 مرات يوميًا (جدول غير متماثل يسمح بفترة خالية من النترات)',
+        pediatricDose: 'Not established for pediatric use',
+        pediatricDoseAr: 'غير مستقر للاستخدام عند الأطفال',
+        maxDose: '160 mg/day in divided doses',
+        duration: 'Chronic, scheduled dosing with nitrate-free interval',
+        route: 'PO'
+      },
+      {
+        indication: 'Acute angina attack',
+        indicationAr: 'نوبة الذبحة الصدرية الحادة',
+        adultDose: '2.5–10 mg sublingual, may repeat every 5–10 min (max 3 doses in 15–30 min)',
+        adultDoseAr: '2.5-10 ملجم تحت اللسان، قد تُكرر كل 5-10 دقائق (بحد أقصى 3 جرعات في 15-30 دقيقة)',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '3 doses within 15–30 minutes; seek emergency care if unrelieved',
+        duration: 'As needed for acute symptoms',
+        route: 'Sublingual'
+      },
+      {
+        indication: 'Heart failure with reduced ejection fraction (combined with hydralazine, self-identified Black patients)',
+        indicationAr: 'قصور القلب بانخفاض الكسر القذفي (مع هيدرالازين، للمرضى من ذوي البشرة السوداء)',
+        adultDose: '20 mg isosorbide dinitrate / 37.5 mg hydralazine PO three times daily, titrate to 40 mg/75 mg three times daily',
+        adultDoseAr: '20 ملجم إيزوسوربيد / 37.5 ملجم هيدرالازين فموي 3 مرات يوميًا، تُزاد إلى 40/75 ملجم 3 مرات يوميًا',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '40 mg isosorbide dinitrate / 75 mg hydralazine three times daily',
+        duration: 'Chronic, added to standard heart failure therapy',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution in severe hepatic impairment; no formal dose adjustment established',
+    contraindications: [
+      'Concurrent use with PDE5 inhibitors (sildenafil, tadalafil, vardenafil) — risk of severe, life-threatening hypotension',
+      'Severe hypotension or uncorrected hypovolemia',
+      'Severe anemia',
+      'Increased intracranial pressure',
+      'Right ventricular infarction with hypotension'
+    ],
+    mechanismOfAction: 'Metabolized to nitric oxide, which activates guanylate cyclase, increasing cGMP and causing smooth muscle relaxation; predominantly venodilation at lower doses, reducing preload and myocardial oxygen demand',
+    mechanismOfActionAr: 'يتحول إلى أكسيد النيتريك الذي ينشط إنزيم غوانيلات السيكلاز، مما يرفع cGMP ويسبب ارتخاء العضلات الملساء؛ بشكل غالب يوسع الأوردة بالجرعات المنخفضة مما يقلل الحمل القبلي والطلب على الأكسجين',
+    halfLife: '1–4 hours (parent); active metabolite isosorbide mononitrate has longer half-life',
+    monitoringParameters: [
+      'Blood pressure (orthostatic hypotension)',
+      'Heart rate',
+      'Headache (common, dose-related)',
+      'Signs of nitrate tolerance (reduced efficacy with chronic continuous use)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'Avoid alcohol (additive hypotension)'
+    ],
+    pearls: [
+      'ALWAYS ask about recent PDE5 inhibitor use (sildenafil/tadalafil/vardenafil) before administering any nitrate — concurrent use can cause severe, refractory hypotension',
+      'A nitrate-free interval of at least 8–12 hours daily (typically overnight) is essential to prevent tolerance — asymmetric dosing schedules (e.g., 7am, 1pm, not evening) achieve this',
+      'Headache is extremely common and usually improves with continued use or can be managed with acetaminophen rather than discontinuing therapy',
+      'The hydralazine-isosorbide dinitrate combination (BiDil) is specifically indicated as add-on therapy in self-identified Black patients with HFrEF based on the A-HeFT trial showing mortality benefit in this population'
+    ]
+  },
+  {
+    id: 'carvedilol',
+    genericName: 'Carvedilol',
+    genericNameAr: 'كارفيديلول',
+    brandNames: ['Coreg', 'كوريج'],
+    drugClass: 'Non-Selective Beta-Blocker with Alpha-1 Blocking Activity',
+    drugClassAr: 'حاصر بيتا غير انتقائي مع نشاط حاصر ألفا-1',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology'],
+    keyHighlights: [
+      'One of only three beta-blockers (with bisoprolol and metoprolol succinate) proven to reduce mortality in heart failure with reduced ejection fraction',
+      'Combined alpha-1 and non-selective beta blockade provides additional vasodilation but higher orthostatic hypotension risk than selective beta-blockers',
+      'Must be taken with food to slow absorption and reduce peak-related orthostatic hypotension'
+    ],
+    indications: [
+      {
+        indication: 'Heart failure with reduced ejection fraction',
+        indicationAr: 'قصور القلب بانخفاض الكسر القذفي',
+        adultDose: '3.125 mg PO twice daily, double every 2 weeks as tolerated up to 25–50 mg twice daily',
+        adultDoseAr: '3.125 ملجم فموي مرتين يوميًا، تُضاعف كل أسبوعين حسب التحمل حتى 25-50 ملجم مرتين يوميًا',
+        pediatricDose: 'Not established for heart failure in children',
+        pediatricDoseAr: 'غير مستقر لقصور القلب عند الأطفال',
+        maxDose: '50 mg twice daily (>85 kg); 25 mg twice daily (≤85 kg)',
+        duration: 'Chronic, lifelong in HFrEF',
+        route: 'PO'
+      },
+      {
+        indication: 'Hypertension',
+        indicationAr: 'ارتفاع ضغط الدم',
+        adultDose: '6.25 mg PO twice daily, titrate up to 25 mg twice daily based on response',
+        adultDoseAr: '6.25 ملجم فموي مرتين يوميًا، تُزاد حتى 25 ملجم مرتين يوميًا حسب الاستجابة',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '50 mg/day',
+        duration: 'Chronic',
+        route: 'PO'
+      },
+      {
+        indication: 'Post-myocardial infarction left ventricular dysfunction',
+        indicationAr: 'خلل البطين الأيسر بعد احتشاء عضلة القلب',
+        adultDose: '6.25 mg PO twice daily, titrate up to 25 mg twice daily as tolerated',
+        adultDoseAr: '6.25 ملجم فموي مرتين يوميًا، تُزاد حتى 25 ملجم مرتين يوميًا حسب التحمل',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '25 mg twice daily',
+        duration: 'Chronic, lifelong',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; primarily hepatic metabolism',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Contraindicated in severe hepatic impairment (clinically manifest liver disease) — extensively hepatically metabolized',
+    contraindications: [
+      'Decompensated (acute) heart failure requiring IV inotropic therapy',
+      'Severe bradycardia, second- or third-degree AV block (without pacemaker), sick sinus syndrome',
+      'Severe hepatic impairment',
+      'Severe bronchospastic disease (e.g., asthma requiring bronchodilator therapy) — relative, non-selective beta blockade',
+      'Cardiogenic shock',
+      'Severe bradycardia (<50 bpm)'
+    ],
+    mechanismOfAction: 'Non-selective competitive antagonist at beta-1 and beta-2 adrenergic receptors, plus alpha-1 adrenergic receptor blockade, producing combined negative chronotropic/inotropic effect and peripheral vasodilation',
+    mechanismOfActionAr: 'مضاد تنافسي غير انتقائي لمستقبلات بيتا-1 وبيتا-2 الأدرينالية، بالإضافة لحصر مستقبلات ألفا-1، مما يُحدث تأثيرًا سلبيًا على معدل ضربات القلب وقوة التقلص وتوسعًا وعائيًا محيطيًا',
+    halfLife: '7–10 hours',
+    monitoringParameters: [
+      'Heart rate and blood pressure, including orthostatic measurements',
+      'Signs of worsening heart failure during up-titration',
+      'Weight (fluid retention)',
+      'Blood glucose in diabetics (can mask hypoglycemia symptoms)',
+      'Hepatic function'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Take with food to slow absorption rate and reduce risk of orthostatic hypotension'
+    ],
+    pearls: [
+      'Never initiate in acutely decompensated heart failure — start only once the patient is euvolemic and hemodynamically stable, and uptitrate slowly over weeks',
+      'Combined alpha/beta blockade causes more orthostatic hypotension than pure beta-blockers — counsel patients to rise slowly, especially after the first few doses',
+      'Along with bisoprolol and metoprolol succinate, one of the three evidence-based beta-blockers for HFrEF mortality reduction — other beta-blockers lack this specific evidence base',
+      'Abrupt discontinuation can precipitate rebound angina, hypertension, or arrhythmia — must be tapered when stopping'
+    ]
+  },
+  {
+    id: 'succinylcholine',
+    genericName: 'Succinylcholine',
+    genericNameAr: 'سكسينيل كولين',
+    brandNames: ['Anectine', 'Quelicin', 'أنكتين'],
+    drugClass: 'Depolarizing Neuromuscular Blocker',
+    drugClassAr: 'مرخي عضلي مزيل للاستقطاب',
+    category: 'Rx',
+    route: ['IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency'],
+    keyHighlights: [
+      'Fastest onset (~45 seconds) and shortest duration (~5–10 min) of any neuromuscular blocker — ideal for rapid sequence intubation with anticipated difficult airway',
+      'Causes transient hyperkalemia — contraindicated in hyperkalemia-prone conditions (burns, crush injury, neuromuscular disease, prolonged immobilization)',
+      'Triggers malignant hyperthermia in genetically susceptible patients — a life-threatening hypermetabolic crisis requiring immediate dantrolene'
+    ],
+    indications: [
+      {
+        indication: 'Rapid sequence intubation',
+        indicationAr: 'التنبيب السريع المتسلسل',
+        adultDose: '1–1.5 mg/kg IV push',
+        adultDoseAr: '1-1.5 ملجم/كجم دفعة وريدية',
+        pediatricDose: '1–2 mg/kg IV (higher mg/kg needed in infants/young children due to larger volume of distribution); 3–4 mg/kg IM if IV access unavailable',
+        pediatricDoseAr: '1-2 ملجم/كجم وريدي (جرعة أعلى بالكجم عند الرضع/الأطفال الصغار)؛ 3-4 ملجم/كجم عضلي إذا تعذر الوصول الوريدي',
+        maxDose: 'Weight-based; no fixed max for single intubating dose',
+        duration: 'Onset ~45 sec, duration 5–10 min',
+        route: 'IV'
+      },
+      {
+        indication: 'Brief surgical procedures requiring short-duration paralysis',
+        indicationAr: 'عمليات جراحية قصيرة تتطلب شلل عضلي قصير المدى',
+        adultDose: '0.3–1.1 mg/kg IV initial, may supplement with continuous infusion 0.5–10 mg/min',
+        adultDoseAr: '0.3-1.1 ملجم/كجم وريدي أولية، يمكن إضافة تسريب مستمر 0.5-10 ملجم/دقيقة',
+        pediatricDose: 'Weight-based per anesthesia protocol',
+        pediatricDoseAr: 'حسب الوزن وفق بروتوكول التخدير',
+        maxDose: 'Titrate to procedure duration and train-of-four',
+        duration: 'Repeated boluses or infusion as needed intraoperatively',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'Use with caution — avoid in patients with hyperkalemia or at risk of hyperkalemia from renal failure',
+      hemodialysis: 'Not significantly dialyzed; use with caution given hyperkalemia risk'
+    },
+    hepaticAdjustment: 'Prolonged effect possible in severe hepatic impairment or pseudocholinesterase deficiency (reduced drug metabolism) — monitor closely',
+    contraindications: [
+      'Personal or family history of malignant hyperthermia',
+      'Known hyperkalemia or conditions predisposing to hyperkalemia (burns, crush injury, severe trauma, denervating neuromuscular disease, prolonged immobilization >72 hours)',
+      'Pseudocholinesterase deficiency (relative — prolonged paralysis)',
+      'Penetrating eye injury or acute narrow-angle glaucoma (increases intraocular pressure)',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Can cause rhabdomyolysis, hyperkalemia with cardiac arrest in children with undiagnosed skeletal muscle myopathy (use particularly with caution for elective procedures in pediatric patients); may trigger malignant hyperthermia',
+    blackBoxWarningAr: 'قد يسبب انحلال العضلات وفرط بوتاسيوم الدم مع سكتة قلبية عند الأطفال المصابين باعتلال عضلي غير مشخص؛ قد يُحفز فرط الحرارة الخبيث',
+    mechanismOfAction: 'Binds and persistently activates nicotinic acetylcholine receptors at the neuromuscular junction, causing sustained depolarization (initial fasciculations) followed by flaccid paralysis as the receptor becomes desensitized',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الأسيتيل كولين النيكوتينية في الموصل العصبي العضلي وينشطها باستمرار، مسببًا استقطابًا مستدامًا (رعشات ابتدائية) يتبعه شلل رخو',
+    halfLife: '~47 seconds (rapidly hydrolyzed by plasma pseudocholinesterase)',
+    monitoringParameters: [
+      'Serum potassium before and after administration in at-risk patients',
+      'Signs of malignant hyperthermia (rising temperature, tachycardia, muscle rigidity, elevated CO2)',
+      'Cardiac rhythm (bradycardia, especially with repeat dosing or in children)',
+      'Train-of-four if repeated dosing used',
+      'Adequate airway management readiness'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Causes a transient, usually clinically insignificant rise in serum potassium (~0.5 mEq/L) in normal patients — but can cause lethal hyperkalemia in burns, crush injury, or denervating conditions, where rocuronium is strongly preferred instead',
+      'Malignant hyperthermia is a rare but life-threatening complication requiring immediate dantrolene administration, active cooling, and discontinuation of all triggering agents',
+      'Causes brief muscle fasciculations on administration (from initial depolarization) which can cause post-procedure myalgia — can be blunted with a small "defasciculating" dose of a non-depolarizing agent beforehand, though this is less commonly practiced now',
+      'Repeated dosing or infusion can cause bradycardia, especially in children — atropine should be available'
+    ]
+  },
+  {
+    id: 'lidocaine',
+    genericName: 'Lidocaine',
+    genericNameAr: 'ليدوكايين',
+    brandNames: ['Xylocaine', 'Lidoderm (patch)', 'زايلوكايين'],
+    drugClass: 'Amide Local Anesthetic / Class IB Antiarrhythmic',
+    drugClassAr: 'مخدر موضعي من مجموعة الأميد / مضاد لاضطراب نظم القلب من الفئة IB',
+    category: 'Rx',
+    route: ['IV', 'topical', 'infiltration', 'nerve block'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology'],
+    keyHighlights: [
+      'Dual clinical identity: most common local anesthetic in medicine AND a second-line IV antiarrhythmic for ventricular arrhythmias',
+      'Local anesthetic systemic toxicity (LAST) is a feared complication of regional anesthesia/nerve blocks — treated with IV lipid emulsion',
+      'Cleared almost entirely by the liver — toxicity accumulates rapidly in hepatic impairment or reduced hepatic blood flow (e.g., heart failure, shock)'
+    ],
+    indications: [
+      {
+        indication: 'Local/regional anesthesia (infiltration, nerve block)',
+        indicationAr: 'التخدير الموضعي/الإقليمي (التسريب، الحصار العصبي)',
+        adultDose: 'Infiltration: up to 4.5 mg/kg (max 300 mg) without epinephrine; up to 7 mg/kg (max 500 mg) with epinephrine',
+        adultDoseAr: 'تسريب: حتى 4.5 ملجم/كجم (بحد أقصى 300 ملجم) بدون إبينفرين؛ حتى 7 ملجم/كجم (بحد أقصى 500 ملجم) مع إبينفرين',
+        pediatricDose: '4–4.5 mg/kg (max per adult limits), weight-based',
+        pediatricDoseAr: '4-4.5 ملجم/كجم (بحد أقصى الحدود البالغة)، حسب الوزن',
+        maxDose: '300 mg without epinephrine; 500 mg with epinephrine (adult)',
+        duration: 'Single administration, duration 1–2 hours (longer with epinephrine)',
+        route: 'Infiltration/nerve block'
+      },
+      {
+        indication: 'Ventricular arrhythmias (VT/VF, ACLS alternative to amiodarone)',
+        indicationAr: 'اضطرابات نظم القلب البطينية (دعم القلب المتقدم، بديل للأميودارون)',
+        adultDose: '1–1.5 mg/kg IV bolus, may repeat 0.5–0.75 mg/kg every 5–10 min (max total 3 mg/kg), then infusion 1–4 mg/min',
+        adultDoseAr: '1-1.5 ملجم/كجم دفعة وريدية، يمكن تكرار 0.5-0.75 ملجم/كجم كل 5-10 دقائق (بحد أقصى إجمالي 3 ملجم/كجم)، ثم تسريب 1-4 ملجم/دقيقة',
+        pediatricDose: '1 mg/kg IV bolus, then infusion 20–50 mcg/kg/min',
+        pediatricDoseAr: '1 ملجم/كجم دفعة وريدية، ثم تسريب 20-50 ميكروجرام/كجم/دقيقة',
+        maxDose: '3 mg/kg total bolus dosing',
+        duration: 'Bolus then continuous infusion until rhythm controlled/transitioned',
+        route: 'IV'
+      },
+      {
+        indication: 'Topical anesthesia (minor procedures, pruritus)',
+        indicationAr: 'التخدير الموضعي (إجراءات بسيطة، الحكة)',
+        adultDose: 'Apply topical gel/patch/cream to intact skin or mucosa as directed, max 3 patches/day (5% patch)',
+        adultDoseAr: 'يُطبّق هلام/لاصقة/كريم موضعي على الجلد السليم أو الغشاء المخاطي حسب التوجيه، بحد أقصى 3 لاصقات/يوم',
+        pediatricDose: 'Weight-adjusted topical application, avoid large body surface area in infants',
+        pediatricDoseAr: 'تطبيق موضعي معدّل حسب الوزن، يُتجنّب على مساحة كبيرة من الجسم عند الرضع',
+        maxDose: 'Per product labeling; avoid excessive application area/duration',
+        duration: 'As needed per product directions',
+        route: 'Topical'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required for single doses; monitor with prolonged IV infusion',
+      crclBelow10: 'Use with caution with prolonged IV infusion; active metabolites may accumulate',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce IV infusion rate/maintenance dose significantly in hepatic impairment or reduced hepatic perfusion (heart failure, shock) — primarily hepatically metabolized with risk of toxic accumulation',
+    contraindications: [
+      'Known hypersensitivity to amide-type local anesthetics',
+      'Severe heart block (second- or third-degree, without pacemaker) for IV antiarrhythmic use',
+      'Wolff-Parkinson-White syndrome or other accessory pathway arrhythmias (IV use, relative)',
+      'Adams-Stokes syndrome'
+    ],
+    blackBoxWarning: 'Viscous oral lidocaine solution: cases of serious adverse effects including death have occurred from accidental overdose in young children; use exact measuring device and lowest effective dose',
+    blackBoxWarningAr: 'محلول الليدوكايين اللزج الفموي: حدثت حالات تأثيرات جانبية خطيرة تشمل الوفاة من جرعة زائدة عرضية عند الأطفال الصغار؛ يجب استخدام أداة قياس دقيقة وأقل جرعة فعالة',
+    mechanismOfAction: 'Blocks voltage-gated sodium channels in neuronal membranes (local anesthesia) and in cardiac Purkinje/ventricular tissue (antiarrhythmic), reducing excitability and conduction',
+    mechanismOfActionAr: 'يحجب قنوات الصوديوم المعتمدة على الجهد في الأغشية العصبية (التخدير الموضعي) وفي نسيج القلب (مضاد لاضطراب النظم)، مما يقلل القابلية للاستثارة والتوصيل',
+    halfLife: '1.5–2 hours (IV, prolonged in hepatic impairment/heart failure)',
+    monitoringParameters: [
+      'Signs of local anesthetic systemic toxicity (perioral numbness, tinnitus, confusion, seizures, cardiac arrhythmia) during regional techniques',
+      'ECG and blood pressure during IV antiarrhythmic use',
+      'CNS toxicity signs (drowsiness, confusion, tremor) with elevated serum levels',
+      'Hepatic function and perfusion status'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Local anesthetic systemic toxicity (LAST) from inadvertent intravascular injection or excessive dose presents with early CNS signs (perioral numbness, tinnitus) progressing to seizures and cardiac arrest — IV lipid emulsion (Intralipid) is the specific treatment',
+      'Always calculate maximum safe dose by weight BEFORE performing nerve blocks or large-volume infiltration, especially in combination with other local anesthetics',
+      'Addition of epinephrine prolongs duration and reduces systemic absorption/peak levels by causing local vasoconstriction — but should be avoided in digits, nose, ears, penis (end-arterial areas)',
+      'As a Class IB antiarrhythmic, now a second-line option after amiodarone for shock-refractory VF/pulseless VT in ACLS'
+    ]
   }
 ];
 
