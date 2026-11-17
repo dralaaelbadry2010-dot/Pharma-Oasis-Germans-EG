@@ -7425,6 +7425,1022 @@ export const INITIAL_DRUGS: Drug[] = [
       'عند الإعطاء الوريدي الضروري، يجب التخفيف الجيد والحقن ببطء شديد في خط وريدي يعمل بتدفق جيد مع مراقبة علامات الألم أو الحرقان فوراً',
       'يُستخدم أحياناً كمساعد مع الأفيونات في تسكين الألم رغم عدم وجود دليل قوي على تحسين التسكين وزيادة خطر التثبيط التنفسي المضاعف'
     ]
+  },
+  {
+    id: 'vasopressin',
+    genericName: 'Vasopressin (Antidiuretic Hormone)',
+    genericNameAr: 'فازوبريسين (الهرمون المضاد لإدرار البول)',
+    brandNames: ['Pitressin', 'Vasostrict', 'فازوستريكت'],
+    drugClass: 'Antidiuretic Hormone / Vasopressor (V1/V2 Receptor Agonist)',
+    drugClassAr: 'هرمون مضاد لإدرار البول / رافع لضغط الدم',
+    category: 'Rx',
+    route: ['IV infusion'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology'],
+    keyHighlights: [
+      'Catecholamine-sparing second-line vasopressor in septic shock',
+      'No direct inotropic or chronotropic effect — minimal arrhythmogenicity',
+      'Also used for vasodilatory shock refractory to norepinephrine and for diabetes insipidus'
+    ],
+    indications: [
+      {
+        indication: 'Septic shock (adjunct to norepinephrine)',
+        indicationAr: 'الصدمة الإنتانية (مساعد للنورإبينفرين)',
+        adultDose: '0.01–0.04 units/min fixed-dose continuous IV infusion',
+        adultDoseAr: '0.01-0.04 وحدة/دقيقة تسريب وريدي مستمر بجرعة ثابتة',
+        pediatricDose: 'Not routinely established; specialist use only',
+        pediatricDoseAr: 'غير مستقر بشكل روتيني؛ للاستخدام المتخصص فقط',
+        maxDose: '0.04 units/min (higher doses increase ischemic risk without added benefit)',
+        duration: 'Continuous infusion, titrate off before norepinephrine',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'GI hemorrhage (variceal bleeding) — historical/adjunct use',
+        indicationAr: 'نزيف الجهاز الهضمي (دوالي المريء) - استخدام تاريخي/مساعد',
+        adultDose: '0.2–0.4 units/min IV infusion, titrate to response',
+        adultDoseAr: '0.2-0.4 وحدة/دقيقة تسريب وريدي، يُعدّل حسب الاستجابة',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '0.9 units/min',
+        duration: 'Until bleeding controlled, then taper',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Central diabetes insipidus',
+        indicationAr: 'البوال التفهي المركزي',
+        adultDose: '5–10 units IM/SC 2–4 times daily as aqueous vasopressin',
+        adultDoseAr: '5-10 وحدة عضلي/تحت الجلد 2-4 مرات يوميًا',
+        pediatricDose: 'Specialist-guided weight-based dosing',
+        pediatricDoseAr: 'جرعة حسب الوزن بإشراف متخصص',
+        maxDose: 'Individualized',
+        duration: 'Chronic — desmopressin generally preferred',
+        route: 'IM/SC'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required; monitor fluid status',
+      crclBelow10: 'Use with caution; monitor for fluid overload and hyponatremia',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment; use with caution in severe hepatic disease due to risk of fluid retention',
+    contraindications: [
+      'Known hypersensitivity to vasopressin',
+      'Chronic nephritis with nitrogen retention (relative)',
+      'Caution in coronary artery disease — can cause coronary vasoconstriction'
+    ],
+    mechanismOfAction: 'Activates V1 receptors on vascular smooth muscle causing vasoconstriction, and V2 receptors in renal collecting ducts causing water reabsorption; unlike catecholamines does not act on adrenergic receptors',
+    mechanismOfActionAr: 'ينشط مستقبلات V1 في العضلات الملساء الوعائية مسببًا تضيق الأوعية، ومستقبلات V2 في الكلى مسببًا إعادة امتصاص الماء؛ لا يعمل على المستقبلات الأدرينالية',
+    halfLife: '10–35 minutes',
+    monitoringParameters: [
+      'Blood pressure and perfusion (continuous)',
+      'Serum sodium (hyponatremia risk)',
+      'Signs of peripheral/mesenteric/digital ischemia',
+      'Urine output',
+      'Cardiac rhythm in coronary disease'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Fixed low-dose infusion (0.03 units/min) is typical — it is NOT titrated like catecholamines',
+      'Added to norepinephrine in septic shock to reduce catecholamine dose and may reduce atrial fibrillation incidence',
+      'Monitor extremities and digits closely — can cause severe peripheral ischemia at higher doses',
+      'Desmopressin (DDAVP) is preferred for chronic diabetes insipidus due to V2 selectivity and longer duration'
+    ]
+  },
+  {
+    id: 'atropine',
+    genericName: 'Atropine',
+    genericNameAr: 'أتروبين',
+    brandNames: ['Atropen', 'أتروبين'],
+    drugClass: 'Anticholinergic (Muscarinic Antagonist)',
+    drugClassAr: 'مضاد كوليني (مضاد للمستقبلات المسكارينية)',
+    category: 'Rx',
+    route: ['IV', 'IM', 'ophthalmic'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology'],
+    keyHighlights: [
+      'First-line for symptomatic bradycardia and organophosphate/nerve agent poisoning',
+      'Blocks vagal effects on the heart via muscarinic receptor antagonism',
+      'ACLS bradycardia dose differs dramatically from toxicology (poisoning) dosing'
+    ],
+    indications: [
+      {
+        indication: 'Symptomatic bradycardia (ACLS)',
+        indicationAr: 'بطء القلب العرضي (دعم القلب المتقدم)',
+        adultDose: '1 mg IV push every 3–5 minutes, max 3 mg total',
+        adultDoseAr: '1 ملجم دفعة وريدية كل 3-5 دقائق، بحد أقصى 3 ملجم',
+        pediatricDose: '0.02 mg/kg IV (min 0.1 mg, max single dose 0.5 mg child / 1 mg adolescent)',
+        pediatricDoseAr: '0.02 ملجم/كجم وريدي (أدنى جرعة 0.1 ملجم)',
+        maxDose: '3 mg total (adult)',
+        duration: 'Single/repeated boluses as needed',
+        route: 'IV'
+      },
+      {
+        indication: 'Organophosphate/nerve agent poisoning',
+        indicationAr: 'التسمم بالفوسفات العضوي/غازات الأعصاب',
+        adultDose: '2–5 mg IV/IM every 5–10 minutes until secretions clear (may require 10s of mg)',
+        adultDoseAr: '2-5 ملجم وريدي/عضلي كل 5-10 دقائق حتى تتحسن الإفرازات (قد تحتاج عشرات الملجم)',
+        pediatricDose: '0.05 mg/kg IV/IM, repeat every 5–10 min as needed',
+        pediatricDoseAr: '0.05 ملجم/كجم وريدي/عضلي، تكرر كل 5-10 دقائق',
+        maxDose: 'Titrate to drying of secretions — no fixed ceiling in severe poisoning',
+        duration: 'Until muscarinic toxicity resolves, pair with pralidoxime',
+        route: 'IV/IM'
+      },
+      {
+        indication: 'Preoperative antisialagogue / bradyarrhythmia prevention',
+        indicationAr: 'مضاد للسيلان قبل الجراحة / منع بطء القلب',
+        adultDose: '0.4–0.6 mg IM/IV preoperatively',
+        adultDoseAr: '0.4-0.6 ملجم عضلي/وريدي قبل الجراحة',
+        pediatricDose: '0.01–0.02 mg/kg IV/IM (min 0.1 mg)',
+        pediatricDoseAr: '0.01-0.02 ملجم/كجم وريدي/عضلي',
+        maxDose: '0.6 mg single preop dose',
+        duration: 'Single preoperative dose',
+        route: 'IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'Use with caution; prolonged effect possible',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Narrow-angle glaucoma',
+      'Tachycardia from thyrotoxicosis or cardiac causes unrelated to bradycardia',
+      'Obstructive uropathy / paralytic ileus',
+      'Myasthenia gravis (relative — antagonizes cholinergic therapy)'
+    ],
+    mechanismOfAction: 'Competitively blocks acetylcholine at muscarinic receptors, reducing vagal tone on the SA/AV node and inhibiting exocrine secretions',
+    mechanismOfActionAr: 'يحجب الأسيتيل كولين تنافسيًا على المستقبلات المسكارينية، مما يقلل التأثير المبهمي على القلب ويثبط الإفرازات الغدية',
+    halfLife: '2–3 hours',
+    monitoringParameters: [
+      'Heart rate and rhythm (ECG)',
+      'Pupil size / secretions in poisoning management',
+      'Mental status (anticholinergic toxicity)',
+      'Urinary retention'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'In ACLS, doses below 0.5 mg can paradoxically worsen bradycardia via central vagal stimulation',
+      'Ineffective for high-grade (Mobitz II/third-degree) AV block below the AV node — go straight to pacing',
+      'In nerve agent/organophosphate poisoning, give alongside pralidoxime and benzodiazepines; doses needed can be massive and are titrated to drying of secretions, not heart rate',
+      'Classic anticholinergic toxidrome: "hot as a hare, blind as a bat, dry as a bone, red as a beet, mad as a hatter"'
+    ]
+  },
+  {
+    id: 'rocuronium',
+    genericName: 'Rocuronium',
+    genericNameAr: 'روكورونيوم',
+    brandNames: ['Zemuron', 'زيمورون'],
+    drugClass: 'Non-Depolarizing Neuromuscular Blocker (Aminosteroid)',
+    drugClassAr: 'مرخي عضلي غير مزيل للاستقطاب',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency'],
+    keyHighlights: [
+      'Fastest-onset non-depolarizing NMB — used for rapid sequence intubation when succinylcholine is contraindicated',
+      'Reversed by sugammadex (direct binding) or neostigmine (acetylcholinesterase inhibitor)',
+      'Patient must be sedated — rocuronium provides NO analgesia or sedation'
+    ],
+    indications: [
+      {
+        indication: 'Rapid sequence intubation',
+        indicationAr: 'التنبيب السريع المتسلسل',
+        adultDose: '1–1.2 mg/kg IV push for RSI (0.6 mg/kg for routine intubation)',
+        adultDoseAr: '1-1.2 ملجم/كجم دفعة وريدية للتنبيب السريع (0.6 ملجم/كجم للتنبيب الروتيني)',
+        pediatricDose: '0.6–1.2 mg/kg IV, similar weight-based dosing',
+        pediatricDoseAr: '0.6-1.2 ملجم/كجم وريدي',
+        maxDose: 'Weight-based; no fixed max',
+        duration: 'Onset 45–60 sec, duration 30–60 min',
+        route: 'IV'
+      },
+      {
+        indication: 'Ongoing neuromuscular blockade in mechanically ventilated patients',
+        indicationAr: 'استمرار الحصار العصبي العضلي في المرضى على التنفس الصناعي',
+        adultDose: 'Maintenance infusion 10–12 mcg/kg/min, titrate to train-of-four',
+        adultDoseAr: 'تسريب صيانة 10-12 ميكروجرام/كجم/دقيقة، يُعدّل حسب مراقبة التحريض الرباعي',
+        pediatricDose: 'Specialist/ICU-guided weight-based infusion',
+        pediatricDoseAr: 'تسريب حسب الوزن بإشراف العناية المركزة',
+        maxDose: 'Titrate to clinical effect and train-of-four monitoring',
+        duration: 'Continuous infusion with periodic holidays for neuro assessment',
+        route: 'IV infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required; monitor duration of effect',
+      crclBelow10: 'Minimal renal clearance (mainly hepatobiliary) — generally safe but monitor for prolonged effect',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Prolonged duration of action in hepatic impairment — reduce dose and monitor train-of-four closely',
+    contraindications: [
+      'Known hypersensitivity to rocuronium or bromide',
+      'Inability to secure airway or provide mechanical ventilation',
+      'Use without adequate sedation/analgesia'
+    ],
+    blackBoxWarning: 'Must only be administered by personnel trained in airway management and mechanical ventilation; causes complete paralysis including respiratory muscles',
+    blackBoxWarningAr: 'يجب أن يُعطى فقط من قبل أطقم مدربة على إدارة مجرى الهواء والتنفس الصناعي؛ يسبب شلل تام يشمل عضلات التنفس',
+    mechanismOfAction: 'Competitively blocks acetylcholine at nicotinic receptors on the postsynaptic motor end plate, preventing depolarization and muscle contraction',
+    mechanismOfActionAr: 'يحجب الأسيتيل كولين تنافسيًا على المستقبلات النيكوتينية في الصفيحة الحركية، مما يمنع الاستقطاب وتقلص العضلات',
+    halfLife: '1–2 hours',
+    monitoringParameters: [
+      'Train-of-four neuromuscular monitoring',
+      'Adequate sedation/analgesia (must be co-administered)',
+      'Ventilator parameters',
+      'Hepatic and renal function'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'NEVER give without ensuring adequate sedation first — awareness under paralysis is a devastating complication',
+      'Onset is dose-dependent: 1.2 mg/kg achieves intubating conditions almost as fast as succinylcholine (~45–60 sec)',
+      'Sugammadex can reverse even deep rocuronium blockade within minutes — critical for "can\'t intubate, can\'t ventilate" rescue',
+      'Preferred over succinylcholine in hyperkalemia, malignant hyperthermia history, and neuromuscular disease'
+    ]
+  },
+  {
+    id: 'phytonadione',
+    genericName: 'Phytonadione (Vitamin K1)',
+    genericNameAr: 'فيتامين ك1 (فيتونادايون)',
+    brandNames: ['Mephyton', 'Vitamin K', 'فيتامين ك'],
+    drugClass: 'Fat-Soluble Vitamin / Coagulation Factor Synthesis Cofactor',
+    drugClassAr: 'فيتامين قابل للذوبان في الدهون / عامل تخثر',
+    category: 'Rx',
+    route: ['PO', 'IV', 'SC'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'internal_medicine'],
+    keyHighlights: [
+      'Specific reversal agent for warfarin-induced coagulopathy',
+      'IV route carries small anaphylactoid reaction risk — give slowly, diluted',
+      'Onset of INR correction: 6–12 hours (PO) vs faster but still delayed with IV — not for immediate bleeding (use with FFP/PCC)'
+    ],
+    indications: [
+      {
+        indication: 'Warfarin reversal — major bleeding or INR very elevated',
+        indicationAr: 'إبطال تأثير الوارفارين - نزيف كبير أو INR مرتفع جدًا',
+        adultDose: '10 mg slow IV infusion (with 4-factor PCC for major bleeding)',
+        adultDoseAr: '10 ملجم تسريب وريدي بطيء (مع مركز عامل التخثر الرباعي في النزيف الكبير)',
+        pediatricDose: '0.5–2 mg (infants) to 5–10 mg (adolescents) IV/PO based on severity',
+        pediatricDoseAr: '0.5-2 ملجم (رضع) إلى 5-10 ملجم (مراهقون) وريدي/فموي',
+        maxDose: '10 mg per dose; may repeat every 12 hours',
+        duration: 'Repeat per INR response',
+        route: 'IV'
+      },
+      {
+        indication: 'Warfarin reversal — elevated INR without bleeding',
+        indicationAr: 'إبطال الوارفارين - INR مرتفع بدون نزيف',
+        adultDose: '1–2.5 mg PO (INR 4.5–10) or hold dose and monitor',
+        adultDoseAr: '1-2.5 ملجم فموي (INR من 4.5 إلى 10) أو إيقاف الجرعة والمراقبة',
+        pediatricDose: 'Specialist-guided, weight-based',
+        pediatricDoseAr: 'بإشراف متخصص حسب الوزن',
+        maxDose: '5 mg PO for very high INR without bleeding',
+        duration: 'Single dose, recheck INR in 24 hours',
+        route: 'PO'
+      },
+      {
+        indication: 'Hemorrhagic disease of the newborn (prophylaxis)',
+        indicationAr: 'المرض النزفي عند الوليد (وقاية)',
+        adultDose: 'Not applicable',
+        adultDoseAr: 'غير قابل للتطبيق',
+        pediatricDose: '0.5–1 mg IM single dose within 1 hour of birth',
+        pediatricDoseAr: '0.5-1 ملجم عضلي جرعة واحدة خلال ساعة من الولادة',
+        maxDose: '1 mg',
+        duration: 'Single dose at birth',
+        route: 'IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduced efficacy in severe hepatic synthetic dysfunction since clotting factors cannot be synthesized regardless of vitamin K availability',
+    contraindications: [
+      'Known hypersensitivity to phytonadione or its vehicle',
+      'IV route in patients with severe allergic reaction history to the formulation (use SC/PO instead)'
+    ],
+    mechanismOfAction: 'Essential cofactor for hepatic gamma-glutamyl carboxylase, enabling activation of clotting factors II, VII, IX, and X; directly counteracts warfarin\'s inhibition of vitamin K epoxide reductase',
+    mechanismOfActionAr: 'عامل مساعد أساسي لإنزيم الكربوكسيلاز الكبدي، يُنشّط عوامل التخثر II وVII وIX وX؛ يعاكس تثبيط الوارفارين لإنزيم إعادة تدوير فيتامين ك',
+    halfLife: '1.5–3 hours (effect on INR delayed 6–12+ hours)',
+    monitoringParameters: [
+      'INR/PT (serially)',
+      'Signs of anaphylactoid reaction during IV infusion (rare but serious)',
+      'Bleeding signs/hemoglobin'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'Dietary vitamin K (leafy greens) does not interact with supplemental dosing but affects baseline warfarin requirements'
+    ],
+    pearls: [
+      'For life-threatening bleeding, vitamin K ALONE is too slow — must combine with 4-factor prothrombin complex concentrate (PCC) or FFP for immediate factor replacement',
+      'IV must be given slowly (over at least 20–30 minutes) diluted in compatible fluid to minimize anaphylactoid reaction risk',
+      'Oral route has similar efficacy to IV for non-urgent reversal with a better safety profile',
+      'Does not reverse direct oral anticoagulants (DOACs) — only effective for vitamin K antagonists like warfarin'
+    ]
+  },
+  {
+    id: 'protamine',
+    genericName: 'Protamine Sulfate',
+    genericNameAr: 'كبريتات البروتامين',
+    brandNames: ['Protamine', 'بروتامين'],
+    drugClass: 'Heparin Antagonist (Basic Protein)',
+    drugClassAr: 'مضاد للهيبارين',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology'],
+    keyHighlights: [
+      'Specific antidote for unfractionated heparin overdose/reversal',
+      'Only partially reverses low molecular weight heparin (enoxaparin) — roughly 60%',
+      'Rapid IV push can cause severe hypotension and anaphylaxis — give slowly'
+    ],
+    indications: [
+      {
+        indication: 'Unfractionated heparin reversal',
+        indicationAr: 'إبطال الهيبارين غير المجزأ',
+        adultDose: '1 mg protamine per 100 units heparin received in last 2–3 hours, slow IV over 10 min',
+        adultDoseAr: '1 ملجم بروتامين لكل 100 وحدة هيبارين تم إعطاؤها خلال آخر 2-3 ساعات، وريدي بطيء خلال 10 دقائق',
+        pediatricDose: 'Same ratio (1 mg per 100 units), weight-based total dose',
+        pediatricDoseAr: 'نفس النسبة (1 ملجم لكل 100 وحدة)، حسب الوزن',
+        maxDose: '50 mg per single dose',
+        duration: 'Single dose, may repeat based on aPTT/ACT',
+        route: 'IV'
+      },
+      {
+        indication: 'Enoxaparin (LMWH) partial reversal',
+        indicationAr: 'إبطال جزئي للإينوكسابارين',
+        adultDose: '1 mg protamine per 1 mg enoxaparin given in last 8 hours (max ~60% reversal)',
+        adultDoseAr: '1 ملجم بروتامين لكل 1 ملجم إينوكسابارين تم إعطاؤه خلال آخر 8 ساعات (إبطال جزئي بحد أقصى 60%)',
+        pediatricDose: 'Same ratio, weight-based',
+        pediatricDoseAr: 'نفس النسبة حسب الوزن',
+        maxDose: '50 mg per dose',
+        duration: 'Single dose',
+        route: 'IV'
+      },
+      {
+        indication: 'Post-cardiopulmonary bypass heparin reversal',
+        indicationAr: 'إبطال الهيبارين بعد جراحة القلب المفتوح',
+        adultDose: 'Dose calculated from total intraoperative heparin dose, typically 1–1.5 mg per 100 units',
+        adultDoseAr: 'الجرعة تُحسب من إجمالي جرعة الهيبارين أثناء العملية، عادة 1-1.5 ملجم لكل 100 وحدة',
+        pediatricDose: 'Weight and bypass-protocol based, cardiac anesthesia team guided',
+        pediatricDoseAr: 'حسب الوزن وبروتوكول المجازة بإشراف فريق تخدير القلب',
+        maxDose: 'Per institutional protocol',
+        duration: 'Single dose at end of bypass',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Known hypersensitivity to protamine',
+      'Use with caution in fish allergy (derived from fish sperm)',
+      'Prior protamine exposure or NPH insulin use (higher anaphylaxis risk, use caution)'
+    ],
+    blackBoxWarning: 'Can cause severe hypotension, bradycardia, and anaphylactoid/anaphylactic reactions, especially with rapid administration; risk is higher in fish allergy, vasectomy, or prior protamine/NPH insulin exposure',
+    blackBoxWarningAr: 'قد يسبب انخفاض ضغط حاد وبطء قلب وتفاعلات تحسسية شديدة، خاصة مع الإعطاء السريع؛ الخطر أعلى في حساسية السمك أو قطع القناة الدافقة أو التعرض السابق للبروتامين أو أنسولين NPH',
+    mechanismOfAction: 'Strongly basic (cationic) protein that binds to acidic (anionic) heparin, forming an inactive stable salt complex that neutralizes anticoagulant activity',
+    mechanismOfActionAr: 'بروتين قاعدي قوي يرتبط بالهيبارين الحمضي مكونًا معقدًا مستقرًا غير فعال يُحيّد التأثير المضاد للتخثر',
+    halfLife: '~7 minutes',
+    monitoringParameters: [
+      'aPTT or ACT (activated clotting time)',
+      'Blood pressure and heart rate during/after administration',
+      'Signs of anaphylaxis/anaphylactoid reaction',
+      'Pulmonary artery pressure in cardiac surgery (risk of pulmonary vasoconstriction)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'Patients with fish allergy have increased risk of hypersensitivity reaction (protamine is derived from fish sperm)'
+    ],
+    pearls: [
+      'Overdosing protamine can itself cause an anticoagulant/bleeding effect — always calculate dose from actual heparin received, not empirically',
+      'Patients on NPH insulin, with prior vasectomy, or fish allergy have higher anaphylaxis risk — consider premedication or slower infusion',
+      'Give slowly over at least 10 minutes — rapid push is a major cause of severe hypotension',
+      'Only partially reverses LMWH anti-Xa activity; andexanet alfa is the specific reversal for factor Xa inhibitors, not protamine'
+    ]
+  },
+  {
+    id: 'tranexamic_acid',
+    genericName: 'Tranexamic Acid',
+    genericNameAr: 'حمض الترانيكساميك',
+    brandNames: ['Cyklokapron', 'TXA', 'سايكلوكابرون'],
+    drugClass: 'Antifibrinolytic (Lysine Analog)',
+    drugClassAr: 'مضاد لانحلال الفيبرين',
+    category: 'Rx',
+    route: ['IV', 'PO', 'topical'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'internal_medicine'],
+    keyHighlights: [
+      'Reduces mortality in trauma hemorrhage when given within 3 hours of injury (CRASH-2 trial)',
+      'First-line for postpartum hemorrhage and heavy menstrual bleeding',
+      'Avoid in active thromboembolic disease and in hematuria from upper urinary tract (risk of clot retention/obstruction)'
+    ],
+    indications: [
+      {
+        indication: 'Major trauma hemorrhage',
+        indicationAr: 'نزيف الصدمات الكبير',
+        adultDose: '1 g IV over 10 min, then 1 g IV over 8 hours, started within 3 hours of injury',
+        adultDoseAr: '1 جرام وريدي خلال 10 دقائق، ثم 1 جرام وريدي خلال 8 ساعات، يُبدأ خلال 3 ساعات من الإصابة',
+        pediatricDose: '15 mg/kg (max 1 g) IV bolus, then 2 mg/kg/hr infusion',
+        pediatricDoseAr: '15 ملجم/كجم (بحد أقصى 1 جرام) دفعة وريدية، ثم تسريب 2 ملجم/كجم/ساعة',
+        maxDose: '2 g total in first 24 hours (trauma protocol)',
+        duration: '8–24 hours depending on protocol',
+        route: 'IV'
+      },
+      {
+        indication: 'Postpartum hemorrhage',
+        indicationAr: 'نزيف ما بعد الولادة',
+        adultDose: '1 g IV over 10 min, repeat once after 30 min if bleeding continues',
+        adultDoseAr: '1 جرام وريدي خلال 10 دقائق، تُكرر مرة بعد 30 دقيقة إذا استمر النزيف',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '2 g total',
+        duration: 'Within 3 hours of delivery for maximal benefit',
+        route: 'IV'
+      },
+      {
+        indication: 'Heavy menstrual bleeding',
+        indicationAr: 'النزيف الطمثي الغزير',
+        adultDose: '1300 mg (or 1 g) PO three times daily during menses, max 5 days',
+        adultDoseAr: '1300 ملجم (أو 1 جرام) فموي 3 مرات يوميًا أثناء الدورة، بحد أقصى 5 أيام',
+        pediatricDose: 'Not routinely established',
+        pediatricDoseAr: 'غير مستقر بشكل روتيني',
+        maxDose: '4 g/day',
+        duration: 'During menstrual flow only',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Reduce dose by 50%',
+      crclBelow10: 'Reduce dose by 75%; use with caution',
+      hemodialysis: 'Dose after dialysis; dialyzable to some degree'
+    },
+    hepaticAdjustment: 'No specific adjustment required',
+    contraindications: [
+      'Active thromboembolic disease (DVT, PE, stroke)',
+      'Subarachnoid hemorrhage (relative — risk of cerebral ischemia)',
+      'Acquired defective color vision (unable to monitor for ocular toxicity with long-term use)',
+      'Known hypersensitivity'
+    ],
+    mechanismOfAction: 'Competitively inhibits plasminogen activation to plasmin by binding lysine-binding sites, preventing fibrin degradation and stabilizing clot formation',
+    mechanismOfActionAr: 'يثبط تنافسيًا تنشيط البلازمينوجين إلى بلازمين عبر الارتباط بمواقع الليسين، مما يمنع تحلل الفيبرين ويثبت الجلطة',
+    halfLife: '2–3 hours',
+    monitoringParameters: [
+      'Signs of ongoing bleeding/hemoglobin',
+      'Signs of thromboembolism (DVT/PE)',
+      'Renal function (dose adjustment)',
+      'Visual symptoms with prolonged use'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Must be given within 3 hours of trauma/injury — benefit diminishes and may reverse (increased mortality) if given later',
+      'Does not increase thromboembolic events in most major trials (CRASH-2, WOMAN) despite being an antifibrinolytic',
+      'Cheap, stable at room temperature, and increasingly used in prehospital/military trauma care',
+      'Avoid in hematuria of upper tract origin — can cause ureteral clot obstruction'
+    ]
+  },
+  {
+    id: 'diazepam',
+    genericName: 'Diazepam',
+    genericNameAr: 'ديازيبام',
+    brandNames: ['Valium', 'فاليوم'],
+    drugClass: 'Benzodiazepine (Long-Acting)',
+    drugClassAr: 'بنزوديازيبين طويل المفعول',
+    category: 'Controlled',
+    route: ['PO', 'IV', 'IM', 'rectal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'internal_medicine', 'pediatrics'],
+    keyHighlights: [
+      'First-line benzodiazepine for status epilepticus and alcohol withdrawal protocols',
+      'Long half-life with active metabolites leads to prolonged sedation, especially in elderly/hepatic impairment',
+      'Rectal gel formulation used for pediatric seizure rescue therapy'
+    ],
+    indications: [
+      {
+        indication: 'Status epilepticus / acute seizure',
+        indicationAr: 'الحالة الصرعية / النوبة الحادة',
+        adultDose: '5–10 mg IV, repeat every 10–15 min as needed (max 30 mg)',
+        adultDoseAr: '5-10 ملجم وريدي، تُكرر كل 10-15 دقيقة حسب الحاجة (بحد أقصى 30 ملجم)',
+        pediatricDose: '0.2–0.5 mg/kg IV or 0.5 mg/kg rectal gel (max 20 mg)',
+        pediatricDoseAr: '0.2-0.5 ملجم/كجم وريدي أو 0.5 ملجم/كجم هلام شرجي (بحد أقصى 20 ملجم)',
+        maxDose: '30 mg in an 8-hour period (adult)',
+        duration: 'Acute treatment, repeat as needed',
+        route: 'IV/rectal'
+      },
+      {
+        indication: 'Alcohol withdrawal (symptom-triggered or fixed-schedule)',
+        indicationAr: 'انسحاب الكحول (موجه بالأعراض أو بجدول ثابت)',
+        adultDose: '10–20 mg PO/IV every 1–4 hours per CIWA-Ar protocol',
+        adultDoseAr: '10-20 ملجم فموي/وريدي كل 1-4 ساعات وفق بروتوكول تقييم الانسحاب',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: 'Per institutional withdrawal protocol, can require very high cumulative doses',
+        duration: '3–7 days typically, tapering',
+        route: 'PO/IV'
+      },
+      {
+        indication: 'Muscle spasm / spasticity',
+        indicationAr: 'تشنج العضلات / التشنج اللاإرادي',
+        adultDose: '2–10 mg PO 3–4 times daily',
+        adultDoseAr: '2-10 ملجم فموي 3-4 مرات يوميًا',
+        pediatricDose: '0.12–0.8 mg/kg/day PO divided doses (per specific indication)',
+        pediatricDoseAr: '0.12-0.8 ملجم/كجم/يوم فموي مقسمة',
+        maxDose: '40 mg/day',
+        duration: 'Short-term, taper after extended use',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'Use with caution — active metabolites may accumulate',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose substantially in hepatic impairment — markedly prolonged half-life due to active metabolites (desmethyldiazepam); consider lorazepam or oxazepam instead (no active hepatic metabolites)',
+    contraindications: [
+      'Narrow-angle glaucoma',
+      'Severe respiratory insufficiency',
+      'Sleep apnea syndrome',
+      'Severe hepatic impairment',
+      'Myasthenia gravis',
+      'Known hypersensitivity to benzodiazepines'
+    ],
+    blackBoxWarning: 'Concomitant use with opioids may result in profound sedation, respiratory depression, coma, and death',
+    blackBoxWarningAr: 'الاستخدام المصاحب مع الأفيونيات قد يؤدي إلى تخدير شديد وتثبيط تنفسي وغيبوبة ووفاة',
+    mechanismOfAction: 'Enhances GABA-A receptor-mediated chloride influx by binding the benzodiazepine site, increasing frequency of channel opening and producing CNS depression',
+    mechanismOfActionAr: 'يعزز تدفق الكلوريد عبر مستقبلات GABA-A بالارتباط بموقع البنزوديازيبين، مما يزيد تكرار فتح القناة ويُحدث تثبيطًا للجهاز العصبي المركزي',
+    halfLife: '20–100 hours (parent drug); active metabolite desmethyldiazepam up to 200 hours',
+    monitoringParameters: [
+      'Level of sedation / respiratory status',
+      'Seizure frequency/control',
+      'CIWA-Ar score in withdrawal management',
+      'Signs of accumulation in elderly/hepatic impairment (excessive sedation)'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'Avoid alcohol (additive CNS/respiratory depression)',
+      'Grapefruit juice may increase diazepam levels via CYP3A4 inhibition'
+    ],
+    pearls: [
+      'Long half-life with active metabolites means significant accumulation risk with repeated dosing, especially in elderly and hepatic impairment',
+      'Rectal gel (Diastat) is a key pediatric/home rescue therapy for prolonged seizures outside the hospital',
+      'Lorazepam is often preferred over diazepam for status epilepticus in current guidelines due to a more favorable CNS distribution profile with comparable efficacy',
+      'Flumazenil can reverse benzodiazepine effect but risks precipitating seizures in chronic users — use cautiously'
+    ]
+  },
+  {
+    id: 'bupropion',
+    genericName: 'Bupropion',
+    genericNameAr: 'بوبروبيون',
+    brandNames: ['Wellbutrin', 'Zyban', 'ويلبوترين'],
+    drugClass: 'Atypical Antidepressant (NDRI — Norepinephrine-Dopamine Reuptake Inhibitor)',
+    drugClassAr: 'مضاد اكتئاب غير نمطي (مثبط إعادة امتصاص النورإبينفرين والدوبامين)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Lacks sexual dysfunction and weight gain common with SSRIs — favored for depression with fatigue/low libido',
+      'FDA-approved for smoking cessation (Zyban) in addition to depression and seasonal affective disorder',
+      'Lowers seizure threshold — contraindicated in seizure disorders and eating disorders'
+    ],
+    indications: [
+      {
+        indication: 'Major depressive disorder',
+        indicationAr: 'اضطراب الاكتئاب الشديد',
+        adultDose: 'IR: 100 mg BID–TID; SR: 150 mg BID; XL: 150 mg once daily, titrate to 300–450 mg/day',
+        adultDoseAr: 'سريع المفعول: 100 ملجم مرتين-3 مرات يوميًا؛ XL: 150 ملجم مرة يوميًا، يُزاد إلى 300-450 ملجم/يوم',
+        pediatricDose: 'Not established for depression in children; limited adolescent data',
+        pediatricDoseAr: 'غير مستقر للاكتئاب عند الأطفال؛ بيانات محدودة للمراهقين',
+        maxDose: '450 mg/day (XL); 400 mg/day (SR); 450 mg/day IR divided',
+        duration: 'Chronic, reassess at 4–6 weeks',
+        route: 'PO'
+      },
+      {
+        indication: 'Smoking cessation',
+        indicationAr: 'الإقلاع عن التدخين',
+        adultDose: '150 mg SR once daily for 3 days, then 150 mg BID, start 1–2 weeks before quit date',
+        adultDoseAr: '150 ملجم SR مرة يوميًا لـ 3 أيام، ثم 150 ملجم مرتين يوميًا، يُبدأ 1-2 أسبوع قبل تاريخ الإقلاع',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '300 mg/day',
+        duration: '7–12 weeks typical course',
+        route: 'PO'
+      },
+      {
+        indication: 'Seasonal affective disorder (prevention)',
+        indicationAr: 'الاضطراب الوجداني الفصلي (وقاية)',
+        adultDose: 'XL 150 mg once daily, started in autumn, titrate to 300 mg if needed',
+        adultDoseAr: 'XL 150 ملجم مرة يوميًا، يُبدأ في الخريف، يُزاد إلى 300 ملجم حسب الحاجة',
+        pediatricDose: 'Not established',
+        pediatricDoseAr: 'غير مستقر',
+        maxDose: '300 mg/day',
+        duration: 'Through winter season, taper in early spring',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Consider reduced dose/frequency; metabolites accumulate',
+      crclBelow10: 'Reduce dose and/or frequency significantly (e.g., 100 mg once daily or 150 mg every other day)',
+      hemodialysis: 'Not well dialyzed; dose as per severe renal impairment, monitor closely'
+    },
+    hepaticAdjustment: 'Severe cirrhosis: maximum 100 mg every other day (IR) or 150 mg every other day (SR); avoid XL formulation in severe hepatic impairment',
+    contraindications: [
+      'Seizure disorder (current or past)',
+      'Current or prior diagnosis of bulimia or anorexia nervosa',
+      'Abrupt discontinuation of alcohol, benzodiazepines, or sedatives',
+      'Use of MAO inhibitors within 14 days',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Increased risk of suicidal thinking and behavior in children, adolescents, and young adults; monitor closely for clinical worsening',
+    blackBoxWarningAr: 'خطر متزايد للتفكير والسلوك الانتحاري عند الأطفال والمراهقين والشباب؛ يجب المراقبة الدقيقة لأي تدهور سريري',
+    mechanismOfAction: 'Inhibits neuronal reuptake of norepinephrine and dopamine with minimal effect on serotonin; exact antidepressant mechanism not fully established',
+    mechanismOfActionAr: 'يثبط إعادة امتصاص النورإبينفرين والدوبامين العصبي مع تأثير ضئيل على السيروتونين',
+    halfLife: '21 hours (parent); active metabolites have longer half-lives',
+    monitoringParameters: [
+      'Mood and suicidality, especially early in treatment',
+      'Blood pressure (can cause hypertension)',
+      'Seizure history/risk factors',
+      'Weight (typically neutral or mild loss, unlike SSRIs)'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'Avoid alcohol (lowers seizure threshold further)'
+    ],
+    pearls: [
+      'A favored choice when sexual side effects or weight gain from SSRIs are problematic, or when fatigue/hypersomnia predominate',
+      'Dose-dependent seizure risk — never exceed max daily dose and avoid in patients with seizure history or eating disorders',
+      'Can be combined with SSRIs for augmentation in partial responders (watch for additive stimulant-like effects)',
+      'Immediate-release formulation has highest seizure risk; XL (extended-release) once-daily dosing has the best tolerability and adherence'
+    ]
+  },
+  {
+    id: 'cisplatin',
+    genericName: 'Cisplatin',
+    genericNameAr: 'سيسبلاتين',
+    brandNames: ['Platinol', 'بلاتينول'],
+    drugClass: 'Platinum-Based Alkylating-Like Chemotherapy Agent',
+    drugClassAr: 'عامل علاج كيميائي يحتوي على البلاتين',
+    category: 'Rx',
+    route: ['IV infusion'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology'],
+    keyHighlights: [
+      'Highly emetogenic — mandates aggressive triple antiemetic prophylaxis (5-HT3 antagonist + NK1 antagonist + dexamethasone)',
+      'Dose-limiting nephrotoxicity requires aggressive IV hydration before and after infusion',
+      'Cumulative peripheral neuropathy and ototoxicity are irreversible dose-limiting toxicities'
+    ],
+    indications: [
+      {
+        indication: 'Testicular cancer (combination chemotherapy, e.g., BEP)',
+        indicationAr: 'سرطان الخصية (علاج كيميائي مركب)',
+        adultDose: '20 mg/m² IV daily for 5 days every 3 weeks, or per regimen protocol',
+        adultDoseAr: '20 ملجم/م² وريدي يوميًا لـ 5 أيام كل 3 أسابيع، أو حسب بروتوكول البرنامج',
+        pediatricDose: 'Protocol-specific, specialist oncology dosing only',
+        pediatricDoseAr: 'حسب البروتوكول، بإشراف أخصائي أورام فقط',
+        maxDose: 'Per cycle protocol; cumulative lifetime dose limited by nephro/neuro/ototoxicity',
+        duration: 'Multiple cycles per oncology protocol',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Ovarian cancer / NSCLC / head and neck cancer / bladder cancer',
+        indicationAr: 'سرطان المبيض / سرطان الرئة غير صغير الخلايا / سرطان الرأس والرقبة / سرطان المثانة',
+        adultDose: '75–100 mg/m² IV every 3–4 weeks, often combined with other agents',
+        adultDoseAr: '75-100 ملجم/م² وريدي كل 3-4 أسابيع، غالبًا مع عوامل أخرى',
+        pediatricDose: 'Protocol-specific',
+        pediatricDoseAr: 'حسب البروتوكول',
+        maxDose: 'Per cycle protocol',
+        duration: 'Multiple cycles, typically 4–6',
+        route: 'IV infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'Standard dose with adequate pre/post hydration',
+      crcl10to50: 'Reduce dose by 25–50%; consider carboplatin substitution',
+      crclBelow10: 'Generally avoided — consider carboplatin as a less nephrotoxic alternative',
+      hemodialysis: 'Avoid if possible; specialist oncology/nephrology co-management required'
+    },
+    hepaticAdjustment: 'No formal dose adjustment established; use with caution in severe hepatic impairment',
+    contraindications: [
+      'Pre-existing significant renal impairment (relative, requires dose reduction/alternative)',
+      'Pre-existing significant hearing impairment (relative)',
+      'Myelosuppression (active severe)',
+      'Known hypersensitivity to platinum compounds'
+    ],
+    blackBoxWarning: 'Causes cumulative dose-dependent nephrotoxicity, ototoxicity, and peripheral neuropathy; severe nausea/vomiting; myelosuppression; anaphylactic-like reactions possible',
+    blackBoxWarningAr: 'يسبب سمية كلوية وسمعية واعتلال عصبي محيطي تراكمي مرتبط بالجرعة؛ غثيان وقيء شديدين؛ تثبيط نقي العظام؛ تفاعلات تحسسية شديدة محتملة',
+    mechanismOfAction: 'Forms intrastrand and interstrand DNA crosslinks, disrupting DNA replication and transcription, triggering apoptosis in rapidly dividing cells',
+    mechanismOfActionAr: 'يشكل روابط متصالبة داخل وبين خيوط الحمض النووي، معطلاً النسخ والتضاعف، مما يحفز موت الخلايا المبرمج',
+    halfLife: '58–73 hours (terminal, due to protein binding)',
+    monitoringParameters: [
+      'Renal function (creatinine, magnesium, electrolytes) before each cycle',
+      'Audiometry for ototoxicity',
+      'CBC with differential (myelosuppression)',
+      'Peripheral neuropathy assessment',
+      'Electrolytes — especially magnesium and potassium wasting'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'No significant food interactions; avoid nephrotoxic supplements/herbs'
+    ],
+    pearls: [
+      'Vigorous IV hydration (normal saline) before and after infusion is essential to reduce nephrotoxicity — mannitol/furosemide may be added for forced diuresis',
+      'Magnesium and potassium wasting is common due to renal tubular damage — supplement proactively',
+      'Carboplatin is often substituted when renal function, neuropathy, or ototoxicity risk is a concern, with a different (myelosuppressive) toxicity profile',
+      'Amifostine can be used as a nephroprotectant in select high-risk regimens'
+    ]
+  },
+  {
+    id: 'tamoxifen',
+    genericName: 'Tamoxifen',
+    genericNameAr: 'تاموكسيفين',
+    brandNames: ['Nolvadex', 'نولفاديكس'],
+    drugClass: 'Selective Estrogen Receptor Modulator (SERM)',
+    drugClassAr: 'معدّل انتقائي لمستقبلات الإستروجين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology'],
+    keyHighlights: [
+      'Standard adjuvant endocrine therapy for hormone receptor-positive breast cancer, used in both pre- and postmenopausal women',
+      'Acts as estrogen antagonist in breast tissue but agonist in endometrium — increases endometrial cancer and VTE risk',
+      'Requires functional CYP2D6 for conversion to active metabolite endoxifen — efficacy may be reduced with potent CYP2D6 inhibitors (e.g., paroxetine, fluoxetine)'
+    ],
+    indications: [
+      {
+        indication: 'Adjuvant therapy, hormone receptor-positive breast cancer',
+        indicationAr: 'علاج مساعد لسرطان الثدي الإيجابي لمستقبلات الهرمون',
+        adultDose: '20 mg PO once daily for 5–10 years',
+        adultDoseAr: '20 ملجم فموي مرة يوميًا لمدة 5-10 سنوات',
+        pediatricDose: 'Not applicable (adult oncology indication)',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '20 mg/day (standard; higher doses not more effective)',
+        duration: '5–10 years per oncology guidance',
+        route: 'PO'
+      },
+      {
+        indication: 'Metastatic breast cancer',
+        indicationAr: 'سرطان الثدي النقيلي',
+        adultDose: '20–40 mg/day PO (40 mg given in divided doses)',
+        adultDoseAr: '20-40 ملجم/يوم فموي (40 ملجم تُعطى بجرعات مقسمة)',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '40 mg/day',
+        duration: 'Until disease progression or unacceptable toxicity',
+        route: 'PO'
+      },
+      {
+        indication: 'Breast cancer risk reduction (high-risk women)',
+        indicationAr: 'تقليل خطر سرطان الثدي (النساء عاليات الخطورة)',
+        adultDose: '20 mg PO once daily for 5 years',
+        adultDoseAr: '20 ملجم فموي مرة يوميًا لمدة 5 سنوات',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: '20 mg/day',
+        duration: '5 years',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'No adjustment required',
+      crclBelow10: 'No adjustment required; limited data, use with caution',
+      hemodialysis: 'Not dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution in hepatic impairment; no formal dose adjustment established, monitor liver function',
+    contraindications: [
+      'Concurrent warfarin therapy requiring close monitoring (increased bleeding risk)',
+      'History of DVT/PE (relative — risk reduction use contraindicated)',
+      'Pregnancy',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Increases risk of endometrial cancer, uterine sarcoma, and venous thromboembolism (DVT/PE); for risk-reduction use, benefits must be weighed carefully against these serious risks',
+    blackBoxWarningAr: 'يزيد خطر سرطان بطانة الرحم والساركوما الرحمية والانسداد الوريدي الخثاري؛ عند استخدامه لتقليل الخطر يجب موازنة الفوائد بعناية مقابل هذه المخاطر الجسيمة',
+    mechanismOfAction: 'Competitively binds estrogen receptors; antagonist activity in breast tissue inhibits estrogen-driven tumor growth, while partial agonist activity in endometrium and bone has tissue-specific effects',
+    mechanismOfActionAr: 'يرتبط تنافسيًا بمستقبلات الإستروجين؛ تأثير مضاد في نسيج الثدي يثبط نمو الورم المعتمد على الإستروجين، بينما له تأثير جزئي منشط في بطانة الرحم والعظام',
+    halfLife: '5–7 days (parent); active metabolites up to 14 days',
+    monitoringParameters: [
+      'Annual gynecologic exam — abnormal vaginal bleeding warrants prompt endometrial evaluation',
+      'Signs/symptoms of DVT/PE',
+      'Visual symptoms (rare retinopathy/cataracts with long-term use)',
+      'Liver function tests',
+      'Bone density (beneficial effect in postmenopausal women)'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Avoid concurrent strong CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion) which reduce conversion to the active metabolite endoxifen and may reduce efficacy — prefer venlafaxine or escitalopram for hot flashes/depression if an antidepressant is needed',
+      'Beneficial estrogen-agonist effect on bone density and lipids in postmenopausal women, unlike aromatase inhibitors',
+      'Unexplained vaginal bleeding in a patient on tamoxifen must be promptly evaluated for endometrial pathology',
+      'Can be used in premenopausal women (unlike aromatase inhibitors, which require ovarian suppression)'
+    ]
+  },
+  {
+    id: 'cyclophosphamide',
+    genericName: 'Cyclophosphamide',
+    genericNameAr: 'سيكلوفوسفاميد',
+    brandNames: ['Cytoxan', 'سايتوكسان'],
+    drugClass: 'Alkylating Agent (Nitrogen Mustard Derivative)',
+    drugClassAr: 'عامل مؤلكل (من مشتقات خردل النيتروجين)',
+    category: 'Rx',
+    route: ['IV infusion', 'PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology'],
+    keyHighlights: [
+      'Broad use spanning oncology (lymphoma, breast cancer, sarcomas) and rheumatology/nephrology (lupus nephritis, vasculitis)',
+      'Hemorrhagic cystitis risk requires mesna co-administration and aggressive hydration at high doses',
+      'Significant gonadotoxicity — fertility preservation counseling essential before treatment'
+    ],
+    indications: [
+      {
+        indication: 'Non-Hodgkin lymphoma (e.g., CHOP regimen)',
+        indicationAr: 'ليمفوما غير هودجكين (مثل نظام CHOP)',
+        adultDose: '750 mg/m² IV on day 1 of each 21-day cycle, combined with other agents',
+        adultDoseAr: '750 ملجم/م² وريدي في اليوم 1 من كل دورة 21 يومًا، مع عوامل أخرى',
+        pediatricDose: 'Protocol-specific, specialist oncology dosing only',
+        pediatricDoseAr: 'حسب البروتوكول، بإشراف أخصائي أورام فقط',
+        maxDose: 'Per cycle protocol',
+        duration: 'Multiple cycles per protocol (typically 6–8)',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Lupus nephritis / severe vasculitis (immunosuppression)',
+        indicationAr: 'التهاب الكلى الذئبي / التهاب الأوعية الشديد (تثبيط مناعي)',
+        adultDose: '0.5–1 g/m² IV monthly (NIH protocol) or 500 mg IV every 2 weeks x 6 (Euro-Lupus)',
+        adultDoseAr: '0.5-1 جرام/م² وريدي شهريًا أو 500 ملجم وريدي كل أسبوعين لـ6 جرعات',
+        pediatricDose: 'Specialist rheumatology/nephrology weight-based protocol',
+        pediatricDoseAr: 'بروتوكول حسب الوزن بإشراف أخصائي روماتيزم/كلى',
+        maxDose: 'Per protocol; cumulative lifetime dose tracked for gonadal/bladder toxicity',
+        duration: '3–6 months induction, then maintenance with alternative agent',
+        route: 'IV infusion'
+      },
+      {
+        indication: 'Breast cancer (adjuvant combination, e.g., AC/TC regimen)',
+        indicationAr: 'سرطان الثدي (علاج مساعد مركب)',
+        adultDose: '600 mg/m² IV every 2–3 weeks per regimen',
+        adultDoseAr: '600 ملجم/م² وريدي كل 2-3 أسابيع حسب البرنامج',
+        pediatricDose: 'Not applicable',
+        pediatricDoseAr: 'غير قابل للتطبيق',
+        maxDose: 'Per cycle protocol',
+        duration: '4–6 cycles typical',
+        route: 'IV infusion'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment required',
+      crcl10to50: 'Reduce dose by 25%',
+      crclBelow10: 'Reduce dose by 50%; monitor closely',
+      hemodialysis: 'Dose after dialysis; significantly dialyzed, supplemental dose may be needed'
+    },
+    hepaticAdjustment: 'Reduce dose in significant hepatic impairment (bilirubin >3 mg/dL) — reduced activation of prodrug and risk of accumulation of other metabolites',
+    contraindications: [
+      'Severe myelosuppression (active)',
+      'Active urinary tract infection or bladder outlet obstruction (relative — worsens hemorrhagic cystitis risk)',
+      'Pregnancy',
+      'Known hypersensitivity'
+    ],
+    blackBoxWarning: 'Causes myelosuppression, hemorrhagic cystitis, and secondary malignancy (bladder cancer, myelodysplasia/AML) risk; cardiotoxicity at high doses',
+    blackBoxWarningAr: 'يسبب تثبيط نقي العظام والتهاب المثانة النزفي وخطر الإصابة بسرطان ثانوي (سرطان المثانة، متلازمة خلل التنسج النقوي/اللوكيميا)؛ سمية قلبية بالجرعات العالية',
+    mechanismOfAction: 'Prodrug activated hepatically to phosphoramide mustard, which alkylates DNA causing crosslinks that block replication and transcription, triggering apoptosis in proliferating cells',
+    mechanismOfActionAr: 'عقار سلفي يُنشّط كبديًا إلى فوسفوراميد الخردل الذي يُؤلكل الحمض النووي مكونًا روابط متصالبة تمنع التضاعف والنسخ وتحفز موت الخلايا',
+    halfLife: '3–12 hours (parent); metabolites vary',
+    monitoringParameters: [
+      'CBC with differential (myelosuppression nadir ~10–14 days)',
+      'Urinalysis for hematuria (hemorrhagic cystitis)',
+      'Renal and hepatic function',
+      'Signs of cardiotoxicity at high cumulative doses',
+      'Fertility counseling and gonadal function'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'No significant food interactions'
+    ],
+    pearls: [
+      'Mesna is co-administered with higher IV doses specifically to bind the urotoxic metabolite acrolein and prevent hemorrhagic cystitis — along with vigorous hydration and frequent voiding',
+      'Fertility preservation (sperm/oocyte banking) should be discussed before starting therapy given significant gonadotoxicity',
+      'Dose reduction or interruption is standard practice for severe myelosuppression — nadir typically occurs 10–14 days post-dose',
+      'Used at much lower doses in autoimmune disease (lupus nephritis, vasculitis) than in oncology, with different toxicity-benefit considerations'
+    ]
+  },
+  {
+    id: 'sevelamer',
+    genericName: 'Sevelamer',
+    genericNameAr: 'سيفيلامر',
+    brandNames: ['Renagel', 'Renvela', 'رينفيلا'],
+    drugClass: 'Non-Calcium Phosphate Binder',
+    drugClassAr: 'رابط للفوسفات لا يحتوي على الكالسيوم',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine'],
+    keyHighlights: [
+      'Preferred phosphate binder when avoiding calcium load (vascular calcification risk) in CKD/dialysis patients',
+      'Must be taken WITH meals — ineffective if taken on empty stomach since it binds dietary phosphate in the gut',
+      'Also modestly lowers LDL cholesterol as a secondary benefit'
+    ],
+    indications: [
+      {
+        indication: 'Hyperphosphatemia in chronic kidney disease (dialysis-dependent)',
+        indicationAr: 'ارتفاع الفوسفات في مرض الكلى المزمن (المعتمد على الديال)',
+        adultDose: '800–1600 mg PO three times daily with meals, titrate based on serum phosphate',
+        adultDoseAr: '800-1600 ملجم فموي 3 مرات يوميًا مع الوجبات، تُعدّل حسب مستوى الفوسفات',
+        pediatricDose: 'Weight-based dosing per nephrology protocol, not well established under age 6',
+        pediatricDoseAr: 'جرعة حسب الوزن وفق بروتوكول أمراض الكلى، غير مستقرة جيدًا تحت عمر 6 سنوات',
+        maxDose: 'Titrate to serum phosphate goal; no fixed ceiling, typically up to 13 g/day divided',
+        duration: 'Chronic, ongoing with dialysis',
+        route: 'PO'
+      },
+      {
+        indication: 'Hyperphosphatemia in CKD not yet on dialysis (stage 3–5)',
+        indicationAr: 'ارتفاع الفوسفات في مرض الكلى المزمن قبل الديال (المرحلة 3-5)',
+        adultDose: '400–800 mg PO three times daily with meals',
+        adultDoseAr: '400-800 ملجم فموي 3 مرات يوميًا مع الوجبات',
+        pediatricDose: 'Not well established',
+        pediatricDoseAr: 'غير مستقرة جيدًا',
+        maxDose: 'Titrate to serum phosphate goal',
+        duration: 'Chronic',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'Not applicable — used specifically in renal impairment, no adjustment needed for this indication',
+      crcl10to50: 'No adjustment required; dosed per serum phosphate',
+      crclBelow10: 'No adjustment required; dosed per serum phosphate',
+      hemodialysis: 'Not dialyzed (not systemically absorbed); dose with each meal/dialysis session as prescribed'
+    },
+    hepaticAdjustment: 'No adjustment required — minimal systemic absorption',
+    contraindications: [
+      'Bowel obstruction',
+      'Known hypersensitivity to sevelamer',
+      'Hypophosphatemia'
+    ],
+    mechanismOfAction: 'Non-absorbed polymer that binds dietary phosphate in the gastrointestinal tract through ion exchange, reducing intestinal phosphate absorption and excreting it in stool',
+    mechanismOfActionAr: 'بوليمر غير مُمتَص يرتبط بالفوسفات الغذائي في الجهاز الهضمي عبر تبادل أيوني، مما يقلل امتصاص الفوسفات المعوي ويطرحه في البراز',
+    halfLife: 'Not systemically absorbed — not applicable',
+    monitoringParameters: [
+      'Serum phosphate (monthly initially)',
+      'Serum calcium and PTH (bone-mineral disorder monitoring)',
+      'Bicarbonate (sevelamer hydrochloride can cause acidosis; carbonate form preferred)',
+      'Lipid panel (secondary LDL-lowering benefit)',
+      'GI tolerance'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'Must be taken WITH food/meals — ineffective and poorly tolerated if taken without food',
+      'May reduce absorption of some oral medications (ciprofloxacin, mycophenolate) — separate dosing by 1–2 hours'
+    ],
+    pearls: [
+      'Sevelamer carbonate (Renvela) replaced sevelamer hydrochloride (Renagel) largely because it does not contribute to metabolic acidosis',
+      'A non-calcium alternative to calcium acetate/carbonate binders, preferred in patients with vascular calcification, hypercalcemia, or adynamic bone disease',
+      'Timing with meals is essential for efficacy — counsel patients explicitly, as nonadherence to meal-timing is a common cause of "treatment failure"',
+      'Large pill burden (multiple large tablets per meal) is a major adherence challenge — powder formulation available as an alternative'
+    ]
   }
 ];
 
