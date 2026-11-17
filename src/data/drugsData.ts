@@ -1680,6 +1680,774 @@ export const INITIAL_DRUGS: Drug[] = [
       'الترطيب بمحلول ملحي طبيعي (0.9% NaCl) قبل وبعد الإجراء هو التدخل الوقائي الوحيد المثبت علمياً بشكل قوي ضد الاعتلال الكلوي بالصبغة.',
       'يُفرّق بين الحساسية الحقيقية لليود وبين كون المريض "حساساً من المأكولات البحرية" الذي لا يُعد مؤشراً موثوقاً لرد فعل تجاه الصبغة.'
     ]
+  },
+  {
+    id: 'azithromycin',
+    genericName: 'Azithromycin',
+    genericNameAr: 'أزيثرومايسين',
+    brandNames: ['Zithromax', 'Z-Pak', 'زيثروماكس'],
+    drugClass: 'Macrolide Antibiotic',
+    drugClassAr: 'مضاد حيوي ماكروليد',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'infectious_diseases', 'internal_medicine'],
+    keyHighlights: [
+      'جرعة واحدة يومياً بسبب نصف العمر الطويل جداً (68 ساعة)',
+      'يتراكم داخل الخلايا ويستمر تأثيره بعد إيقافه لعدة أيام',
+      'يطيل فترة QT - احذر مع أدوية أخرى مطيلة لها'
+    ],
+    indications: [
+      {
+        indication: 'Community-acquired pneumonia / Upper respiratory infections',
+        indicationAr: 'التهاب رئوي مكتسب من المجتمع / التهابات الجهاز التنفسي العلوي',
+        adultDose: '500 mg PO on day 1, then 250 mg PO once daily on days 2-5',
+        adultDoseAr: '500 مج فموياً يوم 1، ثم 250 مج يومياً من اليوم 2 إلى 5',
+        pediatricDose: '10 mg/kg PO on day 1 (max 500 mg), then 5 mg/kg/day on days 2-5',
+        pediatricDoseAr: '10 مج/كجم فموياً يوم 1 (حد أقصى 500 مج)، ثم 5 مج/كجم يومياً من اليوم 2 إلى 5',
+        route: 'PO'
+      },
+      {
+        indication: 'Chlamydia trachomatis infection',
+        indicationAr: 'عدوى الكلاميديا التناسلية',
+        adultDose: '1 g PO as a single dose',
+        adultDoseAr: '1 جرام فموياً جرعة واحدة',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; use with caution',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution in hepatic impairment; discontinue if signs of hepatitis occur',
+    contraindications: [
+      'فرط الحساسية لأي ماكروليد',
+      'تاريخ اليرقان الركودي الصفراوي أو خلل وظائف الكبد مع استخدام سابق للأزيثرومايسين',
+      'إطالة QT الخلقية أو الحادة'
+    ],
+    mechanismOfAction: 'Binds to the 50S ribosomal subunit, inhibiting bacterial protein synthesis (bacteriostatic)',
+    mechanismOfActionAr: 'يرتبط بالوحدة الريبوسومية 50S فيثبط تخليق البروتين البكتيري (مثبط للنمو)',
+    halfLife: '68 hours (tissue half-life)',
+    monitoringParameters: [
+      'تخطيط القلب (ECG) في مرضى الخطورة العالية لإطالة QT',
+      'وظائف الكبد عند الاستخدام المطول',
+      'الاستجابة السريرية والأعراض'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'الطعام الدسم يقلل امتصاص الأقراص العادية قليلاً، لا يؤثر على الكبسولات المعوية',
+      'مضادات الحموضة المحتوية على الألومنيوم أو المغنيسيوم تقلل الامتصاص - يفصل بساعتين'
+    ],
+    pearls: [
+      'الدواء المفضل للمرضى الذين لا يتحملون البنسلين في عدوى الجهاز التنفسي',
+      'لا يحتاج تعديل جرعة في القصور الكلوي - ميزة كبيرة مقارنة بالماكروليدات الأخرى',
+      'كورس Z-Pak الشهير (5 أيام) يعطي تغطية علاجية تعادل 10 أيام بسبب التراكم النسيجي'
+    ]
+  },
+  {
+    id: 'ceftriaxone',
+    genericName: 'Ceftriaxone',
+    genericNameAr: 'سيفترياكسون',
+    brandNames: ['Rocephin', 'روسيفين'],
+    drugClass: 'Third-Generation Cephalosporin',
+    drugClassAr: 'سيفالوسبورين من الجيل الثالث',
+    category: 'Rx',
+    route: ['IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'infectious_diseases', 'pediatrics', 'nursing'],
+    keyHighlights: [
+      'لا يُعطى مع محاليل الكالسيوم الوريدية في حديثي الولادة - خطر ترسب قاتل',
+      'يفرز في الصفراء والبول - لا يحتاج تعديل كلوي في معظم الحالات',
+      'جرعة واحدة يومياً تسهل العلاج خارج المستشفى (OPAT)'
+    ],
+    indications: [
+      {
+        indication: 'Meningitis (empiric therapy)',
+        indicationAr: 'التهاب السحايا (علاج تجريبي)',
+        adultDose: '2 g IV every 12 hours',
+        adultDoseAr: '2 جرام وريدي كل 12 ساعة',
+        pediatricDose: '100 mg/kg/day IV divided every 12-24 hours (max 4 g/day)',
+        pediatricDoseAr: '100 مج/كجم/يوم وريدي مقسمة كل 12-24 ساعة (حد أقصى 4 جم/يوم)',
+        route: 'IV'
+      },
+      {
+        indication: 'Community-acquired pneumonia / Intra-abdominal infection',
+        indicationAr: 'التهاب رئوي مكتسب من المجتمع / عدوى داخل البطن',
+        adultDose: '1-2 g IV/IM once daily',
+        adultDoseAr: '1-2 جرام وريدي/عضلي مرة يومياً',
+        route: 'IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment typically needed; monitor levels if combined hepatic/renal failure',
+      hemodialysis: 'Not significantly removed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Max 2 g/day if both hepatic and renal impairment present simultaneously',
+    contraindications: [
+      'فرط الحساسية للسيفالوسبورينات',
+      'حديثو الولادة (خاصة الخدج) الذين يتلقون أو سيتلقون محاليل كالسيوم وريدية - خطر ترسب قاتل في الرئة والكلى',
+      'حديثو الولادة المصابون بفرط بيليروبين الدم'
+    ],
+    blackBoxWarning: 'Fatal reactions with calcium-containing solutions in neonates: concomitant use of ceftriaxone and calcium-containing IV products can cause fatal calcium-ceftriaxone precipitates in neonatal lungs and kidneys',
+    blackBoxWarningAr: 'تفاعلات قاتلة مع محاليل الكالسيوم في حديثي الولادة: الاستخدام المتزامن للسيفترياكسون مع محاليل الكالسيوم الوريدية قد يسبب ترسبات قاتلة في رئة وكلى حديثي الولادة',
+    mechanismOfAction: 'Inhibits bacterial cell wall synthesis by binding to penicillin-binding proteins',
+    mechanismOfActionAr: 'يثبط تخليق جدار الخلية البكتيرية عن طريق الارتباط ببروتينات ربط البنسلين',
+    halfLife: '5.8-8.7 hours',
+    monitoringParameters: [
+      'علامات الحساسية المفرطة',
+      'وظائف الكلى والكبد',
+      'علامات التهاب الكيس الصفراوي الكاذب (pseudolithiasis)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية معروفة ذات أهمية سريرية'
+    ],
+    pearls: [
+      'لا يُخلط أبداً مع محاليل تحتوي على كالسيوم (مثل رينجر لاكتات) في نفس الخط الوريدي حتى في البالغين',
+      'يُستخدم على نطاق واسع في العلاج المنزلي بالمضادات الوريدية (OPAT) بسبب جرعته اليومية الواحدة',
+      'قد يسبب ترسب حصوات صفراوية كاذبة قابلة للعكس عند إيقاف الدواء'
+    ]
+  },
+  {
+    id: 'prednisone',
+    genericName: 'Prednisone',
+    genericNameAr: 'بريدنيزون',
+    brandNames: ['Deltasone', 'بريدنيزون'],
+    drugClass: 'Systemic Corticosteroid',
+    drugClassAr: 'كورتيكوستيرويد جهازي',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'يجب تدريج الإيقاف (tapering) عند الاستخدام لأكثر من 2-3 أسابيع لتجنب قصور الكظر',
+      'يُعطى صباحاً لتقليد الإيقاع اليومي الطبيعي للكورتيزول',
+      'يحتاج تحويل كبدي إلى الشكل الفعال بريدنيزولون'
+    ],
+    indications: [
+      {
+        indication: 'Anti-inflammatory / Immunosuppressive therapy (e.g., asthma exacerbation, autoimmune disease)',
+        indicationAr: 'علاج مضاد للالتهاب / مثبط للمناعة (مثل نوبة الربو، أمراض المناعة الذاتية)',
+        adultDose: '5-60 mg PO once daily, depending on indication and severity',
+        adultDoseAr: '5-60 مج فموياً مرة يومياً حسب دواعي الاستعمال والشدة',
+        pediatricDose: '0.5-2 mg/kg/day PO divided once or twice daily',
+        pediatricDoseAr: '0.5-2 مج/كجم/يوم فموياً مرة أو مرتين يومياً',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'In severe hepatic impairment, consider prednisolone directly as prednisone requires hepatic activation',
+    contraindications: [
+      'العدوى الفطرية الجهازية النشطة',
+      'فرط الحساسية للبريدنيزون',
+      'استخدام لقاحات حية في المرضى على جرعات مثبطة للمناعة'
+    ],
+    mechanismOfAction: 'Binds to glucocorticoid receptors, suppressing inflammatory gene transcription and immune cell function',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الجلوكوكورتيكويد فيثبط نسخ الجينات الالتهابية ووظيفة الخلايا المناعية',
+    halfLife: '2-3 hours (biological effect 18-36 hours)',
+    monitoringParameters: [
+      'سكر الدم',
+      'ضغط الدم',
+      'كثافة العظام عند الاستخدام المزمن',
+      'علامات العدوى المقنعة',
+      'الوزن والسوائل'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يُفضل تناوله مع الطعام لتقليل تهيج المعدة',
+      'يزيد الحاجة لمراقبة السكر مع الأطعمة عالية السكريات'
+    ],
+    pearls: [
+      'لا يُوقف فجأة بعد استخدام أكثر من 3 أسابيع - يجب التدريج التدريجي لتجنب أزمة أديسون',
+      'يزيد خطر هشاشة العظام والقرحة الهضمية والعدوى عند الاستخدام المزمن',
+      'يُفضل إعطاؤه في الصباح الباكر لتقليل تثبيط محور الكظر النخامي'
+    ]
+  },
+  {
+    id: 'digoxin',
+    genericName: 'Digoxin',
+    genericNameAr: 'ديجوكسين',
+    brandNames: ['Lanoxin', 'لانوكسين'],
+    drugClass: 'Cardiac Glycoside',
+    drugClassAr: 'جليكوسيد قلبي',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'icu_emergency', 'pharmacy'],
+    keyHighlights: [
+      'نطاق علاجي ضيق جداً - مراقبة المستوى الدموي ضرورية (0.5-0.9 ng/mL للفشل القلبي)',
+      'نقص بوتاسيوم الدم يزيد خطر التسمم الديجوكسيني بشدة',
+      'يوجد ترياق نوعي: Digoxin Immune Fab (DigiFab) للتسمم الحاد'
+    ],
+    indications: [
+      {
+        indication: 'Heart failure with reduced ejection fraction / Atrial fibrillation (rate control)',
+        indicationAr: 'فشل القلب مع انخفاض الكسر القذفي / الرجفان الأذيني (للتحكم في المعدل)',
+        adultDose: 'Loading: 0.25-0.5 mg IV/PO then 0.25 mg every 6-8h to total 0.75-1.5 mg; Maintenance: 0.125-0.25 mg once daily',
+        adultDoseAr: 'جرعة تحميل: 0.25-0.5 مج وريدي/فموي ثم 0.25 مج كل 6-8 ساعات حتى إجمالي 0.75-1.5 مج؛ جرعة صيانة: 0.125-0.25 مج يومياً',
+        maxDose: '1.5 mg loading dose total',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Reduce maintenance dose by 25-50%; monitor levels closely',
+      crclBelow10: 'Reduce maintenance dose by 50-75%; extend dosing interval; monitor levels closely',
+      hemodialysis: 'Not significantly dialyzed (large volume of distribution); no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment; digoxin is primarily renally eliminated',
+    contraindications: [
+      'الرجفان البطيني',
+      'اعتلال عضلة القلب الضخامي الانسدادي',
+      'الحصار الأذيني البطيني من الدرجة الثانية أو الثالثة بدون جهاز تنظيم ضربات',
+      'متلازمة وولف باركنسون وايت مع الرجفان الأذيني'
+    ],
+    mechanismOfAction: 'Inhibits Na+/K+-ATPase pump, increasing intracellular calcium and myocardial contractility (positive inotrope); also increases vagal tone slowing AV conduction',
+    mechanismOfActionAr: 'يثبط مضخة Na+/K+-ATPase فيزيد الكالسيوم داخل الخلية وقوة انقباض عضلة القلب؛ كما يزيد النغمة المبهمية فيبطئ التوصيل الأذيني البطيني',
+    halfLife: '36-48 hours (longer in renal impairment)',
+    monitoringParameters: [
+      'مستوى الديجوكسين الدموي (0.5-0.9 ng/mL)',
+      'البوتاسيوم والمغنيسيوم والكالسيوم في الدم',
+      'وظائف الكلى',
+      'تخطيط القلب لعلامات التسمم (بطء القلب، اضطراب النظم)',
+      'الأعراض: غثيان، تقيؤ، اضطرابات بصرية (رؤية صفراء/خضراء)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'الألياف العالية (نخالة الشوفان) قد تقلل الامتصاص - يفصل بساعتين',
+      'لا يُعطى مع مضادات الحموضة في نفس الوقت'
+    ],
+    pearls: [
+      'نقص بوتاسيوم أو مغنيسيوم الدم يزيد حساسية القلب لتأثير الديجوكسين السام حتى مع مستوى دموي طبيعي',
+      'التفاعلات الدوائية الشائعة: الأميودارون والفيراباميل والكينيدين ترفع مستوى الديجوكسين بشكل كبير',
+      'الأعراض المبكرة للتسمم غالباً هضمية (غثيان، فقدان شهية) قبل ظهور اضطرابات النظم'
+    ]
+  },
+  {
+    id: 'phenytoin',
+    genericName: 'Phenytoin',
+    genericNameAr: 'فينيتوين',
+    brandNames: ['Dilantin', 'ديلانتين'],
+    drugClass: 'Hydantoin Anticonvulsant',
+    drugClassAr: 'مضاد اختلاج من فئة الهيدانتوين',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'حركية غير خطية (zero-order) - زيادة بسيطة في الجرعة قد تسبب ارتفاع كبير في المستوى الدموي',
+      'يجب تصحيح المستوى الدموي حسب الألبومين في نقص بروتين الدم',
+      'لا يُعطى وريدياً بمعدل أسرع من 50 mg/min لخطر اضطراب النظم القلبي وانخفاض الضغط'
+    ],
+    indications: [
+      {
+        indication: 'Status epilepticus / Tonic-clonic and partial seizures',
+        indicationAr: 'الحالة الصرعية / نوبات الصرع التوترية الرمعية والجزئية',
+        adultDose: 'Loading: 15-20 mg/kg IV at max rate 50 mg/min; Maintenance: 100 mg PO/IV every 8 hours',
+        adultDoseAr: 'جرعة تحميل: 15-20 مج/كجم وريدي بمعدل أقصى 50 مج/دقيقة؛ جرعة صيانة: 100 مج فموي/وريدي كل 8 ساعات',
+        pediatricDose: 'Loading: 15-20 mg/kg IV; Maintenance: 4-8 mg/kg/day divided every 8-12 hours',
+        pediatricDoseAr: 'جرعة تحميل: 15-20 مج/كجم وريدي؛ جرعة صيانة: 4-8 مج/كجم/يوم مقسمة كل 8-12 ساعة',
+        maxDose: 'Infusion rate not to exceed 50 mg/min (25 mg/min in elderly)',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed; monitor free phenytoin level',
+      crclBelow10: 'No adjustment needed; monitor free phenytoin level closely due to altered protein binding',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution; reduce dose in significant hepatic impairment and monitor levels closely',
+    contraindications: [
+      'فرط الحساسية للهيدانتوينات',
+      'الحصار الأذيني البطيني من الدرجة الثانية أو الثالثة أو بطء القلب الجيبي الشديد (للشكل الوريدي)',
+      'بورفيريا حادة متقطعة'
+    ],
+    blackBoxWarning: 'Cardiovascular risk with rapid IV administration: rapid IV infusion can cause severe hypotension and cardiac arrhythmias; infusion rate must not exceed 50 mg/min',
+    blackBoxWarningAr: 'خطورة قلبية وعائية مع الحقن الوريدي السريع: الحقن الوريدي السريع قد يسبب انخفاض ضغط شديد واضطرابات نظم قلبي؛ يجب ألا يتجاوز معدل التسريب 50 مج/دقيقة',
+    mechanismOfAction: 'Blocks voltage-gated sodium channels, stabilizing neuronal membranes and reducing repetitive neuronal firing',
+    mechanismOfActionAr: 'يحجب قنوات الصوديوم المعتمدة على الجهد فيثبت الأغشية العصبية ويقلل الإطلاق العصبي المتكرر',
+    halfLife: '7-42 hours (dose-dependent, non-linear kinetics)',
+    monitoringParameters: [
+      'المستوى الدموي للفينيتوين (المدى العلاجي الكلي: 10-20 mcg/mL، الحر: 1-2 mcg/mL)',
+      'الألبومين في الدم لتصحيح المستوى في نقص بروتين الدم',
+      'تخطيط القلب والضغط أثناء الحقن الوريدي',
+      'علامات التسمم (رأرأة، ترنح، تخليط ذهني)',
+      'تعداد الدم الكامل ووظائف الكبد دورياً'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'التغذية الأنبوبية (enteral feeding) تقلل امتصاصه بشكل كبير - يفصل بساعتين قبل وبعد',
+      'حمض الفوليك قد يقلل مستوى الفينيتوين الدموي'
+    ],
+    pearls: [
+      'الحركية غير الخطية تعني أن زيادة الجرعة بنسبة صغيرة قد تؤدي لقفزة كبيرة وغير متناسبة في المستوى الدموي والتسمم',
+      'الفوسفينيتوين (Fosphenytoin) بديل أكثر أماناً للحقن الوريدي السريع وفي العضل',
+      'يصحح المستوى الدموي حسب معادلة: Corrected = Measured / ((0.2 × Albumin) + 0.1)'
+    ]
+  },
+  {
+    id: 'heparin_unfractionated',
+    genericName: 'Heparin (Unfractionated)',
+    genericNameAr: 'هيبارين غير مجزأ',
+    brandNames: ['Heparin Sodium', 'هيبارين صوديوم'],
+    drugClass: 'Anticoagulant',
+    drugClassAr: 'مضاد تخثر',
+    category: 'Rx',
+    route: ['IV', 'SC'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'cardiology', 'nursing', 'pharmacy'],
+    keyHighlights: [
+      'يُفضل عن الإينوكسابارين في القصور الكلوي الشديد لأنه لا يعتمد على الكلى للإفراز',
+      'نصف عمر قصير (60-90 دقيقة) يجعله مثالياً في الحالات التي تحتاج إيقاف سريع (قبل الجراحة)',
+      'خطر نقص الصفائح المحرض بالهيبارين (HIT) - يراقب تعداد الصفائح'
+    ],
+    indications: [
+      {
+        indication: 'Acute venous thromboembolism / ACS / Anticoagulation bridging',
+        indicationAr: 'الانصمام الخثاري الوريدي الحاد / المتلازمة التاجية الحادة / الربط العلاجي بمضادات التخثر',
+        adultDose: 'Bolus 80 units/kg IV then infusion 18 units/kg/hour, adjusted per aPTT protocol',
+        adultDoseAr: 'جرعة بلعية 80 وحدة/كجم وريدي ثم تسريب 18 وحدة/كجم/ساعة، يُعدل حسب بروتوكول aPTT',
+        route: 'IV continuous infusion'
+      },
+      {
+        indication: 'VTE prophylaxis',
+        indicationAr: 'الوقاية من الانصمام الخثاري الوريدي',
+        adultDose: '5000 units SC every 8-12 hours',
+        adultDoseAr: '5000 وحدة تحت الجلد كل 8-12 ساعة',
+        route: 'SC'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed - preferred over LMWH in severe renal impairment',
+      hemodialysis: 'No adjustment needed; commonly used for dialysis circuit anticoagulation'
+    },
+    hepaticAdjustment: 'Use with caution in severe hepatic impairment due to coagulopathy risk',
+    contraindications: [
+      'نزيف نشط غير محكوم',
+      'نقص الصفائح المحرض بالهيبارين (HIT) الحالي أو في التاريخ المرضي',
+      'فرط الحساسية للهيبارين',
+      'جراحة حديثة بالعين أو الجهاز العصبي المركزي مع خطر نزيف عالي'
+    ],
+    mechanismOfAction: 'Binds to antithrombin III, potentiating its inhibition of thrombin (factor IIa) and factor Xa',
+    mechanismOfActionAr: 'يرتبط بمضاد الثرومبين الثالث فيعزز تثبيطه للثرومبين (العامل IIa) والعامل Xa',
+    halfLife: '60-90 minutes (dose-dependent)',
+    monitoringParameters: [
+      'زمن الثرومبوبلاستين الجزئي المنشط (aPTT) كل 6 ساعات حتى الاستقرار',
+      'تعداد الصفائح الدموية يومياً (لمراقبة HIT)',
+      'الهيموجلوبين والهيماتوكريت',
+      'علامات النزيف'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية؛ يُتجنب مع الأعشاب المضادة للتخثر (الجنكة، الثوم بجرعات عالية)'
+    ],
+    pearls: [
+      'الترياق النوعي هو بروتامين سلفات (1 mg لكل 100 وحدة هيبارين تقريباً)',
+      'يُفضل في المرضى ذوي القصور الكلوي الشديد أو من يحتاجون إيقاف سريع قبل التداخلات الجراحية',
+      'يجب مراقبة تعداد الصفائح للكشف المبكر عن HIT، عادة بين اليوم 5-10 من العلاج'
+    ]
+  },
+  {
+    id: 'metoprolol',
+    genericName: 'Metoprolol',
+    genericNameAr: 'ميتوبرولول',
+    brandNames: ['Lopressor', 'Toprol-XL', 'لوبريسور'],
+    drugClass: 'Beta-1 Selective Blocker',
+    drugClassAr: 'حاصر بيتا 1 انتقائي',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'الشكل الممتد المفعول (succinate/XL) لا يُكسر أو يُمضغ لأنه نظام إطلاق متحكم',
+      'لا يُوقف فجأة في مرضى القلب - خطر الارتداد (rebound tachycardia/ischemia)',
+      'يُفضل عن حاصرات بيتا غير الانتقائية في الربو والسكري لتأثيره الانتقائي على القلب'
+    ],
+    indications: [
+      {
+        indication: 'Hypertension / Angina / Post-MI / Heart failure (succinate form)',
+        indicationAr: 'ارتفاع ضغط الدم / الذبحة الصدرية / بعد احتشاء عضلة القلب / فشل القلب (شكل السكسينات)',
+        adultDose: 'Tartrate: 25-100 mg PO twice daily; Succinate XL: 25-200 mg PO once daily',
+        adultDoseAr: 'تارترات: 25-100 مج فموياً مرتين يومياً؛ سكسينات ممتد المفعول: 25-200 مج فموياً مرة يومياً',
+        maxDose: '400 mg/day',
+        route: 'PO'
+      },
+      {
+        indication: 'Acute MI / Rate control (acute)',
+        indicationAr: 'احتشاء عضلة القلب الحاد / التحكم في معدل القلب (حاد)',
+        adultDose: '5 mg IV every 5 minutes for up to 3 doses, then transition to oral',
+        adultDoseAr: '5 مج وريدي كل 5 دقائق حتى 3 جرعات، ثم التحويل للفموي',
+        route: 'IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce initial dose in significant hepatic impairment; metoprolol undergoes extensive hepatic metabolism via CYP2D6',
+    contraindications: [
+      'بطء القلب الجيبي الشديد',
+      'الحصار الأذيني البطيني من الدرجة الثانية أو الثالثة',
+      'الصدمة القلبية',
+      'الربو الشديد غير المستقر (حذر نسبي)',
+      'فشل القلب غير المعاوض الحاد'
+    ],
+    mechanismOfAction: 'Selectively blocks beta-1 adrenergic receptors in the heart, reducing heart rate, contractility, and myocardial oxygen demand',
+    mechanismOfActionAr: 'يحجب انتقائياً مستقبلات بيتا-1 الأدرينالية في القلب فيقلل معدل ضربات القلب وقوة الانقباض واستهلاك الأكسجين',
+    halfLife: '3-7 hours',
+    monitoringParameters: [
+      'معدل ضربات القلب وضغط الدم',
+      'تخطيط القلب في الاستخدام الوريدي',
+      'علامات تفاقم فشل القلب أو بطء القلب',
+      'سكر الدم في مرضى السكري (قد يخفي أعراض نقص السكر)'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'الطعام يزيد التوافر الحيوي للشكل التارترات بشكل طفيف - يُؤخذ بانتظام مع أو بدون طعام',
+      'يُتجنب مع الكحول لزيادة خطر انخفاض الضغط'
+    ],
+    pearls: [
+      'لا يُوقف فجأة أبداً في مرضى الشريان التاجي - يجب التدريج على مدى 1-2 أسبوع',
+      'الشكل الممتد المفعول (Toprol-XL) مختلف صيدلانياً عن العادي (Lopressor) وليسا قابلين للتبديل مباشرة بنفس الجرعة اليومية',
+      'يُفضل استخدامه بحذر في مرضى الربو لأن الانتقائية لبيتا-1 تقل مع زيادة الجرعة'
+    ]
+  },
+  {
+    id: 'amlodipine',
+    genericName: 'Amlodipine',
+    genericNameAr: 'أملوديبين',
+    brandNames: ['Norvasc', 'نورفاسك'],
+    drugClass: 'Dihydropyridine Calcium Channel Blocker',
+    drugClassAr: 'حاصر قنوات الكالسيوم من فئة الديهيدروبيريدين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'نصف عمر طويل جداً (30-50 ساعة) يسمح بجرعة واحدة يومياً وتغطية ثابتة',
+      'أكثر أسباب الوذمة المحيطية شيوعاً بين خافضات الضغط',
+      'لا يحتاج تعديل جرعة في القصور الكلوي'
+    ],
+    indications: [
+      {
+        indication: 'Hypertension / Chronic stable angina',
+        indicationAr: 'ارتفاع ضغط الدم / الذبحة الصدرية المزمنة المستقرة',
+        adultDose: '5-10 mg PO once daily',
+        adultDoseAr: '5-10 مج فموياً مرة يومياً',
+        pediatricDose: '2.5-5 mg PO once daily (ages 6-17)',
+        pediatricDoseAr: '2.5-5 مج فموياً مرة يومياً (6-17 سنة)',
+        maxDose: '10 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not dialyzable (highly protein bound); no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Start with 2.5 mg once daily in significant hepatic impairment and titrate slowly',
+    contraindications: [
+      'فرط الحساسية لحاصرات قنوات الكالسيوم من فئة الديهيدروبيريدين',
+      'تضيق الأبهر الشديد (حذر نسبي)'
+    ],
+    mechanismOfAction: 'Inhibits calcium ion influx across vascular smooth muscle cell membranes, causing vasodilation and reduced peripheral vascular resistance',
+    mechanismOfActionAr: 'يثبط دخول أيونات الكالسيوم عبر أغشية خلايا العضلات الملساء الوعائية فيسبب توسع الأوعية وانخفاض المقاومة الوعائية المحيطية',
+    halfLife: '30-50 hours',
+    monitoringParameters: [
+      'ضغط الدم',
+      'الوذمة المحيطية في الأطراف السفلية',
+      'معدل ضربات القلب',
+      'وظائف الكبد عند الاستخدام المزمن'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Limited Data',
+    foodInteractions: [
+      'عصير الجريب فروت قد يزيد مستوى الدواء في الدم قليلاً - يُفضل تجنب الكميات الكبيرة'
+    ],
+    pearls: [
+      'الوذمة المحيطية تعتمد على الجرعة وليست بسبب احتباس السوائل - لا تستجيب جيداً لمدرات البول',
+      'يُفضل في المرضى المسنين وذوي الضغط الانقباضي المعزول لثباته وتحمله الجيد',
+      'بداية التأثير بطيئة (أيام) مما يقلل من هبوط الضغط الانتصابي المفاجئ'
+    ]
+  },
+  {
+    id: 'losartan',
+    genericName: 'Losartan',
+    genericNameAr: 'لوسارتان',
+    brandNames: ['Cozaar', 'كوزار'],
+    drugClass: 'Angiotensin II Receptor Blocker (ARB)',
+    drugClassAr: 'حاصر مستقبلات الأنجيوتنسين الثاني',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'بديل جيد لمثبطات الإيس في مرضى السعال المزعج - خطر وذمة وعائية أقل بكثير',
+      'يُمنع تماماً مع مثبطات الإيس أو أليسكيرين (خطر فرط بوتاسيوم وقصور كلوي)',
+      'تأثير خافض لحمض اليوريك إضافي مفيد في النقرس'
+    ],
+    indications: [
+      {
+        indication: 'Hypertension / Diabetic nephropathy / Stroke risk reduction',
+        indicationAr: 'ارتفاع ضغط الدم / اعتلال الكلى السكري / تقليل خطر السكتة الدماغية',
+        adultDose: '50 mg PO once daily, may increase to 100 mg once daily',
+        adultDoseAr: '50 مج فموياً مرة يومياً، يمكن زيادتها إلى 100 مج مرة يومياً',
+        pediatricDose: '0.7 mg/kg PO once daily (max 50 mg) for ages 6-16',
+        pediatricDoseAr: '0.7 مج/كجم فموياً مرة يومياً (حد أقصى 50 مج) للأعمار 6-16 سنة',
+        maxDose: '100 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment typically needed; monitor renal function and potassium',
+      crclBelow10: 'Use with caution; start at lower dose and monitor closely',
+      hemodialysis: 'Not significantly removed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Consider lower starting dose (25 mg) in hepatic impairment due to reduced metabolism to active metabolite',
+    contraindications: [
+      'الحمل',
+      'الاستخدام المتزامن مع أليسكيرين في مرضى السكري',
+      'فرط الحساسية للدواء',
+      'التضيق الثنائي لشرايين الكلى'
+    ],
+    blackBoxWarning: 'Fetal toxicity: can cause injury and death to the developing fetus when used in pregnancy; discontinue as soon as pregnancy is detected',
+    blackBoxWarningAr: 'سمية جنينية: قد يسبب أذى ووفاة للجنين النامي عند الاستخدام أثناء الحمل؛ يجب إيقافه فور اكتشاف الحمل',
+    mechanismOfAction: 'Blocks angiotensin II receptor type 1 (AT1), preventing vasoconstriction and aldosterone secretion',
+    mechanismOfActionAr: 'يحجب مستقبل الأنجيوتنسين الثاني نوع 1 فيمنع تضيق الأوعية وإفراز الألدوستيرون',
+    halfLife: '2 hours (6-9 hours for active metabolite)',
+    monitoringParameters: [
+      'ضغط الدم',
+      'وظائف الكلى والبوتاسيوم خاصة بعد بدء العلاج أو تعديل الجرعة',
+      'اختبار الحمل في النساء في سن الإنجاب'
+    ],
+    pregnancyCategory: 'X',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية كبيرة؛ يُنصح بالحذر مع بدائل الملح الغنية بالبوتاسيوم'
+    ],
+    pearls: [
+      'لا يسبب السعال الجاف المصاحب لمثبطات الإيس لأنه لا يؤثر على تكسير البراديكينين',
+      'يحتاج تحويلاً كبدياً جزئياً إلى مستقلب نشط أقوى 10-40 ضعف',
+      'يُستخدم أيضاً كعلاج مساعد في النقرس بسبب تأثيره الخافض لحمض اليوريك الفريد بين الـ ARBs'
+    ]
+  },
+  {
+    id: 'tramadol',
+    genericName: 'Tramadol',
+    genericNameAr: 'ترامادول',
+    brandNames: ['Ultram', 'ترامال'],
+    drugClass: 'Opioid Analgesic (Atypical)',
+    drugClassAr: 'مسكن أفيوني (غير نمطي)',
+    category: 'Controlled',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'icu_emergency', 'internal_medicine'],
+    keyHighlights: [
+      'يخفض عتبة التشنج - يُستخدم بحذر شديد في مرضى الصرع أو مع أدوية أخرى تخفض العتبة',
+      'خطر متلازمة السيروتونين عند الدمج مع SSRIs/SNRIs/MAOIs',
+      'استقلابه يعتمد على إنزيم CYP2D6 - فعاليته تختلف حسب النمط الجيني للمريض'
+    ],
+    indications: [
+      {
+        indication: 'Moderate to moderately severe pain',
+        indicationAr: 'الألم المتوسط إلى المتوسط الشديد',
+        adultDose: '50-100 mg PO every 4-6 hours as needed',
+        adultDoseAr: '50-100 مج فموياً كل 4-6 ساعات عند الحاجة',
+        maxDose: '400 mg/day (300 mg/day in patients over 75 years)',
+        duration: 'Short-term use preferred',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Increase dosing interval to every 12 hours; max 200 mg/day',
+      crclBelow10: 'Avoid use or use with extreme caution; extend interval further',
+      hemodialysis: 'Dialyzable; administer supplemental dose after dialysis session'
+    },
+    hepaticAdjustment: 'Severe hepatic impairment: 50 mg PO every 12 hours maximum',
+    contraindications: [
+      'فرط الحساسية للترامادول أو الأفيونات',
+      'الاستخدام المتزامن أو خلال 14 يوماً من مثبطات MAO',
+      'انسداد معوي حاد أو انسداد شللي',
+      'التسمم الحاد بالكحول أو المنومات أو الأفيونات أو الأدوية النفسية'
+    ],
+    blackBoxWarning: 'Risk of addiction, abuse, and misuse; respiratory depression; neonatal opioid withdrawal syndrome; risk of serotonin syndrome with serotonergic drugs; increased seizure risk',
+    blackBoxWarningAr: 'خطر الإدمان وسوء الاستخدام؛ تثبيط الجهاز التنفسي؛ متلازمة انسحاب الأفيون عند حديثي الولادة؛ خطر متلازمة السيروتونين مع الأدوية السيروتونينية؛ زيادة خطر التشنجات',
+    mechanismOfAction: 'Weak mu-opioid receptor agonist plus inhibits serotonin and norepinephrine reuptake (dual mechanism)',
+    mechanismOfActionAr: 'ناهض ضعيف لمستقبلات مو الأفيونية بالإضافة إلى تثبيط إعادة امتصاص السيروتونين والنورإبينفرين (آلية مزدوجة)',
+    halfLife: '6-7 hours (parent drug), 7-9 hours (active metabolite)',
+    monitoringParameters: [
+      'مستوى الألم والوظيفة',
+      'معدل التنفس ومستوى الوعي',
+      'علامات متلازمة السيروتونين',
+      'علامات التشنج في المرضى المعرضين للخطر',
+      'علامات الإدمان أو سوء الاستخدام'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'الكحول يزيد خطر التثبيط التنفسي والتخدير بشكل خطير - يُمنع الدمج'
+    ],
+    pearls: [
+      'ليس بديلاً "آمناً تماماً" عن الأفيونات التقليدية - له نفس مخاطر الإدمان والتثبيط التنفسي بدرجة أقل',
+      'يتفاعل بخطورة مع مضادات الاكتئاب السيروتونينية مسبباً متلازمة السيروتونين',
+      'ضعاف الأيض عبر CYP2D6 قد لا يستفيدون من التأثير المسكن الكامل'
+    ]
+  },
+  {
+    id: 'ondansetron',
+    genericName: 'Ondansetron',
+    genericNameAr: 'أوندانسيترون',
+    brandNames: ['Zofran', 'زوفران'],
+    drugClass: '5-HT3 Receptor Antagonist (Antiemetic)',
+    drugClassAr: 'مضاد مستقبلات 5-HT3 (مضاد للقيء)',
+    category: 'Rx',
+    route: ['PO', 'IV', 'ODT'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['oncology', 'pharmacy', 'icu_emergency', 'pediatrics'],
+    keyHighlights: [
+      'يطيل فترة QT بطريقة مرتبطة بالجرعة - يُراقب تخطيط القلب في المرضى عاليي الخطورة',
+      'الحد الأقصى للجرعة الوريدية الواحدة 16 مج بسبب خطورة إطالة QT',
+      'فعال جداً ضد غثيان العلاج الكيماوي والجراحة وليس ضد دوار الحركة'
+    ],
+    indications: [
+      {
+        indication: 'Chemotherapy/radiotherapy/postoperative-induced nausea and vomiting',
+        indicationAr: 'الغثيان والتقيؤ الناتج عن العلاج الكيماوي/الإشعاعي/ما بعد الجراحة',
+        adultDose: '8 mg PO twice daily or 4-8 mg IV, not to exceed 16 mg per single IV dose',
+        adultDoseAr: '8 مج فموياً مرتين يومياً أو 4-8 مج وريدياً، بحد أقصى 16 مج للجرعة الوريدية الواحدة',
+        pediatricDose: '0.15 mg/kg IV (max 16 mg) for chemotherapy-induced nausea',
+        pediatricDoseAr: '0.15 مج/كجم وريدياً (حد أقصى 16 مج) لغثيان العلاج الكيماوي',
+        maxDose: '16 mg per single IV dose',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Severe hepatic impairment (Child-Pugh C): maximum 8 mg/day',
+    contraindications: [
+      'فرط الحساسية للأوندانسيترون',
+      'الاستخدام المتزامن مع أبوموروفين (خطر انخفاض ضغط شديد وفقدان وعي)',
+      'متلازمة QT الطويل الخلقية'
+    ],
+    mechanismOfAction: 'Selectively blocks serotonin 5-HT3 receptors both peripherally (vagal afferents) and centrally (chemoreceptor trigger zone)',
+    mechanismOfActionAr: 'يحجب انتقائياً مستقبلات السيروتونين 5-HT3 محيطياً (الألياف المبهمية الواردة) ومركزياً (منطقة المستقبلات الكيميائية المحفزة)',
+    halfLife: '3-6 hours',
+    monitoringParameters: [
+      'تخطيط القلب في المرضى عاليي الخطورة لإطالة QT أو اضطراب الكهارل',
+      'البوتاسيوم والمغنيسيوم في الدم',
+      'شدة الغثيان والتقيؤ',
+      'وظائف الكبد قبل الجرعات العالية'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية معروفة'
+    ],
+    pearls: [
+      'الشكل القابل للذوبان الفموي (ODT) لا يحتاج ماء - مفيد جداً للمرضى الذين يعانون من القيء الشديد',
+      'يُصحح نقص البوتاسيوم والمغنيسيوم قبل الإعطاء الوريدي في المرضى عاليي الخطورة لتقليل خطر اضطراب النظم',
+      'أقل فعالية ضد دوار الحركة أو الغثيان الناتج عن أسباب دهليزية مقارنة بمضادات الهيستامين'
+    ]
+  },
+  {
+    id: 'fluconazole',
+    genericName: 'Fluconazole',
+    genericNameAr: 'فلوكونازول',
+    brandNames: ['Diflucan', 'ديفلوكان'],
+    drugClass: 'Triazole Antifungal',
+    drugClassAr: 'مضاد فطريات من فئة التريازول',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'مثبط قوي لإنزيم CYP2C9 و CYP3A4 - تفاعلات دوائية كثيرة ومهمة (الوارفارين، الفينيتوين، السلفونيل يوريا)',
+      'يفرز دون تغيير في البول بنسبة كبيرة - يحتاج تعديل جرعة كبير في القصور الكلوي',
+      'توافر حيوي فموي ممتاز (>90%) يجعل التحويل من الوريدي للفموي سهلاً بنفس الجرعة'
+    ],
+    indications: [
+      {
+        indication: 'Vaginal candidiasis / Oropharyngeal and esophageal candidiasis / Systemic candidiasis / Cryptococcal meningitis',
+        indicationAr: 'داء المبيضات المهبلي / داء المبيضات الفموي البلعومي والمريئي / داء المبيضات الجهازي / التهاب السحايا الكريبتوكوكي',
+        adultDose: 'Vaginal: 150 mg PO single dose; Esophageal candidiasis: 200-400 mg PO/IV on day 1 then 100-200 mg daily; Cryptococcal meningitis: 400 mg daily',
+        adultDoseAr: 'المهبلي: 150 مج فموياً جرعة واحدة؛ المريئي: 200-400 مج فموي/وريدي يوم 1 ثم 100-200 مج يومياً؛ التهاب السحايا الكريبتوكوكي: 400 مج يومياً',
+        pediatricDose: '3-12 mg/kg/day depending on indication severity',
+        pediatricDoseAr: '3-12 مج/كجم/يوم حسب شدة الحالة',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Give 50% of standard dose',
+      crclBelow10: 'Give 25% of standard dose (without regular dialysis)',
+      hemodialysis: 'Administer 100% of standard dose after each dialysis session'
+    },
+    hepaticAdjustment: 'Use with caution; monitor liver enzymes; discontinue if signs of progressive liver disease develop',
+    contraindications: [
+      'فرط الحساسية للتريازولات',
+      'الاستخدام المتزامن مع تيرفينادين أو سيزابرايد أو أدوية أخرى مطيلة لـ QT وتعتمد على CYP3A4 (خطر اضطراب النظم القاتل)'
+    ],
+    mechanismOfAction: 'Inhibits fungal cytochrome P450-dependent enzyme lanosterol 14-alpha-demethylase, blocking ergosterol synthesis and disrupting fungal cell membrane',
+    mechanismOfActionAr: 'يثبط إنزيم اللانوستيرول 14-ألفا-ديميثيليز المعتمد على السيتوكروم P450 الفطري، فيمنع تخليق الإرغوستيرول ويخرب غشاء الخلية الفطرية',
+    halfLife: '20-50 hours',
+    monitoringParameters: [
+      'وظائف الكبد (خط الأساس ودورياً)',
+      'تخطيط القلب في المرضى عاليي الخطورة لإطالة QT',
+      'وظائف الكلى لتعديل الجرعة',
+      'مستوى الوارفارين/INR عند الاستخدام المصاحب',
+      'الاستجابة السريرية لعدوى الفطريات'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُمتص جيداً بغض النظر عن الطعام',
+      'يزيد مستوى الكافيين في الدم عبر تثبيط استقلابه'
+    ],
+    pearls: [
+      'من أخطر التفاعلات الدوائية: يرفع مستوى الوارفارين بشكل كبير مسبباً خطر نزيف - يُراقب INR عن كثب',
+      'جرعة 150 مج فموية واحدة كافية لعلاج معظم حالات داء المبيضات المهبلي غير المعقد',
+      'التوافر الحيوي الفموي الممتاز (>90%) يعني أن الجرعة الفموية والوريدية متماثلة تقريباً'
+    ]
   }
 ];
 
