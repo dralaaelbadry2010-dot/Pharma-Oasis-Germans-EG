@@ -3120,6 +3120,748 @@ export const INITIAL_DRUGS: Drug[] = [
       'يجب تصحيح نقص حجم الدم بالسوائل قبل أو بالتوازي مع بدء الرافع الضغطي',
       'التسرب خارج الوعاء خطر جداً وقد يسبب نخراً جلدياً - الفينتولامين هو الترياق الموضعي'
     ]
+  },
+  {
+    id: 'midazolam',
+    genericName: 'Midazolam',
+    genericNameAr: 'ميدازولام',
+    brandNames: ['Versed', 'فيرسيد'],
+    drugClass: 'Benzodiazepine (Short-Acting)',
+    drugClassAr: 'بنزوديازيبين قصير المفعول',
+    category: 'Controlled',
+    route: ['IV', 'IM', 'Intranasal', 'PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'تحذير صندوق أسود لخطر التثبيط التنفسي القاتل، خاصة مع الأفيونات أو الحقن الوريدي السريع',
+      'أكثر البنزوديازيبينات استخداماً في التخدير الإجرائي والتسكين في العناية المركزة',
+      'نصف عمر قصير لكنه يتراكم عند التسريب المستمر المطول خاصة في السمنة والقصور الكلوي'
+    ],
+    indications: [
+      {
+        indication: 'Procedural sedation / ICU sedation / Status epilepticus (alternative) / Pre-anesthetic',
+        indicationAr: 'التخدير الإجرائي / التسكين في العناية المركزة / الحالة الصرعية (بديل) / ما قبل التخدير',
+        adultDose: 'Procedural sedation: 1-2.5 mg IV slowly, titrate; ICU infusion: 0.02-0.1 mg/kg/hour',
+        adultDoseAr: 'التخدير الإجرائي: 1-2.5 مج وريدياً ببطء، يُعدل تدريجياً؛ تسريب العناية المركزة: 0.02-0.1 مج/كجم/ساعة',
+        pediatricDose: '0.05-0.1 mg/kg IV for procedural sedation (max initial dose 2 mg)',
+        pediatricDoseAr: '0.05-0.1 مج/كجم وريدياً للتخدير الإجرائي (حد أقصى للجرعة الأولى 2 مج)',
+        route: 'IV/IM/Intranasal'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Reduce dose; active metabolite may accumulate',
+      crclBelow10: 'Reduce dose significantly; active metabolite accumulates markedly',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose by 50% in significant hepatic impairment due to prolonged half-life',
+    contraindications: [
+      'الزرق الحاد مغلق الزاوية',
+      'الصدمة الحادة أو الغيبوبة',
+      'فرط الحساسية للبنزوديازيبينات',
+      'عدم توفر معدات مراقبة التنفس والإنعاش'
+    ],
+    blackBoxWarning: 'Can cause respiratory depression and arrest, especially when used for sedation in noncritical care settings or combined with opioids; requires continuous monitoring of respiratory and cardiac function',
+    blackBoxWarningAr: 'قد يسبب تثبيطاً وتوقفاً تنفسياً، خاصة عند الاستخدام للتسكين خارج بيئة العناية الحرجة أو مع الأفيونات؛ يتطلب مراقبة مستمرة للوظيفة التنفسية والقلبية',
+    mechanismOfAction: 'Enhances GABA-A receptor-mediated chloride influx, producing sedation, anxiolysis, and anterograde amnesia',
+    mechanismOfActionAr: 'يعزز دخول الكلوريد عبر مستقبل GABA-A فيُحدث تسكيناً وتخفيف قلق وفقدان ذاكرة تقدمي',
+    halfLife: '1.8-6.4 hours (prolonged with continuous infusion or hepatic/renal impairment)',
+    monitoringParameters: [
+      'معدل التنفس وتشبع الأكسجين المستمر',
+      'ضغط الدم ومعدل ضربات القلب',
+      'مستوى التسكين (مقياس RASS في العناية المركزة)',
+      'علامات التراكم عند التسريب المطول'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'عصير الجريب فروت يرفع مستواه الدموي عبر تثبيط CYP3A4 - يُتجنب',
+      'يُمنع الكحول لخطر التثبيط التنفسي المضاعف'
+    ],
+    pearls: [
+      'الفلومازينيل هو الترياق النوعي لعكس تأثير البنزوديازيبينات الحاد عند الجرعة الزائدة',
+      'يسبب فقدان ذاكرة تقدمي مفيد في الإجراءات لكنه قد يُقلق المريض إذا لم يُشرح مسبقاً',
+      'التسريب المطول في العناية المركزة يرتبط بإطالة مدة التهوية الميكانيكية - تُفضل البروبوفول أو الديكسميديتوميدين في كثير من البروتوكولات الحديثة'
+    ]
+  },
+  {
+    id: 'propofol',
+    genericName: 'Propofol',
+    genericNameAr: 'بروبوفول',
+    brandNames: ['Diprivan', 'ديبريفان'],
+    drugClass: 'General Anesthetic/Sedative-Hypnotic',
+    drugClassAr: 'مخدر عام ومهدئ منوم',
+    category: 'Rx',
+    route: ['IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'مستحلب دهني - خطر عدوى بكتيرية إذا لم يُستخدم بتقنية معقمة صارمة؛ يُستبدل كل 12 ساعة',
+      'متلازمة التسريب بالبروبوفول (PRIS) خطر قاتل نادر مع الجرعات العالية أو المطولة',
+      'لا يملك تأثيراً مسكناً - يحتاج دمج مع مسكن أفيوني في الإجراءات المؤلمة'
+    ],
+    indications: [
+      {
+        indication: 'Induction and maintenance of general anesthesia / ICU sedation / Procedural sedation',
+        indicationAr: 'بدء واستمرار التخدير العام / التسكين في العناية المركزة / التخدير الإجرائي',
+        adultDose: 'Induction: 1.5-2.5 mg/kg IV; ICU sedation infusion: 5-50 mcg/kg/min, titrate to effect',
+        adultDoseAr: 'البدء: 1.5-2.5 مج/كجم وريدياً؛ تسريب تسكين العناية المركزة: 5-50 ميكروجرام/كجم/دقيقة، يُعدل حسب الاستجابة',
+        route: 'IV continuous infusion or bolus'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; titrate to effect',
+      hemodialysis: 'Not dialyzed (highly lipophilic); no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment needed; titrate to clinical effect',
+    contraindications: [
+      'فرط الحساسية للبروبوفول أو مكونات المستحلب (فول الصويا، البيض)',
+      'عدم توفر معدات دعم التنفس والدورة الدموية',
+      'حذر في عدم استقرار الدورة الدموية الشديد'
+    ],
+    blackBoxWarning: 'Not indicated for ICU sedation in pediatric patients due to increased mortality risk observed in trials',
+    blackBoxWarningAr: 'غير معتمد للتسكين في العناية المركزة للأطفال بسبب زيادة خطر الوفيات الملاحظة في الدراسات',
+    mechanismOfAction: 'Potentiates GABA-A receptor activity, producing rapid onset sedation and hypnosis with minimal analgesic effect',
+    mechanismOfActionAr: 'يعزز نشاط مستقبل GABA-A فيُحدث تسكيناً وتنويماً سريع البداية مع تأثير مسكن ضئيل',
+    halfLife: '2-24 hours (context-sensitive, rapid redistribution)',
+    monitoringParameters: [
+      'ضغط الدم المستمر (خطر انخفاض ضغط كبير عند البدء)',
+      'معدل التنفس وتشبع الأكسجين',
+      'الدهون الثلاثية عند التسريب المطول (أكثر من 48 ساعة)',
+      'علامات متلازمة تسريب البروبوفول (حماض استقلابي، اضطراب نظم، فشل كلوي)',
+      'الكرياتين كيناز عند الاشتباه بـ PRIS'
+    ],
+    pregnancyCategory: 'B',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'المستحلب يحتوي سعرات دهنية (1.1 kcal/mL) يجب احتسابها في التغذية الكلية عند التسريب المطول'
+    ],
+    pearls: [
+      'يُستبدل خط التسريب والمحلول كل 12 ساعة بسبب قابلية المستحلب الدهني لدعم نمو البكتيريا',
+      'بداية ونهاية تأثير سريعة جداً تجعله مثالياً للإجراءات القصيرة والتخدير الذي يحتاج استيقاظاً سريعاً',
+      'متلازمة تسريب البروبوفول نادرة لكنها قاتلة - تُشتبه بها عند حماض استقلابي غير مفسر مع اضطراب نظم قلبي في مريض على تسريب مطول بجرعة عالية'
+    ]
+  },
+  {
+    id: 'fentanyl',
+    genericName: 'Fentanyl',
+    genericNameAr: 'فنتانيل',
+    brandNames: ['Sublimaze', 'Duragesic', 'فنتانيل'],
+    drugClass: 'Synthetic Opioid Analgesic',
+    drugClassAr: 'مسكن أفيوني اصطناعي',
+    category: 'Controlled',
+    route: ['IV', 'Transdermal', 'Transmucosal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'oncology', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'أقوى 50-100 ضعف من المورفين - الجرعات تُقاس بالميكروجرام وليس الملليجرام',
+      'اللصقة الجلدية غير مناسبة للألم الحاد بسبب بطء بداية التأثير (12-24 ساعة) - للألم المزمن المستقر فقط',
+      'الحرارة المرتفعة (حمى، ساونا، وسادة تدفئة) تزيد امتصاص اللصقة بشكل خطير'
+    ],
+    indications: [
+      {
+        indication: 'Severe acute pain / Procedural analgesia / Chronic cancer pain (transdermal) / Anesthesia adjunct',
+        indicationAr: 'الألم الحاد الشديد / التسكين الإجرائي / ألم السرطان المزمن (اللصقة) / مساعد في التخدير',
+        adultDose: 'IV: 25-100 mcg every 1-2 hours PRN or 25-200 mcg/hour infusion; Transdermal: 12-100 mcg/hour patch every 72 hours (opioid-tolerant patients only)',
+        adultDoseAr: 'وريدي: 25-100 ميكروجرام كل 1-2 ساعة عند الحاجة أو تسريب 25-200 ميكروجرام/ساعة؛ لصقة جلدية: 12-100 ميكروجرام/ساعة كل 72 ساعة (للمرضى المتحملين للأفيونات فقط)',
+        route: 'IV/Transdermal/Transmucosal'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Use with caution; reduce dose by 25%',
+      crclBelow10: 'Use with caution; reduce dose by 50%; preferred opioid in renal failure due to inactive metabolites',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose and extend interval in hepatic impairment; monitor closely for prolonged effect',
+    contraindications: [
+      'القصور التنفسي الشديد غير المدعوم',
+      'انسداد معوي شللي',
+      'الاستخدام المتزامن مع مثبطات MAO خلال 14 يوماً',
+      'اللصقة الجلدية في المرضى غير المتحملين للأفيونات (opioid-naive)'
+    ],
+    blackBoxWarning: 'Addiction, abuse, and misuse risk; life-threatening respiratory depression; accidental exposure risk especially in children with transdermal patches; neonatal opioid withdrawal syndrome; CYP3A4 drug interaction risk',
+    blackBoxWarningAr: 'خطر الإدمان وسوء الاستخدام؛ تثبيط تنفسي مهدد للحياة؛ خطر التعرض العرضي خاصة للأطفال مع اللصقات الجلدية؛ متلازمة انسحاب الأفيون عند حديثي الولادة؛ خطر التفاعل الدوائي عبر CYP3A4',
+    mechanismOfAction: 'Potent mu-opioid receptor agonist in the central nervous system, producing analgesia and sedation',
+    mechanismOfActionAr: 'ناهض قوي لمستقبلات مو الأفيونية في الجهاز العصبي المركزي، يُحدث تسكيناً وتخديراً',
+    halfLife: '2-4 hours (IV); 17 hours (transdermal, due to skin depot)',
+    monitoringParameters: [
+      'معدل التنفس ومستوى الوعي',
+      'ضغط الدم',
+      'مستوى الألم',
+      'علامات الإدمان أو سوء الاستخدام',
+      'موقع اللصقة وعلامات الحرارة الموضعية'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُمنع الكحول تماماً لخطر التثبيط التنفسي الشديد',
+      'عصير الجريب فروت يرفع مستواه عبر تثبيط CYP3A4 المعوي'
+    ],
+    pearls: [
+      'اللصقات الجلدية المستعملة تحتوي كمية متبقية كافية لقتل طفل عند الملامسة - يجب التخلص منها بطيها على نفسها',
+      'النالوكسون هو الترياق النوعي، وقد يحتاج جرعات متكررة بسبب قصر نصف عمره مقارنة بالفنتانيل طويل التأثير',
+      'يُفضل في القصور الكلوي لأن مستقلباته غير نشطة خلافاً للمورفين'
+    ]
+  },
+  {
+    id: 'morphine',
+    genericName: 'Morphine',
+    genericNameAr: 'مورفين',
+    brandNames: ['MS Contin', 'Roxanol', 'مورفين سلفات'],
+    drugClass: 'Opioid Analgesic (Full Agonist)',
+    drugClassAr: 'مسكن أفيوني (ناهض كامل)',
+    category: 'Controlled',
+    route: ['PO', 'IV', 'IM', 'SC'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'oncology', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'المستقلب النشط (M6G) يتراكم في القصور الكلوي مسبباً تثبيطاً تنفسياً مطولاً وغير متوقع',
+      'معيار المقارنة (gold standard) لجميع المسكنات الأفيونية الأخرى في حساب الجرعات المكافئة',
+      'يُستخدم على نطاق واسع في رعاية نهاية الحياة والرعاية التلطيفية'
+    ],
+    indications: [
+      {
+        indication: 'Moderate to severe acute and chronic pain / Dyspnea in palliative care',
+        indicationAr: 'الألم الحاد والمزمن المتوسط إلى الشديد / ضيق التنفس في الرعاية التلطيفية',
+        adultDose: 'IV: 2-4 mg every 2-4 hours PRN; Oral immediate-release: 15-30 mg every 4 hours PRN',
+        adultDoseAr: 'وريدي: 2-4 مج كل 2-4 ساعات عند الحاجة؛ فموي سريع المفعول: 15-30 مج كل 4 ساعات عند الحاجة',
+        pediatricDose: '0.1-0.2 mg/kg IV every 2-4 hours PRN',
+        pediatricDoseAr: '0.1-0.2 مج/كجم وريدياً كل 2-4 ساعات عند الحاجة',
+        route: 'PO/IV/IM/SC'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed; monitor for accumulation',
+      crcl10to50: 'Reduce dose by 25%; extend interval; monitor closely for sedation',
+      crclBelow10: 'Avoid use if possible; active metabolites accumulate significantly; consider fentanyl instead',
+      hemodialysis: 'Partially dialyzed; dose per clinical response, monitor closely'
+    },
+    hepaticAdjustment: 'Reduce dose and extend interval in significant hepatic impairment',
+    contraindications: [
+      'القصور التنفسي الشديد غير المدعوم',
+      'الربو الحاد الشديد',
+      'انسداد معوي شللي أو انسداد معوي معروف أو مشتبه به',
+      'الاستخدام المتزامن مع مثبطات MAO خلال 14 يوماً'
+    ],
+    blackBoxWarning: 'Addiction, abuse, and misuse risk; life-threatening respiratory depression; accidental ingestion risk especially in children; neonatal opioid withdrawal syndrome; CYP interaction risks',
+    blackBoxWarningAr: 'خطر الإدمان وسوء الاستخدام؛ تثبيط تنفسي مهدد للحياة؛ خطر الابتلاع العرضي خاصة للأطفال؛ متلازمة انسحاب الأفيون عند حديثي الولادة؛ مخاطر التفاعل عبر إنزيمات السيتوكروم',
+    mechanismOfAction: 'Binds mu-opioid receptors in the central nervous system, inhibiting ascending pain pathways and altering pain perception',
+    mechanismOfActionAr: 'يرتبط بمستقبلات مو الأفيونية في الجهاز العصبي المركزي فيثبط مسارات الألم الصاعدة ويغير إدراك الألم',
+    halfLife: '2-4 hours (parent); active metabolite morphine-6-glucuronide accumulates in renal impairment',
+    monitoringParameters: [
+      'معدل التنفس ومستوى الوعي',
+      'مستوى الألم باستخدام مقياس موثق',
+      'وظائف الكلى (لخطر تراكم المستقلبات)',
+      'حركة الأمعاء (الإمساك شائع جداً)',
+      'علامات الإدمان أو سوء الاستخدام'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُمنع الكحول تماماً لخطر التثبيط التنفسي الشديد',
+      'الأقراص المعدلة الإطلاق لا تُكسر أو تُمضغ - خطر إطلاق الجرعة الكاملة دفعة واحدة'
+    ],
+    pearls: [
+      'الإمساك الناتج عن الأفيونات لا يتطور له تحمل - يحتاج ملين وقائي روتيني طوال مدة العلاج',
+      'يُستخدم بجرعات منخفضة ومتكررة في علاج ضيق التنفس في الرعاية التلطيفية دون الحاجة لتسكين كامل للألم',
+      'النالوكسون ترياق نوعي فعال، لكن مدة تأثيره أقصر من المورفين فقد يحتاج جرعات متكررة'
+    ]
+  },
+  {
+    id: 'acetaminophen',
+    genericName: 'Acetaminophen (Paracetamol)',
+    genericNameAr: 'أسيتامينوفين (باراسيتامول)',
+    brandNames: ['Tylenol', 'Panadol', 'بانادول'],
+    drugClass: 'Non-Opioid Analgesic/Antipyretic',
+    drugClassAr: 'مسكن وخافض حرارة غير أفيوني',
+    category: 'OTC',
+    route: ['PO', 'IV', 'PR'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'pediatrics', 'internal_medicine'],
+    keyHighlights: [
+      'السبب الأول للفشل الكبدي الحاد الناتج عن الأدوية - الجرعة القصوى الصارمة 4 جم/يوم (أقل في مدمني الكحول)',
+      'الترياق النوعي N-أسيتيل سيستئين فعال جداً إذا أُعطي خلال 8-10 ساعات من التسمم',
+      'آمن نسبياً في القصور الكلوي والكبدي الخفيف بالجرعات المعتادة خلافاً لـ NSAIDs'
+    ],
+    indications: [
+      {
+        indication: 'Mild to moderate pain / Fever',
+        indicationAr: 'الألم الخفيف إلى المتوسط / الحمى',
+        adultDose: '500-1000 mg PO every 4-6 hours PRN',
+        adultDoseAr: '500-1000 مج فموياً كل 4-6 ساعات عند الحاجة',
+        pediatricDose: '10-15 mg/kg PO every 4-6 hours PRN',
+        pediatricDoseAr: '10-15 مج/كجم فموياً كل 4-6 ساعات عند الحاجة',
+        maxDose: '4000 mg/day (3000 mg/day or less in chronic alcohol use or hepatic disease)',
+        route: 'PO/IV/PR'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Extend dosing interval to every 6 hours',
+      crclBelow10: 'Extend dosing interval to every 8 hours',
+      hemodialysis: 'Dialyzable; administer supplemental dose after dialysis session'
+    },
+    hepaticAdjustment: 'Avoid in severe hepatic impairment or active liver disease; reduce max daily dose to 2-3 g in chronic liver disease',
+    contraindications: [
+      'فرط الحساسية للأسيتامينوفين',
+      'مرض الكبد الحاد الشديد',
+      'حذر شديد مع تعاطي الكحول المزمن'
+    ],
+    mechanismOfAction: 'Inhibits central prostaglandin synthesis (COX inhibition primarily in CNS); exact mechanism not fully elucidated; minimal peripheral anti-inflammatory effect',
+    mechanismOfActionAr: 'يثبط تخليق البروستاجلاندين مركزياً (تثبيط COX بشكل أساسي في الجهاز العصبي المركزي)؛ الآلية الدقيقة غير مكتملة الفهم؛ تأثير مضاد التهاب محيطي ضئيل',
+    halfLife: '2-3 hours',
+    monitoringParameters: [
+      'وظائف الكبد عند الاستخدام المزمن أو الجرعات العالية',
+      'الجرعة اليومية التراكمية من جميع المصادر (شامل تركيبات البرد المركبة)',
+      'الاستجابة للألم والحرارة'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'الاستهلاك المزمن للكحول يزيد خطر السمية الكبدية بشكل كبير حتى بالجرعات العلاجية'
+    ],
+    pearls: [
+      'أكثر سبب شائع للتسمم الدوائي المقصود وغير المقصود المؤدي للفشل الكبدي الحاد في العالم',
+      'يجب تنبيه المرضى لفحص المكونات في أدوية البرد والإنفلونزا المركبة لتجنب تجاوز الجرعة القصوى اليومية عن غير قصد',
+      'الأسلوب الأفضل لعلاج الجرعة الزائدة: مخطط Rumack-Matthew لتحديد الحاجة لـ N-أسيتيل سيستئين حسب مستوى الدواء الدموي والوقت منذ التناول'
+    ]
+  },
+  {
+    id: 'aspirin',
+    genericName: 'Aspirin (Acetylsalicylic Acid)',
+    genericNameAr: 'أسبرين (حمض أسيتيل الساليسيليك)',
+    brandNames: ['Bayer Aspirin', 'Ecotrin', 'أسبوكيد'],
+    drugClass: 'Salicylate / Antiplatelet (low-dose) / NSAID (high-dose)',
+    drugClassAr: 'ساليسيلات / مضاد صفائح (بجرعة منخفضة) / مضاد التهاب غير ستيرويدي (بجرعة عالية)',
+    category: 'OTC',
+    route: ['PO', 'PR'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'تثبيط لا رجعي لـ COX-1 في الصفائح - التأثير المضاد للتجلط يستمر طوال عمر الصفيحة (7-10 أيام)',
+      'يُمنع في الأطفال والمراهقين المصابين بعدوى فيروسية لخطر متلازمة راي القاتلة',
+      'جرعة التحميل 162-325 مج تُمضغ فوراً عند الاشتباه باحتشاء عضلة القلب الحاد'
+    ],
+    indications: [
+      {
+        indication: 'Acute coronary syndrome (loading dose) / Secondary prevention of MI and stroke / Pain and fever (high dose, less common now)',
+        indicationAr: 'المتلازمة التاجية الحادة (جرعة تحميل) / الوقاية الثانوية من احتشاء عضلة القلب والسكتة / الألم والحمى (جرعة عالية، أقل شيوعاً حالياً)',
+        adultDose: 'ACS loading: 162-325 mg PO chewed once; Secondary prevention: 75-100 mg PO once daily',
+        adultDoseAr: 'جرعة تحميل للمتلازمة التاجية: 162-325 مج فموياً تُمضغ مرة واحدة؛ الوقاية الثانوية: 75-100 مج فموياً مرة يومياً',
+        maxDose: '4000 mg/day (analgesic/antipyretic use, rarely used at this dose now)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed at antiplatelet doses',
+      crcl10to50: 'Use with caution; avoid high anti-inflammatory doses',
+      crclBelow10: 'Avoid high doses; low-dose antiplatelet use with caution',
+      hemodialysis: 'Dialyzable; monitor levels with high-dose use'
+    },
+    hepaticAdjustment: 'Avoid in severe hepatic impairment, particularly at anti-inflammatory doses',
+    contraindications: [
+      'الأطفال والمراهقون مع عدوى فيروسية نشطة (خطر متلازمة راي)',
+      'فرط الحساسية للساليسيلات أو الربو المحرض بالـ NSAIDs',
+      'نزيف نشط أو اضطراب نزفي شديد',
+      'القرحة الهضمية النشطة'
+    ],
+    mechanismOfAction: 'Irreversibly inhibits cyclooxygenase (COX-1 and COX-2), blocking thromboxane A2 synthesis in platelets (antiplatelet) and prostaglandin synthesis (analgesic/anti-inflammatory at higher doses)',
+    mechanismOfActionAr: 'يثبط بشكل لا رجعي إنزيم الأكسدة الحلقية (COX-1 وCOX-2)، فيمنع تخليق الثرومبوكسان A2 في الصفائح (مضاد للصفائح) وتخليق البروستاجلاندين (مسكن ومضاد التهاب بجرعات أعلى)',
+    halfLife: '15-20 minutes (parent); salicylate effect lasts life of platelet (7-10 days) at low doses',
+    monitoringParameters: [
+      'علامات النزيف الهضمي',
+      'وظائف الكلى عند الاستخدام المزمن بجرعات عالية',
+      'طنين الأذن (علامة مبكرة للتسمم بالساليسيلات)',
+      'الالتزام بجرعة الوقاية الثانوية المنخفضة'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُفضل تناوله مع الطعام لتقليل تهيج المعدة',
+      'الكحول يزيد خطر النزيف الهضمي'
+    ],
+    pearls: [
+      'يُمضغ (لا يُبلع كاملاً) عند الاشتباه باحتشاء عضلة القلب الحاد لتسريع الامتصاص عبر الغشاء المخاطي الفموي',
+      'يُوقف عادة 7 أيام قبل الجراحات الكبرى بسبب التأثير اللارجعي على الصفائح',
+      'التسمم بالساليسيلات يسبب حماضاً استقلابياً مع قلاءً تنفسياً مركباً - نمط تشخيصي مميز في غازات الدم'
+    ]
+  },
+  {
+    id: 'methylprednisolone',
+    genericName: 'Methylprednisolone',
+    genericNameAr: 'ميثيل بريدنيزولون',
+    brandNames: ['Solu-Medrol', 'Medrol', 'سولو ميدرول'],
+    drugClass: 'Systemic Corticosteroid',
+    drugClassAr: 'كورتيكوستيرويد جهازي',
+    category: 'Rx',
+    route: ['PO', 'IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'لا يحتاج تحويلاً كبدياً مثل البريدنيزون - الخيار المفضل في القصور الكبدي الشديد',
+      'الشكل الوريدي (Solu-Medrol) أساسي في علاج نوبات الربو والـ COPD الحادة ورفض الطعم',
+      'نسبة فعالية مضادة للالتهاب أعلى من البريدنيزون بحوالي 25%'
+    ],
+    indications: [
+      {
+        indication: 'Acute asthma/COPD exacerbation / Severe allergic reactions / Autoimmune flares / Spinal cord injury (historically, now controversial)',
+        indicationAr: 'تفاقم الربو/الانسداد الرئوي الحاد / التفاعلات التحسسية الشديدة / نوبات أمراض المناعة الذاتية / إصابة الحبل الشوكي (تاريخياً، مثير للجدل حالياً)',
+        adultDose: 'Acute exacerbation: 40-125 mg IV every 6-12 hours; Oral taper: 4-48 mg/day divided',
+        adultDoseAr: 'التفاقم الحاد: 40-125 مج وريدياً كل 6-12 ساعة؛ التدريج الفموي: 4-48 مج/يوم مقسمة',
+        pediatricDose: '0.5-1.7 mg/kg/day IV/PO divided every 6-12 hours',
+        pediatricDoseAr: '0.5-1.7 مج/كجم/يوم وريدي/فموي مقسمة كل 6-12 ساعة',
+        route: 'PO/IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No conversion required (active form); use with caution in severe hepatic impairment',
+    contraindications: [
+      'العدوى الفطرية الجهازية النشطة',
+      'فرط الحساسية للميثيل بريدنيزولون',
+      'استخدام اللقاحات الحية في جرعات مثبطة للمناعة'
+    ],
+    mechanismOfAction: 'Binds glucocorticoid receptors, suppressing inflammatory cytokine production and immune cell migration',
+    mechanismOfActionAr: 'يرتبط بمستقبلات الجلوكوكورتيكويد فيثبط إنتاج السيتوكينات الالتهابية وهجرة الخلايا المناعية',
+    halfLife: '18-36 hours (biological)',
+    monitoringParameters: [
+      'سكر الدم',
+      'ضغط الدم',
+      'علامات العدوى المقنعة',
+      'وظائف الكظر عند الاستخدام المطول',
+      'كثافة العظام في العلاج المزمن'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يُفضل تناول الشكل الفموي مع الطعام لتقليل تهيج المعدة'
+    ],
+    pearls: [
+      'لا يحتاج تفعيلاً كبدياً خلافاً للبريدنيزون مما يجعله مفضلاً في فشل الكبد الحاد',
+      'جرعات النبض العالية (pulse dose) تُستخدم في حالات المناعة الذاتية الشديدة تحت إشراف متخصص',
+      'الإيقاف المفاجئ بعد استخدام مطول يسبب قصور كظر حاد - يجب التدريج دائماً'
+    ]
+  },
+  {
+    id: 'hydrochlorothiazide',
+    genericName: 'Hydrochlorothiazide',
+    genericNameAr: 'هيدروكلوروثيازيد',
+    brandNames: ['Microzide', 'HCTZ', 'هيدروكلوروثيازيد'],
+    drugClass: 'Thiazide Diuretic',
+    drugClassAr: 'مدر بول من فئة الثيازيد',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'يفقد فعاليته عند CrCl أقل من 30 مل/دقيقة تقريباً - يُفضل مدر عروي (لوب) في القصور الكلوي المتقدم',
+      'يسبب نقص بوتاسيوم وصوديوم الدم، وقد يرفع الكالسيوم (خلافاً للمدرات العروية)',
+      'خط أول شائع لارتفاع ضغط الدم الأساسي بجرعات منخفضة'
+    ],
+    indications: [
+      {
+        indication: 'Hypertension / Edema (mild to moderate)',
+        indicationAr: 'ارتفاع ضغط الدم / الوذمة (خفيفة إلى متوسطة)',
+        adultDose: '12.5-25 mg PO once daily, may increase to 50 mg once daily',
+        adultDoseAr: '12.5-25 مج فموياً مرة يومياً، يمكن زيادتها إلى 50 مج مرة يومياً',
+        maxDose: '50 mg/day for hypertension',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'May have reduced efficacy; monitor response',
+      crclBelow10: 'Generally ineffective; avoid use, consider loop diuretic instead',
+      hemodialysis: 'Not effective; avoid use'
+    },
+    hepaticAdjustment: 'Use with caution in hepatic impairment; monitor electrolytes closely (risk of hepatic encephalopathy with electrolyte imbalance)',
+    contraindications: [
+      'انقطاع البول',
+      'فرط الحساسية للسلفوناميدات أو الثيازيدات',
+      'نقص صوديوم أو بوتاسيوم الدم الشديد غير المصحح'
+    ],
+    mechanismOfAction: 'Inhibits sodium-chloride reabsorption in the distal convoluted tubule, increasing sodium, chloride, and water excretion',
+    mechanismOfActionAr: 'يثبط إعادة امتصاص الصوديوم والكلوريد في الأنبوب الملتوي البعيد فيزيد إخراج الصوديوم والكلوريد والماء',
+    halfLife: '6-15 hours',
+    monitoringParameters: [
+      'البوتاسيوم والصوديوم والمغنيسيوم في الدم',
+      'وظائف الكلى',
+      'سكر الدم وحمض اليوريك (قد يرتفعان)',
+      'الكالسيوم في الدم',
+      'ضغط الدم'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُفضل تناوله صباحاً لتجنب التبول الليلي المتكرر',
+      'بدائل الملح الغنية بالبوتاسيوم قد تتفاعل عند الدمج مع أدوية أخرى حافظة للبوتاسيوم'
+    ],
+    pearls: [
+      'يرفع الكالسيوم في الدم خلافاً للمدرات العروية التي تخفضه - ميزة مفيدة في هشاشة العظام',
+      'غالباً يُستخدم بالاشتراك مع حاصرات الإيس أو ARBs لتعزيز خفض الضغط وموازنة تأثيرات البوتاسيوم',
+      'يفقد فعاليته الإدرارية الكبيرة عند القصور الكلوي المتقدم (CrCl < 30) على عكس المدرات العروية'
+    ]
+  },
+  {
+    id: 'spironolactone',
+    genericName: 'Spironolactone',
+    genericNameAr: 'سبيرونولاكتون',
+    brandNames: ['Aldactone', 'ألداكتون'],
+    drugClass: 'Potassium-Sparing Diuretic (Aldosterone Antagonist)',
+    drugClassAr: 'مدر بول حافظ للبوتاسيوم (مضاد الألدوستيرون)',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'يحسن البقيا في فشل القلب مع انخفاض الكسر القذفي (علاج موجه لا مجرد مدر بول)',
+      'خطر فرط بوتاسيوم الدم كبير خاصة مع مثبطات الإيس أو ARBs أو القصور الكلوي',
+      'له تأثيرات هرمونية مضادة للأندروجين (تثدي الرجال، اضطراب الدورة الشهرية)'
+    ],
+    indications: [
+      {
+        indication: 'Heart failure with reduced ejection fraction / Resistant hypertension / Primary hyperaldosteronism / Ascites (cirrhosis)',
+        indicationAr: 'فشل القلب مع انخفاض الكسر القذفي / ارتفاع الضغط المقاوم / فرط الألدوستيرونية الأولي / الاستسقاء (تشمع الكبد)',
+        adultDose: 'Heart failure: 12.5-25 mg PO once daily; Ascites: 100-200 mg PO once daily, often combined with furosemide',
+        adultDoseAr: 'فشل القلب: 12.5-25 مج فموياً مرة يومياً؛ الاستسقاء: 100-200 مج فموياً مرة يومياً، غالباً مع فوروسيميد',
+        maxDose: '400 mg/day (higher doses for ascites/hyperaldosteronism)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed; monitor potassium',
+      crcl10to50: 'Use with caution; reduce dose; monitor potassium closely',
+      crclBelow10: 'Avoid use; high risk of life-threatening hyperkalemia',
+      hemodialysis: 'Avoid use; not recommended in dialysis-dependent patients'
+    },
+    hepaticAdjustment: 'No specific dose adjustment, but used therapeutically at higher doses in cirrhotic ascites',
+    contraindications: [
+      'فرط بوتاسيوم الدم',
+      'مرض أديسون (قصور الكظر)',
+      'القصور الكلوي الحاد أو الشديد',
+      'الاستخدام المتزامن مع إبليرينون'
+    ],
+    mechanismOfAction: 'Competitively antagonizes aldosterone receptors in the distal nephron, increasing sodium and water excretion while retaining potassium',
+    mechanismOfActionAr: 'يضاد تنافسياً مستقبلات الألدوستيرون في النيفرون البعيد فيزيد إخراج الصوديوم والماء مع الاحتفاظ بالبوتاسيوم',
+    halfLife: '1.4 hours (parent); active metabolites up to 20 hours',
+    monitoringParameters: [
+      'البوتاسيوم في الدم (خط الأساس وبعد أسبوع من البدء ودورياً)',
+      'وظائف الكلى',
+      'ضغط الدم',
+      'علامات تثدي الرجال أو اضطراب الدورة الشهرية'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'بدائل الملح الغنية بالبوتاسيوم تزيد خطر فرط بوتاسيوم الدم بشدة - يجب تجنبها'
+    ],
+    pearls: [
+      'جزء أساسي من "العلاج الرباعي" الموجه لفشل القلب مع انخفاض الكسر القذفي إلى جانب حاصرات بيتا وARNI/ACE-I ومثبطات SGLT2',
+      'التأثيرات الهرمونية الجانبية (تثدي الرجال) أقل بكثير مع الإبليرينون الأكثر انتقائية',
+      'يُراقب البوتاسيوم بصرامة خاصة عند الجمع مع مثبطات الإيس أو ARBs لخطر فرط بوتاسيوم قاتل'
+    ]
+  },
+  {
+    id: 'doxycycline',
+    genericName: 'Doxycycline',
+    genericNameAr: 'دوكسيسيكلين',
+    brandNames: ['Vibramycin', 'فيبراميسين'],
+    drugClass: 'Tetracycline Antibiotic',
+    drugClassAr: 'مضاد حيوي من فئة التتراسيكلين',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'يُمنع في الحمل والأطفال دون 8 سنوات - يسبب تلوناً دائماً للأسنان وتثبيط نمو العظام',
+      'يُفصل بساعتين عن منتجات الألبان ومضادات الحموضة والمكملات المعدنية لتجنب الخلب وفقدان الامتصاص',
+      'خط أول للريكتسيا وداء لايم والملاريا الوقائي والعديد من عدوى الجهاز التنفسي'
+    ],
+    indications: [
+      {
+        indication: 'Community-acquired pneumonia / Lyme disease / Rickettsial infections / Chlamydia / Acne',
+        indicationAr: 'التهاب رئوي مكتسب من المجتمع / داء لايم / عدوى الريكتسيا / الكلاميديا / حب الشباب',
+        adultDose: '100 mg PO/IV every 12 hours (may load with 200 mg on day 1 for severe infections)',
+        adultDoseAr: '100 مج فموياً/وريدياً كل 12 ساعة (يمكن جرعة تحميل 200 مج يوم 1 للعدوى الشديدة)',
+        pediatricDose: '2.2 mg/kg PO/IV every 12 hours (ages 8+; max 200 mg/day)',
+        pediatricDoseAr: '2.2 مج/كجم فموياً/وريدياً كل 12 ساعة (من عمر 8 سنوات؛ حد أقصى 200 مج/يوم)',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed (unlike other tetracyclines, safe in renal impairment)',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution in hepatic impairment; avoid high doses due to hepatotoxicity risk',
+    contraindications: [
+      'الحمل',
+      'الأطفال دون 8 سنوات (ما عدا دواعي استعمال محددة مثل الجمرة الخبيثة)',
+      'فرط الحساسية للتتراسيكلينات'
+    ],
+    blackBoxWarning: 'Use during tooth development (pregnancy, infancy, childhood through age 8) causes permanent tooth discoloration and may affect bone growth',
+    blackBoxWarningAr: 'الاستخدام أثناء تكوّن الأسنان (الحمل، الرضاعة، الطفولة حتى عمر 8 سنوات) يسبب تلوناً دائماً للأسنان وقد يؤثر على نمو العظام',
+    mechanismOfAction: 'Binds to the 30S ribosomal subunit, inhibiting bacterial protein synthesis (bacteriostatic)',
+    mechanismOfActionAr: 'يرتبط بالوحدة الريبوسومية 30S فيثبط تخليق البروتين البكتيري (مثبط للنمو)',
+    halfLife: '12-25 hours',
+    monitoringParameters: [
+      'علامات الحساسية للضوء (photosensitivity)',
+      'وظائف الكبد عند الجرعات العالية أو الاستخدام المطول',
+      'الاستجابة السريرية للعدوى'
+    ],
+    pregnancyCategory: 'D',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'منتجات الألبان ومضادات الحموضة والحديد تقلل الامتصاص بشكل كبير - يفصل بساعتين',
+      'يزيد الحساسية للشمس - يُنصح باستخدام واقي شمسي'
+    ],
+    pearls: [
+      'الاستثناء بين التتراسيكلينات في عدم حاجته لتعديل جرعة في القصور الكلوي',
+      'دواء الاختيار الأول للوقاية والعلاج من الملاريا في بعض المناطق، وللريكتسيا (حمى الجبال الصخرية)',
+      'يمكن تناوله مع الطعام (غير الألبان) لتقليل تهيج المريء، لكن يُنصح بالجلوس منتصباً بعده لتجنب تقرح المريء'
+    ]
+  },
+  {
+    id: 'cefepime',
+    genericName: 'Cefepime',
+    genericNameAr: 'سيفيبيم',
+    brandNames: ['Maxipime', 'ماكسيبيم'],
+    drugClass: 'Fourth-Generation Cephalosporin',
+    drugClassAr: 'سيفالوسبورين من الجيل الرابع',
+    category: 'Rx',
+    route: ['IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['icu_emergency', 'infectious_diseases', 'oncology', 'pharmacy'],
+    keyHighlights: [
+      'تغطية ممتازة ضد الزائفة الزنجارية مع ثبات أعلى ضد البيتالاكتاماز من الجيل الثالث',
+      'خطر سمية عصبية (تخليط، نوبات، اعتلال دماغي) عند تراكمه في القصور الكلوي غير المعدل الجرعة',
+      'خط أول شائع للحمى العصبية الناتجة عن قلة العدلات (febrile neutropenia)'
+    ],
+    indications: [
+      {
+        indication: 'Febrile neutropenia / Hospital-acquired pneumonia / Severe pseudomonal infections / Complicated UTI',
+        indicationAr: 'الحمى العصبية الناتجة عن قلة العدلات / التهاب رئوي مكتسب من المستشفى / عدوى الزائفة الشديدة / عدوى مسالك بولية معقدة',
+        adultDose: '1-2 g IV every 8-12 hours depending on severity and renal function',
+        adultDoseAr: '1-2 جرام وريدياً كل 8-12 ساعة حسب الشدة ووظائف الكلى',
+        pediatricDose: '50 mg/kg IV every 8-12 hours (max 2 g/dose)',
+        pediatricDoseAr: '50 مج/كجم وريدياً كل 8-12 ساعة (حد أقصى 2 جم/جرعة)',
+        route: 'IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed (standard dose)',
+      crcl10to50: 'Reduce dose and/or extend interval (e.g., 1-2 g every 12-24 hours based on CrCl)',
+      crclBelow10: '500 mg-1 g IV every 24 hours',
+      hemodialysis: '1 g loading dose then 500 mg every 24 hours, with supplemental dose after dialysis'
+    },
+    hepaticAdjustment: 'No specific adjustment needed; primarily renally eliminated',
+    contraindications: [
+      'فرط الحساسية للسيفالوسبورينات',
+      'تاريخ تفاعل حساسية شديد تجاه البنسلينات (حذر نسبي لتفاعل متصالب)'
+    ],
+    blackBoxWarning: 'Neurotoxicity including encephalopathy, myoclonus, and seizures reported, particularly in patients with renal impairment who did not receive appropriate dose adjustment',
+    blackBoxWarningAr: 'سمية عصبية شملت اعتلال دماغي ورمعاً عضلياً وتشنجات، خاصة في مرضى القصور الكلوي الذين لم تُعدل جرعتهم بشكل مناسب',
+    mechanismOfAction: 'Inhibits bacterial cell wall synthesis by binding to penicillin-binding proteins; broad spectrum with enhanced stability against beta-lactamases',
+    mechanismOfActionAr: 'يثبط تخليق جدار الخلية البكتيرية عن طريق الارتباط ببروتينات ربط البنسلين؛ طيف واسع مع ثبات معزز ضد إنزيمات البيتالاكتاماز',
+    halfLife: '2 hours (normal renal function)',
+    monitoringParameters: [
+      'وظائف الكلى (أساسي لتعديل الجرعة)',
+      'الحالة العصبية والذهنية خاصة في المسنين وذوي القصور الكلوي',
+      'علامات الحساسية المفرطة',
+      'تعداد الدم الكامل عند العلاج المطول'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية (يُعطى حقناً فقط)'
+    ],
+    pearls: [
+      'تعديل الجرعة حسب وظائف الكلى أمر بالغ الأهمية - الفشل في ذلك هو السبب الأشهر للسمية العصبية',
+      'من أوسع السيفالوسبورينات طيفاً، يغطي موجبات وسالبات الجرام شاملة الزائفة',
+      'يُستخدم كعلاج تجريبي أساسي للحمى العصبية الناتجة عن قلة العدلات في مرضى الأورام'
+    ]
+  },
+  {
+    id: 'linezolid',
+    genericName: 'Linezolid',
+    genericNameAr: 'لينزوليد',
+    brandNames: ['Zyvox', 'زيفوكس'],
+    drugClass: 'Oxazolidinone Antibiotic',
+    drugClassAr: 'مضاد حيوي من فئة الأوكسازوليدينون',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'icu_emergency', 'pharmacy'],
+    keyHighlights: [
+      'توافر حيوي فموي 100% - يسمح بالتحويل المباشر من الوريدي للفموي بنفس الجرعة',
+      'مثبط ضعيف لإنزيم MAO - خطر متلازمة السيروتونين مع SSRIs/SNRIs ومتلازمة ارتفاع ضغط مع التيرامين',
+      'الاستخدام لأكثر من 2-4 أسابيع يزيد خطر تثبيط نخاع العظم والاعتلال العصبي المحيطي/البصري'
+    ],
+    indications: [
+      {
+        indication: 'MRSA infections / VRE infections / Complicated skin and soft tissue infections / Hospital-acquired pneumonia',
+        indicationAr: 'عدوى المكورات العنقودية المقاومة للميثيسيلين / عدوى المكورات المعوية المقاومة للفانكومايسين / عدوى الجلد والأنسجة الرخوة المعقدة / التهاب رئوي مكتسب من المستشفى',
+        adultDose: '600 mg PO/IV every 12 hours',
+        adultDoseAr: '600 مج فموياً/وريدياً كل 12 ساعة',
+        pediatricDose: '10 mg/kg PO/IV every 8 hours (neonates/infants) or every 12 hours (older children)',
+        pediatricDoseAr: '10 مج/كجم فموياً/وريدياً كل 8 ساعات (حديثو الولادة/الرضع) أو كل 12 ساعة (الأطفال الأكبر)',
+        duration: 'Typically 10-14 days; max 28 days due to toxicity risk',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; monitor for accumulation of metabolites',
+      hemodialysis: 'Administer dose after dialysis session; metabolites may accumulate'
+    },
+    hepaticAdjustment: 'No specific adjustment needed in mild to moderate impairment; use with caution in severe impairment',
+    contraindications: [
+      'الاستخدام المتزامن أو خلال أسبوعين من مثبطات MAO',
+      'فرط الحساسية للينزوليد',
+      'الاستخدام غير المحكوم مع أدوية سيروتونينية دون مراقبة دقيقة في حالات معينة (ما لم تكن فائدة العلاج تفوق الخطر)'
+    ],
+    blackBoxWarning: 'Myelosuppression (anemia, leukopenia, thrombocytopenia) with use beyond 2 weeks; risk of serotonin syndrome with serotonergic agents; should not be used in patients taking MAO inhibitors',
+    blackBoxWarningAr: 'تثبيط نخاع العظم (فقر دم، نقص كريات بيضاء، نقص صفائح) مع الاستخدام لأكثر من أسبوعين؛ خطر متلازمة السيروتونين مع الأدوية السيروتونينية؛ لا يُستخدم مع مثبطات MAO',
+    mechanismOfAction: 'Binds to the 23S ribosomal RNA of the 50S subunit, inhibiting formation of the bacterial initiation complex and protein synthesis',
+    mechanismOfActionAr: 'يرتبط بالـ RNA الريبوسومي 23S في الوحدة 50S فيثبط تكوين مركب البدء البكتيري وتخليق البروتين',
+    halfLife: '5-7 hours',
+    monitoringParameters: [
+      'تعداد الدم الكامل أسبوعياً (خاصة عند الاستخدام لأكثر من أسبوعين)',
+      'علامات متلازمة السيروتونين خاصة مع الأدوية السيروتونينية',
+      'الاعتلال العصبي المحيطي والبصري عند الاستخدام المطول',
+      'ضغط الدم إذا استُهلكت أطعمة غنية بالتيرامين'
+    ],
+    pregnancyCategory: 'C',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'الأطعمة الغنية بالتيرامين (الجبن المعتق، النبيذ الأحمر، اللحوم المخللة) قد تسبب أزمة ارتفاع ضغط بسبب تثبيط MAO الضعيف'
+    ],
+    pearls: [
+      'التوافر الحيوي الفموي الكامل (100%) يجعله فريداً بين المضادات المضادة لـ MRSA في سهولة التحويل للعلاج المنزلي الفموي',
+      'يجب إيقاف أي مضاد اكتئاب سيروتونيني قبل البدء به إن أمكن لتجنب متلازمة السيروتونين',
+      'تثبيط نخاع العظم عادة قابل للعكس عند إيقاف الدواء، لكنه يتطلب مراقبة دورية بتعداد دم كامل'
+    ]
   }
 ];
 
