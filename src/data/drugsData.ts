@@ -6005,6 +6005,729 @@ export const INITIAL_DRUGS: Drug[] = [
       'يُفضل عدم استخدامه في الإسهال المصحوب بدم أو حمى لأنه قد يؤخر إخراج السموم البكتيرية ويزيد خطر المضاعفات',
       'آمن وفعال للاستخدام قصير المدى في إسهال المسافرين غير المصحوب بعلامات تحذيرية'
     ]
+  },
+  {
+    id: 'labetalol',
+    genericName: 'Labetalol',
+    genericNameAr: 'لابيتالول',
+    brandNames: ['Trandate', 'ترانديت'],
+    drugClass: 'Combined Alpha-1/Beta Adrenergic Blocker',
+    drugClassAr: 'حاصر مشترك لألفا-1 وبيتا الأدريناليني',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'icu_emergency', 'pharmacy'],
+    keyHighlights: [
+      'الخيار الأول لارتفاع ضغط الدم الحاد في الحمل وتسمم الحمل - آمن نسبياً ومدروس جيداً أثناء الحمل',
+      'الحقن الوريدي المتكرر أو التسريب يُستخدم على نطاق واسع في أزمات ارتفاع الضغط',
+      'تأثيره المشترك على ألفا وبيتا يقلل انخفاض الضغط الانعكاسي المصاحب لحاصرات بيتا وحدها'
+    ],
+    indications: [
+      {
+        indication: 'Hypertensive emergency/urgency / Hypertension in pregnancy / Chronic hypertension',
+        indicationAr: 'أزمة/طوارئ ارتفاع ضغط الدم / ارتفاع ضغط الدم في الحمل / ارتفاع ضغط الدم المزمن',
+        adultDose: 'IV: 20 mg bolus over 2 min, then 20-80 mg every 10 min (max 300 mg) or infusion 0.5-2 mg/min; Oral: 100-400 mg twice daily',
+        adultDoseAr: 'وريدي: 20 مج جرعة بلعية خلال دقيقتين، ثم 20-80 مج كل 10 دقائق (حد أقصى 300 مج) أو تسريب 0.5-2 مج/دقيقة؛ فموي: 100-400 مج مرتين يومياً',
+        maxDose: '300 mg IV cumulative; 2400 mg/day oral',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution; reduce dose in significant hepatic impairment due to extensive hepatic metabolism',
+    contraindications: [
+      'الربو الشديد غير المستقر',
+      'بطء القلب الجيبي الشديد أو الحصار الأذيني البطيني من الدرجة الثانية أو الثالثة',
+      'الصدمة القلبية أو فشل القلب الحاد غير المعاوض',
+      'الحساسية المفرطة للابيتالول'
+    ],
+    mechanismOfAction: 'Blocks beta-1, beta-2, and alpha-1 adrenergic receptors, reducing heart rate, cardiac output, and peripheral vascular resistance',
+    mechanismOfActionAr: 'يحجب مستقبلات بيتا-1 وبيتا-2 وألفا-1 الأدرينالية، فيقلل معدل ضربات القلب والنتاج القلبي والمقاومة الوعائية المحيطية',
+    halfLife: '5.5-8 hours',
+    monitoringParameters: [
+      'ضغط الدم المستمر أثناء الإعطاء الوريدي',
+      'معدل ضربات القلب',
+      'علامات تشنج قصبي في المرضى المعرضين للخطر',
+      'وظائف الكبد عند الاستخدام المطول'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية كبيرة'
+    ],
+    pearls: [
+      'من أكثر الأدوية أماناً وفعالية لعلاج ارتفاع ضغط الدم الحاد في تسمم الحمل والحمل بشكل عام',
+      'التحول من الوضع الاستلقاء للوقوف يزيد تأثيره الخافض للضغط بسبب مكون ألفا الحاصر - يُنصح المريض بالحذر عند النهوض',
+      'يُستخدم أيضاً كبديل للنيتروبروسيد في أزمات ارتفاع الضغط عندما يكون تجنب انخفاض الضغط الانعكاسي الحاد مرغوباً'
+    ]
+  },
+  {
+    id: 'hydralazine',
+    genericName: 'Hydralazine',
+    genericNameAr: 'هيدرالازين',
+    brandNames: ['Apresoline', 'أبريزولين'],
+    drugClass: 'Direct Arterial Vasodilator',
+    drugClassAr: 'موسع وعائي شرياني مباشر',
+    category: 'Rx',
+    route: ['PO', 'IV', 'IM'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'icu_emergency', 'pharmacy'],
+    keyHighlights: [
+      'من أقدم وأكثر الأدوية أماناً المستخدمة لعلاج ارتفاع ضغط الدم الحاد في الحمل وتسمم الحمل',
+      'يسبب تسرع قلب انعكاسي واحتباس سوائل - غالباً يُدمج مع حاصر بيتا ومدر بول لموازنة هذه التأثيرات',
+      'الاستخدام المزمن بجرعات عالية قد يسبب متلازمة شبيهة بالذئبة الحمامية - أكثر شيوعاً في ضعاف الأيض (slow acetylators)'
+    ],
+    indications: [
+      {
+        indication: 'Hypertensive emergency (including pregnancy) / Chronic heart failure (with nitrates, adjunct) / Chronic hypertension',
+        indicationAr: 'طوارئ ارتفاع ضغط الدم (شاملة الحمل) / فشل القلب المزمن (مع النترات، مساعد) / ارتفاع ضغط الدم المزمن',
+        adultDose: 'IV/IM: 5-10 mg every 20-30 min as needed (max 20-30 mg); Oral: start 10 mg four times daily, titrate to 25-100 mg four times daily',
+        adultDoseAr: 'وريدي/عضلي: 5-10 مج كل 20-30 دقيقة عند الحاجة (حد أقصى 20-30 مج)؛ فموي: البدء بـ 10 مج أربع مرات يومياً، يُعدل إلى 25-100 مج أربع مرات يومياً',
+        maxDose: '300 mg/day (oral)',
+        route: 'PO/IV/IM'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed; monitor for accumulation',
+      crclBelow10: 'Reduce dose or extend interval to every 8 hours; monitor closely',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Use with caution; reduce dose in significant hepatic impairment',
+    contraindications: [
+      'مرض القلب الروماتزمي المصيب للصمام التاجي',
+      'الذئبة الحمامية الجهازية (نسبي)',
+      'فرط الحساسية للهيدرالازين',
+      'تمدد الأوعية الدموية الأبهري الانسلاخي'
+    ],
+    mechanismOfAction: 'Directly relaxes arteriolar smooth muscle, reducing peripheral vascular resistance with minimal effect on veins',
+    mechanismOfActionAr: 'يرخي مباشرة العضلات الملساء الشريانية فيقلل المقاومة الوعائية المحيطية مع تأثير ضئيل على الأوردة',
+    halfLife: '3-7 hours (varies by acetylator status)',
+    monitoringParameters: [
+      'ضغط الدم ومعدل ضربات القلب',
+      'علامات احتباس السوائل أو الوذمة',
+      'الأعراض الشبيهة بالذئبة (ألم مفصلي، طفح) عند الاستخدام المزمن',
+      'تعداد الدم الكامل عند الاستخدام طويل المدى'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية كبيرة'
+    ],
+    pearls: [
+      'يُستخدم تاريخياً وحتى اليوم كخط أول أو ثانٍ لعلاج أزمات ارتفاع الضغط في تسمم الحمل جنباً إلى جنب مع لابيتالول',
+      'الجمع الروتيني مع حاصر بيتا ومدر بول (ثلاثي كلاسيكي) يوازن التسرع القلبي الانعكاسي واحتباس السوائل الناتجين عنه',
+      'متلازمة الذئبة الدوائية خطر معروف مع الجرعات العالية المزمنة (أكثر من 200 مج/يوم) وعادة قابلة للعكس عند الإيقاف'
+    ]
+  },
+  {
+    id: 'methyldopa',
+    genericName: 'Methyldopa',
+    genericNameAr: 'ميثيل دوبا',
+    brandNames: ['Aldomet', 'ألدوميت'],
+    drugClass: 'Central Alpha-2 Adrenergic Agonist',
+    drugClassAr: 'ناهض ألفا-2 أدريناليني مركزي',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'الأكثر توثيقاً عالمياً من حيث الأمان طويل المدى لعلاج ارتفاع ضغط الدم المزمن أثناء الحمل',
+      'قد يسبب فقر دم انحلالي إيجابي كومبس واختبار كومبس مباشر إيجابي كاذب دون انحلال فعلي',
+      'التأثير المهدئ شائع خاصة عند البدء - يقل عادة مع استمرار العلاج'
+    ],
+    indications: [
+      {
+        indication: 'Chronic hypertension in pregnancy / Essential hypertension',
+        indicationAr: 'ارتفاع ضغط الدم المزمن في الحمل / ارتفاع ضغط الدم الأساسي',
+        adultDose: 'Start 250 mg PO twice or three times daily, titrate to 500-2000 mg/day divided',
+        adultDoseAr: 'البدء بـ 250 مج فموياً مرتين أو ثلاث مرات يومياً، يُعدل إلى 500-2000 مج/يوم مقسمة',
+        maxDose: '3000 mg/day',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Extend dosing interval; reduce dose by 25-50%',
+      crclBelow10: 'Reduce dose by 50-75%; extend interval to every 12-24 hours',
+      hemodialysis: 'Dialyzable; administer supplemental dose after dialysis session'
+    },
+    hepaticAdjustment: 'Avoid in active liver disease; discontinue if signs of hepatotoxicity develop',
+    contraindications: [
+      'أمراض الكبد النشطة (التهاب كبد حاد، تشمع نشط)',
+      'تاريخ اضطراب كبدي مرتبط بالميثيل دوبا سابقاً',
+      'فقر الدم الانحلالي النشط',
+      'الاستخدام المتزامن مع مثبطات MAO'
+    ],
+    mechanismOfAction: 'Converted to alpha-methylnorepinephrine, which stimulates central alpha-2 receptors, reducing sympathetic outflow and peripheral vascular resistance',
+    mechanismOfActionAr: 'يُحول إلى ألفا-ميثيل نورإبينفرين الذي ينبه مستقبلات ألفا-2 المركزية فيقلل التدفق الودي والمقاومة الوعائية المحيطية',
+    halfLife: '1.7 hours (central effect lasts 12-24 hours)',
+    monitoringParameters: [
+      'ضغط الدم',
+      'وظائف الكبد (خط الأساس وفي أول 6-12 أسبوع)',
+      'تعداد الدم الكامل (علامات فقر دم انحلالي)',
+      'المزاج والتأثير المهدئ خاصة عند البدء'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يُفضل تناوله بانتظام مع أو بدون طعام'
+    ],
+    pearls: [
+      'يُعتبر الخيار الأكثر أماناً وتوثيقاً تاريخياً لعلاج ارتفاع ضغط الدم المزمن طوال فترة الحمل بما في ذلك الثلث الأول',
+      'اختبار كومبس المباشر الإيجابي شائع (10-20%) دون أن يعني بالضرورة فقر دم انحلالي فعلي سريرياً',
+      'التأثير المهدئ وجفاف الفم من أكثر الآثار الجانبية شيوعاً خاصة في الأسابيع الأولى من العلاج'
+    ]
+  },
+  {
+    id: 'nifedipine',
+    genericName: 'Nifedipine',
+    genericNameAr: 'نيفيديبين',
+    brandNames: ['Procardia', 'Adalat', 'أدالات'],
+    drugClass: 'Dihydropyridine Calcium Channel Blocker',
+    drugClassAr: 'حاصر قنوات الكالسيوم من فئة الديهيدروبيريدين',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'internal_medicine', 'pharmacy'],
+    keyHighlights: [
+      'الشكل سريع المفعول تحت اللسان ممنوع في أزمات ارتفاع الضغط - خطر انخفاض ضغط حاد ونقص تروية قلبية/دماغية',
+      'الشكل ممتد المفعول (ER) يُستخدم بأمان لعلاج ارتفاع ضغط الدم المزمن في الحمل وكموسع رئوي في تسمم الحمل',
+      'يُستخدم أيضاً كموقف للمخاض (tocolytic) خارج الاستطباب المعتمد'
+    ],
+    indications: [
+      {
+        indication: 'Hypertension (extended-release) / Chronic stable angina / Raynaud phenomenon / Preterm labor tocolysis (off-label)',
+        indicationAr: 'ارتفاع ضغط الدم (ممتد المفعول) / الذبحة الصدرية المزمنة المستقرة / ظاهرة رينو / إيقاف المخاض المبكر (خارج الاستطباب)',
+        adultDose: 'Extended-release: 30-90 mg PO once daily',
+        adultDoseAr: 'ممتد المفعول: 30-90 مج فموياً مرة يومياً',
+        maxDose: '120 mg/day (extended-release)',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'Reduce dose in significant hepatic impairment; monitor closely due to reduced clearance',
+    contraindications: [
+      'فرط الحساسية للنيفيديبين',
+      'تضيق الأبهر الشديد (حذر نسبي)',
+      'الشكل سريع المفعول تحت اللسان يُمنع في أزمات ارتفاع الضغط الحادة'
+    ],
+    mechanismOfAction: 'Inhibits calcium ion influx into vascular smooth muscle, causing arterial vasodilation with minimal direct cardiac effect',
+    mechanismOfActionAr: 'يثبط دخول أيونات الكالسيوم إلى العضلات الملساء الوعائية مسبباً توسعاً شريانياً مع تأثير مباشر ضئيل على القلب',
+    halfLife: '2-5 hours (immediate-release); effective duration longer with extended-release',
+    monitoringParameters: [
+      'ضغط الدم',
+      'الوذمة المحيطية',
+      'معدل ضربات القلب (قد يسبب تسرعاً انعكاسياً)',
+      'وظائف الكبد عند الاستخدام المزمن'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'عصير الجريب فروت يرفع مستواه الدموي بشكل ملحوظ عبر تثبيط CYP3A4 - يُمنع',
+      'الشكل ممتد المفعول لا يُكسر أو يُمضغ'
+    ],
+    pearls: [
+      'استخدام الشكل سريع المفعول تحت اللسان لعلاج أزمات ارتفاع الضغط أصبح ممارسة مهجورة تماماً بسبب خطر الانخفاض الحاد وغير المتحكم به في الضغط',
+      'بديل فعال وآمن نسبياً للابيتالول أو الميثيل دوبا في علاج ارتفاع ضغط الدم المزمن أثناء الحمل',
+      'يُستخدم خارج الاستطباب المعتمد كدواء موقف للمخاض المبكر بفعالية مماثلة للتوكوليتيكس التقليدية'
+    ]
+  },
+  {
+    id: 'ticagrelor',
+    genericName: 'Ticagrelor',
+    genericNameAr: 'تيكاجريلور',
+    brandNames: ['Brilinta', 'برلينتا'],
+    drugClass: 'P2Y12 Platelet Inhibitor',
+    drugClassAr: 'مثبط مستقبلات الصفائح P2Y12',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['cardiology', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'يحتاج جرعة أسبرين صيانة منخفضة فقط (75-100 مج/يوم) - الجرعات الأعلى تقلل فعاليته',
+      'ضيق التنفس أثر جانبي شائع (حوالي 14%) وعادة خفيف وعابر، ليس بالضرورة علامة تحسسية أو قلبية',
+      'تثبيط الصفائح عكسي (خلافاً لكلوبيدوجريل وبراسوجريل) - يستعيد وظيفة الصفائح أسرع بعد الإيقاف'
+    ],
+    indications: [
+      {
+        indication: 'Acute coronary syndrome / Secondary prevention of cardiovascular events post-MI',
+        indicationAr: 'المتلازمة التاجية الحادة / الوقاية الثانوية من الأحداث القلبية الوعائية بعد احتشاء عضلة القلب',
+        adultDose: '180 mg PO loading dose, then 90 mg twice daily (with aspirin 75-100 mg/day)',
+        adultDoseAr: '180 مج فموياً جرعة تحميل، ثم 90 مج مرتين يومياً (مع أسبرين 75-100 مج/يوم)',
+        maxDose: '90 mg twice daily maintenance',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'Use with caution; limited data in severe renal impairment',
+      hemodialysis: 'Not recommended; limited data in dialysis-dependent patients'
+    },
+    hepaticAdjustment: 'Avoid in severe hepatic impairment; use with caution in moderate impairment',
+    contraindications: [
+      'نزيف نشط ذو أهمية سريرية',
+      'تاريخ نزيف داخل الجمجمة',
+      'القصور الكبدي الشديد',
+      'الاستخدام المتزامن مع مثبطات قوية لـ CYP3A4 (كيتوكونازول، ريتونافير)'
+    ],
+    blackBoxWarning: 'Maintenance aspirin dose above 100 mg/day reduces ticagrelor effectiveness and should be avoided',
+    blackBoxWarningAr: 'جرعة صيانة الأسبرين فوق 100 مج/يوم تقلل فعالية التيكاجريلور ويجب تجنبها',
+    mechanismOfAction: 'Reversibly and directly inhibits the P2Y12 ADP receptor on platelets, preventing platelet activation and aggregation',
+    mechanismOfActionAr: 'يثبط بشكل عكسي ومباشر مستقبل ADP من نوع P2Y12 على الصفائح، فيمنع تنشيط الصفائح وتجمعها',
+    halfLife: '7 hours (12 hours for active metabolite)',
+    monitoringParameters: [
+      'علامات النزيف',
+      'ضيق التنفس وشدته',
+      'جرعة الأسبرين المصاحبة (يجب ألا تتجاوز 100 مج/يوم)',
+      'وظائف الكبد',
+      'انقطاعات بطينية (bradyarrhythmias) نادرة موثقة'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'عصير الجريب فروت قد يرفع مستواه الدموي عبر تثبيط CYP3A4 - يُفضل تجنبه'
+    ],
+    pearls: [
+      'يحتاج جرعتين يومياً خلافاً لكلوبيدوجريل وبراسوجريل (مرة واحدة يومياً) - قد يؤثر على الالتزام',
+      'ضيق التنفس العابر غير المرتبط بأمراض القلب أو الرئة أثر جانبي مميز يجب تمييزه عن تفاقم حقيقي للحالة القلبية',
+      'التأثير العكسي على الصفائح يعني استعادة أسرع لوظيفة الصفائح عند الإيقاف مقارنة بكلوبيدوجريل، وهو أمر مهم قبل الجراحة'
+    ]
+  },
+  {
+    id: 'azathioprine',
+    genericName: 'Azathioprine',
+    genericNameAr: 'آزاثيوبرين',
+    brandNames: ['Imuran', 'إيموران'],
+    drugClass: 'Immunosuppressant (Purine Antagonist)',
+    drugClassAr: 'مثبط مناعة (مضاد بيورين)',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'oncology'],
+    keyHighlights: [
+      'تفاعل خطير وقاتل محتمل مع الألوبيورينول - يتطلب تقليل جرعة الآزاثيوبرين بنسبة 65-75% عند الدمج',
+      'فحص نشاط إنزيم TPMT (أو الجينوتايب) قبل البدء يحدد خطر تثبيط نخاع العظم الشديد في ضعاف الأيض',
+      'تحذير صندوق أسود لزيادة خطر الأورام الخبيثة (خاصة اللمفوما وسرطان الجلد) مع الاستخدام المزمن'
+    ],
+    indications: [
+      {
+        indication: 'Rheumatoid arthritis / Renal transplant rejection prophylaxis / Inflammatory bowel disease (adjunct)',
+        indicationAr: 'التهاب المفاصل الروماتويدي / الوقاية من رفض زراعة الكلى / مرض الأمعاء الالتهابي (مساعد)',
+        adultDose: 'Rheumatoid arthritis: 1 mg/kg/day PO, may increase to 2.5 mg/kg/day; Transplant: 3-5 mg/kg/day initially, then taper to maintenance',
+        adultDoseAr: 'التهاب المفاصل الروماتويدي: 1 مج/كجم/يوم فموياً، يمكن زيادتها إلى 2.5 مج/كجم/يوم؛ زراعة الأعضاء: 3-5 مج/كجم/يوم في البداية، ثم تخفيض لجرعة الصيانة',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Reduce dose by 25%',
+      crclBelow10: 'Reduce dose by 50%',
+      hemodialysis: 'Dialyzable; administer supplemental dose after dialysis session'
+    },
+    hepaticAdjustment: 'Reduce dose in significant hepatic impairment; monitor liver function closely',
+    contraindications: [
+      'الحمل في مرضى التهاب المفاصل الروماتويدي (يُقيّم الخطر/الفائدة في زراعة الأعضاء)',
+      'الاستخدام المتزامن مع الألوبيورينول دون تعديل جرعة كبير',
+      'فرط الحساسية للآزاثيوبرين',
+      'نقص نشاط TPMT الشديد (حذر بالغ أو تجنب)'
+    ],
+    blackBoxWarning: 'Chronic immunosuppression with azathioprine increases risk of malignancy, particularly lymphoma and skin cancer; mutagenic potential in both sexes',
+    blackBoxWarningAr: 'تثبيط المناعة المزمن بالآزاثيوبرين يزيد خطر الأورام الخبيثة، خاصة اللمفوما وسرطان الجلد؛ احتمالية طفرية في كلا الجنسين',
+    mechanismOfAction: 'Converted to 6-mercaptopurine and then to thioguanine nucleotides, which inhibit purine synthesis and DNA replication in rapidly dividing lymphocytes',
+    mechanismOfActionAr: 'يُحول إلى 6-ميركابتوبورين ثم إلى نيوكليوتيدات الثيوجوانين التي تثبط تخليق البيورين وتضاعف الحمض النووي في الخلايا الليمفاوية سريعة الانقسام',
+    halfLife: '3-5 hours (active metabolites longer)',
+    monitoringParameters: [
+      'تعداد الدم الكامل أسبوعياً عند البدء ثم شهرياً',
+      'وظائف الكبد',
+      'نشاط إنزيم TPMT قبل البدء',
+      'علامات العدوى الانتهازية',
+      'فحوصات الجلد الدورية للكشف المبكر عن الأورام'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية كبيرة'
+    ],
+    pearls: [
+      'يجب تقليل جرعة الآزاثيوبرين بنسبة 65-75% عند الدمج الضروري مع الألوبيورينول لتجنب تثبيط نخاع عظم قاتل',
+      'فحص TPMT (أو NUDT15 في بعض الأعراق) قبل البدء يساعد على تحديد المرضى عاليي الخطورة لتثبيط نخاع العظم الشديد',
+      'الاستخدام طويل المدى يتطلب فحوصات جلدية دورية ووعياً بزيادة خطر الأورام الخبيثة مع مرور السنين'
+    ]
+  },
+  {
+    id: 'tacrolimus',
+    genericName: 'Tacrolimus',
+    genericNameAr: 'تاكروليمس',
+    brandNames: ['Prograf', 'بروجراف'],
+    drugClass: 'Calcineurin Inhibitor (Immunosuppressant)',
+    drugClassAr: 'مثبط الكالسينيورين (مثبط مناعة)',
+    category: 'Rx',
+    route: ['PO', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'oncology'],
+    keyHighlights: [
+      'نطاق علاجي ضيق جداً يتطلب مراقبة مستوى دموي دقيقة ومستمرة طوال فترة العلاج',
+      'سمية كلوية وعصبية جرعة-معتمدة - من أكثر أدوية زراعة الأعضاء تطلباً للمراقبة الدقيقة',
+      'تفاعلات دوائية كثيرة عبر CYP3A4 - عصير الجريب فروت ومضادات الفطريات الآزولية ترفع مستواه بشكل خطير'
+    ],
+    indications: [
+      {
+        indication: 'Prophylaxis of organ transplant rejection (kidney, liver, heart)',
+        indicationAr: 'الوقاية من رفض زراعة الأعضاء (الكلى، الكبد، القلب)',
+        adultDose: 'Individualized based on transplant type and trough levels; typically start 0.1-0.2 mg/kg/day PO divided every 12 hours',
+        adultDoseAr: 'فردي حسب نوع الزراعة والمستوى الدموي؛ عادة البدء بـ 0.1-0.2 مج/كجم/يوم فموياً مقسمة كل 12 ساعة',
+        route: 'PO/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed; dose per trough levels',
+      crcl10to50: 'Dose per trough levels; monitor renal function closely (nephrotoxic)',
+      crclBelow10: 'Dose per trough levels with extreme caution; high nephrotoxicity risk',
+      hemodialysis: 'Not significantly dialyzed; dose per trough levels'
+    },
+    hepaticAdjustment: 'Reduce dose significantly in hepatic impairment; monitor levels closely due to reduced clearance',
+    contraindications: [
+      'فرط الحساسية للتاكروليمس',
+      'الاستخدام المتزامن مع السيكلوسبورين (كلاهما مثبط كالسينيورين - خطر سمية مضاعفة)'
+    ],
+    blackBoxWarning: 'Increased susceptibility to infection and development of malignancy (particularly lymphoma and skin cancer) due to immunosuppression; should only be prescribed by physicians experienced in transplant management',
+    blackBoxWarningAr: 'زيادة القابلية للعدوى وتطور الأورام الخبيثة (خاصة اللمفوما وسرطان الجلد) بسبب تثبيط المناعة؛ يجب أن يُوصف فقط من قبل أطباء ذوي خبرة في إدارة زراعة الأعضاء',
+    mechanismOfAction: 'Binds FK-binding protein, inhibiting calcineurin and blocking T-lymphocyte activation and interleukin-2 production',
+    mechanismOfActionAr: 'يرتبط ببروتين FK الرابط، فيثبط الكالسينيورين ويمنع تنشيط الخلايا الليمفاوية التائية وإنتاج الإنترلوكين-2',
+    halfLife: '11-19 hours',
+    monitoringParameters: [
+      'مستوى التاكروليمس الدموي (trough) بانتظام',
+      'وظائف الكلى (كرياتينين)',
+      'ضغط الدم وسكر الدم',
+      'البوتاسيوم والمغنيسيوم في الدم',
+      'علامات العدوى الانتهازية'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Contraindicated',
+    foodInteractions: [
+      'عصير الجريب فروت يرفع مستواه الدموي بشكل خطير عبر تثبيط CYP3A4 - يُمنع تماماً',
+      'الطعام الدسم يقلل امتصاصه - يُؤخذ بشكل ثابت بالنسبة للوجبات'
+    ],
+    pearls: [
+      'يحل محل السيكلوسبورين في معظم بروتوكولات زراعة الأعضاء الحديثة بسبب فعالية أعلى نسبياً رغم ملف سمية مشابه',
+      'التحويل بين الأشكال الفورية والممتدة المفعول أو بين الشركات المصنعة المختلفة يتطلب إعادة مراقبة دقيقة للمستوى الدموي',
+      'سمية CNS (رعاش، صداع، نوبات نادرة) أكثر شيوعاً من السيكلوسبورين بينما السمية الكلوية متشابهة تقريباً'
+    ]
+  },
+  {
+    id: 'hydroxychloroquine',
+    genericName: 'Hydroxychloroquine',
+    genericNameAr: 'هيدروكسي كلوروكين',
+    brandNames: ['Plaquenil', 'بلاكينيل'],
+    drugClass: 'Antimalarial / DMARD',
+    drugClassAr: 'مضاد ملاريا / دواء مضاد للروماتيزم معدل للمرض',
+    category: 'Rx',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['internal_medicine', 'pharmacy', 'infectious_diseases'],
+    keyHighlights: [
+      'اعتلال الشبكية السام قابل للعكس إذا اكتُشف مبكراً - يحتاج فحص عيون أساسي وسنوي بعد 5 سنوات من الاستخدام',
+      'الجرعة القصوى الآمنة طويلة المدى تُحسب حسب وزن الجسم الفعلي (≤5 مج/كجم/يوم) لتقليل خطر السمية الشبكية',
+      'من أكثر أدوية الذئبة الحمامية الجهازية استخداماً وأماناً نسبياً أثناء الحمل'
+    ],
+    indications: [
+      {
+        indication: 'Rheumatoid arthritis / Systemic lupus erythematosus / Malaria prophylaxis and treatment (chloroquine-sensitive)',
+        indicationAr: 'التهاب المفاصل الروماتويدي / الذئبة الحمامية الجهازية / الوقاية والعلاج من الملاريا (الحساسة للكلوروكين)',
+        adultDose: 'RA/Lupus: 200-400 mg/day PO divided once or twice daily (max 5 mg/kg/day actual body weight)',
+        adultDoseAr: 'التهاب المفاصل/الذئبة: 200-400 مج/يوم فموياً مقسمة مرة أو مرتين يومياً (حد أقصى 5 مج/كجم/يوم وزن فعلي)',
+        maxDose: '5 mg/kg/day (actual body weight) for chronic use',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Use with caution; consider dose reduction',
+      crclBelow10: 'Reduce dose by 50%; use with caution',
+      hemodialysis: 'Not significantly dialyzed; use with caution'
+    },
+    hepaticAdjustment: 'Use with caution in hepatic impairment; monitor liver function',
+    contraindications: [
+      'اعتلال الشبكية الموجود مسبقاً',
+      'فرط الحساسية للكلوروكين أو مشتقاته',
+      'نقص إنزيم G6PD الشديد (حذر - خطر انحلال دم)'
+    ],
+    mechanismOfAction: 'Accumulates in lysosomes, interfering with antigen processing and Toll-like receptor signaling, reducing autoimmune inflammatory response',
+    mechanismOfActionAr: 'يتراكم في الليزوزومات فيتداخل مع معالجة المستضدات وإشارات المستقبلات الشبيهة بـ Toll، مما يقلل الاستجابة الالتهابية المناعية الذاتية',
+    halfLife: '40-50 days',
+    monitoringParameters: [
+      'فحص قاع العين وشبكية العين (أساسي ثم سنوي بعد 5 سنوات)',
+      'تعداد الدم الكامل',
+      'وظائف الكبد والكلى',
+      'إنزيم G6PD قبل البدء في المرضى المعرضين للخطر',
+      'أعراض ضعف العضلات (اعتلال عضلي نادر)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يُفضل تناوله مع الطعام لتقليل الاضطراب الهضمي'
+    ],
+    pearls: [
+      'من الأدوية القليلة المضادة للروماتيزم التي تُعتبر آمنة للاستمرار أثناء الحمل، خاصة في مريضات الذئبة',
+      'بداية التأثير العلاجي الكامل بطيئة (قد تستغرق 3-6 أشهر) - يجب توعية المريض بعدم توقع نتائج فورية',
+      'اعتلال الشبكية السام نادر بالجرعات الموصى بها حديثاً لكنه قد يكون غير قابل للعكس إذا تأخر اكتشافه - الفحص الدوري ضروري'
+    ]
+  },
+  {
+    id: 'nystatin',
+    genericName: 'Nystatin',
+    genericNameAr: 'نيستاتين',
+    brandNames: ['Mycostatin', 'ميكوستاتين'],
+    drugClass: 'Polyene Antifungal (Topical/Oral, Non-Absorbed)',
+    drugClassAr: 'مضاد فطريات من فئة البوليين (موضعي/فموي، غير ممتص)',
+    category: 'Rx',
+    route: ['PO (Oral Suspension)', 'Topical', 'Vaginal'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pediatrics', 'pharmacy', 'nursing'],
+    keyHighlights: [
+      'غير ممتص من الجهاز الهضمي - يعمل فقط موضعياً على الغشاء المخاطي الفموي أو المعوي، آمن جداً حتى لحديثي الولادة',
+      'يُستخدم على نطاق واسع للوقاية والعلاج من داء المبيضات الفموي (القلاع) عند الرضع ومرضى المناعة الضعيفة',
+      'يجب أن يبقى بتماس مع الآفة لأطول فترة ممكنة (يُحرك في الفم قبل البلع) لتحقيق أقصى فعالية'
+    ],
+    indications: [
+      {
+        indication: 'Oral candidiasis (thrush) / Cutaneous candidiasis / Vaginal candidiasis',
+        indicationAr: 'داء المبيضات الفموي (القلاع) / داء المبيضات الجلدي / داء المبيضات المهبلي',
+        adultDose: 'Oral suspension: 400,000-600,000 units (4-6 mL) swish and swallow four times daily',
+        adultDoseAr: 'معلق فموي: 400,000-600,000 وحدة (4-6 مل) يُحرك في الفم ويُبلع أربع مرات يومياً',
+        pediatricDose: 'Infants: 200,000 units (2 mL) four times daily (100,000 units/mL each side of mouth)',
+        pediatricDoseAr: 'الرضع: 200,000 وحدة (2 مل) أربع مرات يومياً (100,000 وحدة/مل لكل جانب من الفم)',
+        route: 'PO/Topical/Vaginal'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed (not systemically absorbed)',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'No adjustment needed; not systemically absorbed'
+    },
+    hepaticAdjustment: 'No adjustment needed; not systemically absorbed',
+    contraindications: [
+      'فرط الحساسية للنيستاتين'
+    ],
+    mechanismOfAction: 'Binds to ergosterol in the fungal cell membrane, creating pores that increase membrane permeability and cause cell death',
+    mechanismOfActionAr: 'يرتبط بالإرغوستيرول في غشاء الخلية الفطرية مكوناً مسامات تزيد نفاذية الغشاء وتسبب موت الخلية',
+    halfLife: 'N/A (not systemically absorbed)',
+    monitoringParameters: [
+      'الاستجابة السريرية للآفات الفطرية (تحسن خلال 48-72 ساعة)',
+      'استمرار الأعراض بعد 7 أيام (قد يستدعي تقييماً إضافياً)',
+      'الالتزام بالجدول الزمني الصحيح للجرعات'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'يُفضل عدم الأكل أو الشرب لمدة 30 دقيقة بعد الجرعة الفموية لإطالة وقت التماس مع الآفة'
+    ],
+    pearls: [
+      'من أكثر مضادات الفطريات أماناً على الإطلاق بسبب غياب الامتصاص الجهازي - الخيار الأول للقلاع عند حديثي الولادة والرضع',
+      'يجب الاستمرار بالعلاج لمدة 48-72 ساعة بعد زوال الأعراض لضمان القضاء الكامل على العدوى',
+      'عقمة الحلمات أثناء الرضاعة قد تحتاج علاجاً متزامناً للأم والطفل لمنع إعادة العدوى المتبادلة'
+    ]
+  },
+  {
+    id: 'terbinafine',
+    genericName: 'Terbinafine',
+    genericNameAr: 'تيربينافين',
+    brandNames: ['Lamisil', 'لاميزيل'],
+    drugClass: 'Allylamine Antifungal',
+    drugClassAr: 'مضاد فطريات من فئة الأليل أمين',
+    category: 'Rx',
+    route: ['PO', 'Topical'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['infectious_diseases', 'pharmacy', 'internal_medicine'],
+    keyHighlights: [
+      'العلاج الفموي الأكثر فعالية لعدوى فطريات الأظافر (الفطار الظفري) - كورس طويل (6-12 أسبوع) مطلوب',
+      'يحتاج فحص وظائف الكبد قبل البدء ودورياً - سمية كبدية نادرة لكن موثقة وقد تكون شديدة',
+      'يتراكم في الأظافر والجلد لأسابيع بعد إيقاف العلاج الفموي مما يسمح بمدة علاج أقصر من المتوقع ظاهرياً'
+    ],
+    indications: [
+      {
+        indication: 'Onychomycosis (nail fungal infection) / Tinea corporis/cruris/pedis',
+        indicationAr: 'الفطار الظفري (عدوى فطريات الأظافر) / السعفة الجسدية/الأربية/القدم',
+        adultDose: 'Onychomycosis: 250 mg PO once daily for 6 weeks (fingernails) or 12 weeks (toenails); Topical: apply once or twice daily for 1-4 weeks',
+        adultDoseAr: 'الفطار الظفري: 250 مج فموياً مرة يومياً لمدة 6 أسابيع (أظافر اليد) أو 12 أسبوع (أظافر القدم)؛ موضعي: يُطبق مرة أو مرتين يومياً لمدة 1-4 أسابيع',
+        route: 'PO/Topical'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'Reduce dose by 50% (e.g., 125 mg every other day)',
+      crclBelow10: 'Avoid use or reduce dose significantly; limited data',
+      hemodialysis: 'Not significantly dialyzed; use with caution'
+    },
+    hepaticAdjustment: 'Avoid in chronic or active liver disease; discontinue if signs of hepatotoxicity develop',
+    contraindications: [
+      'أمراض الكبد المزمنة أو النشطة',
+      'فرط الحساسية للتيربينافين',
+      'القصور الكلوي الشديد (CrCl < 50 بدون تعديل جرعة)'
+    ],
+    mechanismOfAction: 'Inhibits fungal squalene epoxidase, blocking ergosterol synthesis and causing toxic accumulation of squalene within the fungal cell',
+    mechanismOfActionAr: 'يثبط إنزيم سكوالين إيبوكسيديز الفطري، فيمنع تخليق الإرغوستيرول ويسبب تراكماً ساماً للسكوالين داخل الخلية الفطرية',
+    halfLife: '36 hours (up to 200-400 hours in tissues)',
+    monitoringParameters: [
+      'وظائف الكبد (خط الأساس وبعد 4-6 أسابيع)',
+      'تعداد الدم الكامل عند الاستخدام المطول',
+      'علامات اضطراب التذوق (أثر جانبي معروف وقد يستمر بعد الإيقاف)',
+      'الاستجابة السريرية (نمو الظفر الجديد السليم)'
+    ],
+    pregnancyCategory: 'Use with Caution',
+    lactationSafety: 'Use with Caution',
+    foodInteractions: [
+      'يُؤخذ مع أو بدون طعام',
+      'الكحول يزيد خطر السمية الكبدية - يُنصح بالحذر'
+    ],
+    pearls: [
+      'أكثر فعالية من مضادات الفطريات الآزولية الفموية (مثل الإيتراكونازول) في علاج عدوى الأظافر طويلة المدى',
+      'التحسن السريري الكامل قد يستغرق أشهراً بعد انتهاء العلاج بسبب الوقت اللازم لنمو الظفر السليم الجديد بالكامل',
+      'اضطراب أو فقدان حاسة التذوق أثر جانبي غير شائع لكنه موثق وقد يستمر لفترة طويلة بعد إيقاف الدواء'
+    ]
+  },
+  {
+    id: 'ferrous_sulfate',
+    genericName: 'Ferrous Sulfate',
+    genericNameAr: 'كبريتات الحديدوز',
+    brandNames: ['Feosol', 'فيوسول'],
+    drugClass: 'Oral Iron Supplement',
+    drugClassAr: 'مكمل حديد فموي',
+    category: 'OTC',
+    route: ['PO'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'internal_medicine', 'nursing'],
+    keyHighlights: [
+      'يُسبب تلوناً أسود للبراز (طبيعي وغير ضار) يجب تمييزه عن النزيف الهضمي الحقيقي (براز أسود لامع رائحته كريهة)',
+      'فيتامين C يحسن الامتصاص بشكل ملحوظ بينما الشاي والقهوة ومنتجات الألبان تقلله بشكل كبير',
+      'الجرعة الزائدة في الأطفال خطيرة جداً وقد تكون قاتلة - من أكثر أسباب التسمم الدوائي العرضي عند الأطفال'
+    ],
+    indications: [
+      {
+        indication: 'Iron deficiency anemia / Iron deficiency prophylaxis (pregnancy)',
+        indicationAr: 'فقر الدم بنقص الحديد / الوقاية من نقص الحديد (الحمل)',
+        adultDose: '325 mg (65 mg elemental iron) PO once to three times daily',
+        adultDoseAr: '325 مج (65 مج حديد أولي) فموياً مرة إلى ثلاث مرات يومياً',
+        pediatricDose: '3-6 mg/kg/day elemental iron divided for treatment; 1-2 mg/kg/day for prophylaxis',
+        pediatricDoseAr: '3-6 مج/كجم/يوم حديد أولي مقسمة للعلاج؛ 1-2 مج/كجم/يوم للوقاية',
+        route: 'PO'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed; use with caution',
+      hemodialysis: 'Not significantly dialyzed; no supplemental dose needed'
+    },
+    hepaticAdjustment: 'No specific adjustment needed; avoid in hemochromatosis or iron overload conditions',
+    contraindications: [
+      'داء ترسب الأصبغة الدموية (hemochromatosis) أو فرط حمل الحديد',
+      'فقر الدم الانحلالي غير الناتج عن نقص الحديد',
+      'القرحة الهضمية النشطة أو التهاب القولون التقرحي (حذر نسبي)'
+    ],
+    mechanismOfAction: 'Provides elemental iron for incorporation into hemoglobin, myoglobin, and various enzyme systems required for oxygen transport and cellular metabolism',
+    mechanismOfActionAr: 'يوفر الحديد الأولي للاندماج في الهيموجلوبين والميوجلوبين وأنظمة إنزيمية متنوعة مطلوبة لنقل الأكسجين والاستقلاب الخلوي',
+    halfLife: 'N/A (incorporated into body iron stores)',
+    monitoringParameters: [
+      'الهيموجلوبين والهيماتوكريت (تحسن متوقع خلال 2-4 أسابيع)',
+      'فيريتين الدم ومخزون الحديد',
+      'الأعراض الهضمية (إمساك، غثيان)',
+      'لون البراز (تلون أسود طبيعي متوقع)'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'فيتامين C (عصير البرتقال) يحسن الامتصاص بشكل ملحوظ',
+      'الشاي والقهوة ومنتجات الألبان ومضادات الحموضة تقلل الامتصاص بشكل كبير - يفصل بساعتين',
+      'يُفضل تناوله على معدة فارغة لأقصى امتصاص، لكن يمكن تناوله مع طعام خفيف لتقليل تهيج المعدة'
+    ],
+    pearls: [
+      'يجب تخزينه بعيداً تماماً عن متناول الأطفال - الجرعة الزائدة من أقراص الحديد من أخطر حالات التسمم الدوائي العرضي في الأطفال',
+      'الإمساك والغثيان آثار جانبية شائعة جداً تقلل الالتزام - قد يساعد تبديل الشكل الصيدلاني أو تقسيم الجرعة',
+      'الاستجابة العلاجية (ارتفاع الهيموجلوبين) تُقيّم بعد 2-4 أسابيع من العلاج المنتظم قبل الحكم على الفشل العلاجي'
+    ]
+  },
+  {
+    id: 'folic_acid',
+    genericName: 'Folic Acid (Vitamin B9)',
+    genericNameAr: 'حمض الفوليك (فيتامين ب9)',
+    brandNames: ['Folvite', 'فولفيت'],
+    drugClass: 'Vitamin Supplement',
+    drugClassAr: 'مكمل فيتامين',
+    category: 'OTC',
+    route: ['PO', 'IM', 'IV'],
+    isFeaturedToday: false,
+    dateFeatured: '2026-11-17',
+    targetSpecialties: ['pharmacy', 'internal_medicine', 'pediatrics'],
+    keyHighlights: [
+      'المكمل الوقائي الأهم قبل وأثناء الحمل المبكر لمنع عيوب الأنبوب العصبي (السنسنة المشقوقة)',
+      'قد يُخفي نقص فيتامين B12 بتصحيح فقر الدم الضخم الأرومات مع استمرار تدهور الأعراض العصبية - يجب استبعاد نقص B12 أولاً',
+      'ضروري كمكمل مع الميثوتريكسات لتقليل الآثار الجانبية دون التأثير على الفعالية العلاجية'
+    ],
+    indications: [
+      {
+        indication: 'Folate deficiency / Pregnancy supplementation (neural tube defect prevention) / Methotrexate adjunct',
+        indicationAr: 'نقص الفولات / مكمل الحمل (الوقاية من عيوب الأنبوب العصبي) / مكمل مع الميثوتريكسات',
+        adultDose: 'Deficiency: 1 mg PO once daily; Pregnancy prophylaxis: 0.4-0.8 mg once daily (4 mg if high risk)',
+        adultDoseAr: 'النقص: 1 مج فموياً مرة يومياً؛ الوقاية في الحمل: 0.4-0.8 مج مرة يومياً (4 مج إذا كانت الخطورة عالية)',
+        pediatricDose: '0.1-0.4 mg PO once daily depending on age',
+        pediatricDoseAr: '0.1-0.4 مج فموياً مرة يومياً حسب العمر',
+        route: 'PO/IM/IV'
+      }
+    ],
+    renalAdjustment: {
+      crclAbove50: 'No adjustment needed',
+      crcl10to50: 'No adjustment needed',
+      crclBelow10: 'No adjustment needed',
+      hemodialysis: 'Dialyzable; supplemental dose may be needed with regular dialysis'
+    },
+    hepaticAdjustment: 'No specific adjustment needed',
+    contraindications: [
+      'فرط الحساسية لحمض الفوليك',
+      'لا يُستخدم كعلاج وحيد لفقر الدم الضخم الأرومات غير المشخص قبل استبعاد نقص فيتامين B12'
+    ],
+    mechanismOfAction: 'Converted to tetrahydrofolate, an essential cofactor for DNA synthesis, amino acid metabolism, and red blood cell formation',
+    mechanismOfActionAr: 'يُحول إلى رباعي هيدروفولات، وهو عامل مساعد أساسي لتخليق الحمض النووي واستقلاب الأحماض الأمينية وتكوين خلايا الدم الحمراء',
+    halfLife: 'N/A (stored in liver and tissues)',
+    monitoringParameters: [
+      'مستوى الفولات الدموي',
+      'الهيموجلوبين والهيماتوكريت وحجم الكرية الوسطي (MCV)',
+      'مستوى فيتامين B12 (يجب استبعاد نقصه قبل العلاج الأحادي بالفوليك)',
+      'الالتزام قبل وأثناء الحمل المبكر'
+    ],
+    pregnancyCategory: 'Compatible',
+    lactationSafety: 'Safe',
+    foodInteractions: [
+      'لا توجد تفاعلات غذائية ذات أهمية سريرية كبيرة'
+    ],
+    pearls: [
+      'يُنصح بالبدء قبل الحمل بشهر على الأقل لأن الأنبوب العصبي يتكون في الأسابيع الأولى جداً من الحمل غالباً قبل معرفة المرأة بحملها',
+      'إعطاء حمض الفوليك وحده دون تقييم B12 في فقر الدم الضخم الأرومات قد يصحح فقر الدم ظاهرياً بينما يستمر التلف العصبي الناتج عن نقص B12 في التفاقم',
+      'جزء أساسي وروتيني من بروتوكول العلاج بالميثوتريكسات لتقليل السمية الهضمية والكبدية دون التأثير على الفعالية المضادة للالتهاب'
+    ]
   }
 ];
 
